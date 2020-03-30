@@ -28,7 +28,7 @@ public class CharControler : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Vector3 direction = new Vector3(Input.GetAxis(Horizontal), 0, Input.GetAxis(Vertical));
         Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis(Horizontal);
@@ -40,9 +40,15 @@ public class CharControler : MonoBehaviour
         transform.position += rightMovement;
         transform.position += upMovement;
 
-        if(Input.GetKeyDown("space"))
+        Dash(heading);
+
+    }
+
+    private void Dash(Vector3 dir)
+    {
+        if (Input.GetKeyDown("space"))
         {
-            _rb.AddForce(heading * pushSpeed, ForceMode.Impulse);
+            _rb.AddForce(dir * pushSpeed, ForceMode.Impulse);
         }
     }
 }
