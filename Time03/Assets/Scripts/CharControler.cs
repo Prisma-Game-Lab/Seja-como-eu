@@ -7,12 +7,12 @@ public class CharControler : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 5f;
     [SerializeField]
-    private float pushSpeed = 10f;
+    private float pushSpeed = 1.0f;
     Vector3 forward, right;
 
     public string Horizontal;
     public string Vertical;
-    public string pushButton;
+    //public string pushButton;
 
     private Rigidbody _rb;
 
@@ -40,10 +40,9 @@ public class CharControler : MonoBehaviour
         transform.position += rightMovement;
         transform.position += upMovement;
 
-        if(Input.GetButtonDown(pushButton)){
+        if(Input.GetKeyDown("space"))
+        {
             _rb.AddForce(heading * pushSpeed, ForceMode.Impulse);
         }
     }
-
-    
 }
