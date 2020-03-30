@@ -12,7 +12,7 @@ public class CharControler : MonoBehaviour
 
     public string Horizontal;
     public string Vertical;
-    //public string pushButton;
+    public string pushButton;
 
     private Rigidbody _rb;
 
@@ -38,17 +38,17 @@ public class CharControler : MonoBehaviour
 
         transform.forward = heading;
         transform.position += rightMovement;
-        transform.position += upMovement;
-
+        transform.position += upMovement;
+
         Dash(heading);
 
     }
 
-    private void Dash(Vector3 dir)
-    {
-        if (Input.GetKeyDown("space"))
+    private void Dash(Vector3 dir)
+    {
+        if (Input.GetKeyDown("space"))
         {
             _rb.AddForce(dir * pushSpeed, ForceMode.Impulse);
-        }
+        }
     }
 }

@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 25123759}
   - component: {fileID: 25123758}
   - component: {fileID: 25123762}
+  - component: {fileID: 25123763}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -209,8 +210,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25123757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36, y: 2.4976082, z: 1.5132313}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.62, y: 2.369, z: -3.165}
+  m_LocalScale: {x: 1, y: 1.398, z: 1.551}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -231,6 +232,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &25123763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25123757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f64bf0af79c5674ca4109598a8b26bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerPosition: {fileID: 1573305569}
 --- !u!1 &383428652
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,8 +333,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383428652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 1.625, y: 1, z: 1.3}
+  m_LocalPosition: {x: 4.875, y: -0, z: -1.829}
+  m_LocalScale: {x: 2.6000001, y: 1, z: 2.3332999}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -349,7 +363,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545334369}
   m_LocalRotation: {x: 0.23911765, y: 0.3696438, z: -0.09904577, w: 0.89239913}
-  m_LocalPosition: {x: -4.39, y: 5.3, z: -4.39}
+  m_LocalPosition: {x: -11.47, y: 16.44, z: -18.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2025859922}
@@ -481,9 +495,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  pushSpeed: 10
-  Horizontal: HorizontalKey
-  Vertical: VerticalKey
+  pushSpeed: 3
+  Horizontal: Horizontal
+  Vertical: Vertical
+  pushButton: PushKey
 --- !u!1 &2025859921
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +566,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.41
+  orthographic size: 7.64
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
