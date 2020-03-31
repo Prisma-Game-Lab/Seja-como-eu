@@ -27,24 +27,27 @@ public class PlayerController : MonoBehaviour
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
         float rayLength;
 
-        if(groundPlane.Raycast(cameraRay, out rayLength)){
+        if(groundPlane.Raycast(cameraRay, out rayLength))
+        {
+
             Vector3 ponitToLook = cameraRay.GetPoint(rayLength);
             Debug.DrawLine(cameraRay.origin, ponitToLook, Color.blue);
 
             transform.LookAt(new Vector3(ponitToLook.x, transform.position.y, ponitToLook.z)); //o player irá virar para a mesma direção em que o raycast está atingindo o chão 
-
-             
+            
         }
 
 
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         _rb.velocity = moveVelocity;
         Dash(transform.forward);
     }
 
-    private void Dash(Vector3 dir){
+    private void Dash(Vector3 dir)
+    {
        if (Input.GetMouseButtonDown(0))
         {
             _rb.AddForce(dir * pushSpeed, ForceMode.Impulse);

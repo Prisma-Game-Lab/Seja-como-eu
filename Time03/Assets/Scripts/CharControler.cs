@@ -16,6 +16,9 @@ public class CharControler : MonoBehaviour
 
     private Rigidbody _rb;
 
+    public bool dashing = false;
+    public float tempoDash = 3.0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,11 +47,21 @@ public class CharControler : MonoBehaviour
 
     }
 
-    private void Dash(Vector3 dir)
-    {
-        if (Input.GetKeyDown("space"))
+    private void Dash(Vector3 dir)
+    {
+        if (Input.GetKeyDown("space"))
         {
             _rb.AddForce(dir * pushSpeed, ForceMode.Impulse);
-        }
+            dashing = true;
+            Invoke("StopDashing", tempoDash);
+        }
+    }
+
+    /*Essa função só existe pra aumentar a janela de duração da condição de dash, 
+    porque senão o knockback só funciona em distâncias muito pequenas ou com pushSpeed muito grande.
+    Estou pensando em algo mais prático, mas no momento essa foi a solução que encontrei.*/
+    private void StopDashing()
+    {
+        dashing = false;
     }
 }
