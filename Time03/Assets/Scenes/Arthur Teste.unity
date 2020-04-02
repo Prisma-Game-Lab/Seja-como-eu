@@ -920,6 +920,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 327366994}
+    - target: {fileID: 7025049443328107717, guid: 70c5897f70c9a974ca4748e4565f8ec2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: SampleScene
+      objectReference: {fileID: 0}
     - target: {fileID: 7025049443365970597, guid: 70c5897f70c9a974ca4748e4565f8ec2,
         type: 3}
       propertyPath: m_LocalPosition.x
