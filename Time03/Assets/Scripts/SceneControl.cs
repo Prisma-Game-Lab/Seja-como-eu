@@ -15,33 +15,40 @@ public class SceneControl : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            if(GameIsPaused){
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(GameIsPaused)
+            {
                 Resume();
             }
-            else if(!GameIsPaused){
+            else if(!GameIsPaused)
+            {
                 Pause();
             }
         }
     }
 
-    public void Pause(){
+    public void Pause()
+    {
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
 
-    public void Resume(){
+    public void Resume()
+    {
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
-    public void ChangeScene(string SceneName){
+    public void ChangeScene(string SceneName)
+    {
         SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
     }
 
-    public void ReloadScene(){
+    public void ReloadScene()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
