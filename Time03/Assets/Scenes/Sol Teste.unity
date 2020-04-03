@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 25123758}
   - component: {fileID: 25123762}
   - component: {fileID: 25123763}
-  - component: {fileID: 25123764}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -211,7 +210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25123757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.01, y: 1.38, z: -3.165}
+  m_LocalPosition: {x: 2.62, y: 2.369, z: -3.165}
   m_LocalScale: {x: 1, y: 1.398, z: 1.551}
   m_Children: []
   m_Father: {fileID: 0}
@@ -240,26 +239,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25123757}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f64bf0af79c5674ca4109598a8b26bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerPosition: {fileID: 1573305569}
---- !u!114 &25123764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25123757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48714e424579cfb44bad4eadcb46deec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovimentSpeed: 5
-  RotationSpeed: 2
 --- !u!1 &383428652
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +384,6 @@ GameObject:
   - component: {fileID: 1573305566}
   - component: {fileID: 1573305565}
   - component: {fileID: 1573305570}
-  - component: {fileID: 1573305571}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -505,7 +489,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573305564}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9868d892751e1fc47bcfaa2e684a1634, type: 3}
   m_Name: 
@@ -515,22 +499,6 @@ MonoBehaviour:
   Horizontal: Horizontal
   Vertical: Vertical
   pushButton: PushKey
-  dashing: 0
-  tempoDash: 3
---- !u!114 &1573305571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573305564}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48714e424579cfb44bad4eadcb46deec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovimentSpeed: 2
-  RotationSpeed: 1
 --- !u!1 &2025859921
 GameObject:
   m_ObjectHideFlags: 0
