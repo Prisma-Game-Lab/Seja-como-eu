@@ -9,7 +9,7 @@ public class MovimentPlayer : MonoBehaviour
     public float DashSpeed;
     public bool dashing = false;
 
-    private float tempoDash = 3.0f;
+    private float tempoDash = 1.0f;
     private Rigidbody _rb;
 
     // Start is called before the first frame update
