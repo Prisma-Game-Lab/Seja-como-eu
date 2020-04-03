@@ -29,7 +29,7 @@ public class EnemyCollision : MonoBehaviour
 
         if (rb != null && collision.collider.CompareTag("enemy"))
         {
-            if (this.gameObject.GetComponent<CharControler>().dashing)
+            if (this.gameObject.GetComponent<MovimentPlayer>().dashing)
             {
                 Vector3 dir = collision.transform.position - transform.position;
                 dir.y = knockbackHeight;

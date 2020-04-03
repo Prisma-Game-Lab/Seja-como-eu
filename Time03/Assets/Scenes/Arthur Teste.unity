@@ -667,6 +667,7 @@ GameObject:
   - component: {fileID: 1161093208}
   - component: {fileID: 1161093209}
   - component: {fileID: 1161093207}
+  - component: {fileID: 1161093210}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -755,7 +756,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161093202}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9868d892751e1fc47bcfaa2e684a1634, type: 3}
   m_Name: 
@@ -781,7 +782,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &1161093209
 MonoBehaviour:
@@ -798,6 +799,22 @@ MonoBehaviour:
   knockbackStrenght: 15
   knockbackHeight: 0.3
   deathScreen: {fileID: 971127820}
+--- !u!114 &1161093210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161093202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5910a05afa71169409eeda95b8ed012c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovimentSpeed: 5
+  RotationSpeed: 5
+  DashSpeed: 5
+  dashing: 0
 --- !u!1 &1857268688
 GameObject:
   m_ObjectHideFlags: 0
