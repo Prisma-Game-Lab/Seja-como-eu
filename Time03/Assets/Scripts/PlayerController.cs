@@ -30,10 +30,10 @@ public class PlayerController : MonoBehaviour
         if(groundPlane.Raycast(cameraRay, out rayLength))
         {
 
-            Vector3 pointToLook = cameraRay.GetPoint(rayLength);
-            Debug.DrawLine(cameraRay.origin, pointToLook, Color.blue);
+            Vector3 ponitToLook = cameraRay.GetPoint(rayLength);
+            Debug.DrawLine(cameraRay.origin, ponitToLook, Color.blue);
 
-            transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z)); //o player irá virar para a mesma direção em que o raycast está atingindo o chão 
+            transform.LookAt(new Vector3(ponitToLook.x, transform.position.y, ponitToLook.z)); //o player irá virar para a mesma direção em que o raycast está atingindo o chão 
             
         }
 
