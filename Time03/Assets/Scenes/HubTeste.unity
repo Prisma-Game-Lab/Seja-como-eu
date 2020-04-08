@@ -493,7 +493,6 @@ GameObject:
   - component: {fileID: 1573305567}
   - component: {fileID: 1573305566}
   - component: {fileID: 1573305565}
-  - component: {fileID: 1573305570}
   m_Layer: 0
   m_Name: Personagem
   m_TagString: Untagged
@@ -592,25 +591,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1573305570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573305564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9868d892751e1fc47bcfaa2e684a1634, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  pushSpeed: 3
-  Horizontal: Horizontal
-  Vertical: Vertical
-  pushButton: PushKey
-  dashing: 0
-  tempoDash: 3
 --- !u!1 &2025859921
 GameObject:
   m_ObjectHideFlags: 0
