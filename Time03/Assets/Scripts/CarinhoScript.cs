@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class CarinhoScript : MonoBehaviour
 {
+    public float ProbabilidadeLaunch;
+    public float CoolDownLaunch;
+
+    private Skills Launch;
+
+    private List<Skills> skills;
+    
+
     public Transform PlayerPosition;
 
     private Rigidbody _rb;
@@ -21,10 +29,9 @@ public class CarinhoScript : MonoBehaviour
 
     void Start()
     {
-        skills = new Skills[3];
-        skills[0] = new Skills(orbitProb, orbitCd, false);
-        skills[1] = new Skills(launchProb, launchCd, false);
-        skills[2] = new Skills(bombProb, bombCd, false);
+        Launch = new Skills(ProbabilidadeLaunch,CoolDownLaunch,false);
+
+        skills.Add(Launch);
     }
 
     // Update is called once per frame
