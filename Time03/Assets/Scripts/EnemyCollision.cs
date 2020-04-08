@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class EnemyCollision : MonoBehaviour
 {
-    [SerializeField]
-    private float knockbackStrenght = 20.0f;
-    [SerializeField]
-    private float knockbackHeight = 1.0f;
+    public float knockbackStrenght = 20.0f;
+    public float knockbackHeight = 1.0f;
 
     public GameObject deathScreen;
 
@@ -29,7 +27,7 @@ public class EnemyCollision : MonoBehaviour
 
         if (rb != null && collision.collider.CompareTag("enemy"))
         {
-            if (this.gameObject.GetComponent<MovimentPlayer>().dashing)
+            if (gameObject.GetComponent<MovimentPlayer>().dashing)
             {
                 Vector3 dir = collision.transform.position - transform.position;
                 dir.y = knockbackHeight;
@@ -37,7 +35,7 @@ public class EnemyCollision : MonoBehaviour
             }
             else
             {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
                 deathScreen.SetActive(true);
             }
         }
