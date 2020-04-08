@@ -16,8 +16,6 @@ public class CarinhoScript : MonoBehaviour
 
     private Rigidbody _rb;
 
-    private Skills[] skills;
-
     public float orbitCd;
     public float orbitProb;
 
