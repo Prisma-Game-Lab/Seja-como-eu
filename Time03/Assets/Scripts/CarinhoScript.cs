@@ -32,7 +32,6 @@ public class CarinhoScript : MonoBehaviour
         
     }
 
-<<<<<<< HEAD
     void Update() 
     {
         float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
