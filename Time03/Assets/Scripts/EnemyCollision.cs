@@ -40,4 +40,13 @@ public class EnemyCollision : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("orb"))
+        {
+            Destroy(gameObject);
+            deathScreen.SetActive(true);
+        }
+    }
 }
