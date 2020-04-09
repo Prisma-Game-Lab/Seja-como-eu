@@ -17,13 +17,15 @@ public class CarinhoScript : MonoBehaviour
     public Transform PlayerPosition;
     private Rigidbody _rb;
 
-    NavMeshAgent agent;
-        void Start()
+    private NavMeshAgent agent;
+
+    void Start()
     {
         Launch = new Skills(ProbabilidadeLaunch,CoolDownLaunch,false);
 
         agent = GetComponent<NavMeshAgent>();
 
+        skills = new List<Skills>();
         skills.Add(Launch);
 
         
