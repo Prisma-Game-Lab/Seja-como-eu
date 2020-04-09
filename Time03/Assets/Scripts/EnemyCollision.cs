@@ -35,7 +35,6 @@ public class EnemyCollision : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
                 deathScreen.SetActive(true);
             }
         }
@@ -45,7 +44,6 @@ public class EnemyCollision : MonoBehaviour
     {
         if(other.gameObject.CompareTag("orb"))
         {
-            Destroy(gameObject);
             deathScreen.SetActive(true);
         }
     }

@@ -79,9 +79,9 @@ public class CarinhoScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
 
-        if(rb != null && collision.collider.CompareTag("rock"))
+
+        if(collision.collider.CompareTag("rock"))
         {
             Damage();
         }
