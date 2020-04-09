@@ -18,7 +18,7 @@ public class CarinhoScript : MonoBehaviour
 
     private Rigidbody _rb;
 
-    NavMeshAgent agent;
+    private NavMeshAgent agent;
 
     void Start()
     {
@@ -26,6 +26,7 @@ public class CarinhoScript : MonoBehaviour
 
         agent = GetComponent<NavMeshAgent>();
 
+        skills = new List<Skills>();
         skills.Add(Launch);
         
     }
