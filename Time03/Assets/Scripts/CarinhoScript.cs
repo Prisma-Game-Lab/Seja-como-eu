@@ -18,6 +18,7 @@ public class CarinhoScript : MonoBehaviour
     private List<Skills> skills;
     private Rigidbody _rb;
     private NavMeshAgent agent;
+    public GameObject arena;
 
     void Start()
     {
@@ -69,7 +70,7 @@ public class CarinhoScript : MonoBehaviour
     {
         for(int i = 0; i <= carinhoHearts.Length - 1; i++)
         {
-            carinhoHearts[i].RotateAround(gameObject.transform.position, Vector3.up, orbitSpeed * Time.deltaTime);
+            carinhoHearts[i].RotateAround(arena.transform.position, Vector3.up, orbitSpeed * Time.deltaTime);
         }
     }
 
