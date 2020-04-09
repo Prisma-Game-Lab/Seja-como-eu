@@ -8,8 +8,10 @@ public class CarinhoScript : MonoBehaviour
     public float ProbabilidadeLaunch;
     public float CoolDownLaunch;
     public float lookRadius = 10f; // se o jogador entrar nesse raio o carinho vai começar a perseguir ele
+    public Transform[] carinhoHearts;
 
     private Skills Launch;
+    private float orbitSpeed = 100.0f;
 
     private List<Skills> skills;
     
@@ -26,22 +28,24 @@ public class CarinhoScript : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         skills = new List<Skills>();
-        skills.Add(Launch);
-
-        
+        skills.Add(Launch);       
     }
 
 
-    void Update() {
+    void Update()
+    {
+
         float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
 
-        if(distance <= lookRadius){
+        HeartOrbit();
+
+        /*if(distance <= lookRadius){
             agent.SetDestination(PlayerPosition.position);
         }
 
         if(distance <= agent.stoppingDistance){
             FaceTarget();
-        }
+        }*/
     }
     // Update is called once per frame
     /*void FixedUpdate()
@@ -61,6 +65,14 @@ public class CarinhoScript : MonoBehaviour
     void OnDrawGizmos() {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+
+    void HeartOrbit()
+    {
+        for(int i = 0; i <= carinhoHearts.Length - 1; i++)
+        {
+            carinhoHearts[i].RotateAround(gameObject.transform.position, Vector3.up, orbitSpeed * Time.deltaTime);
+        }
     }
 
 }
