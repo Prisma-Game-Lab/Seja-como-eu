@@ -33,26 +33,18 @@ public class CarinhoScript : MonoBehaviour
     void Update()
     {
 
-        //float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
+        float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
 
         HeartOrbit();
 
-        /*if(distance <= lookRadius){
+        if(distance <= lookRadius){
             agent.SetDestination(PlayerPosition.position);
         }
 
         if(distance <= agent.stoppingDistance){
             FaceTarget();
-        }*/
-    }
-    // Update is called once per frame
-    /*void FixedUpdate()
-    {
-        if(PlayerPosition != null){
-            //transform.LookAt(PlayerPosition);
-            transform.rotation = Quaternion.LookRotation(PlayerPosition.position - transform.position);
         }
-    }*/
+    }
 
     void FaceTarget(){
         Vector3 direction = (PlayerPosition.position - transform.position).normalized;
