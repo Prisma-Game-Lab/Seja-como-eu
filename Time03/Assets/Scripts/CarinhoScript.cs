@@ -41,13 +41,15 @@ public class CarinhoScript : MonoBehaviour
 
         HeartOrbit();
 
-        if(distance <= lookRadius){
-            agent.SetDestination(PlayerPosition.position);
-        }
+        if(agent.enabled){
+            if(distance <= lookRadius){
+                agent.SetDestination(PlayerPosition.position);
+            }
 
-        if(distance <= agent.stoppingDistance){
-            FaceTarget();
+            if(distance <= agent.stoppingDistance){
+                FaceTarget();
 
+            }
         }
 
         if(Input.GetKeyDown(KeyCode.Z))
