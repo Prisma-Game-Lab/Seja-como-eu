@@ -1496,6 +1496,7 @@ GameObject:
   - component: {fileID: 1857268693}
   - component: {fileID: 1857268694}
   - component: {fileID: 1857268695}
+  - component: {fileID: 1857268696}
   m_Layer: 0
   m_Name: Inimigo
   m_TagString: enemy
@@ -1638,6 +1639,20 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1857268696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857268688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97652cbb311343a49878c3ccbbee473c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 16
+  windup: 0.75
 --- !u!1001 &724779494848353159
 PrefabInstance:
   m_ObjectHideFlags: 0
