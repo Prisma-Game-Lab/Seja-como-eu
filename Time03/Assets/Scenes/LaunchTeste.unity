@@ -147,6 +147,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4336250183862168252, guid: 4db5fb8a143c7b54e8350d0bf8f8115a,
         type: 3}
+      propertyPath: carinhoHearts.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336250183862168252, guid: 4db5fb8a143c7b54e8350d0bf8f8115a,
+        type: 3}
       propertyPath: PlayerPosition
       value: 
       objectReference: {fileID: 1161093206}
@@ -154,6 +159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: lookRadius
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336250183862168253, guid: 4db5fb8a143c7b54e8350d0bf8f8115a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4336250183862168254, guid: 4db5fb8a143c7b54e8350d0bf8f8115a,
         type: 3}

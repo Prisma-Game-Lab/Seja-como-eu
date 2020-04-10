@@ -44,6 +44,7 @@ public class CarinhoScript : MonoBehaviour
         if(distance <= agent.stoppingDistance){
             FaceTarget();
         }*/
+
     }
     // Update is called once per frame
     /*void FixedUpdate()
@@ -97,4 +98,19 @@ public class CarinhoScript : MonoBehaviour
         }
     }
 
+
+    IEnumerator HeartLaunch()
+    {
+        Transform target;
+        /*WINDUP*/
+        yield return new WaitForSeconds(3);
+
+        target = PlayerPosition;
+
+        /*ALVO DEFINIDO / TEMPO PARA DESVIAR*/
+        yield return new WaitForSeconds(2);
+
+
+
+    }
 }
