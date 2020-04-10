@@ -16,6 +16,8 @@ public class CarinhoScript : MonoBehaviour
     private int health = 3;
     private Skills Launch;
     private List<Skills> skills;
+    private bool launching;
+    private HeartLaunch hlScript;
 
     private Rigidbody _rb;
     private NavMeshAgent agent;
@@ -23,6 +25,7 @@ public class CarinhoScript : MonoBehaviour
     void Start()
     {
         Launch = new Skills(ProbabilidadeLaunch,CoolDownLaunch,false);
+        hlScript = GetComponent<HeartLaunch>();
 
         agent = GetComponent<NavMeshAgent>();
 
@@ -35,15 +38,23 @@ public class CarinhoScript : MonoBehaviour
     void Update() 
     {
         float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
+
         HeartOrbit();
 
-        /*if(distance <= lookRadius){
+        if(distance <= lookRadius){
             agent.SetDestination(PlayerPosition.position);
         }
 
         if(distance <= agent.stoppingDistance){
             FaceTarget();
-        }*/
+
+        }
+
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            hlScript.Launch(PlayerPosition.position);
+        }
+
 
     }
     // Update is called once per frame
@@ -52,6 +63,7 @@ public class CarinhoScript : MonoBehaviour
         if(PlayerPosition != null){
             //transform.LookAt(PlayerPosition);
             transform.rotation = Quaternion.LookRotation(PlayerPosition.position - transform.position);
+
         }
     }*/
 
@@ -90,7 +102,8 @@ public class CarinhoScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
+
+        Rigidbody rb = collision.collider.GetComponent<Rigidbody>(); 
 
         if(rb != null && collision.collider.CompareTag("rock"))
         {
@@ -98,19 +111,4 @@ public class CarinhoScript : MonoBehaviour
         }
     }
 
-
-    IEnumerator HeartLaunch()
-    {
-        Transform target;
-        /*WINDUP*/
-        yield return new WaitForSeconds(3);
-
-        target = PlayerPosition;
-
-        /*ALVO DEFINIDO / TEMPO PARA DESVIAR*/
-        yield return new WaitForSeconds(2);
-
-
-
-    }
 }
