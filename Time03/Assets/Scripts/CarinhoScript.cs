@@ -11,35 +11,36 @@ public class CarinhoScript : MonoBehaviour
     public Transform[] carinhoHearts;
     public Transform PlayerPosition;
 
-
+    private bool launching;
     private float orbitSpeed = 100.0f;
     private int health = 3;
     private Skills Launch;
-    private List<Skills> skills;
-    private bool launching;
+    private List<Skills> skills;  
     private HeartLaunch hlScript;
+    private HeartOrbit hoScript;
 
     private Rigidbody _rb;
     private NavMeshAgent agent;
 
     void Start()
     {
-        Launch = new Skills(ProbabilidadeLaunch,CoolDownLaunch,false);
-        hlScript = GetComponent<HeartLaunch>();
-
         agent = GetComponent<NavMeshAgent>();
 
         skills = new List<Skills>();
 
+        Launch = new Skills(ProbabilidadeLaunch, CoolDownLaunch, false);
+        hlScript = GetComponent<HeartLaunch>();
         skills.Add(Launch);
-        
+
+        hoScript = GetComponent<HeartOrbit>();
+        skills.Add(hoScript.Orbit);
     }
 
     void Update() 
     {
         float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
 
-        HeartOrbit();
+        hoScript.OrbitAround(carinhoHearts);
 
         if(agent.enabled){
             if(distance <= lookRadius){
@@ -82,19 +83,11 @@ public class CarinhoScript : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 
-    void HeartOrbit()
-    {
-        for(int i = 0; i <= carinhoHearts.Length - 1; i++)
-        {
-            carinhoHearts[i].RotateAround(gameObject.transform.position, Vector3.up, orbitSpeed * Time.deltaTime);
-        }
-    }
-
     void Damage()
     {
         health -= 1;
         carinhoHearts[health].gameObject.SetActive(false);
-        orbitSpeed += 100;
+        hoScript.orbitSpeed += 100.0f; 
 
         if(health <= 0)
         {
