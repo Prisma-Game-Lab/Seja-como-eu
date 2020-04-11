@@ -9,6 +9,7 @@ public class MenuSelect : MonoBehaviour
     public List<Button> MenuButtons;
     private int CoordenadaPlayer;
     private bool ControlAcess;
+    
 
     void Start()
     {
