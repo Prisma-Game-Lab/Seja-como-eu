@@ -1595,6 +1595,7 @@ GameObject:
   - component: {fileID: 1857268695}
   - component: {fileID: 1857268694}
   - component: {fileID: 1857268696}
+  - component: {fileID: 1857268697}
   m_Layer: 0
   m_Name: Inimigo
   m_TagString: enemy
@@ -1707,6 +1708,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f64bf0af79c5674ca4109598a8b26bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ProbabilidadeOrbit: 0
+  CooldownOrbit: 0
   ProbabilidadeLaunch: 0
   CoolDownLaunch: 0
   lookRadius: 30
@@ -1751,6 +1754,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 16
   windup: 0.75
+--- !u!114 &1857268697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857268688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e12b011c2c5d054ba2ba927e7bac233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbitSpeed: 100
 --- !u!1 &2057341181
 GameObject:
   m_ObjectHideFlags: 0
