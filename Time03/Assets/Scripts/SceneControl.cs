@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class SceneControl : MonoBehaviour
 {
     public GameObject PauseMenuUI;
-    public bool GameIsPaused = false;
+    private bool GameIsPaused = false;
+
+    private bool WaitPause = false;
 
     void Start()
     {
@@ -15,15 +17,18 @@ public class SceneControl : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        Debug.Log(WaitPause);
+        if(Input.GetAxisRaw("Pause") == 1 && WaitPause == false)
         {
             if(GameIsPaused)
             {
                 Resume();
+                StartCoroutine(KeepPaused());
             }
             else if(!GameIsPaused)
             {
                 Pause();
+                StartCoroutine(KeepPaused());
             }
         }
     }
@@ -56,4 +61,10 @@ public class SceneControl : MonoBehaviour
 	{
 		Application.Quit();
 	}
+
+    IEnumerator KeepPaused() {
+        WaitPause = true;
+        yield return new WaitForSecondsRealtime(0.5f);
+        WaitPause = false;
+    }
 }
