@@ -53,7 +53,6 @@ public class MovimentPlayer : MonoBehaviour
 
     private void Dash(Vector3 dir)
     {
-        Debug.Log(Input.GetAxisRaw("Dash"));
         if (Input.GetAxis("Dash") == 1)
         {
             _rb.AddForce(dir * DashSpeed, ForceMode.Impulse);

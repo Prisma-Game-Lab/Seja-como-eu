@@ -17,7 +17,6 @@ public class SceneControl : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(WaitPause);
         if(Input.GetAxisRaw("Pause") == 1 && WaitPause == false)
         {
             if(GameIsPaused)
@@ -50,11 +49,13 @@ public class SceneControl : MonoBehaviour
     public void ChangeScene(string SceneName)
     {
         SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
+        Time.timeScale = 1f;
     }
 
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
     }
 
     public void ExitGame()

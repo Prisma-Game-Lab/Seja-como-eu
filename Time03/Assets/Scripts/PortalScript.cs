@@ -6,24 +6,26 @@ using UnityEngine.SceneManagement;
 /*Autor: Nagib Moura Suaid*/
 public class PortalScript : MonoBehaviour
 {
+    public GameObject ChooseUI;
 
-    public string sceneName; /*Aqui vai o nome da cena associada ao portal*/
-
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ChooseUI.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("entrou");
-        SceneManager.LoadScene(sceneName); /*Quando o personagem entra, muda de cena instantaneamente (bem provisório)*/
+        ChooseUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void YesButton(string SceneName) {
+        SceneManager.LoadScene(SceneName);
+        Time.timeScale = 1f;
+    }
+
+    public void NoButton() {
+        ChooseUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
