@@ -1596,6 +1596,7 @@ GameObject:
   - component: {fileID: 1857268694}
   - component: {fileID: 1857268696}
   - component: {fileID: 1857268697}
+  - component: {fileID: 1857268698}
   m_Layer: 0
   m_Name: Inimigo
   m_TagString: enemy
@@ -1714,6 +1715,7 @@ MonoBehaviour:
   - {fileID: 1614429981}
   - {fileID: 1520056038}
   PlayerPosition: {fileID: 1161093206}
+  Cooldown: 10
 --- !u!195 &1857268695
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1750,8 +1752,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 16
   windup: 0.75
-  probabilidadeLaunch: 0.133
+  probabilidadeLaunch: 30
   cooldownLaunch: 10
+  PlayerPosition: {fileID: 1161093206}
 --- !u!114 &1857268697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1765,13 +1768,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitSpeed: 100
-  ProbabilidadeOrbit: 0
+  ProbabilidadeOrbit: 40
   CooldownOrbit: 5
   maxRadius: 10
   minRadius: 2
   expansionSpeed: 2.5
   center: {fileID: 1857268692}
   newOrbit: {x: 0, y: 0, z: 0}
+  carinhoHearts:
+  - {fileID: 690701698}
+  - {fileID: 1614429981}
+  - {fileID: 1520056038}
+--- !u!114 &1857268698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857268688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb1c7f2e8c381143af9f3910fcf094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2057341181
 GameObject:
   m_ObjectHideFlags: 0

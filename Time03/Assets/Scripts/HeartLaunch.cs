@@ -14,10 +14,11 @@ public class HeartLaunch : MonoBehaviour
 
 	public float windup;
 
-	[Range(0, 1)]
+	[Range(0, 100)]
 	public float probabilidadeLaunch;
 
     public float cooldownLaunch;
+    public Transform PlayerPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +42,9 @@ public class HeartLaunch : MonoBehaviour
         }
     }
 
-    public void Launch(Vector3 playerPosition)
+    public void Launch()
     {
-    	target = playerPosition;
+    	target = PlayerPosition.position;
     	StartCoroutine(HLaunch());
     	Debug.Log("Launch!");
     }

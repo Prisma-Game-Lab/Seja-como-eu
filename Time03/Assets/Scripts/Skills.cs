@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class Skills
 {
-    public Skills(float p, float cd, bool r) {
+    public Skills(float p, float cd, bool r, SkillFunction SkillName) {
         Probabilidade = p;
         CoolDown = cd;
         isReady = r;
+        ActiveSkill = SkillName;
     }
+
+    public delegate void SkillFunction();
 
     private float Probabilidade;
 
     private float CoolDown;
 
     private bool isReady;
+
+    private SkillFunction ActiveSkill;
 
     public float GetProbabilidade() {
         return Probabilidade;
@@ -35,5 +40,9 @@ public class Skills
         else {
             isReady = true;
         }
+    }
+
+    public void ActivateSkill() {
+        ActiveSkill();
     }
 }

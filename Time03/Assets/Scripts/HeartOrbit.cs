@@ -6,9 +6,9 @@ public class HeartOrbit : MonoBehaviour
 {
 
     public float orbitSpeed = 100.0f;
+    [Range(0, 100)]
     public float ProbabilidadeOrbit;
     public float CooldownOrbit;
-    public Skills Orbit;
 
     private float radius;
     public float maxRadius = 10.0f;
@@ -16,12 +16,13 @@ public class HeartOrbit : MonoBehaviour
     public float expansionSpeed;
     public Transform center;
     public Vector3 newOrbit;
+    public Transform[] carinhoHearts;
     private bool canExpand = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        Orbit = new Skills(ProbabilidadeOrbit, CooldownOrbit, true);
+        
     }
 
     // Update is called once per frame
@@ -30,13 +31,13 @@ public class HeartOrbit : MonoBehaviour
         
     }
 
-    public void OrbitAround(Transform[] hearts)
+    public void OrbitAround()
     {
-        for(int i = 0; i <= hearts.Length - 1; i++)
+        for(int i = 0; i <= carinhoHearts.Length - 1; i++)
         {
-            hearts[i].RotateAround(gameObject.transform.position, Vector3.up, orbitSpeed * Time.deltaTime);
-            newOrbit = (hearts[i].position - center.position).normalized * radius + center.position;
-            hearts[i].position = Vector3.MoveTowards(hearts[i].position, newOrbit, Time.deltaTime * expansionSpeed);
+            carinhoHearts[i].RotateAround(gameObject.transform.position, Vector3.up, orbitSpeed * Time.deltaTime);
+            newOrbit = (carinhoHearts[i].position - center.position).normalized * radius + center.position;
+            carinhoHearts[i].position = Vector3.MoveTowards(carinhoHearts[i].position, newOrbit, Time.deltaTime * expansionSpeed);
             if(canExpand)
             {
                 StartCoroutine(Expand());
@@ -48,7 +49,7 @@ public class HeartOrbit : MonoBehaviour
         }
     }
 
-    public IEnumerator Expand()
+    private IEnumerator Expand()
     {
         radius = maxRadius;     
 
@@ -57,12 +58,22 @@ public class HeartOrbit : MonoBehaviour
         canExpand = false;
     }
 
-    public IEnumerator Retract()
+    private IEnumerator Retract()
     {
         radius = minRadius;
 
         yield return new WaitForSeconds(CooldownOrbit);
 
         canExpand = true;
+    }
+
+    public float getProb()
+    {
+    	return ProbabilidadeOrbit;
+    }
+
+    public float getCD()
+    {
+    	return CooldownOrbit;
     }
 }
