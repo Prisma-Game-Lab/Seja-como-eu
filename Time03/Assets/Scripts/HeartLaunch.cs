@@ -12,6 +12,9 @@ public class HeartLaunch : MonoBehaviour
 	public float speed;
 	public float windup;
 
+	public float probabilidadeLaunch;
+    public float cooldownLaunch;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,16 @@ public class HeartLaunch : MonoBehaviour
     	target = playerPosition;
     	StartCoroutine(HLaunch());
     	Debug.Log("Launch!");
+    }
+
+    public float getProb()
+    {
+    	return probabilidadeLaunch;
+    }
+
+    public float getCD()
+    {
+    	return cooldownLaunch;
     }
 
     private IEnumerator HLaunch()

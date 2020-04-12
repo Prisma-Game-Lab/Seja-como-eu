@@ -5,14 +5,12 @@ using UnityEngine.AI;
 
 public class CarinhoScript : MonoBehaviour
 {
-    public float ProbabilidadeLaunch;
-    public float CoolDownLaunch;
+    
     public float lookRadius = 10f; // se o jogador entrar nesse raio o carinho vai começar a perseguir ele
     public Transform[] carinhoHearts;
     public Transform PlayerPosition;
 
     private bool launching;
-    private float orbitSpeed = 100.0f;
     private int health = 3;
     private Skills Launch;
     private List<Skills> skills;  
@@ -28,8 +26,9 @@ public class CarinhoScript : MonoBehaviour
 
         skills = new List<Skills>();
 
-        Launch = new Skills(ProbabilidadeLaunch, CoolDownLaunch, false);
         hlScript = GetComponent<HeartLaunch>();
+        Launch = new Skills(hlScript.getProb(), hlScript.getCD(), false);
+        
         skills.Add(Launch);
 
         hoScript = GetComponent<HeartOrbit>();
