@@ -9,11 +9,19 @@ public class HeartLaunch : MonoBehaviour
 	private bool launching = false;
 	private Transform _t;
 	private NavMeshAgent agent;
-	public float speed;
-	public float windup;
 
-	public float probabilidadeLaunch;
-    public float cooldownLaunch;
+	[SerializeField]
+	private float speed;
+
+	[SerializeField]
+	private float windup;
+
+	[SerializeField]
+	[Range(0, 1)]
+	private float probabilidadeLaunch;
+
+	[SerializeField]
+    private float cooldownLaunch;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +52,15 @@ public class HeartLaunch : MonoBehaviour
     	Debug.Log("Launch!");
     }
 
+	private IEnumerator HLaunch()
+    {
+    	agent.enabled = false;
+        /*ALVO DEFINIDO / TEMPO PARA DESVIAR*/
+        yield return new WaitForSeconds(windup);
+
+        launching = true;
+    }
+
     public float getProb()
     {
     	return probabilidadeLaunch;
@@ -54,12 +71,5 @@ public class HeartLaunch : MonoBehaviour
     	return cooldownLaunch;
     }
 
-    private IEnumerator HLaunch()
-    {
-    	agent.enabled = false;
-        /*ALVO DEFINIDO / TEMPO PARA DESVIAR*/
-        yield return new WaitForSeconds(windup);
-
-        launching = true;
-    }
+    
 }
