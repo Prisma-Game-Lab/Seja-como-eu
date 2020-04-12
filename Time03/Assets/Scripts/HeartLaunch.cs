@@ -10,18 +10,14 @@ public class HeartLaunch : MonoBehaviour
 	private Transform _t;
 	private NavMeshAgent agent;
 
-	[SerializeField]
-	private float speed;
+	public float speed;
 
-	[SerializeField]
-	private float windup;
+	public float windup;
 
-	[SerializeField]
 	[Range(0, 1)]
-	private float probabilidadeLaunch;
+	public float probabilidadeLaunch;
 
-	[SerializeField]
-    private float cooldownLaunch;
+    public float cooldownLaunch;
 
     // Start is called before the first frame update
     void Start()
