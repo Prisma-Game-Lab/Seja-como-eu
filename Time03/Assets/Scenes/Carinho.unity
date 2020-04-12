@@ -1708,8 +1708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f64bf0af79c5674ca4109598a8b26bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProbabilidadeLaunch: 0
-  CoolDownLaunch: 0
   lookRadius: 30
   carinhoHearts:
   - {fileID: 690701698}
@@ -1752,6 +1750,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 16
   windup: 0.75
+  probabilidadeLaunch: 0.133
+  cooldownLaunch: 10
 --- !u!114 &1857268697
 MonoBehaviour:
   m_ObjectHideFlags: 0
