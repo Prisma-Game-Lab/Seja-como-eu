@@ -6,11 +6,17 @@ using UnityEngine.AI;
 public class HeartLaunch : MonoBehaviour
 {
 	private Vector3 target;
+
 	private bool launching = false;
+	private bool rising = false;
+
 	private Transform _t;
 	private NavMeshAgent agent;
 
-	public float speed;
+	public float risingDuration;
+	public float height;
+
+	public float launchingSpeed;
 
 	public float windup;
 
@@ -18,7 +24,7 @@ public class HeartLaunch : MonoBehaviour
 	public float probabilidadeLaunch;
 
     public float cooldownLaunch;
-    public Transform PlayerPosition;
+    public Transform playerPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -30,32 +36,49 @@ public class HeartLaunch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(launching)
-        {
-	        float step = speed * Time.deltaTime;
-	        _t.position = Vector3.MoveTowards(_t.position, target, step);
-	        if(_t.position == target)
-	        {
-	        	launching = false;
-	        	agent.enabled = true;
-	        }
-        }
+
     }
 
     public void Launch()
     {
-    	target = PlayerPosition.position;
     	StartCoroutine(HLaunch());
     	Debug.Log("Launch!");
     }
 
 	private IEnumerator HLaunch()
     {
-    	agent.enabled = false;
-        /*ALVO DEFINIDO / TEMPO PARA DESVIAR*/
-        yield return new WaitForSeconds(windup);
+
+    	Vector3 startPos = _t.position;
+    	float time = 0f;
+
+		agent.enabled = false; //desativa agente do carinho
+
+		target = _t.position + height*_t.up;
+
+    	rising = true;
+    	while(time < 1)//move para o alto
+    	{
+    		time += Time.deltaTime / risingDuration;
+    		_t.position = Vector3.Lerp(startPos,target,time);
+
+    		yield return new WaitForEndOfFrame ();
+    	} 
+    	rising=false;
+
+
+    	target = playerPosition.position; //alvo definido
+        
+        yield return new WaitForSeconds(windup); //tempo pra desviar
 
         launching = true;
+        while(_t.position != target)//vai pro jogador
+        {
+        	_t.position = Vector3.MoveTowards(_t.position, target, launchingSpeed * Time.deltaTime);
+        	yield return new WaitForEndOfFrame ();
+        }
+        launching = false;
+
+        agent.enabled = true; //reativa agente do carinho
     }
 
     public float getProb()
