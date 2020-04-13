@@ -10,7 +10,6 @@ public class CarinhoScript : MonoBehaviour
     public Transform[] carinhoHearts;
     public Transform PlayerPosition;
 
-    private bool launching;
     private int health = 3;
     private Skills Launch;
     private Skills Orbit;
@@ -57,13 +56,10 @@ public class CarinhoScript : MonoBehaviour
         if(agent.enabled){
             if(distance <= lookRadius){
                 agent.SetDestination(PlayerPosition.position);
-            }
-
-            if(distance <= agent.stoppingDistance){
-                FaceTarget();
-
-            }
+            }  
         }
+
+        FaceTarget();
 
         hoScript.OrbitAround();
 
