@@ -34,7 +34,7 @@ public class CarinhoScript : MonoBehaviour
         skills = new List<Skills>();
 
         hoScript = GetComponent<HeartOrbit>();
-        Orbit = new Skills(hoScript.getProb(), hoScript.getCD(), false, hoScript.OrbitAround);
+        Orbit = new Skills(hoScript.getProb(), hoScript.getCD(), true, hoScript.Expansion);
         skills.Add(Orbit);
 
         hlScript = GetComponent<HeartLaunch>();
@@ -58,6 +58,8 @@ public class CarinhoScript : MonoBehaviour
 
             }
         }
+
+        hoScript.OrbitAround();
 
         if(SkillIsReady) {
             SkillCD.ChooseSkill(skills);
@@ -86,7 +88,8 @@ public class CarinhoScript : MonoBehaviour
         if(health == fullhealth - 1) {
             //Launch.SwitchReady();
         }
-        hoScript.orbitSpeed += 100.0f; 
+        hoScript.orbitSpeed += 100.0f;
+        hoScript.maxRadius += 5.0f;
 
         if(health <= 0)
         {

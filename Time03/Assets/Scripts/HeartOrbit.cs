@@ -10,8 +10,9 @@ public class HeartOrbit : MonoBehaviour
     public float ProbabilidadeOrbit;
     public float CooldownOrbit;
 
-    private float radius;
-    public float maxRadius = 10.0f;
+    private float radius = 2.0f;
+    private float expansionTime = 5.0f;
+    public float maxRadius = 5.0f;
     public float minRadius = 2.0f;
     public float expansionSpeed;
     public Transform center;
@@ -38,14 +39,18 @@ public class HeartOrbit : MonoBehaviour
             carinhoHearts[i].RotateAround(gameObject.transform.position, Vector3.up, orbitSpeed * Time.deltaTime);
             newOrbit = (carinhoHearts[i].position - center.position).normalized * radius + center.position;
             carinhoHearts[i].position = Vector3.MoveTowards(carinhoHearts[i].position, newOrbit, Time.deltaTime * expansionSpeed);
-            if(canExpand)
-            {
-                StartCoroutine(Expand());
-            }
-            else
-            {
-                StartCoroutine(Retract());
-            }           
+        }
+    }
+
+    public void Expansion()
+    {
+        if (canExpand)
+        {
+            StartCoroutine(Expand());
+        }
+        else
+        {
+            StartCoroutine(Retract());
         }
     }
 
@@ -53,7 +58,7 @@ public class HeartOrbit : MonoBehaviour
     {
         radius = maxRadius;     
 
-        yield return new WaitForSeconds(CooldownOrbit);
+        yield return new WaitForSeconds(expansionTime);
 
         canExpand = false;
     }
@@ -62,7 +67,7 @@ public class HeartOrbit : MonoBehaviour
     {
         radius = minRadius;
 
-        yield return new WaitForSeconds(CooldownOrbit);
+        yield return new WaitForSeconds(expansionTime);
 
         canExpand = true;
     }

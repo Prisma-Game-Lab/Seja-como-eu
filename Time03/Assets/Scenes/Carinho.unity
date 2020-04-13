@@ -1770,7 +1770,7 @@ MonoBehaviour:
   orbitSpeed: 100
   ProbabilidadeOrbit: 40
   CooldownOrbit: 5
-  maxRadius: 10
+  maxRadius: 5
   minRadius: 2
   expansionSpeed: 2.5
   center: {fileID: 1857268692}
