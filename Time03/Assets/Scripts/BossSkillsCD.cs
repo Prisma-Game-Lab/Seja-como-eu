@@ -20,7 +20,7 @@ public class BossSkillsCD : MonoBehaviour
         }
     }
 
-    IEnumerator ActiveCoolDown(Skills s) {
+    private IEnumerator ActiveCoolDown(Skills s) {
         s.SwitchReady();
         yield return new WaitForSeconds(s.GetCoolDown());
         s.SwitchReady();

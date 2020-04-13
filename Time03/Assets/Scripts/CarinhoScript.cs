@@ -14,9 +14,11 @@ public class CarinhoScript : MonoBehaviour
     private int health = 3;
     private Skills Launch;
     private Skills Orbit;
+    private Skills Clap;
     private List<Skills> skills;  
     private HeartLaunch hlScript;
     private HeartOrbit hoScript;
+    private HeartClap hcScript;
     private BossSkillsCD SkillCD; 
     public float Cooldown;
     private bool SkillIsReady = true;
@@ -38,8 +40,12 @@ public class CarinhoScript : MonoBehaviour
         skills.Add(Orbit);
 
         hlScript = GetComponent<HeartLaunch>();
-        Launch = new Skills(hlScript.getProb(), hlScript.getCD(), true, hlScript.Launch);
+        Launch = new Skills(hlScript.getProb(), hlScript.getCD(), false, hlScript.Launch);
         skills.Add(Launch);
+
+        hcScript = GetComponent<HeartClap>();
+        Clap = new Skills(hcScript.getProb(), hcScript.getCD(), false, hcScript.Clap);
+        skills.Add(Clap);
 
         SkillCD = GetComponent<BossSkillsCD>();
     }
@@ -86,7 +92,10 @@ public class CarinhoScript : MonoBehaviour
         health -= 1;
         carinhoHearts[health].gameObject.SetActive(false);
         if(health == fullhealth - 1) {
-            //Launch.SwitchReady();
+            Launch.SwitchReady();
+        }
+        if(health == fullhealth - 2) {
+            Clap.SwitchReady();
         }
         hoScript.orbitSpeed += 100.0f;
         hoScript.maxRadius += 5.0f;
