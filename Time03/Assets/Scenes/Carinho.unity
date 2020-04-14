@@ -1716,7 +1716,7 @@ MonoBehaviour:
   - {fileID: 1614429981}
   - {fileID: 1520056038}
   PlayerPosition: {fileID: 1161093206}
-  Cooldown: 10
+  Cooldown: 3
 --- !u!195 &1857268695
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1751,11 +1751,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97652cbb311343a49878c3ccbbee473c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 16
-  windup: 0.75
+  risingDuration: 2
+  height: 5
+  launchingSpeed: 5
+  windup: 0.25
   probabilidadeLaunch: 30
-  cooldownLaunch: 10
-  PlayerPosition: {fileID: 1161093206}
+  cooldownLaunch: 5
+  playerPosition: {fileID: 1161093206}
 --- !u!114 &1857268697
 MonoBehaviour:
   m_ObjectHideFlags: 0

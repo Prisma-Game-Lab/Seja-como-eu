@@ -20,7 +20,7 @@ public class CarinhoScript : MonoBehaviour
     private HeartClap hcScript;
     private BossSkillsCD SkillCD; 
     public float Cooldown;
-    private bool SkillIsReady = true;
+    private bool SkillIsReady = false;
 
     private Rigidbody _rb;
     private NavMeshAgent agent;
@@ -35,11 +35,11 @@ public class CarinhoScript : MonoBehaviour
         skills = new List<Skills>();
 
         hoScript = GetComponent<HeartOrbit>();
-        Orbit = new Skills(hoScript.getProb(), hoScript.getCD(), true, hoScript.Expansion);
+        Orbit = new Skills(hoScript.getProb(), hoScript.getCD(), false, hoScript.Expansion);
         skills.Add(Orbit);
 
         hlScript = GetComponent<HeartLaunch>();
-        Launch = new Skills(hlScript.getProb(), hlScript.getCD(), false, hlScript.Launch);
+        Launch = new Skills(hlScript.getProb(), hlScript.getCD(), true, hlScript.Launch);
         skills.Add(Launch);
 
         hcScript = GetComponent<HeartClap>();
@@ -47,6 +47,8 @@ public class CarinhoScript : MonoBehaviour
         skills.Add(Clap);
 
         SkillCD = GetComponent<BossSkillsCD>();
+
+        StartCoroutine(ResetCooldown());
     }
 
     void Update() 
@@ -66,7 +68,6 @@ public class CarinhoScript : MonoBehaviour
         if(SkillIsReady) {
             SkillCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
-            Debug.Log("entrei");
         }
     }
 
