@@ -24,7 +24,6 @@ public class SadRain : MonoBehaviour
     }
 
     public void Rain() {
-        Debug.Log("Executei");
         float xPosition;
         float zPosition;
         for (int i = 0; i < NumeroGotas; i++) {
