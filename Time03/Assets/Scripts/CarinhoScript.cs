@@ -35,11 +35,11 @@ public class CarinhoScript : MonoBehaviour
         skills = new List<Skills>();
 
         hoScript = GetComponent<HeartOrbit>();
-        Orbit = new Skills(hoScript.getProb(), hoScript.getCD(), false, hoScript.Expansion);
+        Orbit = new Skills(hoScript.getProb(), hoScript.getCD(), true, hoScript.Expansion);
         skills.Add(Orbit);
 
         hlScript = GetComponent<HeartLaunch>();
-        Launch = new Skills(hlScript.getProb(), hlScript.getCD(), true, hlScript.Launch);
+        Launch = new Skills(hlScript.getProb(), hlScript.getCD(), false, hlScript.Launch);
         skills.Add(Launch);
 
         hcScript = GetComponent<HeartClap>();
