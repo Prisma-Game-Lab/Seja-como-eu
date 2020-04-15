@@ -38,6 +38,19 @@ public class EnemyCollision : MonoBehaviour
                 deathScreen.SetActive(true);
             }
         }
+        if(collision.collider.CompareTag("rock"))
+        {
+            if(gameObject.GetComponent<MovimentPlayer>().dashing)
+            {
+                rb.isKinematic = false;
+                Vector3 dir = collision.transform.position - transform.position;
+                rb.AddForce(dir.normalized * knockbackStrenght, ForceMode.Impulse);
+            }
+            else
+            {
+                rb.isKinematic = true;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
