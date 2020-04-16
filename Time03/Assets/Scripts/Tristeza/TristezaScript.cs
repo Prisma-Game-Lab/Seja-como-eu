@@ -15,9 +15,9 @@ public class TristezaScript : MonoBehaviour
     public float Cooldown;
     private bool SkillIsReady = false;
     private NavMeshAgent Agent;
-    private bool CanGetNewDirection = true;
-
+    private NavMeshPath Path;
     private Vector3 Direction;
+    private float timer;
 
     public float RunAwayDistance;
 
@@ -25,6 +25,8 @@ public class TristezaScript : MonoBehaviour
     {
 
         Agent = GetComponent<NavMeshAgent>();
+
+        Path = new NavMeshPath();
 
         skills = new List<Skills>();
 
@@ -59,6 +61,7 @@ public class TristezaScript : MonoBehaviour
     }
 
     private void FleeFromPlayer() {
+
         float distance = Vector3.Distance(transform.position,Player.transform.position);
 
         if(distance < RunAwayDistance) {
@@ -70,26 +73,21 @@ public class TristezaScript : MonoBehaviour
         }
         else {
             
-            if(CanGetNewDirection) {
+            if(!Agent.hasPath || timer >= 10) {
+                timer = 0;
                 Direction = ChooseDirection();
-                StartCoroutine(ChangeDirection());
+                NavMesh.CalculatePath(transform.position,Direction,NavMesh.AllAreas,Path);
+                Agent.path = Path;
             }
-
-            Agent.SetDestination(Direction);
         }
-    }
-
-    private IEnumerator ChangeDirection() {
-        CanGetNewDirection = false;
-        yield return new WaitForSeconds(8.0f);
-        CanGetNewDirection = true;
+        
+        timer += Time.deltaTime;
     }
 
     private Vector3 ChooseDirection() {
         float xPosition = Random.Range(-19,19);
         float zPosition = Random.Range(-19,19);
         Vector3 newPos = new Vector3(xPosition,0,zPosition);
-        Debug.Log(newPos);
         return newPos;
     }
 
