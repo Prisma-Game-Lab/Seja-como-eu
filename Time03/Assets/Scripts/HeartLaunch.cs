@@ -6,10 +6,6 @@ using UnityEngine.AI;
 public class HeartLaunch : MonoBehaviour
 {
 	private Vector3 target;
-
-	private bool launching = false;
-	private bool rising = false;
-
 	private Transform _t;
 	private NavMeshAgent agent;
 
@@ -55,7 +51,7 @@ public class HeartLaunch : MonoBehaviour
 
 		target = _t.position + height*_t.up;
 
-    	rising = true;
+    	// Rising
     	while(time < 1)//move para o alto
     	{
     		time += Time.deltaTime / risingDuration;
@@ -63,20 +59,20 @@ public class HeartLaunch : MonoBehaviour
 
     		yield return new WaitForEndOfFrame ();
     	} 
-    	rising=false;
+    	// End Rising
 
 
     	target = playerPosition.position; //alvo definido
         
         yield return new WaitForSeconds(windup); //tempo pra desviar
 
-        launching = true;
+        // Launcing
         while(_t.position != target)//vai pro jogador
         {
         	_t.position = Vector3.MoveTowards(_t.position, target, launchingSpeed * Time.deltaTime);
         	yield return new WaitForEndOfFrame ();
         }
-        launching = false;
+        // End Launcing
 
         agent.enabled = true; //reativa agente do carinho
     }
