@@ -50,7 +50,7 @@ public class EnemyCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("orb") && !gameObject.GetComponent<MovimentPlayer>().dashing)
+        if(other.gameObject.CompareTag("orb"))
         {
             deathScreen.SetActive(true);
         }
