@@ -1922,8 +1922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   risingDuration: 2
-  height: 5
-  launchingSpeed: 5
+  height: 8
+  launchingSpeed: 30
   windup: 0.25
   probabilidadeLaunch: 30
   cooldownLaunch: 5
@@ -2087,6 +2087,11 @@ PrefabInstance:
       propertyPath: deathScreen
       value: 
       objectReference: {fileID: 971127820}
+    - target: {fileID: 6603433125135224185, guid: 87af9f27abf3b77418ee4d70afc01926,
+        type: 3}
+      propertyPath: RotationSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87af9f27abf3b77418ee4d70afc01926, type: 3}
 --- !u!1 &724779494848353160 stripped
