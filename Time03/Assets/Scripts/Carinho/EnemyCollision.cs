@@ -42,13 +42,8 @@ public class EnemyCollision : MonoBehaviour
         {
             if(gameObject.GetComponent<MovimentPlayer>().dashing)
             {
-                rb.isKinematic = false;
                 Vector3 dir = collision.transform.position - transform.position;
                 rb.AddForce(dir.normalized * knockbackStrenght, ForceMode.Impulse);
-            }
-            else
-            {
-                rb.isKinematic = true;
             }
         }
     }
