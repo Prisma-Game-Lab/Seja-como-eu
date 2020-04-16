@@ -10,6 +10,7 @@ public class PotalExit : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(sceneName);
+        if(other.gameObject.CompareTag("Player"))
+            SceneManager.LoadScene(sceneName);
     }
 }

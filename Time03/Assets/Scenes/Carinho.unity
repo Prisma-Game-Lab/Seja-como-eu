@@ -234,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317531694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.558232, y: -0.054211617, z: -10.267174}
+  m_LocalPosition: {x: 2.16, y: -0.054211617, z: -6.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1229754139}
@@ -1222,7 +1222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406126374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.5117674, y: -0.054211617, z: 11.412827}
+  m_LocalPosition: {x: 2.37, y: -0.054211617, z: 7.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1229754139}
@@ -1519,7 +1519,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686796050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.218233, y: -0.054211617, z: 11.542827}
+  m_LocalPosition: {x: 2.29, y: -0.054211617, z: 11.542827}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1229754139}
@@ -1642,7 +1642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768739881}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.911767, y: -0.054211617, z: -11.367173}
+  m_LocalPosition: {x: 1.95, y: -0.054211617, z: -9.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1229754139}
@@ -1992,6 +1992,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 724779493857211349, guid: 87af9f27abf3b77418ee4d70afc01926,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 724779493857211358, guid: 87af9f27abf3b77418ee4d70afc01926,
         type: 3}
       propertyPath: deathScreen
@@ -2014,11 +2019,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 724779494848353160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6272fb60de696641bef7c9a65154864, type: 3}
+  m_Script: {fileID: 11500000, guid: 559a1232f69757b478585ef99ba66950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackStrenght: 15
-  knockbackHeight: 0.3
+  knockbackStrenght: 20
+  knockbackHeight: 1
   deathScreen: {fileID: 971127820}
 --- !u!1001 &4160702874730922000
 PrefabInstance:
