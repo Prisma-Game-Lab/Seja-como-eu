@@ -86,20 +86,22 @@ public class CarinhoScript : MonoBehaviour
 
     void Damage()
     {
-        health -= 1;
-        carinhoHearts[health].gameObject.SetActive(false);
-        if(health == fullhealth - 1) {
-            Launch.SwitchReady();
-        }
-        if(health == fullhealth - 2) {
-            Clap.SwitchReady();
-        }
-        hoScript.orbitSpeed += 100.0f;
-        hoScript.maxRadius += 5.0f;
+        if(agent.enabled){
+            health -= 1;
+            carinhoHearts[health].gameObject.SetActive(false);
+            if(health == fullhealth - 1) {
+                Launch.SwitchReady();
+            }
+            if(health == fullhealth - 2) {
+                Clap.SwitchReady();
+            }
+            hoScript.orbitSpeed += 100.0f;
+            hoScript.maxRadius += 5.0f;
 
-        if(health <= 0)
-        {
-            Destroy(gameObject);
+            if(health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -116,4 +118,5 @@ public class CarinhoScript : MonoBehaviour
         yield return new WaitForSeconds(Cooldown);
         SkillIsReady = true;
     }
+
 }
