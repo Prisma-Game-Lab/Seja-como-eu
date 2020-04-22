@@ -8,7 +8,6 @@ public class TristezaScript : MonoBehaviour
     public GameObject Player;
     private SadRain srScript;
     private SadPistol spScript;
-    private Skills Rain;
     private Skills Pistol;
     private List<Skills> skills;
     private BossSkillsCD SkillCD;
@@ -31,11 +30,9 @@ public class TristezaScript : MonoBehaviour
         skills = new List<Skills>();
 
         srScript = GetComponent<SadRain>();
-        Rain = new Skills(srScript.getProb(),srScript.getCD(),false,srScript.Rain);
-        skills.Add(Rain);
 
         spScript = GetComponent<SadPistol>();
-        Pistol = new Skills(spScript.getProb(),spScript.getCD(),false,spScript.Pistol);
+        Pistol = new Skills(spScript.getProb(),spScript.getCD(),true,spScript.Pistol);
         skills.Add(Pistol);
 
         SkillCD = GetComponent<BossSkillsCD>();
@@ -51,6 +48,10 @@ public class TristezaScript : MonoBehaviour
         if(SkillIsReady) {
             SkillCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
+        }
+
+        if(srScript.RainReady()) {
+            srScript.Rain();
         }
     }
 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BossSkillsCD : MonoBehaviour
 {
-
     // Retorna a posicao da Skill que vai ser escolhida
     public void ChooseSkill(List<Skills> skills) {
         int ReturnCount = 0;

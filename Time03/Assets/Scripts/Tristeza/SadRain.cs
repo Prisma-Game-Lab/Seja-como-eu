@@ -6,15 +6,17 @@ public class SadRain : MonoBehaviour
 {
     public int NumeroGotas;
 
-    public float Probabilidade;
+    public float RainInterval;
 
     public float Cooldown;
 
     public GameObject PrefabGota;
 
+    private bool isReady = false;
+
     void Start()
     {
-        
+        StartCoroutine(StartRain());
     }
 
     
@@ -24,22 +26,29 @@ public class SadRain : MonoBehaviour
     }
 
     public void Rain() {
+        isReady = false;
+        StartCoroutine(SlowRain());
+    }
+
+    private IEnumerator SlowRain() {
         float xPosition;
         float zPosition;
         for (int i = 0; i < NumeroGotas; i++) {
             xPosition = Random.Range(-19,19);
             zPosition = Random.Range(-19,19);
-            Instantiate(PrefabGota, new Vector3(xPosition, 15, zPosition), Quaternion.identity);                                                                
+            Instantiate(PrefabGota, new Vector3(xPosition, 15, zPosition), Quaternion.identity);
+            yield return new WaitForSeconds(RainInterval);                                                                
         }
+        yield return new WaitForSeconds(Cooldown);
+        isReady = true;
     }
 
-    public float getProb()
-    {
-    	return Probabilidade;
+    private IEnumerator StartRain() {
+        yield return new WaitForSeconds(Cooldown);
+        isReady = true;
     }
 
-    public float getCD()
-    {
-    	return Cooldown;
+    public bool RainReady() {
+        return isReady;
     }
 }
