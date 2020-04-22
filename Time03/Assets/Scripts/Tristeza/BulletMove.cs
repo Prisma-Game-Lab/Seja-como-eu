@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletMove : MonoBehaviour
 {
     public float speed;
+    public float bulletDuration;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class BulletMove : MonoBehaviour
     }
 
     private IEnumerator Despawn() {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(bulletDuration);
         Destroy(gameObject);
     }
 }

@@ -12,22 +12,33 @@ public class SadPistol : MonoBehaviour
 
     public GameObject PrefabBulletGota;
     public GameObject Reference;
-    
+    public GameObject tristeza;
     void Start()
     {
-        
+
     }
 
-    
+
     void Update()
     {
-        
+
     }
 
-    public void Pistol() {
+    public void Pistol()
+    {
+        GameObject initialShot = Instantiate(PrefabBulletGota,tristeza.transform.position,tristeza.transform.rotation);
+        initialShot.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        StartCoroutine(PistolSpread(initialShot));
+    }
+
+    private IEnumerator PistolSpread(GameObject splitPoint)
+    {
+        yield return new WaitForSeconds(splitPoint.GetComponent<BulletMove>().bulletDuration);
+
         int Arc = 360/NumeroBullets;
-        for(int i = 0; i < 360; i += Arc) {
-            Instantiate(PrefabBulletGota,Reference.transform.position,Quaternion.AngleAxis(i,Vector3.up));
+        for(int i = 0; i < 360; i += Arc)
+        {
+            Instantiate(PrefabBulletGota,splitPoint.transform.position,Quaternion.AngleAxis(i,Vector3.up));
         }
     }
 
