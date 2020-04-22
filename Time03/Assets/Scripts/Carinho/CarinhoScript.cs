@@ -26,6 +26,8 @@ public class CarinhoScript : MonoBehaviour
     private NavMeshAgent agent;
     private int fullhealth;
 
+    private bool invulneravel = false;
+
     void Start()
     {
         fullhealth = health;
@@ -86,7 +88,7 @@ public class CarinhoScript : MonoBehaviour
 
     void Damage()
     {
-        if(agent.enabled){
+        if(agent.enabled && !invulneravel){
             health -= 1;
             carinhoHearts[health].gameObject.SetActive(false);
             if(health == fullhealth - 1) {
@@ -102,6 +104,7 @@ public class CarinhoScript : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            StartCoroutine(Invunerability());
         }
     }
 
@@ -113,10 +116,15 @@ public class CarinhoScript : MonoBehaviour
         }
     }
 
-    IEnumerator ResetCooldown() {
+    private IEnumerator ResetCooldown() {
         SkillIsReady = false;
         yield return new WaitForSeconds(Cooldown);
         SkillIsReady = true;
+    }
+
+    private IEnumerator Invunerability() {
+        yield return new WaitForSeconds(2);
+        invulneravel = true;
     }
 
 }
