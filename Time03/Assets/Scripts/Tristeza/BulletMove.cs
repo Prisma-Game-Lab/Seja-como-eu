@@ -9,11 +9,17 @@ public class BulletMove : MonoBehaviour
     void Start()
     {
         GetComponent<Rigidbody>().AddForce(transform.forward * speed);
+        StartCoroutine(Despawn());
     }
 
     
     void Update()
     {
         
+    }
+
+    private IEnumerator Despawn() {
+        yield return new WaitForSeconds(5);
+        Destroy(gameObject);
     }
 }
