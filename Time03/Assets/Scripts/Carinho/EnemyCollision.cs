@@ -36,6 +36,7 @@ public class EnemyCollision : MonoBehaviour
             else
             {
                 deathScreen.SetActive(true);
+                GeneralCounts.DeathCount++;
             }
         }
         if(collision.collider.CompareTag("rock"))
@@ -53,6 +54,7 @@ public class EnemyCollision : MonoBehaviour
         if(other.gameObject.CompareTag("orb"))
         {
             deathScreen.SetActive(true);
+            GeneralCounts.DeathCount++;
         }
     }
 }

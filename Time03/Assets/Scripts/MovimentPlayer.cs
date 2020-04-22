@@ -55,6 +55,7 @@ public class MovimentPlayer : MonoBehaviour
     {
         if (Input.GetAxis("Dash") == 1)
         {
+            GeneralCounts.DashCount++;
             _rb.AddForce(dir * DashSpeed, ForceMode.Impulse);
             dashing = true;
             StartCoroutine(StopTheDash());
