@@ -42,10 +42,10 @@ public class HeartClap : MonoBehaviour
 
     	int i = 0;
 
-    	hitColliders = Physics.OverlapBox(_t.forward * hugRadius/2f, new Vector3(hugRadius/2f,hugRadius/2f,hugRadius/2f), _t.rotation);
+    	hitColliders = Physics.OverlapBox(_t.position + _t.forward * hugRadius/2f + _t.up * hugRadius/2, new Vector3(hugRadius,hugRadius/2f,hugRadius/2f), _t.rotation);
     	while( i < hitColliders.Length)
     	{
-    		if(ballHitColliders[i].tag == "Player")
+    		if(hitColliders[i].tag == "Player")
     		{
     			inBox = true;
     			break;
@@ -58,7 +58,7 @@ public class HeartClap : MonoBehaviour
 	    	hitColliders = Physics.OverlapSphere(_t.position, hugRadius);
 	        while (i < hitColliders.Length)
 	        {
-	        	if(ballHitColliders[i].tag == "Player")
+	        	if(hitColliders[i].tag == "Player")
 	        	{
 	        		
 	            	eCol.Hit();

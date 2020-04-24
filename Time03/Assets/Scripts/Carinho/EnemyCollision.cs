@@ -35,7 +35,7 @@ public class EnemyCollision : MonoBehaviour
             }
             else
             {
-                deathScreen.SetActive(true);
+                //deathScreen.SetActive(true);
             }
         }
         if(collision.collider.CompareTag("rock"))
@@ -52,7 +52,7 @@ public class EnemyCollision : MonoBehaviour
     {
         if(other.gameObject.CompareTag("orb"))
         {
-            deathScreen.SetActive(true);
+            //deathScreen.SetActive(true);
         }
     }
 
@@ -63,7 +63,7 @@ public class EnemyCollision : MonoBehaviour
         }
         else{
             Debug.Log("Hit!");
-            deathScreen.SetActive(true);
+            //deathScreen.SetActive(true);
         }
     }
 }

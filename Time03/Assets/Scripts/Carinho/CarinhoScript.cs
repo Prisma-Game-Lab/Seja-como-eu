@@ -55,7 +55,7 @@ public class CarinhoScript : MonoBehaviour
     {
         float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
 
-        if(agent.enabled){
+        if(agent != null && agent.enabled){
             if(distance <= lookRadius){
                 agent.SetDestination(PlayerPosition.position);
             }  
