@@ -9,6 +9,7 @@ public class CarinhoScript : MonoBehaviour
     public float lookRadius = 10f; // se o jogador entrar nesse raio o carinho vai começar a perseguir ele
     public Transform[] carinhoHearts;
     public Transform PlayerPosition;
+    public GameObject portalExit;
 
     private int health = 3;
     private Skills Launch;
@@ -103,6 +104,7 @@ public class CarinhoScript : MonoBehaviour
             if(health <= 0)
             {
                 Destroy(gameObject);
+                portalExit.gameObject.SetActive(true);
             }
             StartCoroutine(Invunerability());
         }

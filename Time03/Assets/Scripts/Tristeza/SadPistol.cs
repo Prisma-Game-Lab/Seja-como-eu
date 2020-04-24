@@ -11,8 +11,7 @@ public class SadPistol : MonoBehaviour
     public float Cooldown;
 
     public GameObject PrefabBulletGota;
-    public GameObject Reference;
-    public GameObject tristeza;
+    public GameObject Player;
     void Start()
     {
 
@@ -26,11 +25,11 @@ public class SadPistol : MonoBehaviour
 
     public void Pistol()
     {
-        GameObject initialShot = Instantiate(PrefabBulletGota,tristeza.transform.position,tristeza.transform.rotation);
+        gameObject.transform.LookAt(Player.transform);
+        GameObject initialShot = Instantiate(PrefabBulletGota,gameObject.transform.position,gameObject.transform.rotation);
         initialShot.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         StartCoroutine(PistolSpread(initialShot));
     }
-
     private IEnumerator PistolSpread(GameObject splitPoint)
     {
         yield return new WaitForSeconds(splitPoint.GetComponent<BulletMove>().bulletDuration);
