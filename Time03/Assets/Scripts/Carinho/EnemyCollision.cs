@@ -26,9 +26,17 @@ public class EnemyCollision : MonoBehaviour
         Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
 
         if (rb != null && collision.collider.CompareTag("enemy"))
-        {  
-            deathScreen.SetActive(true);
-            GeneralCounts.DeathCount++;
+        {
+            if (gameObject.GetComponent<MovimentPlayer>().dashing)
+            {
+                Vector3 dir = collision.transform.position - transform.position;
+                dir.y = knockbackHeight;
+                rb.AddForce(dir.normalized * knockbackStrenght, ForceMode.Impulse);
+            }
+            else
+            {
+                deathScreen.SetActive(true);
+            }
         }
         if(collision.collider.CompareTag("rock"))
         {
@@ -46,6 +54,18 @@ public class EnemyCollision : MonoBehaviour
         {
             deathScreen.SetActive(true);
             GeneralCounts.DeathCount++;
+        }
+    }
+
+    public void Hit()
+    {
+        if(gameObject.GetComponent<MovimentPlayer>().dashing){
+            return;
+        }
+        else{
+            Debug.Log("Hit!");
+            deathScreen.SetActive(true);
+
         }
     }
 }
