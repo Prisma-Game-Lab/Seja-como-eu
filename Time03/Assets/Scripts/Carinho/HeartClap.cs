@@ -34,20 +34,39 @@ public class HeartClap : MonoBehaviour
     private IEnumerator HHug(){
 
     	Collider[] hitColliders;
+    	bool inBox = false;
+    	
     	agent.enabled = false; //desativa agente do carinho
 
     	yield return new WaitForSeconds(windup); //tempo esticando os bracos
 
-    	hitColliders = Physics.OverlapSphere(_t.position, hugRadius);
-        int i = 0;
-        while (i < hitColliders.Length)
-        {
-        	if(hitColliders[i].tag == "Player")
-        	{
-            	eCol.Hit();
-            }
-            i+=1;
-        }
+    	int i = 0;
+
+    	hitColliders = Physics.OverlapBox(_t.forward * hugRadius/2f, new Vector3(hugRadius/2f,hugRadius/2f,hugRadius/2f), _t.rotation);
+    	while( i < hitColliders.Length)
+    	{
+    		if(ballHitColliders[i].tag == "Player")
+    		{
+    			inBox = true;
+    			break;
+    		}
+    		i+=1;
+    	}
+
+    	if(inBox)
+    	{
+	    	hitColliders = Physics.OverlapSphere(_t.position, hugRadius);
+	        while (i < hitColliders.Length)
+	        {
+	        	if(ballHitColliders[i].tag == "Player")
+	        	{
+	        		
+	            	eCol.Hit();
+	            	break;
+	            }
+	            i+=1;
+	        }
+	    }
 
         agent.enabled = true; //reativa agente do carinho
 
