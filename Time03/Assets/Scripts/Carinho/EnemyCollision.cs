@@ -27,16 +27,8 @@ public class EnemyCollision : MonoBehaviour
 
         if (rb != null && collision.collider.CompareTag("enemy"))
         {
-            if (gameObject.GetComponent<MovimentPlayer>().dashing)
-            {
-                Vector3 dir = collision.transform.position - transform.position;
-                dir.y = knockbackHeight;
-                rb.AddForce(dir.normalized * knockbackStrenght, ForceMode.Impulse);
-            }
-            else
-            {
-                deathScreen.SetActive(true);
-            }
+            deathScreen.SetActive(true);
+            GeneralCounts.DeathCount++;
         }
         if(collision.collider.CompareTag("rock"))
         {
