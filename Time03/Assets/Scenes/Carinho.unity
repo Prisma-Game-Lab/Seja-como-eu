@@ -210,7 +210,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 96
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &177332458
 CapsuleCollider:
@@ -480,7 +480,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 96
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &456359100
 CapsuleCollider:
@@ -1473,7 +1473,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 96
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!208 &1768739887
 NavMeshObstacle:
@@ -1668,7 +1668,7 @@ MonoBehaviour:
   launchingSpeed: 30
   windup: 0.25
   probabilidadeLaunch: 30
-  cooldownLaunch: 5
+  cooldownLaunch: 10
   playerPosition: {fileID: 1161093206}
 --- !u!114 &1857268697
 MonoBehaviour:
@@ -1991,7 +1991,7 @@ PrefabInstance:
     - target: {fileID: 4160702874246658407, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
         type: 3}

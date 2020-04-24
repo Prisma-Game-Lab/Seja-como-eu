@@ -123,8 +123,9 @@ public class CarinhoScript : MonoBehaviour
     }
 
     private IEnumerator Invunerability() {
-        yield return new WaitForSeconds(2);
         invulneravel = true;
+        yield return new WaitForSeconds(2);
+        invulneravel = false;
     }
 
 }
