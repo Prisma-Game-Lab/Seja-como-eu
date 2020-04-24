@@ -1976,8 +1976,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab1f0dcd531ed44b87dc173af23c216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Probabilidade: 50
+  Probabilidade: 90
   CoolDown: 10
+  windup: 2
+  hugRadius: 5
+  player: {fileID: 724779494848353160}
 --- !u!1 &1885175052
 GameObject:
   m_ObjectHideFlags: 0

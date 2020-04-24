@@ -55,4 +55,15 @@ public class EnemyCollision : MonoBehaviour
             deathScreen.SetActive(true);
         }
     }
+
+    public void Hit()
+    {
+        if(gameObject.GetComponent<MovimentPlayer>().dashing){
+            return;
+        }
+        else{
+            Debug.Log("Hit!");
+            deathScreen.SetActive(true);
+        }
+    }
 }
