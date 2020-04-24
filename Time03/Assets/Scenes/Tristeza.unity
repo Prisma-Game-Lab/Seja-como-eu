@@ -871,9 +871,7 @@ MonoBehaviour:
   Cooldown: 5
   PrefabBulletGota: {fileID: 4035445688948290335, guid: 532c3a64bdc73ca4d9bba67b29bd851e,
     type: 3}
-  Reference: {fileID: 1155202080}
-  tristeza: {fileID: 1138785812}
-  bulletDuration: 3
+  Player: {fileID: 1548817916}
 --- !u!195 &1138785822
 NavMeshAgent:
   m_ObjectHideFlags: 0
