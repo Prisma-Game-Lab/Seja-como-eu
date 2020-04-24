@@ -872,6 +872,7 @@ MonoBehaviour:
   PrefabBulletGota: {fileID: 4035445688948290335, guid: 532c3a64bdc73ca4d9bba67b29bd851e,
     type: 3}
   Player: {fileID: 1548817916}
+  telegraph: 0.5
 --- !u!195 &1138785822
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1089,6 +1090,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603433125135224185, guid: 87af9f27abf3b77418ee4d70afc01926,
+        type: 3}
+      propertyPath: DashSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87af9f27abf3b77418ee4d70afc01926, type: 3}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SadPistol : MonoBehaviour
 {
@@ -12,9 +13,11 @@ public class SadPistol : MonoBehaviour
 
     public GameObject PrefabBulletGota;
     public GameObject Player;
+    private NavMeshAgent agent;
+    public float telegraph;
     void Start()
     {
-
+        agent = gameObject.GetComponent<NavMeshAgent>();
     }
 
 
@@ -25,10 +28,22 @@ public class SadPistol : MonoBehaviour
 
     public void Pistol()
     {
-        gameObject.transform.LookAt(Player.transform);
-        GameObject initialShot = Instantiate(PrefabBulletGota,gameObject.transform.position,gameObject.transform.rotation);
+        StartCoroutine(Shoot());
+    }
+
+    private IEnumerator Shoot()
+    {
+        agent.speed = 0;
+        agent.angularSpeed = 0;
+        gameObject.transform.LookAt(Player.transform.position);
+
+        yield return new WaitForSeconds(telegraph);
+
+        GameObject initialShot = Instantiate(PrefabBulletGota, gameObject.transform.position, gameObject.transform.rotation);
         initialShot.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         StartCoroutine(PistolSpread(initialShot));
+        agent.speed = 3.5f;
+        agent.angularSpeed = 120;
     }
     private IEnumerator PistolSpread(GameObject splitPoint)
     {
