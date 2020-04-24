@@ -124,6 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovimentSpeed: 6
-  RotationSpeed: 100
+  RotationSpeed: 1000
   DashSpeed: 3
   dashing: 0
