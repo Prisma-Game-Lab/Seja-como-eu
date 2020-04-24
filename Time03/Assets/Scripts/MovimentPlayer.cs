@@ -33,7 +33,7 @@ public class MovimentPlayer : MonoBehaviour
 
         transform.rotation = Rotation;
 
-        transform.position += Direction() * Time.deltaTime;
+        transform.position += Vector3.Normalize(Direction()) * Time.deltaTime;
     }
 
     private void Update()
