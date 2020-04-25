@@ -47,6 +47,7 @@ public class SadRain : MonoBehaviour
             Instantiate(PrefabBulletGota, gota.transform.position, Quaternion.AngleAxis(i, Vector3.up));
         }
     }
+
     public float getProb()
     {
     	return Probabilidade;
