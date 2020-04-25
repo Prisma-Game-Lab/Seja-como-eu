@@ -16,26 +16,16 @@ public class HeartOrbit : MonoBehaviour
     public float minRadius = 2.0f;
     public float expansionSpeed;
     public Transform center;
+    public GameObject hearts;
     public Vector3 newOrbit;
     public Transform[] carinhoHearts;
     private bool canExpand = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void OrbitAround()
     {
         for(int i = 0; i <= carinhoHearts.Length - 1; i++)
         {
+            hearts.transform.position = center.position;
             carinhoHearts[i].RotateAround(gameObject.transform.position, Vector3.up, orbitSpeed * Time.deltaTime);
             newOrbit = (carinhoHearts[i].position - center.position).normalized * radius + center.position;
             carinhoHearts[i].position = Vector3.MoveTowards(carinhoHearts[i].position, newOrbit, Time.deltaTime * expansionSpeed);
