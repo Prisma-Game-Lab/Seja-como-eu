@@ -6,38 +6,51 @@ public class SadRain : MonoBehaviour
 {
     public int NumeroGotas;
 
-    public float Probabilidade;
+    public float RainInterval;
 
     public float Cooldown;
 
     public GameObject PrefabGota;
-    public GameObject PrefabBulletGota;
+
+    private bool isReady = false;
+
     public int NumeroBullets;
+    public GameObject PrefabBulletGota;
 
     void Start()
     {
-        
+        StartCoroutine(StartRain());
     }
 
-    
+
     void Update()
     {
-        
+
     }
 
-    public void Rain() {
-        Debug.Log("choveu");
+    public void Rain()
+    {
+        isReady = false;
+        StartCoroutine(SlowRain());
+    }
+
+    private IEnumerator SlowRain()
+    {
         float xPosition;
         float zPosition;
-        for (int i = 0; i < NumeroGotas; i++) {
-            xPosition = Random.Range(-19,19);
-            zPosition = Random.Range(-19,19);
+        for (int i = 0; i < NumeroGotas; i++)
+        {
+            xPosition = Random.Range(-19, 19);
+            zPosition = Random.Range(-19, 19);
             GameObject rain = Instantiate(PrefabGota, new Vector3(xPosition, 15, zPosition), Quaternion.identity);
-            StartCoroutine(RainSplit(rain));
+            StartCoroutine(SplitRain(rain));
+            yield return new WaitForSeconds(RainInterval);
         }
+        yield return new WaitForSeconds(Cooldown);
+        isReady = true;
     }
 
-    private IEnumerator RainSplit(GameObject gota)
+    private IEnumerator SplitRain(GameObject gota)
     {
         yield return new WaitForSeconds(1.7f);
 
@@ -47,14 +60,14 @@ public class SadRain : MonoBehaviour
             Instantiate(PrefabBulletGota, gota.transform.position, Quaternion.AngleAxis(i, Vector3.up));
         }
     }
-
-    public float getProb()
+    private IEnumerator StartRain()
     {
-    	return Probabilidade;
+        yield return new WaitForSeconds(Cooldown);
+        isReady = true;
     }
 
-    public float getCD()
+    public bool RainReady()
     {
-    	return Cooldown;
+        return isReady;
     }
 }

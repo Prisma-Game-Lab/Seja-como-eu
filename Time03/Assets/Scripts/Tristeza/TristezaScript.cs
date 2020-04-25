@@ -31,8 +31,6 @@ public class TristezaScript : MonoBehaviour
         skills = new List<Skills>();
 
         srScript = GetComponent<SadRain>();
-        Rain = new Skills(srScript.getProb(),srScript.getCD(),true,srScript.Rain);
-        skills.Add(Rain);
 
         spScript = GetComponent<SadPistol>();
         Pistol = new Skills(spScript.getProb(),spScript.getCD(),false,spScript.Pistol);
@@ -51,6 +49,11 @@ public class TristezaScript : MonoBehaviour
         if(SkillIsReady) {
             SkillCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
+        }
+
+        if(srScript.RainReady())
+        {
+            srScript.Rain();
         }
     }
 
