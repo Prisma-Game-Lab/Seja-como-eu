@@ -115,6 +115,7 @@ public class CarinhoScript : MonoBehaviour
         if(collision.collider.CompareTag("rock"))
         {
             Damage();
+            Destroy(collision.gameObject);
         }
     }
 
