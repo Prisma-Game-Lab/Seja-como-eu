@@ -31,7 +31,7 @@ public class TristezaScript : MonoBehaviour
         skills = new List<Skills>();
 
         srScript = GetComponent<SadRain>();
-        Rain = new Skills(srScript.getProb(),srScript.getCD(),false,srScript.Rain);
+        Rain = new Skills(srScript.getProb(),srScript.getCD(),true,srScript.Rain);
         skills.Add(Rain);
 
         spScript = GetComponent<SadPistol>();

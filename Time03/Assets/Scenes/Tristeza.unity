@@ -523,6 +523,9 @@ MonoBehaviour:
   Cooldown: 5
   PrefabGota: {fileID: 5973786886215369571, guid: 26dd2b34cca856749b49e76bf54cf877,
     type: 3}
+  PrefabBulletGota: {fileID: 4035445688948290335, guid: 532c3a64bdc73ca4d9bba67b29bd851e,
+    type: 3}
+  NumeroBullets: 6
 --- !u!114 &1138785819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,8 +539,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1548817916}
-  PrefabTears: {fileID: 3066991304279154759, guid: 3d2b57683bdcc6644a89cb4f29919775,
-    type: 3}
   Cooldown: 5
   RunAwayDistance: 10
 --- !u!114 &1138785820
