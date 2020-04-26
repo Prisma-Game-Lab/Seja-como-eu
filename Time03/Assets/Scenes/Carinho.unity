@@ -2120,6 +2120,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carinho
       objectReference: {fileID: 0}
+    - target: {fileID: 7997187475700378182, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: m_Speed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378183, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: PlayerPosition
@@ -2134,6 +2139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: lookRadius
       value: 8.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997187475700378183, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: health
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378185, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
