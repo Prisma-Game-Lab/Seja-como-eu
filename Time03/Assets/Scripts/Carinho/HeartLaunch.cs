@@ -21,12 +21,14 @@ public class HeartLaunch : MonoBehaviour
 
     public float cooldownLaunch;
     public Transform playerPosition;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         _t = GetComponent<Transform>();
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -51,7 +53,8 @@ public class HeartLaunch : MonoBehaviour
 
 		target = _t.position + height*_t.up;
 
-    	// Rising
+        // Rising
+        anim.SetTrigger("Up");
     	while(time < 1)//move para o alto
     	{
     		time += Time.deltaTime / risingDuration;
@@ -66,14 +69,16 @@ public class HeartLaunch : MonoBehaviour
         
         yield return new WaitForSeconds(windup); //tempo pra desviar
 
-        // Launcing
+        // Launching
+        anim.SetTrigger("Fall");
         while(_t.position != target)//vai pro jogador
         {
         	_t.position = Vector3.MoveTowards(_t.position, target, launchingSpeed * Time.deltaTime);
         	yield return new WaitForEndOfFrame ();
         }
-        // End Launcing
+        // End Launching
 
+        anim.SetTrigger("Ground");
         agent.enabled = true; //reativa agente do carinho
     }
 

@@ -86,7 +86,6 @@ public class CarinhoScript : MonoBehaviour
         {
             anim.SetBool("Idle",true);
         }
-
     }
 
     void FaceTarget()
@@ -104,6 +103,7 @@ public class CarinhoScript : MonoBehaviour
 
     void Damage()
     {
+        anim.SetTrigger("Damage");
         if(agent.enabled && !invulneravel){
             health -= 1;
             carinhoHearts[health].gameObject.SetActive(false);
@@ -118,8 +118,9 @@ public class CarinhoScript : MonoBehaviour
 
             if(health <= 0)
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
                 portalExit.gameObject.SetActive(true);
+                anim.SetTrigger("Death");
             }
             StartCoroutine(Invunerability());
         }
