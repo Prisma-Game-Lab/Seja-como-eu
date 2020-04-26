@@ -28,7 +28,6 @@ public class PunchRain : MonoBehaviour
 
     private IEnumerator ERain() {
         for(int i = 0; i < Duration/Frequency; i++) {
-            Debug.Log(i);
             Instantiate(PrefabHelper,new Vector3(Player.transform.position.x,0,Player.transform.position.z),Quaternion.identity);
             Instantiate(PrefabPunches, new Vector3(Player.transform.position.x, Altura, Player.transform.position.z), Quaternion.identity);
             yield return new WaitForSeconds(Frequency);

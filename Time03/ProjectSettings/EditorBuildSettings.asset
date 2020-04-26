@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MDM.unity
+    guid: a31748a03e340824387dd69885a3da75
   m_configObjects: {}

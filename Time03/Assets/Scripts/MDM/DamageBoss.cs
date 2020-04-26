@@ -8,7 +8,7 @@ public class DamageBoss : MonoBehaviour
     public float TimeInside;
     private MDM mdm;
     private float timer;
-    private bool Canlose = true;
+    private bool Canlose = false;
     void Start()
     {
         mdm = MDM.GetComponent<MDM>();
@@ -26,6 +26,10 @@ public class DamageBoss : MonoBehaviour
         }
         else {
             timer = 0;
+        }
+
+        if(!gameObject.activeSelf) {
+            Canlose = false;
         }
     }
 
