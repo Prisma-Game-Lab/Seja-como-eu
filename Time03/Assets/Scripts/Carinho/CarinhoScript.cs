@@ -108,28 +108,31 @@ public class CarinhoScript : MonoBehaviour
     {        
         if(agent.enabled && !invulneravel)
         {
-            anim.SetTrigger("Damage");
             health -= 1;
-            Destroy(feno);
-            carinhoHearts[health].gameObject.SetActive(false);
-            if(health == fullhealth - 1)
-            {
-                Launch.SwitchReady();
-            }
-            if(health == fullhealth - 2)
-            {
-                Clap.SwitchReady();
-            }
-            hoScript.orbitSpeed += 100.0f;
-            hoScript.maxRadius += 5.0f;
-
             if(health <= 0)
             {
                 //Destroy(gameObject);
                 portalExit.gameObject.SetActive(true);
                 anim.SetTrigger("Death");
             }
-            StartCoroutine(Invunerability());
+            else
+            {
+                anim.SetTrigger("Damage");
+                Destroy(feno);
+                carinhoHearts[health].gameObject.SetActive(false);
+                if(health == fullhealth - 1)
+                {
+                    Launch.SwitchReady();
+                }
+                if(health == fullhealth - 2)
+                {
+                    Clap.SwitchReady();
+                }
+                hoScript.orbitSpeed += 100.0f;
+                hoScript.maxRadius += 5.0f;
+                StartCoroutine(Invunerability());
+            }
+            
         }
     }
 
