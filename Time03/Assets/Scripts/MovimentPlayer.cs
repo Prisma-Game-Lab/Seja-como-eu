@@ -33,7 +33,7 @@ public class MovimentPlayer : MonoBehaviour
 
         transform.rotation = Rotation;
 
-        transform.position += Direction() * Time.deltaTime;
+        transform.position += Vector3.Normalize(Direction())* MovimentSpeed * Time.deltaTime;
     }
 
     private void Update()
@@ -44,8 +44,8 @@ public class MovimentPlayer : MonoBehaviour
 
     private Vector3 Direction()
     {
-        float h = Input.GetAxis("Horizontal") *  MovimentSpeed;
-        float v = Input.GetAxis("Vertical") *  MovimentSpeed;
+        float h = Input.GetAxis("Horizontal") ;
+        float v = Input.GetAxis("Vertical") ;
         return new Vector3(h, 0, v);
     }
     private Quaternion Rotation => Quaternion.LookRotation(RotationDirection);
