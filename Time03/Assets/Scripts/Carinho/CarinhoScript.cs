@@ -63,8 +63,10 @@ public class CarinhoScript : MonoBehaviour
     {
         float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
 
-        if(agent != null && agent.enabled){
-            if(distance <= lookRadius){
+        if(agent != null && agent.enabled)
+        {
+            if(distance <= lookRadius)
+            {
                 agent.SetDestination(PlayerPosition.position);
             }  
         }
@@ -101,16 +103,20 @@ public class CarinhoScript : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 
-    void Damage()
-    {
-        anim.SetTrigger("Damage");
-        if(agent.enabled && !invulneravel){
+    void Damage(GameObject feno)
+    {        
+        if(agent.enabled && !invulneravel)
+        {
+            anim.SetTrigger("Damage");
             health -= 1;
+            Destroy(feno);
             carinhoHearts[health].gameObject.SetActive(false);
-            if(health == fullhealth - 1) {
+            if(health == fullhealth - 1)
+            {
                 Launch.SwitchReady();
             }
-            if(health == fullhealth - 2) {
+            if(health == fullhealth - 2)
+            {
                 Clap.SwitchReady();
             }
             hoScript.orbitSpeed += 100.0f;
@@ -130,18 +136,19 @@ public class CarinhoScript : MonoBehaviour
     {
         if(collision.collider.CompareTag("rock"))
         {
-            Damage();
-            Destroy(collision.gameObject);
+            Damage(collision.gameObject);
         }
     }
 
-    private IEnumerator ResetCooldown() {
+    private IEnumerator ResetCooldown()
+    {
         SkillIsReady = false;
         yield return new WaitForSeconds(Cooldown);
         SkillIsReady = true;
     }
 
-    private IEnumerator Invunerability() {
+    private IEnumerator Invunerability()
+    {
         invulneravel = true;
         yield return new WaitForSeconds(2);
         invulneravel = false;
