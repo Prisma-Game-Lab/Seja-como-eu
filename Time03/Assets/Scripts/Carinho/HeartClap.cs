@@ -18,11 +18,14 @@ public class HeartClap : MonoBehaviour
     private Transform _t;
     private UnityEngine.AI.NavMeshAgent agent;
 
+    private Animator anim;
+
     void Start()
     {
         _t = GetComponent<Transform>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         eCol = player.GetComponent<EnemyCollision>();
+        anim = GetComponentInChildren<Animator>();
     }
 
 
@@ -38,7 +41,11 @@ public class HeartClap : MonoBehaviour
     	
     	agent.enabled = false; //desativa agente do carinho
 
+        anim.SetTrigger("Hug 1");
+
     	yield return new WaitForSeconds(windup); //tempo esticando os bracos
+
+        anim.SetTrigger("Hug");
 
     	int i = 0;
 
