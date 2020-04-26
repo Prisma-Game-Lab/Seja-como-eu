@@ -23,6 +23,8 @@ public class CarinhoScript : MonoBehaviour
     public float Cooldown;
     private bool SkillIsReady = false;
 
+    private Animator anim;
+
     private Rigidbody _rb;
     private NavMeshAgent agent;
     private int fullhealth;
@@ -51,6 +53,9 @@ public class CarinhoScript : MonoBehaviour
 
         SkillCD = GetComponent<BossSkillsCD>();
 
+        anim = GetComponentInChildren<Animator>();
+        _rb = GetComponent<Rigidbody>();
+
         StartCoroutine(ResetCooldown());
     }
 
@@ -72,6 +77,16 @@ public class CarinhoScript : MonoBehaviour
             SkillCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
         }
+
+        if(agent.hasPath)
+        {
+            anim.SetBool("Idle",false);
+        }
+        else
+        {
+            anim.SetBool("Idle",true);
+        }
+
     }
 
     void FaceTarget()
