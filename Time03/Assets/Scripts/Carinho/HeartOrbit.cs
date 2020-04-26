@@ -23,9 +23,9 @@ public class HeartOrbit : MonoBehaviour
 
     public void OrbitAround()
     {
-        for(int i = 0; i <= carinhoHearts.Length - 1; i++)
+        hearts.transform.position = center.position;
+        for (int i = 0; i <= carinhoHearts.Length - 1; i++)
         {
-            hearts.transform.position = center.position;
             carinhoHearts[i].RotateAround(gameObject.transform.position, Vector3.up, orbitSpeed * Time.deltaTime);
             newOrbit = (carinhoHearts[i].position - center.position).normalized * radius + center.position;
             carinhoHearts[i].position = Vector3.MoveTowards(carinhoHearts[i].position, newOrbit, Time.deltaTime * expansionSpeed);
