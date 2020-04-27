@@ -28,6 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe5f62222af1fb408e5a1dcb641cfa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimetoDespawn: 1.5
 --- !u!114 &8182009804414985592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,8 +41,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6efed85234b641f44930c7157dd306fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathScreen: {fileID: 7025049443365970617, guid: 70c5897f70c9a974ca4748e4565f8ec2,
-    type: 3}
 --- !u!1001 &7555418901360476904
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1051,6 +1051,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1663785184}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1498068568 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 724779493857211345, guid: 87af9f27abf3b77418ee4d70afc01926,
+    type: 3}
+  m_PrefabInstance: {fileID: 1663785184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1663785184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1061,17 +1067,17 @@ PrefabInstance:
     - target: {fileID: 724779493857211345, guid: 87af9f27abf3b77418ee4d70afc01926,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 724779493857211345, guid: 87af9f27abf3b77418ee4d70afc01926,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.341
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 724779493857211345, guid: 87af9f27abf3b77418ee4d70afc01926,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 724779493857211345, guid: 87af9f27abf3b77418ee4d70afc01926,
         type: 3}
@@ -1224,6 +1230,8 @@ GameObject:
   - component: {fileID: 1877664320}
   - component: {fileID: 1877664322}
   - component: {fileID: 1877664323}
+  - component: {fileID: 1877664324}
+  - component: {fileID: 1877664325}
   m_Layer: 0
   m_Name: MDM
   m_TagString: Untagged
@@ -1323,7 +1331,7 @@ MonoBehaviour:
     type: 3}
   PrefabHelper: {fileID: 7542135265080225965, guid: 0ba70cbaa6a2acf44b6aea668f85016c,
     type: 3}
-  Cooldown: 5
+  Cooldown: 8
   Frequency: 0.5
   Duration: 10
   Altura: 6
@@ -1339,7 +1347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32862cae7ac9f3b43bc0a5137197ff42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 100
+  HitPoints: 50
   Cooldown: 3
   HpBar: {fileID: 1699464408}
   DamagePlatform: {fileID: 1167644592}
@@ -1372,8 +1380,40 @@ MonoBehaviour:
   PrefabHelper: {fileID: 7542135265080225965, guid: 0ba70cbaa6a2acf44b6aea668f85016c,
     type: 3}
   Quantity: 100
-  Cooldown: 5
+  Cooldown: 4
   Delay: 0.5
+--- !u!114 &1877664324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877664315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff480b2055945f4468bf27c1e3fff78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PrefabPunchesFollow: {fileID: 8435792613004044729, guid: 422cbb090845b854698221e19cbd1b60,
+    type: 3}
+  PlayerPosition: {fileID: 1498068568}
+  Cooldown: 3
+--- !u!114 &1877664325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877664315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14da4a8c43343bd4c9332a02f93113de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cooldown: 7
+  PrefabPrison: {fileID: 1560332571150943995, guid: 897116f79b723c94bb2f46d93964c02e,
+    type: 3}
+  Player: {fileID: 1498068568}
 --- !u!1 &1949758042
 GameObject:
   m_ObjectHideFlags: 0

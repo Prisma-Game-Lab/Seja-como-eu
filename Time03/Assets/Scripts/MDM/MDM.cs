@@ -11,8 +11,12 @@ public class MDM : MonoBehaviour
     public GameObject DamagePlatform;
     private Skills Rain;
     private Skills Floor;
+    private Skills Follow;
+    private Skills Prison;
     private PunchRain PRScript;
     private PunchFloor PFScript;
+    private PunchFollow PFOScript;
+    private PunchPrison PPScript;
     private NewBossSkillCD SkillCD;
     private List<Skills> skills;
     private bool SkillIsReady = false;
@@ -33,6 +37,14 @@ public class MDM : MonoBehaviour
         PFScript = GetComponent<PunchFloor>();
         Floor = new Skills(100,PFScript.GetCD(),true,PFScript.Floor);
         skills.Add(Floor);
+
+        PFOScript = GetComponent<PunchFollow>();
+        Follow = new Skills(100,PFOScript.GetCD(),true,PFOScript.Follow);
+        skills.Add(Follow);
+
+        PPScript = GetComponent<PunchPrison>();
+        Prison = new Skills(100,PPScript.GetCD(),true,PPScript.Prison);
+        skills.Add(Prison);
 
         StartCoroutine(ResetCooldown());
         StartCoroutine(ResetPlatform());

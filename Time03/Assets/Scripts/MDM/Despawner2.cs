@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Despawner2 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float TimetoDespawn;
+
     void Start()
     {
         StartCoroutine(Despawn2());
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -24,7 +25,7 @@ public class Despawner2 : MonoBehaviour
     }
 
     private IEnumerator Despawn2() {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(TimetoDespawn);
         Destroy(gameObject);
     }
 }

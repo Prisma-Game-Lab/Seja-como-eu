@@ -24,7 +24,7 @@ public class PunchFloor : MonoBehaviour
         StartCoroutine(EFloor());
     }
 
-     public float GetCD() {
+    public float GetCD() {
         return Cooldown;
     }
 
