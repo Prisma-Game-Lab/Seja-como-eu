@@ -15,15 +15,22 @@ public class SadPistol : MonoBehaviour
     public GameObject Player;
     private NavMeshAgent agent;
     public float telegraph;
+    private float bulletDuration;
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
+        bulletDuration = PrefabBulletGota.GetComponent<BulletMove>().bulletDuration;
     }
 
 
     void Update()
     {
-
+        if(agent.isStopped)
+        {
+            Vector3 direction = (Player.transform.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5.0f);
+        }
     }
 
     public void Pistol()
@@ -33,21 +40,20 @@ public class SadPistol : MonoBehaviour
 
     private IEnumerator Shoot()
     {
-        agent.speed = 0;
-        agent.angularSpeed = 0;
-        gameObject.transform.LookAt(Player.transform.position);
+        agent.isStopped = true;
 
         yield return new WaitForSeconds(telegraph);
 
         GameObject initialShot = Instantiate(PrefabBulletGota, gameObject.transform.position, gameObject.transform.rotation);
         initialShot.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         StartCoroutine(PistolSpread(initialShot));
-        agent.speed = 3.5f;
-        agent.angularSpeed = 120;
+
+        agent.isStopped = false;
     }
+
     private IEnumerator PistolSpread(GameObject splitPoint)
     {
-        yield return new WaitForSeconds(splitPoint.GetComponent<BulletMove>().bulletDuration);
+        yield return new WaitForSeconds(bulletDuration);
 
         int Arc = 360/NumeroBullets;
         for(int i = 0; i < 360; i += Arc)
