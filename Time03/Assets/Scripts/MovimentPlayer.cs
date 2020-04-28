@@ -57,7 +57,7 @@ public class MovimentPlayer : MonoBehaviour
     {
         if(!dashing)
         {
-            Dash(Direction());
+            Dash(Vector3.Normalize(transform.forward));
         }
     }
 
