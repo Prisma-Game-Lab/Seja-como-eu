@@ -448,6 +448,11 @@ PrefabInstance:
       propertyPath: carinhoHearts.Array.data[2]
       value: 
       objectReference: {fileID: 7997187475389310746}
+    - target: {fileID: 7520953614679747938, guid: 4aea6c4c929683e4784e064e477dd1ce,
+        type: 3}
+      propertyPath: lookRadius
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7520953614679747940, guid: 4aea6c4c929683e4784e064e477dd1ce,
         type: 3}
       propertyPath: m_Name

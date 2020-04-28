@@ -9,7 +9,7 @@ public class MovimentPlayer : MonoBehaviour
     public float DashSpeed;
     public bool dashing = false;
 
-    private float tempoDash = 1.0f;
+    public float tempoDash = 1.0f;
 
     private Rigidbody _rb;
     private Animator anim;
