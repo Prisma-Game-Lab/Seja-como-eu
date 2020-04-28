@@ -44,7 +44,7 @@ public class MovimentPlayer : MonoBehaviour
 
         transform.position += Vector3.Normalize(Direction())* MovimentSpeed * Time.deltaTime;
         
-        if((translationV > 0 || translationV < 0) || (translationH > 0 || translationH < 0)){
+        if((translationV != 0) || (translationH != 0)){
             anim.SetBool("Idle",false);
         }
         else

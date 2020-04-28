@@ -6,23 +6,33 @@ public class BossSkillsCD : MonoBehaviour
 {
     // Retorna a posicao da Skill que vai ser escolhida
     public void ChooseSkill(List<Skills> skills) {
-        int ReturnCount = 0;
-        foreach(Skills s in skills) {
-            if(!s.IsSkillReady())
-                ReturnCount++;
+
+        float probTotal = 0;
+        List<Skills> readySkills = new List<Skills>();
+        List<float> skillProbs = new List<float>();
+        foreach(Skills s in skills)
+        {
+
+            if(s.IsSkillReady())
+            {
+                probTotal+=s.GetProbabilidade();
+                skillProbs.Add(probTotal);
+                readySkills.Add(s);
+            }
         }
-        if(ReturnCount == skills.Count)
+
+        if(readySkills.Count == 0)
             return;
 
-        while(true) {
-            int id = Random.Range(0,skills.Count);
-            if(skills[id].IsSkillReady()) {
-                float prob = Random.Range(0,100f);
-                if(prob<= skills[id].GetProbabilidade()) {
-                    skills[id].ActivateSkill();
-                    StartCoroutine(ActiveCoolDown(skills[id]));
-                    return;
-                }   
+        float sorteio = Random.Range(0,probTotal);
+
+        for(int i=0; i<readySkills.Count; i++)
+        {
+            if(sorteio<=skillProbs[i])
+            {
+                readySkills[i].ActivateSkill();
+                StartCoroutine(ActiveCoolDown(readySkills[i]));
+                return;
             }
         }
     }
