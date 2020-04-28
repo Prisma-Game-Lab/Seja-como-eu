@@ -12,11 +12,13 @@ public class MovimentPlayer : MonoBehaviour
     private float tempoDash = 1.0f;
 
     private Rigidbody _rb;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -31,15 +33,32 @@ public class MovimentPlayer : MonoBehaviour
         translationV *= Time.deltaTime;
         translationH *= Time.deltaTime;
 
-        transform.rotation = Rotation;
+        if(!dashing)
+        {
+            transform.rotation = Rotation;
+        }
+        else
+        {
+            transform.rotation = transform.rotation;
+        }
 
         transform.position += Vector3.Normalize(Direction())* MovimentSpeed * Time.deltaTime;
+        
+        if((translationV > 0 || translationV < 0) || (translationH > 0 || translationH < 0)){
+            anim.SetBool("Idle",false);
+        }
+        else
+        {
+            anim.SetBool("Idle",true);
+        }
     }
 
     private void Update()
     {
         if(!dashing)
+        {
             Dash(Direction());
+        }
     }
 
     private Vector3 Direction()
@@ -48,6 +67,7 @@ public class MovimentPlayer : MonoBehaviour
         float v = Input.GetAxis("Vertical") ;
         return new Vector3(h, 0, v);
     }
+    
     private Quaternion Rotation => Quaternion.LookRotation(RotationDirection);
     private Vector3 RotationDirection => Vector3.RotateTowards(transform.forward, Direction(), RotationSpeed * Time.deltaTime, 0);
 
@@ -55,8 +75,12 @@ public class MovimentPlayer : MonoBehaviour
     {
         if (Input.GetAxis("Dash") == 1)
         {
+            anim.SetBool("Dash", true);
             GeneralCounts.DashCount++;
             _rb.AddForce(dir * DashSpeed, ForceMode.Impulse);
+            _rb.maxAngularVelocity = 1000;
+            _rb.constraints = RigidbodyConstraints.None;
+            _rb.AddRelativeTorque(Vector3.right * 5f, ForceMode.Force);
             dashing = true;
             StartCoroutine(StopTheDash());
         }
@@ -64,6 +88,12 @@ public class MovimentPlayer : MonoBehaviour
 
     IEnumerator StopTheDash() {
         yield return new WaitForSeconds(tempoDash);
+        anim.SetBool("Dash", false);
+        _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        _rb.angularVelocity = Vector3.zero;
+        _rb.maxAngularVelocity = 7;
+        transform.rotation = Quaternion.identity;
         dashing = false;
+        
     }
 }
