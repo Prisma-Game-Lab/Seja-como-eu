@@ -80,7 +80,7 @@ public class MovimentPlayer : MonoBehaviour
             _rb.AddForce(dir * DashSpeed, ForceMode.Impulse);
             _rb.maxAngularVelocity = 1000;
             _rb.constraints = RigidbodyConstraints.None;
-            _rb.AddRelativeTorque(Vector3.right * 5f, ForceMode.Force);
+            _rb.AddRelativeTorque(Vector3.right * 2f, ForceMode.Impulse);
             dashing = true;
             StartCoroutine(StopTheDash());
         }
