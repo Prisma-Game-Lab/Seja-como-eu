@@ -61,33 +61,37 @@ public class CarinhoScript : MonoBehaviour
 
     void Update() 
     {
-        Dano();
-        float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
-
-        if(agent != null && agent.enabled)
+        if(health > 0)
         {
-            if(distance <= lookRadius)
+            Dano();
+            float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
+
+            if (agent != null && agent.enabled)
             {
-                agent.SetDestination(PlayerPosition.position);
-            }  
-        }
+                if (distance <= lookRadius)
+                {
+                    agent.SetDestination(PlayerPosition.position);
+                }
+            }
 
-        FaceTarget();
+            FaceTarget();
 
-        hoScript.OrbitAround();
+            hoScript.OrbitAround();
 
-        if(SkillIsReady) {
-            SkillCD.ChooseSkill(skills);
-            StartCoroutine(ResetCooldown());
-        }
+            if (SkillIsReady)
+            {
+                SkillCD.ChooseSkill(skills);
+                StartCoroutine(ResetCooldown());
+            }
 
-        if(agent.hasPath)
-        {
-            anim.SetBool("Idle",false);
-        }
-        else
-        {
-            anim.SetBool("Idle",true);
+            if (agent.hasPath)
+            {
+                anim.SetBool("Idle", false);
+            }
+            else
+            {
+                anim.SetBool("Idle", true);
+            }
         }
     }
 
@@ -109,7 +113,8 @@ public class CarinhoScript : MonoBehaviour
         if(agent.enabled && !invulneravel)
         {
             health -= 1;
-            if(health <= 0)
+            carinhoHearts[health].gameObject.SetActive(false);
+            if (health <= 0)
             {
                 //Destroy(gameObject);
                 portalExit.gameObject.SetActive(true);
@@ -118,8 +123,7 @@ public class CarinhoScript : MonoBehaviour
             else
             {
                 anim.SetTrigger("Damage");
-                Destroy(feno);
-                carinhoHearts[health].gameObject.SetActive(false);
+                Destroy(feno);                
                 if(health == fullhealth - 1)
                 {
                     Launch.SwitchReady();
