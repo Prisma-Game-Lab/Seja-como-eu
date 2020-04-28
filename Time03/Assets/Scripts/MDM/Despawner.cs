@@ -17,7 +17,7 @@ public class Despawner : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Finish")) {
+        if(other.gameObject.CompareTag("rock")) {
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

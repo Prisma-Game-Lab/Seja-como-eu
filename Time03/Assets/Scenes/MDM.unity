@@ -1331,7 +1331,7 @@ MonoBehaviour:
     type: 3}
   PrefabHelper: {fileID: 7542135265080225965, guid: 0ba70cbaa6a2acf44b6aea668f85016c,
     type: 3}
-  Cooldown: 6
+  Cooldown: 7
   Frequency: 0.5
   Duration: 7
   Altura: 6
@@ -1348,7 +1348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoints: 25
-  Cooldown: 3
+  Cooldown: 4
   HpBar: {fileID: 1699464408}
   DamagePlatform: {fileID: 1167644592}
 --- !u!114 &1877664322
@@ -1380,8 +1380,8 @@ MonoBehaviour:
   PrefabHelper: {fileID: 7542135265080225965, guid: 0ba70cbaa6a2acf44b6aea668f85016c,
     type: 3}
   Quantity: 120
-  Cooldown: 3
-  Delay: 0.5
+  Cooldown: 4
+  Delay: 0.6
 --- !u!114 &1877664324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,7 +1397,7 @@ MonoBehaviour:
   PrefabPunchesFollow: {fileID: 8435792613004044729, guid: 422cbb090845b854698221e19cbd1b60,
     type: 3}
   PlayerPosition: {fileID: 1498068568}
-  Cooldown: 5
+  Cooldown: 6
 --- !u!114 &1877664325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1410,8 +1410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14da4a8c43343bd4c9332a02f93113de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cooldown: 8
-  Delay: 0.5
+  Cooldown: 9
+  Delay: 0.7
   PrefabPrison: {fileID: 1560332571150943995, guid: 897116f79b723c94bb2f46d93964c02e,
     type: 3}
   PrefabPrisonWarning: {fileID: 2068871413408327608, guid: 81a23b5f0d91e04499819eb6978771d6,

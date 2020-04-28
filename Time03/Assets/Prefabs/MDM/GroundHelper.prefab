@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6575914094898225002}
   m_Layer: 0
   m_Name: GroundHelper
-  m_TagString: Finish
+  m_TagString: rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
