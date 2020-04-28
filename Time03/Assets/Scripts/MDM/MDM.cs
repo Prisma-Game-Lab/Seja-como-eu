@@ -59,6 +59,10 @@ public class MDM : MonoBehaviour
         }
 
         HpBar.fillAmount = CurrentHP/HitPoints;
+
+        if(CurrentHP <= 0) {
+            WinGame();
+        }
     }
 
     public void PerdeVida() {
@@ -67,6 +71,11 @@ public class MDM : MonoBehaviour
             Platform();
             StartCoroutine(ResetPlatform());
         }
+    }
+
+    public void WinGame() {
+        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        gameObject.AddComponent<Rigidbody>();
     }
 
     private IEnumerator ResetCooldown() {

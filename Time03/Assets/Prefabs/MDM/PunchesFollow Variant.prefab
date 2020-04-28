@@ -98,7 +98,7 @@ PrefabInstance:
     - target: {fileID: 7536304684026592823, guid: 688cc77139a51f24a9df18e558028620,
         type: 3}
       propertyPath: TimetoDespawn
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 688cc77139a51f24a9df18e558028620, type: 3}
