@@ -160,6 +160,8 @@ MonoBehaviour:
   PlayerPosition: {fileID: 0}
   portalExit: {fileID: 0}
   Cooldown: 3
+  damageStun: 2
+  damageInvuln: 2
 --- !u!114 &7520953614679747948
 MonoBehaviour:
   m_ObjectHideFlags: 0
