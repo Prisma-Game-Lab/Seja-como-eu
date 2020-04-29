@@ -786,7 +786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866338157}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -7.2211237, y: 33.96, z: -12.882003}
+  m_LocalPosition: {x: -7.22, y: 33.96, z: -10.39}
   m_LocalScale: {x: 0.70548993, y: 8.550363, z: 26.00381}
   m_Children: []
   m_Father: {fileID: 952367520}
@@ -1079,7 +1079,7 @@ Transform:
   m_GameObject: {fileID: 989579556}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.6720724, y: 33.96, z: -24.199448}
-  m_LocalScale: {x: 0.78648, y: 8.550363, z: 22.21512}
+  m_LocalScale: {x: 0.78648, y: 8.550363, z: 30.454725}
   m_Children: []
   m_Father: {fileID: 952367520}
   m_RootOrder: 7
@@ -2121,8 +2121,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060867636}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.566807, y: 33.96, z: -24.199448}
-  m_LocalScale: {x: 0.78648, y: 8.550363, z: 22.21512}
+  m_LocalPosition: {x: -20.4, y: 33.96, z: -24.199448}
+  m_LocalScale: {x: 0.78648, y: 8.550363, z: 28.293177}
   m_Children: []
   m_Father: {fileID: 952367520}
   m_RootOrder: 4
@@ -2800,32 +2800,32 @@ PrefabInstance:
     - target: {fileID: 7997187475700378176, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.7675118
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378176, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.3837558
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378176, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.4205198
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378176, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.004471779
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378176, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_Size.z
-      value: 1.4352818
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378176, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_Center.z
-      value: -0.11764073
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378183, guid: e038351f0774806489b8203beb393a7f,
         type: 3}

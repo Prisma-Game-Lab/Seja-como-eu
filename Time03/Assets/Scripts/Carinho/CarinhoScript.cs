@@ -118,6 +118,7 @@ public class CarinhoScript : MonoBehaviour
         {
             health -= 1;
             carinhoHearts[health].gameObject.SetActive(false);
+            Destroy(feno);
             if (health <= 0)
             {
                 //Destroy(gameObject);
@@ -126,8 +127,7 @@ public class CarinhoScript : MonoBehaviour
             }
             else
             {
-                anim.SetTrigger("Damage");
-                Destroy(feno);                
+                anim.SetTrigger("Damage");              
                 if(health == fullhealth - 1)
                 {
                     Launch.SwitchReady();
