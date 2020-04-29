@@ -2736,6 +2736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carinho
       objectReference: {fileID: 0}
+    - target: {fileID: 7997187474781481671, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7997187475389310749, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_Radius

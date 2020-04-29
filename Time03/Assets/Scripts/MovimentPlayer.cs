@@ -24,25 +24,28 @@ public class MovimentPlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float translationV = 0;
-        float translationH = 0;
-
-        translationV = Input.GetAxis("Vertical") *  MovimentSpeed;
-        translationH = Input.GetAxis("Horizontal") *  MovimentSpeed;
-
-        translationV *= Time.deltaTime;
-        translationH *= Time.deltaTime;
-
-        transform.rotation = Rotation;
-
-        transform.position += Vector3.Normalize(Direction())* MovimentSpeed * Time.deltaTime;
-        
-        if((translationV != 0) || (translationH != 0)){
-            anim.SetBool("Idle",false);
-        }
-        else
+        if(dashing == false)
         {
-            anim.SetBool("Idle",true);
+            float translationV = 0;
+            float translationH = 0;
+
+            translationV = Input.GetAxis("Vertical") *  MovimentSpeed;
+            translationH = Input.GetAxis("Horizontal") *  MovimentSpeed;
+
+            translationV *= Time.deltaTime;
+            translationH *= Time.deltaTime;
+
+            transform.rotation = Rotation;
+
+            transform.position += Vector3.Normalize(Direction())* MovimentSpeed * Time.deltaTime;
+        
+            if((translationV != 0) || (translationH != 0)){
+                anim.SetBool("Idle",false);
+            }
+            else
+            {
+                anim.SetBool("Idle",true);
+            }
         }
     }
 
