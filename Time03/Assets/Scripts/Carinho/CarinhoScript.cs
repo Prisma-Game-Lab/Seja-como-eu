@@ -82,13 +82,13 @@ public class CarinhoScript : MonoBehaviour
 
             hoScript.OrbitAround();
 
-            if (SkillIsReady && agent.enabled)
+            if (SkillIsReady && agent.isStopped == false)
             {
                 SkillCD.ChooseSkill(skills);
                 StartCoroutine(ResetCooldown());
             }
 
-            if (agent.hasPath)
+            if (agent.hasPath && agent.isStopped == false)
             {
                 anim.SetBool("Idle", false);
             }
@@ -168,9 +168,9 @@ public class CarinhoScript : MonoBehaviour
 
     private IEnumerator Stun()
     {
-        agent.enabled = false;
+        agent.isStopped = true;
         yield return new WaitForSeconds(damageStun);
-        agent.enabled = true;
+        agent.isStopped = false;
     }
 
     void Dano(){
