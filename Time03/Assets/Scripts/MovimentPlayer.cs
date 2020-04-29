@@ -33,14 +33,7 @@ public class MovimentPlayer : MonoBehaviour
         translationV *= Time.deltaTime;
         translationH *= Time.deltaTime;
 
-        if(!dashing)
-        {
-            transform.rotation = Rotation;
-        }
-        else
-        {
-            transform.rotation = transform.rotation;
-        }
+        transform.rotation = Rotation;
 
         transform.position += Vector3.Normalize(Direction())* MovimentSpeed * Time.deltaTime;
         
@@ -78,9 +71,6 @@ public class MovimentPlayer : MonoBehaviour
             anim.SetBool("Dash", true);
             GeneralCounts.DashCount++;
             _rb.AddForce(dir * DashSpeed, ForceMode.Impulse);
-            _rb.maxAngularVelocity = 1000;
-            _rb.constraints = RigidbodyConstraints.None;
-            _rb.AddRelativeTorque(Vector3.right * 2f, ForceMode.Impulse);
             dashing = true;
             StartCoroutine(StopTheDash());
         }
@@ -89,10 +79,6 @@ public class MovimentPlayer : MonoBehaviour
     IEnumerator StopTheDash() {
         yield return new WaitForSeconds(tempoDash);
         anim.SetBool("Dash", false);
-        _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-        _rb.angularVelocity = Vector3.zero;
-        _rb.maxAngularVelocity = 7;
-        transform.rotation = Quaternion.identity;
         dashing = false;
         
     }

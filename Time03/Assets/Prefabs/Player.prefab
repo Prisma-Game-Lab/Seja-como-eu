@@ -265,8 +265,6 @@ MonoBehaviour:
   MainRigidbody: {fileID: 0}
   AllRigidbodies: []
   camera: {fileID: 0}
-  BoxCollider: {fileID: 724779493857211348}
-  SphereCollider: {fileID: 7207550308065104000}
 --- !u!54 &9130424104085107713
 Rigidbody:
   m_ObjectHideFlags: 0

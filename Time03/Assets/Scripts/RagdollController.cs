@@ -12,16 +12,12 @@ public class RagdollController : MonoBehaviour
 
     bool rag = false;
 
-    public Collider BoxCollider, SphereCollider;
-    private MovimentPlayer movimentPlayer;
-
     void Awake()
     {
-        MainCollider = BoxCollider;
+        MainCollider = GetComponent<Collider>();
         MainRigidbody = GetComponent<Rigidbody>();
         AllColliders = GetComponentsInChildren<Collider>(true);
         AllRigidbodies = GetComponentsInChildren<Rigidbody>();
-        movimentPlayer = GetComponent<MovimentPlayer>();
         DoRagdoll(false);
     }
 
@@ -37,19 +33,6 @@ public class RagdollController : MonoBehaviour
         {
             DoRagdoll(false);
             rag = false;
-        }
-
-        if (movimentPlayer.dashing)
-        {
-            BoxCollider.enabled = false;
-            SphereCollider.enabled = true;
-            MainCollider = SphereCollider;
-        }
-        else
-        {
-            BoxCollider.enabled = true;
-            SphereCollider.enabled = false;
-            MainCollider = BoxCollider;
         }
             
     }

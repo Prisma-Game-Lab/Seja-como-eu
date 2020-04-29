@@ -237,7 +237,7 @@ ModelImporter:
       takeName: Armature|ArmatureAction
       internalID: 0
       firstFrame: 350
-      lastFrame: 355
+      lastFrame: 409
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -266,7 +266,7 @@ ModelImporter:
       takeName: Armature.eyes|Armature.eyesAction
       internalID: 0
       firstFrame: 350
-      lastFrame: 355
+      lastFrame: 379
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
