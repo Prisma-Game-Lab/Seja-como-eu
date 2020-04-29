@@ -75,24 +75,25 @@ public class MovimentPlayer : MonoBehaviour
     {
         if (Input.GetAxis("Dash") == 1)
         {
+            Quaternion originalRotation = transform.rotation;
             anim.SetBool("Dash", true);
             GeneralCounts.DashCount++;
             _rb.AddForce(dir * DashSpeed, ForceMode.Impulse);
             _rb.maxAngularVelocity = 1000;
-            _rb.constraints = RigidbodyConstraints.None;
+            _rb.constraints = RigidbodyConstraints.FreezePositionY;
             _rb.AddRelativeTorque(Vector3.right * 2f, ForceMode.Impulse);
             dashing = true;
-            StartCoroutine(StopTheDash());
+            StartCoroutine(StopTheDash(originalRotation));
         }
     }
 
-    IEnumerator StopTheDash() {
+    IEnumerator StopTheDash(Quaternion originalRotation) {
         yield return new WaitForSeconds(tempoDash);
         anim.SetBool("Dash", false);
         _rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         _rb.angularVelocity = Vector3.zero;
         _rb.maxAngularVelocity = 7;
-        transform.rotation = Quaternion.identity;
+        transform.rotation = originalRotation;
         dashing = false;
         
     }

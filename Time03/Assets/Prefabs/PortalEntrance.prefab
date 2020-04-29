@@ -194,10 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd22e57b9d5b8e147b9d7608b0570530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectPlayer: {fileID: 2072096815}
-  MenuButtons:
-  - {fileID: 8489818885395128899}
-  - {fileID: 8489818885755603676}
+  SelectPlayer: {fileID: 0}
+  MenuButtons: []
 --- !u!1 &8489818885395128901
 GameObject:
   m_ObjectHideFlags: 0

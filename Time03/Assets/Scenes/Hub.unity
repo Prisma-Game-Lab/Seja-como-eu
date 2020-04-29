@@ -425,6 +425,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &734865560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8489818885395128899, guid: 6fbff826f6439f94d9e5464a5868b869,
+    type: 3}
+  m_PrefabInstance: {fileID: 8489818886270728806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &934876663
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +596,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097719048}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1508896269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8489818885755603676, guid: 6fbff826f6439f94d9e5464a5868b869,
+    type: 3}
+  m_PrefabInstance: {fileID: 8489818886270728806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1572071416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -761,6 +785,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortalEntranceT
       objectReference: {fileID: 0}
+    - target: {fileID: 6999902754095812543, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: MenuButtons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999902754095812543, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: SelectPlayer
+      value: 
+      objectReference: {fileID: 2070115619}
+    - target: {fileID: 6999902754095812543, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: MenuButtons.Array.data[0]
+      value: 
+      objectReference: {fileID: 734865560}
+    - target: {fileID: 6999902754095812543, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: MenuButtons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1508896269}
     - target: {fileID: 8489818885395128899, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -1061,6 +1105,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &2070115619 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2072096815, guid: 6fbff826f6439f94d9e5464a5868b869,
+    type: 3}
+  m_PrefabInstance: {fileID: 8489818886270728806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8489818886270728806
 PrefabInstance:
   m_ObjectHideFlags: 0
