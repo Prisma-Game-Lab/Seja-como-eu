@@ -7,7 +7,12 @@ public class MovimentPlayer : MonoBehaviour
     public float MovimentSpeed;
     public float RotationSpeed;
     public float DashSpeed;
+    public float dashCooldown;
+
+    [HideInInspector]
     public bool dashing = false;
+    
+    private bool dashEnabled = true;
 
     public float tempoDash = 1.0f;
 
@@ -51,7 +56,7 @@ public class MovimentPlayer : MonoBehaviour
 
     private void Update()
     {
-        if(!dashing)
+        if(!dashing && dashEnabled)
         {
             Dash(Vector3.Normalize(transform.forward));
         }
@@ -75,6 +80,7 @@ public class MovimentPlayer : MonoBehaviour
             GeneralCounts.DashCount++;
             _rb.AddForce(dir * DashSpeed, ForceMode.Impulse);
             dashing = true;
+            dashEnabled = false;
             StartCoroutine(StopTheDash());
         }
     }
@@ -83,6 +89,7 @@ public class MovimentPlayer : MonoBehaviour
         yield return new WaitForSeconds(tempoDash);
         anim.SetBool("Dash", false);
         dashing = false;
-        
+        yield return new WaitForSeconds(dashCooldown);
+        dashEnabled = true;
     }
 }
