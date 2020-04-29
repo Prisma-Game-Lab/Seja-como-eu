@@ -52,7 +52,7 @@ public class MenuSelect : MonoBehaviour
     private void PressButton(List<Button> Buttons)
     {
         
-        if (Input.GetAxisRaw("PressButton") > 0 && ControlAcess && Buttons[CoordenadaPlayer].transform.parent.gameObject.activeSelf)
+        if (Input.GetAxisRaw("PressButton") > 0 && ControlAcess && Buttons[CoordenadaPlayer].transform.parent.parent.gameObject.activeSelf)
         {
             Buttons[CoordenadaPlayer].onClick.Invoke();
             ControlAcess = false;
