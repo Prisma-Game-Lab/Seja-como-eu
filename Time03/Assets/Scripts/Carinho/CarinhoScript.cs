@@ -82,7 +82,7 @@ public class CarinhoScript : MonoBehaviour
 
             hoScript.OrbitAround();
 
-            if (SkillIsReady)
+            if (SkillIsReady && agent.enabled)
             {
                 SkillCD.ChooseSkill(skills);
                 StartCoroutine(ResetCooldown());
@@ -121,7 +121,6 @@ public class CarinhoScript : MonoBehaviour
             Destroy(feno);
             if (health <= 0)
             {
-                //Destroy(gameObject);
                 portalExit.gameObject.SetActive(true);
                 anim.SetTrigger("Death");
             }
