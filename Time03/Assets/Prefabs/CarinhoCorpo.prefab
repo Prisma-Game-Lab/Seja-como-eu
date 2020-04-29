@@ -176,6 +176,7 @@ MonoBehaviour:
   height: 8
   launchingSpeed: 30
   windup: 0.25
+  posLaunch: 0.5
   probabilidadeLaunch: 30
   cooldownLaunch: 10
   playerPosition: {fileID: 0}
