@@ -1502,7 +1502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cooldown: 9
-  Delay: 0.7
+  Delay: 0.6
   PrefabPrison: {fileID: 1560332571150943995, guid: 897116f79b723c94bb2f46d93964c02e,
     type: 3}
   PrefabPrisonWarning: {fileID: 2068871413408327608, guid: 81a23b5f0d91e04499819eb6978771d6,

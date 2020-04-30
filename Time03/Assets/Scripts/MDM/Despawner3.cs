@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Despawner3 : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -22,4 +21,5 @@ public class Despawner3 : MonoBehaviour
             Destroy(other.transform.parent.gameObject);
         }
     }
+
 }
