@@ -70,7 +70,7 @@ public class MovimentPlayer : MonoBehaviour
     }
     
     private Quaternion Rotation => Quaternion.LookRotation(RotationDirection);
-    private Vector3 RotationDirection => Vector3.RotateTowards(transform.forward, Direction(), RotationSpeed * Time.deltaTime, 0);
+    private Vector3 RotationDirection => Vector3.RotateTowards(transform.forward, Vector3.Normalize(Direction()), RotationSpeed * Time.deltaTime, 0);
 
     private void Dash(Vector3 dir)
     {
