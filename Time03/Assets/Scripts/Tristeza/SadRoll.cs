@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class SadRoll : MonoBehaviour
 {
     public float rollWindup;
+    public float rollDuration;
 
     public float rollSpeed;
 
@@ -15,10 +16,15 @@ public class SadRoll : MonoBehaviour
 
     private NavMeshAgent agent;
 
+    private Rigidbody t_rb;
+
+    private bool rolling;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
+        t_rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -40,20 +46,19 @@ public class SadRoll : MonoBehaviour
     private IEnumerator RollDestination(Vector3 target)
     {
         agent.isStopped = true;
+        rolling = true;
 
         yield return new WaitForSeconds(0.5f);
 
         transform.LookAt(target);
 
-        yield return new WaitForSeconds(rollWindup);
+        t_rb.AddForce(target.normalized * rollSpeed, ForceMode.Impulse);
 
-        while(transform.position != target)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target, rollSpeed * Time.deltaTime);
-            yield return new WaitForEndOfFrame();
-        }
+        yield return new WaitForSeconds(rollDuration);
 
+        t_rb.velocity = Vector3.zero;
         agent.isStopped = false;
+        rolling = false;
     }
 
     public float getProb()
