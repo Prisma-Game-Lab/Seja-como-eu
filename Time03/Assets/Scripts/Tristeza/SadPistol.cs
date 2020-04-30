@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -25,12 +25,7 @@ public class SadPistol : MonoBehaviour
 
     void Update()
     {
-        if(agent.isStopped)
-        {
-            Vector3 direction = (Player.transform.position - transform.position).normalized;
-            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5.0f);
-        }
+
     }
 
     public void Pistol()
@@ -41,6 +36,10 @@ public class SadPistol : MonoBehaviour
     private IEnumerator Shoot()
     {
         agent.isStopped = true;
+
+        yield return new WaitForSeconds(0.5f);
+
+        transform.LookAt(Player.transform.position);
 
         yield return new WaitForSeconds(telegraph);
 
