@@ -23,7 +23,6 @@ public class CarinhoScript : MonoBehaviour
     public float Cooldown;
 
     public float damageStun;
-    public float damageInvuln;
 
     private bool SkillIsReady = false;
 
@@ -129,7 +128,6 @@ public class CarinhoScript : MonoBehaviour
                 }
                 hoScript.orbitSpeed += 100.0f;
                 hoScript.maxRadius += 5.0f;
-                StartCoroutine(Invunerability());
                 StartCoroutine(Stun());
             }
             
@@ -151,18 +149,14 @@ public class CarinhoScript : MonoBehaviour
         SkillIsReady = true;
     }
 
-    private IEnumerator Invunerability()
-    {
-        invulneravel = true;
-        yield return new WaitForSeconds(damageInvuln);
-        invulneravel = false;
-    }
 
     private IEnumerator Stun()
     {
-        agent.isStopped = true;
+        agent.enabled = false;
+        invulneravel = true;
         yield return new WaitForSeconds(damageStun);
-        agent.isStopped = false;
+        agent.enabled = true;
+        invulneravel = false;
     }
 
     void Dano(){
