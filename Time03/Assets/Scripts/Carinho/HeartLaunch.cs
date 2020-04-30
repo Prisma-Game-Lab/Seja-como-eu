@@ -24,12 +24,15 @@ public class HeartLaunch : MonoBehaviour
     public Transform playerPosition;
     private Animator anim;
 
+    private CarinhoScript cScript;
+
     // Start is called before the first frame update
     void Start()
     {
         _t = GetComponent<Transform>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
+        cScript = GetComponent<CarinhoScript>();
     }
 
     // Update is called once per frame
@@ -60,7 +63,7 @@ public class HeartLaunch : MonoBehaviour
     	{
     		time += Time.deltaTime / risingDuration;
     		_t.position = Vector3.Lerp(startPos,target,time);
-
+    		cScript.FaceTarget(playerPosition.position);
     		yield return new WaitForEndOfFrame ();
     	} 
     	// End Rising
@@ -75,6 +78,7 @@ public class HeartLaunch : MonoBehaviour
         while(_t.position != target)//vai pro jogador
         {
         	_t.position = Vector3.MoveTowards(_t.position, target, launchingSpeed * Time.deltaTime);
+        	cScript.FaceTarget(target);
         	yield return new WaitForEndOfFrame ();
         }
         // End Launching

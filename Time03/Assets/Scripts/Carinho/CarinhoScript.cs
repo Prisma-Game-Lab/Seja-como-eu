@@ -67,7 +67,7 @@ public class CarinhoScript : MonoBehaviour
     {
         if(health > 0)
         {
-            Dano();
+            Dano();// linha de Debug
             float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
 
             if (agent != null && agent.enabled)
@@ -75,34 +75,26 @@ public class CarinhoScript : MonoBehaviour
                 if (distance <= lookRadius)
                 {
                     agent.SetDestination(PlayerPosition.position);
+                    FaceTarget(PlayerPosition.position);
+                }
+                anim.SetBool("Idle", !(agent.hasPath));
+                if (SkillIsReady)
+                {
+                    SkillCD.ChooseSkill(skills);
+                    StartCoroutine(ResetCooldown());
                 }
             }
 
-            FaceTarget();
 
             hoScript.OrbitAround();
 
-            if (SkillIsReady && agent.isStopped == false)
-            {
-                SkillCD.ChooseSkill(skills);
-                StartCoroutine(ResetCooldown());
-            }
-
-            if (agent.hasPath && agent.isStopped == false)
-            {
-                anim.SetBool("Idle", false);
-            }
-            else
-            {
-                anim.SetBool("Idle", true);
-            }
         }
     }
 
-    void FaceTarget()
+    public void FaceTarget(Vector3 target)
     {
-        Vector3 direction = (PlayerPosition.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        Vector3 direction = (target - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
     

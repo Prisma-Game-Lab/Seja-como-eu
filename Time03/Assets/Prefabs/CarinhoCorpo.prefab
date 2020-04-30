@@ -160,8 +160,8 @@ MonoBehaviour:
   PlayerPosition: {fileID: 0}
   portalExit: {fileID: 0}
   Cooldown: 3
-  damageStun: 2
-  damageInvuln: 2
+  damageStun: 1
+  damageInvuln: 1
 --- !u!114 &7520953614679747948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +178,7 @@ MonoBehaviour:
   height: 8
   launchingSpeed: 30
   windup: 0.25
+  posLaunch: 0.25
   probabilidadeLaunch: 30
   cooldownLaunch: 10
   playerPosition: {fileID: 0}
