@@ -660,6 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathScreen: {fileID: 608679618}
+  player: {fileID: 1498068562}
 --- !u!1001 &1167644591
 PrefabInstance:
   m_ObjectHideFlags: 0
