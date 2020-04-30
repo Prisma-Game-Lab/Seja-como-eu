@@ -28,6 +28,7 @@ public class EnemyCollision : MonoBehaviour
         if (rb != null && collision.collider.CompareTag("enemy"))
         {
             GetComponent<RagdollController>().DoRagdoll(true);
+            GetComponent<MovimentPlayer>().enabled = false;
             deathScreen.SetActive(true);
             GeneralCounts.DeathCount++;
         }
@@ -46,6 +47,7 @@ public class EnemyCollision : MonoBehaviour
         if(other.gameObject.CompareTag("orb"))
         {
             GetComponent<RagdollController>().DoRagdoll(true);
+            GetComponent<MovimentPlayer>().enabled = false;
             deathScreen.SetActive(true);
             GeneralCounts.DeathCount++;
         }
