@@ -229,12 +229,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1732b36eb9167e140b5dec82ae1b11a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovimentSpeed: 6
+  MovimentSpeed: 8
   RotationSpeed: 1000
-  DashSpeed: 16
-  dashCooldown: 1
+  DashSpeed: 18
+  dashCooldown: 0.3
   dashing: 0
-  tempoDash: 0.1
+  tempoDash: 0.3
 --- !u!114 &-9222175269315924345
 MonoBehaviour:
   m_ObjectHideFlags: 0
