@@ -65694,6 +65694,11 @@ PrefabInstance:
       propertyPath: health
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7997187475700378183, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: dano
+      value: 
+      objectReference: {fileID: 724779494848353161}
     - target: {fileID: 7997187475700378185, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: playerPosition
