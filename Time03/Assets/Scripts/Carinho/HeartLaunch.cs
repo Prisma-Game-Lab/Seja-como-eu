@@ -15,6 +15,7 @@ public class HeartLaunch : MonoBehaviour
 	public float launchingSpeed;
 
 	public float windup;
+	public float posLaunch;
 
 	[Range(0, 100)]
 	public float probabilidadeLaunch;
@@ -79,6 +80,7 @@ public class HeartLaunch : MonoBehaviour
         // End Launching
 
         anim.SetTrigger("Ground");
+        yield return new WaitForSeconds(posLaunch); //tempo pos launch
         agent.enabled = true; //reativa agente do carinho
     }
 
