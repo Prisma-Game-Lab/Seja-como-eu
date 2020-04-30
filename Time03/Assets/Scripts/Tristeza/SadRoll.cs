@@ -30,7 +30,10 @@ public class SadRoll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(rolling)
+        {
+            transform.forward = t_rb.velocity;
+        }
     }
 
     public void Roll()
@@ -45,14 +48,17 @@ public class SadRoll : MonoBehaviour
 
     private IEnumerator RollDestination(Vector3 target)
     {
-        agent.isStopped = true;
-        rolling = true;
+        agent.isStopped = true;       
 
         yield return new WaitForSeconds(0.5f);
 
         transform.LookAt(target);
 
+        yield return new WaitForSeconds(rollWindup);
+
         t_rb.AddForce(target.normalized * rollSpeed, ForceMode.Impulse);
+
+        rolling = true;
 
         yield return new WaitForSeconds(rollDuration);
 
