@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject DeathScreen;
+    public GameObject player;
 
     void Start()
     {
@@ -21,8 +22,9 @@ public class GameManager : MonoBehaviour
     }
 
     public void Death() {
+        player.GetComponent<RagdollController>().DoRagdoll(true);
+        player.GetComponent<MovimentPlayer>().enabled = false;
         DeathScreen.SetActive(true);
         GeneralCounts.DeathCount++;
-        Time.timeScale = 0;
     }
 }
