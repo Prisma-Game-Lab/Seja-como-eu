@@ -8,6 +8,7 @@ public class EnemyCollision : MonoBehaviour
     public float knockbackHeight = 1.0f;
 
     public GameObject deathScreen;
+    public RagdollController playerRagdoll;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class EnemyCollision : MonoBehaviour
 
         if (rb != null && collision.collider.CompareTag("enemy"))
         {
+            playerRagdoll.DoRagdoll(true);
             deathScreen.SetActive(true);
             GeneralCounts.DeathCount++;
         }
