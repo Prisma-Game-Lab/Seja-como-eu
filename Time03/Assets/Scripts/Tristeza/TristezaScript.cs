@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,7 +8,9 @@ public class TristezaScript : MonoBehaviour
     public GameObject Player;
     private SadRain srScript;
     private SadPistol spScript;
+    private SadRoll srlScript;
     private Skills Pistol;
+    private Skills Roll;
     private List<Skills> skills;
     private BossSkillsCD SkillCD;
     public float Cooldown;
@@ -34,6 +36,10 @@ public class TristezaScript : MonoBehaviour
         spScript = GetComponent<SadPistol>();
         Pistol = new Skills(spScript.getProb(),spScript.getCD(),true,spScript.Pistol);
         skills.Add(Pistol);
+
+        srlScript = GetComponent<SadRoll>();
+        Roll = new Skills(srlScript.getProb(), srlScript.getCD(), true, srlScript.Roll);
+        skills.Add(Roll);
 
         SkillCD = GetComponent<BossSkillsCD>();
 
