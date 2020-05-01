@@ -48,16 +48,17 @@ public class MovimentPlayer : MonoBehaviour
             if((translationV != 0) || (translationH != 0)){
                 anim.SetBool("Idle",false);
 
-                /*Footsteps.pitch = Random.Range(0.7f, 1.3f);
-                Footsteps.Play();*/
-                
+                Footsteps.pitch = Random.Range(0.7f, 1.3f);
+                if(!Footsteps.isPlaying) {
+                    Footsteps.Play();
+                }
             }
             else
             {
                 anim.SetBool("Idle",true);
 
 
-               /* Footsteps.Stop();*/
+               Footsteps.Stop();
             }
 
         }
