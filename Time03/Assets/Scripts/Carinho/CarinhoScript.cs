@@ -65,7 +65,6 @@ public class CarinhoScript : MonoBehaviour
     {
         if(health > 0)
         {
-            Dano();// linha de Debug
             float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
 
             if (agent != null && agent.enabled)
@@ -158,12 +157,4 @@ public class CarinhoScript : MonoBehaviour
         agent.enabled = true;
         invulneravel = false;
     }
-
-    void Dano(){
-        if(Input.GetKeyDown(KeyCode.K)){
-            Damage(null);
-        }
-
-    }
-
 }
