@@ -8,7 +8,7 @@ public class MovimentPlayer : MonoBehaviour
     public float RotationSpeed;
     public float DashSpeed;
     public float dashCooldown;
-    public AudioSource Footseps;
+    public AudioSource Footsteps;
 
     [HideInInspector]
     public bool dashing = false;
@@ -47,13 +47,19 @@ public class MovimentPlayer : MonoBehaviour
         
             if((translationV != 0) || (translationH != 0)){
                 anim.SetBool("Idle",false);
-                Footseps.Play();
+
+                /*Footsteps.pitch = Random.Range(0.7f, 1.3f);
+                Footsteps.Play();*/
+                
             }
             else
             {
                 anim.SetBool("Idle",true);
-                Footseps.Stop();
+
+
+               /* Footsteps.Stop();*/
             }
+
         }
     }
 
