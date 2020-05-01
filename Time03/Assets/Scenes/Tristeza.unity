@@ -1358,7 +1358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumeroBullets: 12
   Probabilidade: 100
-  Cooldown: 5
+  Cooldown: 8
   PrefabBulletGota: {fileID: 4035445688948290335, guid: 532c3a64bdc73ca4d9bba67b29bd851e,
     type: 3}
   Player: {fileID: 1548817916}
@@ -1398,10 +1398,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rollWindup: 1
-  rollDuration: 4
-  rollSpeed: 20
+  rollDuration: 3
+  rollSpeed: 30
   Probabilidade: 100
   Cooldown: 10
+  bounceMat: {fileID: 13400000, guid: ae647c002cd0501438ca2954c45ae449, type: 2}
 --- !u!135 &1138785824
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1409,7 +1410,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138785812}
-  m_Material: {fileID: 13400000, guid: ae647c002cd0501438ca2954c45ae449, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

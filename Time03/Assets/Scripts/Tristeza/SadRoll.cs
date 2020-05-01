@@ -17,14 +17,16 @@ public class SadRoll : MonoBehaviour
     private NavMeshAgent agent;
 
     private Rigidbody t_rb;
-
     private bool rolling;
+    public PhysicMaterial bounceMat;
+    private Collider t_col;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         t_rb = gameObject.GetComponent<Rigidbody>();
+        t_col = gameObject.GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -56,13 +58,14 @@ public class SadRoll : MonoBehaviour
 
         yield return new WaitForSeconds(rollWindup);
 
-        t_rb.AddForce(target.normalized * rollSpeed, ForceMode.Impulse);
-
+        t_rb.AddForce(transform.forward * rollSpeed, ForceMode.Impulse);
+        t_col.material = bounceMat;
         rolling = true;
 
         yield return new WaitForSeconds(rollDuration);
 
         t_rb.velocity = Vector3.zero;
+        t_col.material = null;
         agent.isStopped = false;
         rolling = false;
     }
