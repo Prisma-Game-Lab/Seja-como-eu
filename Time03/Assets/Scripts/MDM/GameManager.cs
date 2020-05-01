@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     {
         if(GeneralCounts.Kill) {
             Death();
-            GeneralCounts.Kill = false;
         }   
     }
 

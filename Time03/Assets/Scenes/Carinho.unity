@@ -65824,6 +65824,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7997187475014849037, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7997187475389310749, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_Radius
@@ -65914,6 +65919,11 @@ PrefabInstance:
       propertyPath: playerPosition
       value: 
       objectReference: {fileID: 1161093206}
+    - target: {fileID: 7997187475700378185, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: cooldownLaunch
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378186, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: player

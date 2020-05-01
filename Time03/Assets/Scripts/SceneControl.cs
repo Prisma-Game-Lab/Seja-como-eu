@@ -52,12 +52,14 @@ public class SceneControl : MonoBehaviour
     {
         SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
         Time.timeScale = 1f;
+        GeneralCounts.Kill = false;
     }
 
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1f;
+        GeneralCounts.Kill = false;
     }
 
     public void ExitGame()
