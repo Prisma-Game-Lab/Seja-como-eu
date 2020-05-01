@@ -10,8 +10,6 @@ public class CarinhoScript : MonoBehaviour
     public Transform[] carinhoHearts;
     public Transform PlayerPosition;
     public GameObject portalExit;
-    public EnemyCollision collisionWithPlayer; // para desativar o dano no player quando o carinho morrer
-
     private int health = 3;
     private Skills Launch;
     private Skills Orbit;
@@ -113,9 +111,9 @@ public class CarinhoScript : MonoBehaviour
             Destroy(feno);
             if (health <= 0)
             {
-                collisionWithPlayer.enabled = false;
-                portalExit.gameObject.SetActive(true);
+                GeneralCounts.CarinhoIsMorto = true;
                 anim.SetTrigger("Death");
+                portalExit.SetActive(true);
             }
             else
             {

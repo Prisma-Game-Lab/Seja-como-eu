@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RagdollController : MonoBehaviour
 {
-    public Collider MainCollider;
-    public Collider[] AllColliders;
-    public Rigidbody MainRigidbody;
-    public Rigidbody[] AllRigidbodies;
+    private Collider MainCollider;
+    private Collider[] AllColliders;
+    private Rigidbody MainRigidbody;
+    private Rigidbody[] AllRigidbodies;
 
     bool rag = false;
 
@@ -50,6 +50,5 @@ public class RagdollController : MonoBehaviour
             body.isKinematic = !isRagdoll;
             MainRigidbody.isKinematic = isRagdoll;
         }
-
     }
 }

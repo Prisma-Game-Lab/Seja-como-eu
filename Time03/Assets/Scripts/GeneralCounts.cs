@@ -8,4 +8,6 @@ public class GeneralCounts
    public static int DeathCount = 0;
 
    public static bool Kill = false;
+
+   public static bool CarinhoIsMorto = false;
 }

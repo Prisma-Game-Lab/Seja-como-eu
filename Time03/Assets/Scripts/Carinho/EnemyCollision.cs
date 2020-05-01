@@ -25,7 +25,7 @@ public class EnemyCollision : MonoBehaviour
     {
         Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
 
-        if (rb != null && collision.collider.CompareTag("enemy"))
+        if (rb != null && collision.collider.CompareTag("enemy") && !GeneralCounts.CarinhoIsMorto)
         {
             GetComponent<RagdollController>().DoRagdoll(true);
             GetComponent<MovimentPlayer>().enabled = false;
