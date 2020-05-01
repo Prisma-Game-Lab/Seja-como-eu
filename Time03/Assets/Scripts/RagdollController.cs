@@ -8,7 +8,6 @@ public class RagdollController : MonoBehaviour
     public Collider[] AllColliders;
     public Rigidbody MainRigidbody;
     public Rigidbody[] AllRigidbodies;
-    public Camera camera;
 
     bool rag = false;
 

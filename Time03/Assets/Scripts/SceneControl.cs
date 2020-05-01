@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 public class SceneControl : MonoBehaviour
 {
     public GameObject PauseMenuUI;
-    private bool GameIsPaused = false;
+    public AudioSource SceneTheme;
 
+    private bool GameIsPaused = false;
     private bool WaitPause = false;
 
     void Start()
     {
         PauseMenuUI.SetActive(false);
+        SceneTheme.Play();
     }
 
     void Update()
