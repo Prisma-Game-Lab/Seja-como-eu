@@ -1330,6 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1548817916}
+  deathScreen: {fileID: 543572094}
   Cooldown: 5
   RunAwayDistance: 10
 --- !u!114 &1138785820
@@ -1402,7 +1403,9 @@ MonoBehaviour:
   rollSpeed: 30
   Probabilidade: 100
   Cooldown: 10
+  rolling: 0
   bounceMat: {fileID: 13400000, guid: ae647c002cd0501438ca2954c45ae449, type: 2}
+  Player: {fileID: 1548817917}
 --- !u!135 &1138785824
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1973,6 +1976,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 724779493857211349, guid: 87af9f27abf3b77418ee4d70afc01926,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 787064013563886180, guid: 87af9f27abf3b77418ee4d70afc01926,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -2083,6 +2091,12 @@ PrefabInstance:
 --- !u!1 &1548817916 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 724779493857211349, guid: 87af9f27abf3b77418ee4d70afc01926,
+    type: 3}
+  m_PrefabInstance: {fileID: 1548817915}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1548817917 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 724779493857211345, guid: 87af9f27abf3b77418ee4d70afc01926,
     type: 3}
   m_PrefabInstance: {fileID: 1548817915}
   m_PrefabAsset: {fileID: 0}

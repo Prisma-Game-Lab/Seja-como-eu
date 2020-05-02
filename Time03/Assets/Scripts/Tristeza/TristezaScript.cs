@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class TristezaScript : MonoBehaviour
 {
     public GameObject Player;
+    public GameObject deathScreen;
     private SadRain srScript;
     private SadPistol spScript;
     private SadRoll srlScript;
@@ -96,6 +97,14 @@ public class TristezaScript : MonoBehaviour
         float zPosition = Random.Range(-19,19);
         Vector3 newPos = new Vector3(xPosition,0,zPosition);
         return newPos;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(srlScript.rolling && collision.gameObject.CompareTag("Player"))
+        {
+            deathScreen.SetActive(true);
+        }
     }
 
 }

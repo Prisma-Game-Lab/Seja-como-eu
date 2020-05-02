@@ -17,9 +17,12 @@ public class SadRoll : MonoBehaviour
     private NavMeshAgent agent;
 
     private Rigidbody t_rb;
-    private bool rolling;
+    [HideInInspector]
+    public bool rolling;
+    [Tooltip("O material é o que faz a tristeza rebater nas paredes.")]
     public PhysicMaterial bounceMat;
     private Collider t_col;
+    public Transform Player;
 
     // Start is called before the first frame update
     void Start()
@@ -40,21 +43,16 @@ public class SadRoll : MonoBehaviour
 
     public void Roll()
     {
-        float posx = Random.Range(-19, 19);
-        float posz = Random.Range(-19, 19);
-        Vector3 destination = new Vector3(posx, transform.position.y, posz);
-        Debug.Log(destination);
-
-        StartCoroutine(RollDestination(destination));
+        StartCoroutine(RollDestination());
     }
 
-    private IEnumerator RollDestination(Vector3 target)
+    private IEnumerator RollDestination()
     {
         agent.isStopped = true;       
 
         yield return new WaitForSeconds(0.5f);
 
-        transform.LookAt(target);
+        transform.LookAt(Player.position);
 
         yield return new WaitForSeconds(rollWindup);
 
@@ -69,7 +67,6 @@ public class SadRoll : MonoBehaviour
         agent.isStopped = false;
         rolling = false;
     }
-
     public float getProb()
     {
         return Probabilidade;
