@@ -13,13 +13,17 @@ public class MDM : MonoBehaviour
     private Skills Floor;
     private Skills Follow;
     private Skills Prison;
+    private Skills Ultimate;
     private PunchRain PRScript;
     private PunchFloor PFScript;
     private PunchFollow PFOScript;
     private PunchPrison PPScript;
+    private PunchUltimate PUScript;
     private NewBossSkillCD SkillCD;
     private List<Skills> skills;
     private bool SkillIsReady = false;
+    private bool UltimateNow = false;
+    private bool UltimateExecuteNow;
     private float CurrentHP;
 
     void Start()
@@ -46,16 +50,27 @@ public class MDM : MonoBehaviour
         Prison = new Skills(100,PPScript.GetCD(),true,PPScript.Prison);
         skills.Add(Prison);
 
+        PUScript = GetComponent<PunchUltimate>();
+        Ultimate = new Skills(100,0,true,PUScript.Ultimate);
+
         StartCoroutine(ResetCooldown());
         StartCoroutine(ResetPlatform());
+        UltimateExecuteNow = true;
     }
 
     
     void Update()
     {
-        if(SkillIsReady) {
+        UltimateNow = true;
+
+        if(SkillIsReady && !UltimateNow) {
             SkillCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
+        }
+
+        if(UltimateExecuteNow) {
+            Ultimate.ActivateSkill();
+            UltimateExecuteNow = false;
         }
 
         HpBar.fillAmount = CurrentHP/HitPoints;
@@ -86,7 +101,7 @@ public class MDM : MonoBehaviour
 
     public void Platform() {
         float xPosition = Random.Range(-19,19);
-        float zPosition = Random.Range(-19,19);
+        float zPosition = Random.Range(-18,18);
         if(!DamagePlatform.activeSelf) {
             DamagePlatform.transform.position = new Vector3(xPosition,0,zPosition);
             DamagePlatform.SetActive(true);
