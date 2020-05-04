@@ -17,10 +17,11 @@ public class DamageBoss : MonoBehaviour
     
     void Update()
     {
+        Debug.Log(Canlose);
         if(Canlose && !GeneralCounts.Kill) {
             timer += Time.deltaTime;
             if(timer >= TimeInside) {
-                mdm.PerdeVida();  
+                mdm.Charge();  
                 timer = 0;
             }
         }

@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class MDM : MonoBehaviour
 {
     public float HitPoints;
+    public float FullSpecial;
     public float Cooldown;
     public Image HpBar;
+    public Image SpecBar;
     public GameObject DamagePlatform;
     private Skills Rain;
     private Skills Floor;
@@ -25,9 +27,15 @@ public class MDM : MonoBehaviour
     private bool UltimateNow = false;
     private bool UltimateExecuteNow;
     private float CurrentHP;
+    private float Charger;
+    private int Level;
 
     void Start()
     {
+        Level = 1;
+
+        Charger = 0;
+        
         CurrentHP = HitPoints;
 
         skills = new List<Skills>();
@@ -55,14 +63,11 @@ public class MDM : MonoBehaviour
 
         StartCoroutine(ResetCooldown());
         StartCoroutine(ResetPlatform());
-        UltimateExecuteNow = true;
     }
 
     
     void Update()
     {
-        UltimateNow = true;
-
         if(SkillIsReady && !UltimateNow) {
             SkillCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
@@ -74,18 +79,26 @@ public class MDM : MonoBehaviour
         }
 
         HpBar.fillAmount = CurrentHP/HitPoints;
+        SpecBar.fillAmount = Charger/FullSpecial;
 
         if(CurrentHP <= 0) {
             WinGame();
         }
+
+        if(Charger >= FullSpecial) {
+            PerdeVida();
+        }
     }
 
-    public void PerdeVida() {
-        CurrentHP--;
-        if(CurrentHP % 5 == 0) {
-            Platform();
-            StartCoroutine(ResetPlatform());
-        }
+    private void PerdeVida() {
+        CurrentHP -= 5;
+        UltimateExecuteNow = true;
+        UltimateNow = true;
+        Charger = 0;
+        
+        Platform();
+        StartCoroutine(ResetPlatform());
+        
     }
 
     public void WinGame() {
@@ -114,5 +127,17 @@ public class MDM : MonoBehaviour
     private IEnumerator ResetPlatform() {
         yield return new WaitForSeconds(3);
         Platform();
+    }
+
+    public void RaiseLevel() {
+        Level++;
+    }
+
+    public void FinishUltimate() {
+        UltimateNow = false;
+    }
+
+    public void Charge() {
+        Charger++;
     }
 }

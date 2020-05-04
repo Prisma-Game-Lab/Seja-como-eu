@@ -8,14 +8,12 @@ public class PunchUltimate : MonoBehaviour
     public float TimeBetweenWaves;
     public GameObject UltimateBarrier;
     public GameObject UltimateWave;
-
     public Transform Player;
-
-    private int Level;
+    private MDM Mestre;
 
     void Start()
     {
-        Level = 0;
+        Mestre = GetComponent<MDM>();
     }
 
     
@@ -44,9 +42,7 @@ public class PunchUltimate : MonoBehaviour
         }
         yield return new WaitForSeconds(5);
         UltimateBarrier.SetActive(false);
-    }
-
-    public void RaiseLevel() {
-        Level++;
+        Mestre.RaiseLevel();
+        Mestre.FinishUltimate();
     }
 }
