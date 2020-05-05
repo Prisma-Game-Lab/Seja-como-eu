@@ -37,10 +37,6 @@ public class SadPistol : MonoBehaviour
     {
         agent.isStopped = true;
 
-        yield return new WaitForSeconds(0.5f);
-
-        transform.LookAt(Player.transform.position);
-
         yield return new WaitForSeconds(telegraph);
 
         GameObject initialShot = Instantiate(PrefabBulletGota, gameObject.transform.position, gameObject.transform.rotation);

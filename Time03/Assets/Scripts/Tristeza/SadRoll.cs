@@ -50,10 +50,6 @@ public class SadRoll : MonoBehaviour
     {
         agent.isStopped = true;       
 
-        yield return new WaitForSeconds(0.5f);
-
-        transform.LookAt(Player.position);
-
         yield return new WaitForSeconds(rollWindup);
 
         t_rb.AddForce(transform.forward * rollSpeed, ForceMode.Impulse);
