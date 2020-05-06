@@ -20,6 +20,12 @@ public class MovimentPlayer : MonoBehaviour
     private Rigidbody _rb;
     private Animator anim;
 
+    private Quaternion Rotation => Quaternion.LookRotation(RotationDirection);
+    private Vector3 RotationDirection => Vector3.RotateTowards(transform.forward, Vector3.Normalize(Direction()), RotationSpeed * Time.deltaTime, 0);
+
+    //teclado
+    private Vector2 kInput;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,34 +38,46 @@ public class MovimentPlayer : MonoBehaviour
     {
         if(dashing == false)
         {
-            float translationV = 0;
-            float translationH = 0;
 
-            translationV = Input.GetAxis("Vertical") *  MovimentSpeed;
-            translationH = Input.GetAxis("Horizontal") *  MovimentSpeed;
+            if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)){
+                KeyboardInput();
+            }
 
-            translationV *= Time.deltaTime;
-            translationH *= Time.deltaTime;
+            else if(Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D)){
+                anim.SetBool("Idle", true);
+                Footsteps.Stop();
+            }
+            
 
-            transform.rotation = Rotation;
+            else{
+                float translationV = 0;
+                float translationH = 0;
 
-            transform.position += Vector3.Normalize(Direction())* MovimentSpeed * Time.deltaTime;
+                translationV = Input.GetAxis("Vertical") *  MovimentSpeed;
+                translationH = Input.GetAxis("Horizontal") *  MovimentSpeed;
+
+                translationV *= Time.deltaTime;
+                translationH *= Time.deltaTime;
+
+                transform.rotation = Rotation;
+
+                transform.position += Vector3.Normalize(Direction())* MovimentSpeed * Time.deltaTime;
         
-            if((translationV != 0) || (translationH != 0)){
-                anim.SetBool("Idle",false);
+                if((translationV != 0) || (translationH != 0)){
+                    anim.SetBool("Idle",false);
 
-                Footsteps.pitch = Random.Range(0.7f, 1.3f);
-                if(!Footsteps.isPlaying) {
+                    Footsteps.pitch = Random.Range(0.7f, 1.3f);
+                    if(!Footsteps.isPlaying) {
                     Footsteps.Play();
+                    }
+                }
+                else
+                {
+                    anim.SetBool("Idle",true);
+                    Footsteps.Stop();
                 }
             }
-            else
-            {
-                anim.SetBool("Idle",true);
-
-
-               Footsteps.Stop();
-            }
+            
 
         }
     }
@@ -79,8 +97,9 @@ public class MovimentPlayer : MonoBehaviour
         return new Vector3(h, 0, v);
     }
     
-    private Quaternion Rotation => Quaternion.LookRotation(RotationDirection);
-    private Vector3 RotationDirection => Vector3.RotateTowards(transform.forward, Vector3.Normalize(Direction()), RotationSpeed * Time.deltaTime, 0);
+    
+
+
 
     private void Dash(Vector3 dir)
     {
@@ -93,6 +112,22 @@ public class MovimentPlayer : MonoBehaviour
             dashEnabled = false;
             StartCoroutine(StopTheDash());
         }
+    }
+
+    private void KeyboardInput(){
+        kInput.x = Input.GetAxisRaw("Horizontal");
+        kInput.y = Input.GetAxisRaw("Vertical");
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, Rotation, RotationSpeed * Time.deltaTime);
+
+        transform.position += transform.forward * MovimentSpeed * Time.deltaTime;
+
+        anim.SetBool("Idle",false);
+        Footsteps.pitch = Random.Range(0.7f, 1.3f);
+            if(!Footsteps.isPlaying) {
+                Footsteps.Play();
+            }
+
     }
 
     IEnumerator StopTheDash() {
