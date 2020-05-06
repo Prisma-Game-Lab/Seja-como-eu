@@ -71,6 +71,7 @@ public class CarinhoScript : MonoBehaviour
             {
                 if (distance <= lookRadius)
                 {
+                    //Debug.Log(agent.enabled);
                     agent.SetDestination(PlayerPosition.position);
                     FaceTarget(PlayerPosition.position);
                 }
@@ -151,9 +152,11 @@ public class CarinhoScript : MonoBehaviour
 
     private IEnumerator Stun()
     {
+        //Debug.Log("Start Stun!");
         agent.enabled = false;
         invulneravel = true;
         yield return new WaitForSeconds(damageStun);
+        //Debug.Log("End Stun!");
         agent.enabled = true;
         invulneravel = false;
     }

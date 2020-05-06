@@ -75,8 +75,10 @@ public class HeartLaunch : MonoBehaviour
 
         // Launching
         anim.SetTrigger("Fall");
-        while(_t.position != target)//vai pro jogador
+        float distTol = 0.05f;
+        while(Vector3.Distance(_t.position,target) > distTol)//vai pro jogador
         {
+            //Debug.Log(agent.enabled);
         	_t.position = Vector3.MoveTowards(_t.position, target, launchingSpeed * Time.deltaTime);
         	cScript.FaceTarget(target);
         	yield return new WaitForEndOfFrame ();
@@ -86,6 +88,7 @@ public class HeartLaunch : MonoBehaviour
         anim.SetTrigger("Ground");
         yield return new WaitForSeconds(posLaunch); //tempo pos launch
         agent.enabled = true; //reativa agente do carinho
+        //Debug.Log("Launch ACABOU!");
     }
 
     public float getProb()
