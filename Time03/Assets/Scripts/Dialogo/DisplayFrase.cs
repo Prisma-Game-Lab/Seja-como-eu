@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DisplayFrase : MonoBehaviour
 {
     public PersonagemFraseSO Frases;
+    public DialogueTrigger Trigger;
 
     public Image ChatBox;
 
@@ -23,23 +24,29 @@ public class DisplayFrase : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K) && ChatBox.gameObject.activeSelf) {
-            NextFrase();
-        }
+        if(Input.GetKeyDown(KeyCode.J)) {
+            if(Frases.Frase[CurrentFrase].EndDialogue && FraseEnd) {
+                HideFrase();
+                Trigger.EndConversation();
+                return;
+            }
 
-        if(Input.GetKeyDown(KeyCode.J) && !ChatBox.gameObject.activeSelf) {
-            ShowFrase();
-        }
+            if(ChatBox.gameObject.activeSelf) {
+                NextFrase();
+            }
 
-        if(Input.GetKeyDown(KeyCode.L)) {
-            HideFrase();
+            if(!ChatBox.gameObject.activeSelf) {
+                ShowFrase();
+                Trigger.TriggerConversation();
+            }
+
         }
     }
 
     private void NextFrase() {
         if(!FraseEnd) {
             FraseEnd = true;
-            Chat.text = Frases.Frase[CurrentFrase];
+            Chat.text = Frases.Frase[CurrentFrase].Texto;
         }
         else {
             if(CurrentFrase + 1 == Frases.Frase.Count) {
@@ -59,13 +66,19 @@ public class DisplayFrase : MonoBehaviour
     }
 
     private void HideFrase() {
+        if(CurrentFrase + 1 == Frases.Frase.Count) {
+            CurrentFrase = 0;
+        }
+        else {
+            CurrentFrase++;
+        }
         ChatBox.gameObject.SetActive(false);
     }
 
     private IEnumerator ShowLetters() {
         Chat.text = "";
         FraseEnd = false;
-        foreach(char c in Frases.Frase[CurrentFrase]) {
+        foreach(char c in Frases.Frase[CurrentFrase].Texto) {
             if(FraseEnd) {
                 break;
             }

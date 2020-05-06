@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: FrasePlayer
   m_EditorClassIdentifier: 
   Frase:
-  - ola tudo bem, meu nome eh joaquim
-  - eu gosto de torrada
-  - porque torrada eh muito bom
+  - Texto: 1eu gosto de torrada
+    EndDialogue: 0
+  - Texto: 2torrada eh muito bom
+    EndDialogue: 0
+  - Texto: 3torrada eh bom demais
+    EndDialogue: 1
