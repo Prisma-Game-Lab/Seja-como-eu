@@ -60,6 +60,11 @@ public class TristezaScript : MonoBehaviour
         if(srScript.RainReady()) {
             srScript.Rain();
         }
+
+        if(Agent.isStopped)
+        {
+            FaceTarget(Player.transform.position);
+        }
     }
 
     private IEnumerator ResetCooldown() {
@@ -90,6 +95,13 @@ public class TristezaScript : MonoBehaviour
         }
         
         timer += Time.deltaTime;
+    }
+
+    public void FaceTarget(Vector3 target)
+    {
+        Vector3 direction = (target - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
     private Vector3 ChooseDirection() {
