@@ -11,6 +11,8 @@ public class SadRain : MonoBehaviour
     public float Cooldown;
 
     public GameObject PrefabGota;
+    public GameObject PrefabBulletGota;
+    public int numeroBullets;
 
     private bool isReady = false;
 
@@ -36,7 +38,8 @@ public class SadRain : MonoBehaviour
         for (int i = 0; i < NumeroGotas; i++) {
             xPosition = Random.Range(-19,19);
             zPosition = Random.Range(-19,19);
-            Instantiate(PrefabGota, new Vector3(xPosition, 15, zPosition), Quaternion.identity);
+            GameObject rain = Instantiate(PrefabGota, new Vector3(xPosition, 15, zPosition), Quaternion.identity);
+            StartCoroutine(RainSplit(rain));
             yield return new WaitForSeconds(RainInterval);                                                                
         }
         yield return new WaitForSeconds(Cooldown);
@@ -46,6 +49,17 @@ public class SadRain : MonoBehaviour
     private IEnumerator StartRain() {
         yield return new WaitForSeconds(Cooldown);
         isReady = true;
+    }
+
+    private IEnumerator RainSplit(GameObject gota)
+    {
+        yield return new WaitForSeconds(1.7f);
+
+        int Arc = 360 / numeroBullets;
+        for(int i = 0; i < 360; i += Arc)
+        {
+            Instantiate(PrefabBulletGota, gota.transform.position, Quaternion.AngleAxis(i, Vector3.up));
+        }
     }
 
     public bool RainReady() {
