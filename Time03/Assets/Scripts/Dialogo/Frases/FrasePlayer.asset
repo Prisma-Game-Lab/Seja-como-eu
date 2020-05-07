@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: FrasePlayer
   m_EditorClassIdentifier: 
   Frase:
-  - Texto: 1eu gosto de torrada
-    EndDialogue: 0
-  - Texto: 2torrada eh muito bom
-    EndDialogue: 0
-  - Texto: 3torrada eh bom demais
-    EndDialogue: 1
+  - Texto: oi meu nome eh joao
+    Turn: 1
+  - Texto: vou te ajudar a virar macho
+    Turn: 2
+  - Texto: yay
+    Turn: 1
+  - Texto: '###########################'
+    Turn: 0

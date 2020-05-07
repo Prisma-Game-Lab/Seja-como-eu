@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DisplayFrase : MonoBehaviour
 {
+    public int MyTurn;
     public PersonagemFraseSO Frases;
     public DialogueTrigger Trigger;
 
@@ -14,28 +15,26 @@ public class DisplayFrase : MonoBehaviour
 
     private bool FraseEnd;
 
-    static private int CurrentFrase = 0;
-
     void Start()
     {
         Chat = ChatBox.transform.GetChild(0).GetComponent<Text>();
+        Frases.Reset(); // Debugger
     }
 
     
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.J)) {
-            if(Frases.Frase[CurrentFrase].EndDialogue && FraseEnd) {
+            if((Frases.CurrentFrase().Turn != MyTurn) && FraseEnd) {
                 HideFrase();
-                Trigger.EndConversation();
                 return;
             }
 
             if(ChatBox.gameObject.activeSelf) {
-                NextFrase();
+                Next();
             }
 
-            if(!ChatBox.gameObject.activeSelf) {
+            if(!ChatBox.gameObject.activeSelf && Frases.CurrentFrase().Turn == MyTurn) {
                 ShowFrase();
                 Trigger.TriggerConversation();
             }
@@ -43,18 +42,13 @@ public class DisplayFrase : MonoBehaviour
         }
     }
 
-    private void NextFrase() {
+    private void Next() {
         if(!FraseEnd) {
+            Debug.Log("Passei");
+            Chat.text = Frases.CurrentFrase().Texto;
             FraseEnd = true;
-            Chat.text = Frases.Frase[CurrentFrase].Texto;
         }
         else {
-            if(CurrentFrase + 1 == Frases.Frase.Count) {
-                CurrentFrase = 0;
-            }
-            else {
-                CurrentFrase++;
-            }
             StartCoroutine(ShowLetters());
         }
     }
@@ -66,19 +60,16 @@ public class DisplayFrase : MonoBehaviour
     }
 
     private void HideFrase() {
-        if(CurrentFrase + 1 == Frases.Frase.Count) {
-            CurrentFrase = 0;
-        }
-        else {
-            CurrentFrase++;
-        }
         ChatBox.gameObject.SetActive(false);
+        if(Frases.CurrentFrase().Turn == 0) {
+            Trigger.EndConversation();
+        }
     }
 
     private IEnumerator ShowLetters() {
         Chat.text = "";
         FraseEnd = false;
-        foreach(char c in Frases.Frase[CurrentFrase].Texto) {
+        foreach(char c in Frases.CurrentFrase().Texto) {
             if(FraseEnd) {
                 break;
             }
@@ -86,5 +77,7 @@ public class DisplayFrase : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         FraseEnd = true;
+        Debug.Log("Passei por aqui");
+        Frases.NextFrase();
     }
 }

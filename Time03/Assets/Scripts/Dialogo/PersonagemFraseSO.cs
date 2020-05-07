@@ -6,4 +6,22 @@ using UnityEngine;
 public class PersonagemFraseSO : ScriptableObject
 {
     public List<Dialogue> Frase;
+
+    private int Index = 0;
+
+    public Dialogue CurrentFrase() {
+        return Frase[Index];
+    }
+
+    public void NextFrase() {
+        if(Index + 1 >= Frase.Count) {
+            Index = 0;
+            return;
+        }
+        Index++;
+    }
+
+    public void Reset() {
+        Index = 0;
+    }
 }

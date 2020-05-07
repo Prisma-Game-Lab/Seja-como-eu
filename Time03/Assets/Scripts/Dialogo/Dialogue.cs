@@ -5,8 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
-    [TextArea(15,20)]
+    [TextArea(8,12)]
     public string Texto;
 
-    public bool EndDialogue;
+    public int Turn;
 }
