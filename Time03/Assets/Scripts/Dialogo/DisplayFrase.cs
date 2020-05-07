@@ -18,7 +18,6 @@ public class DisplayFrase : MonoBehaviour
     void Start()
     {
         Chat = ChatBox.transform.GetChild(0).GetComponent<Text>();
-        Frases.Reset(); // Debugger
     }
 
     

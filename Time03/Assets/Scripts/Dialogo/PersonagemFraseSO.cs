@@ -21,7 +21,8 @@ public class PersonagemFraseSO : ScriptableObject
         Index++;
     }
 
-    public void Reset() {
+    private void OnEnable()
+    {
         Index = 0;
     }
 }
