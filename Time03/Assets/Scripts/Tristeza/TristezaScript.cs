@@ -54,7 +54,7 @@ public class TristezaScript : MonoBehaviour
     
     void Update()
     {
-        if(health > 0)
+        if(health > 0 && Agent.enabled)
         {
             FleeFromPlayer();
 
@@ -88,6 +88,8 @@ public class TristezaScript : MonoBehaviour
         if(health<=0)
         {
             portaExit.SetActive(true);
+            srScript.StopAllCoroutines();
+            Agent.enabled = false;
         }
         else
         {

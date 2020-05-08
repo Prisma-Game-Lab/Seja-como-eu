@@ -149,7 +149,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66915482}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 66915482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 11.69}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 1364944661}
   m_RootOrder: 0
@@ -228,8 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   center: {x: 0, y: 1, z: 10}
-  orbitSpeed: 50
-  radius: 5
+  orbitSpeed: 100
+  radius: 3.5
   tristeza: {fileID: 1138785812}
   apagado: {fileID: 2100000, guid: 36b94246bfeb1b04195fdbb9fd5237ee, type: 2}
   acesoMat: {fileID: 2100000, guid: 1074e8fead7a5684e9e5e26875376583, type: 2}
@@ -604,8 +604,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   center: {x: -10, y: 1, z: -10}
-  orbitSpeed: 50
-  radius: 5
+  orbitSpeed: 100
+  radius: 3.5
   tristeza: {fileID: 1138785812}
   apagado: {fileID: 2100000, guid: 36b94246bfeb1b04195fdbb9fd5237ee, type: 2}
   acesoMat: {fileID: 2100000, guid: 1074e8fead7a5684e9e5e26875376583, type: 2}
@@ -618,7 +618,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454577919}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -679,7 +679,7 @@ Transform:
   m_GameObject: {fileID: 454577919}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10, y: 1, z: -12.69}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 1364944661}
   m_RootOrder: 2
@@ -1540,7 +1540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumeroGotas: 40
   RainInterval: 1
-  Cooldown: 5
+  Cooldown: 0
   PrefabGota: {fileID: 5973786886215369571, guid: 26dd2b34cca856749b49e76bf54cf877,
     type: 3}
   PrefabBulletGota: {fileID: 4035445688948290335, guid: 532c3a64bdc73ca4d9bba67b29bd851e,
@@ -2074,8 +2074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   center: {x: 10, y: 1, z: -10}
-  orbitSpeed: 50
-  radius: 5
+  orbitSpeed: 100
+  radius: 3.5
   tristeza: {fileID: 1138785812}
   apagado: {fileID: 2100000, guid: 36b94246bfeb1b04195fdbb9fd5237ee, type: 2}
   acesoMat: {fileID: 2100000, guid: 1074e8fead7a5684e9e5e26875376583, type: 2}
@@ -2088,7 +2088,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503080071}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -2149,7 +2149,7 @@ Transform:
   m_GameObject: {fileID: 1503080071}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: 1, z: -12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 1364944661}
   m_RootOrder: 1

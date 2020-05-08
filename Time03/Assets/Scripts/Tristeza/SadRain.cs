@@ -31,7 +31,6 @@ public class SadRain : MonoBehaviour
         isReady = false;
         StartCoroutine(SlowRain());
     }
-
     private IEnumerator SlowRain() {
         float xPosition;
         float zPosition;

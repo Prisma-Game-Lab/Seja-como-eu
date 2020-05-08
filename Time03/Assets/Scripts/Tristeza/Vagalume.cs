@@ -37,9 +37,9 @@ public class Vagalume : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.collider.CompareTag("Player") && aceso)
+        if(other.CompareTag("Player") && aceso)
         {
             aceso = false;
             tristeza.GetComponent<TristezaScript>().damageCounter += 1;
