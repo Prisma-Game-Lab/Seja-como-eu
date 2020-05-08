@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class TristezaScript : MonoBehaviour
 {
     public GameObject Player;
+    public GameObject portaExit;
+    public Vagalume[] vagalumes;
     public GameObject deathScreen;
     private SadRain srScript;
     private SadPistol spScript;
@@ -20,6 +22,8 @@ public class TristezaScript : MonoBehaviour
     private NavMeshPath Path;
     private Vector3 Direction;
     private float timer;
+    public int damageCounter = 0;
+    public int health = 3;
 
     public float RunAwayDistance;
 
@@ -35,11 +39,11 @@ public class TristezaScript : MonoBehaviour
         srScript = GetComponent<SadRain>();
 
         spScript = GetComponent<SadPistol>();
-        Pistol = new Skills(spScript.getProb(),spScript.getCD(),true,spScript.Pistol);
+        Pistol = new Skills(spScript.getProb(),spScript.getCD(),false,spScript.Pistol);
         skills.Add(Pistol);
 
         srlScript = GetComponent<SadRoll>();
-        Roll = new Skills(srlScript.getProb(), srlScript.getCD(), true, srlScript.Roll);
+        Roll = new Skills(srlScript.getProb(), srlScript.getCD(), false, srlScript.Roll);
         skills.Add(Roll);
 
         SkillCD = GetComponent<BossSkillsCD>();
@@ -50,29 +54,70 @@ public class TristezaScript : MonoBehaviour
     
     void Update()
     {
-        FleeFromPlayer();
-
-        if(SkillIsReady) {
-            SkillCD.ChooseSkill(skills);
-            StartCoroutine(ResetCooldown());
-        }
-
-        if(srScript.RainReady()) {
-            srScript.Rain();
-        }
-
-        if(Agent.isStopped)
+        if(health > 0)
         {
-            FaceTarget(Player.transform.position);
+            FleeFromPlayer();
+
+            if (SkillIsReady)
+            {
+                SkillCD.ChooseSkill(skills);
+                StartCoroutine(ResetCooldown());
+            }
+
+            if (srScript.RainReady())
+            {
+                srScript.Rain();
+            }
+
+            if (Agent.isStopped)
+            {
+                FaceTarget(Player.transform.position);
+            }
+
+            if (damageCounter >= 3)
+            {
+                Damage();
+            }
         }
     }
 
+    private void Damage()
+    {
+        health -= 1;
+        damageCounter = 0;
+        if(health<=0)
+        {
+            portaExit.SetActive(true);
+        }
+        else
+        {
+            if(health == 2)
+            {
+                Roll.SwitchReady();
+            }
+            if(health == 1)
+            {
+                Pistol.SwitchReady();
+            }
+            StartCoroutine(Stun());
+        }
+    }
+
+    private IEnumerator Stun()
+    {
+        Agent.speed = 0.0f;
+        yield return new WaitForSeconds(2);
+        Agent.speed = 3.5f;
+        for(int i = 0; i < vagalumes.Length; i++)
+        {
+            vagalumes[i].aceso = true;
+        }
+    }
     private IEnumerator ResetCooldown() {
         SkillIsReady = false;
         yield return new WaitForSeconds(Cooldown);
         SkillIsReady = true;
     }
-
     private void FleeFromPlayer() {
 
         float distance = Vector3.Distance(transform.position,Player.transform.position);
