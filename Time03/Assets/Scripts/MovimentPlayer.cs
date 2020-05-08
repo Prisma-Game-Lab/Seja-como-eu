@@ -26,11 +26,14 @@ public class MovimentPlayer : MonoBehaviour
     //teclado
     private Vector2 kInput;
 
+    private GeneralCounts Counts;
+
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
+        Counts = SaveSystem.GetInstance().generalCounts;
     }
 
     // Update is called once per frame
@@ -106,7 +109,7 @@ public class MovimentPlayer : MonoBehaviour
         if (Input.GetAxis("Dash") == 1)
         {
             anim.SetBool("Dash", true);
-            GeneralCounts.DashCount++;
+            Counts.DashCount++;
             _rb.AddForce(dir * DashSpeed, ForceMode.Impulse);
             dashing = true;
             dashEnabled = false;

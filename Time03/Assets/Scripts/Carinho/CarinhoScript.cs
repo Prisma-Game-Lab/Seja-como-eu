@@ -33,8 +33,12 @@ public class CarinhoScript : MonoBehaviour
 
     private bool invulneravel = false;
 
+    private GeneralCounts Counts;
+
     void Start()
     {
+        Counts = SaveSystem.GetInstance().generalCounts;
+
         fullhealth = health;
 
         agent = GetComponent<NavMeshAgent>();
@@ -111,7 +115,7 @@ public class CarinhoScript : MonoBehaviour
             Destroy(feno);
             if (health <= 0)
             {
-                GeneralCounts.CarinhoIsMorto = true;
+                Counts.CarinhoIsMorto = true;
                 anim.SetTrigger("Death");
                 portalExit.SetActive(true);
             }

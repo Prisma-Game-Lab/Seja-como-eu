@@ -72,4 +72,9 @@ public class SceneControl : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         WaitPause = false;
     }
+
+    public void SaveGame() {
+        SaveSystem s = SaveSystem.GetInstance();
+        s.SaveState();
+    }
 }

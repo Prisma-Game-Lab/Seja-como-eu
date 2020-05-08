@@ -7,9 +7,11 @@ public class GameManager : MonoBehaviour
     public GameObject DeathScreen;
     public GameObject player;
 
+    private GeneralCounts Counts;
+
     void Start()
     {
-        
+        Counts = SaveSystem.GetInstance().generalCounts;
     }
 
     
@@ -24,6 +26,6 @@ public class GameManager : MonoBehaviour
         player.GetComponent<RagdollController>().DoRagdoll(true);
         player.GetComponent<MovimentPlayer>().enabled = false;
         DeathScreen.SetActive(true);
-        GeneralCounts.DeathCount++;
+        Counts.DeathCount++;
     }
 }
