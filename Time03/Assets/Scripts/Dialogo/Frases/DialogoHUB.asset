@@ -19,13 +19,13 @@ MonoBehaviour:
   - Texto: Oi joao, voce gosta de torrada?
     Turn: 2
     Options: []
-  - Texto: yay
+  - Texto: '*Responde a Pergunta*'
     Turn: 1
     Options:
     - Eu gosto de torrada
     - Eu odeio torrada
     - Eu nunca comi torrada
-  - Texto: '*Acaba o Dialogo*'
+  - Texto: Eu nunca comi torrada
     Turn: 1
     Options: []
   - Texto: '*Acaba o Dialogo*'
