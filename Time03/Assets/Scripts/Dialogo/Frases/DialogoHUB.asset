@@ -15,9 +15,19 @@ MonoBehaviour:
   Frase:
   - Texto: oi meu nome eh joao
     Turn: 1
-  - Texto: vou te ajudar a virar macho
+    Options: []
+  - Texto: Oi joao, voce gosta de torrada?
     Turn: 2
+    Options: []
   - Texto: yay
     Turn: 1
-  - Texto: '###########################'
+    Options:
+    - Eu gosto de torrada
+    - Eu odeio torrada
+    - Eu nunca comi torrada
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 1
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
     Turn: 0
+    Options: []

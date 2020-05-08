@@ -29,6 +29,11 @@ public class DisplayFrase : MonoBehaviour
                 return;
             }
 
+            if(Frases.CurrentFrase().Options.Count > 0) {
+                HideFrase();
+                return;
+            }
+
             if(ChatBox.gameObject.activeSelf) {
                 Next();
             }
@@ -43,7 +48,6 @@ public class DisplayFrase : MonoBehaviour
 
     private void Next() {
         if(!FraseEnd) {
-            Debug.Log("Passei");
             Chat.text = Frases.CurrentFrase().Texto;
             FraseEnd = true;
         }
@@ -52,7 +56,7 @@ public class DisplayFrase : MonoBehaviour
         }
     }
 
-    private void ShowFrase() {
+    public void ShowFrase() {
         ChatBox.gameObject.SetActive(true);
         StartCoroutine(ShowLetters());
 
@@ -76,7 +80,6 @@ public class DisplayFrase : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         FraseEnd = true;
-        Debug.Log("Passei por aqui");
         Frases.NextFrase();
     }
 }
