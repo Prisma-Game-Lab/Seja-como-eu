@@ -43,6 +43,7 @@ public class HeartLaunch : MonoBehaviour
 
     public void Launch()
     {
+        agent.enabled = false; //desativa agente do carinho
     	StartCoroutine(HLaunch());
     	Debug.Log("Launch!");
     }
@@ -53,7 +54,7 @@ public class HeartLaunch : MonoBehaviour
     	Vector3 startPos = _t.position;
     	float time = 0f;
 
-		agent.enabled = false; //desativa agente do carinho
+		
 
 		target = _t.position + height*_t.up;
 
@@ -67,7 +68,7 @@ public class HeartLaunch : MonoBehaviour
     		yield return new WaitForEndOfFrame ();
     	} 
     	// End Rising
-
+        Debug.Log("Chegou no alto");
 
     	target = playerPosition.position; //alvo definido
         
@@ -78,9 +79,13 @@ public class HeartLaunch : MonoBehaviour
         float distTol = 0.05f;
         while(Vector3.Distance(_t.position,target) > distTol)//vai pro jogador
         {
-            //Debug.Log(agent.enabled);
+            if(agent.enabled)
+            {
+                Debug.Log("Bugou :(");
+            }
+            
         	_t.position = Vector3.MoveTowards(_t.position, target, launchingSpeed * Time.deltaTime);
-        	cScript.FaceTarget(target);
+        	//cScript.FaceTarget(target);
         	yield return new WaitForEndOfFrame ();
         }
         // End Launching
@@ -88,7 +93,7 @@ public class HeartLaunch : MonoBehaviour
         anim.SetTrigger("Ground");
         yield return new WaitForSeconds(posLaunch); //tempo pos launch
         agent.enabled = true; //reativa agente do carinho
-        //Debug.Log("Launch ACABOU!");
+        Debug.Log("Launch ACABOU!");
     }
 
     public float getProb()

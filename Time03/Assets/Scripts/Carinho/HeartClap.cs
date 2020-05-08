@@ -39,7 +39,7 @@ public class HeartClap : MonoBehaviour
     	Collider[] hitColliders;
     	bool inBox = false;
     	
-    	agent.enabled = false; //desativa agente do carinho
+    	
 
         anim.SetTrigger("Hug 1");
 
@@ -86,6 +86,7 @@ public class HeartClap : MonoBehaviour
     }
 
     public void Clap() {
+        agent.enabled = false; //desativa agente do carinho
     	StartCoroutine(HHug());
         Debug.Log("Clap!");
     }
