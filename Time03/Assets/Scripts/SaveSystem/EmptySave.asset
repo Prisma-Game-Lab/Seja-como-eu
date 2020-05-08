@@ -12,3 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f411736d4fa47419d6886e833ef811, type: 3}
   m_Name: EmptySave
   m_EditorClassIdentifier: 
+  DashCount: 0
+  DeathCount: 0
+  CarinhoIsMorto: 0
+  TristezaIsMorto: 0
+  ExpressividadeIsMorto: 0
+  CarinhoCompleteTimer: 0
+  TristezaCompleteTimer: 0
+  ExpressividadeCompleteTimer: 0
+  MDMCompleteTimer: 0
