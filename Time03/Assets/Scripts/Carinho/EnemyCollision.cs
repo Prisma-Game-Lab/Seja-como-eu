@@ -9,9 +9,12 @@ public class EnemyCollision : MonoBehaviour
 
     public GameObject deathScreen;
 
+    private GeneralCounts Counts;
+
     // Start is called before the first frame update
     void Start()
     {
+        Counts = SaveSystem.GetInstance().generalCounts;
         deathScreen.SetActive(false);
     }
 
@@ -25,12 +28,12 @@ public class EnemyCollision : MonoBehaviour
     {
         Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
 
-        if (rb != null && collision.collider.CompareTag("enemy") && !GeneralCounts.CarinhoIsMorto)
+        if (rb != null && collision.collider.CompareTag("enemy") && !Counts.CarinhoIsMorto)
         {
             GetComponent<RagdollController>().DoRagdoll(true);
             GetComponent<MovimentPlayer>().enabled = false;
             deathScreen.SetActive(true);
-            GeneralCounts.DeathCount++;
+            Counts.DeathCount++;
         }
         if(collision.collider.CompareTag("rock"))
         {
@@ -49,7 +52,7 @@ public class EnemyCollision : MonoBehaviour
             GetComponent<RagdollController>().DoRagdoll(true);
             GetComponent<MovimentPlayer>().enabled = false;
             deathScreen.SetActive(true);
-            GeneralCounts.DeathCount++;
+            Counts.DeathCount++;
         }
     }
 

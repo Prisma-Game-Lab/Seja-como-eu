@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
+    private GeneralCounts Counts;
 
     void Start()
     {
-        
+        Counts = SaveSystem.GetInstance().generalCounts;
     }
 
     
@@ -19,7 +20,7 @@ public class Death : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Player") && !GeneralCounts.Kill) {
             GeneralCounts.Kill = true;
-            GeneralCounts.DeathCount++;
+            Counts.DeathCount++;
         }
     }
 }
