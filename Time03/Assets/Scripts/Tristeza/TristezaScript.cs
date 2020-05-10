@@ -8,7 +8,6 @@ public class TristezaScript : MonoBehaviour
     public GameObject Player;
     public GameObject portaExit;
     public Vagalume[] vagalumes;
-    public GameObject deathScreen;
     private SadRain srScript;
     private SadPistol spScript;
     private SadRoll srlScript;
@@ -59,7 +58,7 @@ public class TristezaScript : MonoBehaviour
         if(!Counts.TristezaIsMorto) {
             Counts.TristezaCompleteTimer += Time.deltaTime;
         }
-        
+
         if(health > 0 && Agent.enabled)
         {
             FleeFromPlayer();
@@ -170,7 +169,7 @@ public class TristezaScript : MonoBehaviour
     {
         if(srlScript.rolling && collision.gameObject.CompareTag("Player"))
         {
-            deathScreen.SetActive(true);
+            GeneralCounts.Kill = true;
         }
     }
 

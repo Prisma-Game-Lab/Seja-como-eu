@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6070928611016569056}
   - component: {fileID: 6367117813406093518}
   - component: {fileID: 588345240012317799}
+  - component: {fileID: 2587102828851975317}
   m_Layer: 0
   m_Name: Gotas
   m_TagString: Untagged
@@ -121,5 +122,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7969a05521bef240b1df499419ce999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2587102828851975317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5973786886215369571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6efed85234b641f44930c7157dd306fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

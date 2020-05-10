@@ -11,16 +11,15 @@ public class Death : MonoBehaviour
         Counts = SaveSystem.GetInstance().generalCounts;
     }
 
-    
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Player") && !GeneralCounts.Kill) {
             GeneralCounts.Kill = true;
-            Counts.DeathCount++;
+        }
+    }
+
+    void OnCollisionEnter(Collision other) {
+        if(other.gameObject.CompareTag("Player") && !GeneralCounts.Kill) {
+            GeneralCounts.Kill = true;
         }
     }
 }
