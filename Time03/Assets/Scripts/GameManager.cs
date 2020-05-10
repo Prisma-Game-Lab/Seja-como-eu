@@ -12,12 +12,13 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Counts = SaveSystem.GetInstance().generalCounts;
+        DeathScreen.SetActive(false);
     }
 
     
     void Update()
     {
-        if(GeneralCounts.Kill) {
+        if(GeneralCounts.Kill && !DeathScreen.activeSelf) {
             Death();
         }   
     }

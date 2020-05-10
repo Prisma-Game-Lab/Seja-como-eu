@@ -14,7 +14,7 @@ public class HeartClap : MonoBehaviour
 
     public GameObject player;
 
-    private EnemyCollision eCol;
+    private ThrowFeno eCol;
     private Transform _t;
     private UnityEngine.AI.NavMeshAgent agent;
 
@@ -24,7 +24,7 @@ public class HeartClap : MonoBehaviour
     {
         _t = GetComponent<Transform>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        eCol = player.GetComponent<EnemyCollision>();
+        eCol = player.GetComponent<ThrowFeno>();
         anim = GetComponentInChildren<Animator>();
     }
 
