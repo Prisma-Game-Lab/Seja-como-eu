@@ -12,6 +12,7 @@ public class SadRain : MonoBehaviour
 
     public GameObject PrefabGota;
     public GameObject PrefabBulletGota;
+    public GameObject PrefabHelper;
     public int numeroBullets;
 
     private bool isReady = false;
@@ -19,6 +20,7 @@ public class SadRain : MonoBehaviour
     void Start()
     {
         StartCoroutine(StartRain());
+        PrefabHelper.transform.localScale.Set(PrefabGota.transform.localScale.x,0.05f,PrefabGota.transform.localScale.z);
     }
 
     
@@ -38,6 +40,7 @@ public class SadRain : MonoBehaviour
             xPosition = Random.Range(-19,19);
             zPosition = Random.Range(-19,19);
             GameObject rain = Instantiate(PrefabGota, new Vector3(xPosition, 15, zPosition), Quaternion.identity);
+            Instantiate(PrefabHelper, new Vector3(xPosition, 0, zPosition), Quaternion.identity);
             StartCoroutine(RainSplit(rain));
             yield return new WaitForSeconds(RainInterval);                                                                
         }

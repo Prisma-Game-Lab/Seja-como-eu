@@ -20,7 +20,7 @@ public class SceneControl : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
         Counts.TotalPlayTime += Time.deltaTime;
         if(Input.GetAxisRaw("Pause") == 1 && WaitPause == false)
         {

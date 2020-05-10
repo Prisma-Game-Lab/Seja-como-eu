@@ -67,6 +67,9 @@ public class CarinhoScript : MonoBehaviour
 
     void Update() 
     {
+        if(!Counts.CarinhoIsMorto) {
+            Counts.CarinhoCompleteTimer += Time.deltaTime;
+        }
         if(health > 0)
         {
             float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player

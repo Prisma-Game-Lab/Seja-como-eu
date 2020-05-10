@@ -1614,6 +1614,8 @@ MonoBehaviour:
     type: 3}
   PrefabBulletGota: {fileID: 4035445688948290335, guid: 532c3a64bdc73ca4d9bba67b29bd851e,
     type: 3}
+  PrefabHelper: {fileID: 7542135265080225965, guid: 0ba70cbaa6a2acf44b6aea668f85016c,
+    type: 3}
   numeroBullets: 8
 --- !u!114 &1138785819
 MonoBehaviour:

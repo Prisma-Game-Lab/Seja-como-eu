@@ -16,6 +16,7 @@ public class PunchRain : MonoBehaviour
     void Start()
     {
         Cooldown += Duration; 
+        PrefabHelper.transform.localScale.Set(PrefabPunches.transform.localScale.x,0.05f,PrefabPunches.transform.localScale.z);
     }
 
     public void Rain() {
