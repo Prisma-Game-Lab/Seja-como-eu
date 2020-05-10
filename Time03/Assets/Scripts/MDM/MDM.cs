@@ -29,9 +29,12 @@ public class MDM : MonoBehaviour
     private float CurrentHP;
     private float Charger;
     private int Level;
+    private GeneralCounts Counts;
 
     void Start()
     {
+        Counts = SaveSystem.GetInstance().generalCounts;
+
         Level = 1;
 
         Charger = 0;
@@ -68,6 +71,10 @@ public class MDM : MonoBehaviour
     
     void Update()
     {
+        if(!Counts.MDMIsMorto) {
+            Counts.MDMCompleteTimer += Time.deltaTime;
+        }
+
         if(SkillIsReady && !UltimateNow) {
             SkillCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
@@ -102,6 +109,7 @@ public class MDM : MonoBehaviour
     }
 
     public void WinGame() {
+        Counts.MDMIsMorto = true;
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
         gameObject.AddComponent<Rigidbody>();
     }

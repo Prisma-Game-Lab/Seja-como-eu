@@ -22,6 +22,7 @@ public class TristezaScript : MonoBehaviour
     private NavMeshPath Path;
     private Vector3 Direction;
     private float timer;
+    private GeneralCounts Counts;
     public int damageCounter = 0;
     public int health = 3;
 
@@ -29,6 +30,7 @@ public class TristezaScript : MonoBehaviour
 
     void Start()
     {
+        Counts = SaveSystem.GetInstance().generalCounts;
 
         Agent = GetComponent<NavMeshAgent>();
 
@@ -54,6 +56,10 @@ public class TristezaScript : MonoBehaviour
     
     void Update()
     {
+        if(!Counts.TristezaIsMorto) {
+            Counts.TristezaCompleteTimer += Time.deltaTime;
+        }
+        
         if(health > 0 && Agent.enabled)
         {
             FleeFromPlayer();
@@ -87,6 +93,7 @@ public class TristezaScript : MonoBehaviour
         damageCounter = 0;
         if(health<=0)
         {
+            Counts.TristezaIsMorto = true;
             portaExit.SetActive(true);
             srScript.StopAllCoroutines();
             Agent.enabled = false;
