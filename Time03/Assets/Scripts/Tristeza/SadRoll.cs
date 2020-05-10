@@ -10,6 +10,7 @@ public class SadRoll : MonoBehaviour
 
     public float rollSpeed;
 
+    [Range(0,100)]
     public float Probabilidade;
 
     public float Cooldown;

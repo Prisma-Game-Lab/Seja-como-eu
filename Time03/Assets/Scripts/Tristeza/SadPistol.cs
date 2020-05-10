@@ -7,6 +7,7 @@ public class SadPistol : MonoBehaviour
 {
     public int NumeroBullets;
 
+    [Range(0,100)]
     public float Probabilidade;
 
     public float Cooldown;

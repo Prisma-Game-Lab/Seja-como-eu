@@ -93,6 +93,7 @@ public class TristezaScript : MonoBehaviour
         }
         else
         {
+            srScript.RainInterval -= 0.25f;
             if(health == 2)
             {
                 Roll.SwitchReady();
@@ -107,9 +108,9 @@ public class TristezaScript : MonoBehaviour
 
     private IEnumerator Stun()
     {
-        Agent.speed = 0.0f;
+        Agent.enabled = false;
         yield return new WaitForSeconds(2);
-        Agent.speed = 3.5f;
+        Agent.enabled = true;
         for(int i = 0; i < vagalumes.Length; i++)
         {
             vagalumes[i].aceso = true;

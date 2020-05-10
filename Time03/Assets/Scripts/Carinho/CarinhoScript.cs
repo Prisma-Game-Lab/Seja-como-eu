@@ -166,7 +166,7 @@ public class CarinhoScript : MonoBehaviour
         //Debug.Log("Start Stun!");
         agent.enabled = false;
         invulneravel = true;
-        yield return new WaitForSeconds(damageStun);
+        yield return new WaitForSeconds(damageStun);      
         //Debug.Log("End Stun!");
         agent.enabled = true;
         invulneravel = false;
