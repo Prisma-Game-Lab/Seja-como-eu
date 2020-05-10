@@ -17,9 +17,12 @@ public class GeneralCounts : ScriptableObject
    public bool TristezaIsMorto = false;
 
    public bool ExpressividadeIsMorto = false;
+   public bool MDMIsMorto = false;
 
    public float CarinhoCompleteTimer = 0f;
    public float TristezaCompleteTimer = 0f;
    public float ExpressividadeCompleteTimer = 0f;
    public float MDMCompleteTimer = 0f;
+
+   public float TotalPlayTime = 0f;
 }

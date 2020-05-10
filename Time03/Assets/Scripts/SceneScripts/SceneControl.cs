@@ -10,15 +10,18 @@ public class SceneControl : MonoBehaviour
 
     private bool GameIsPaused = false;
     private bool WaitPause = false;
+    private GeneralCounts Counts;
 
     void Start()
     {
+        Counts = SaveSystem.GetInstance().generalCounts;
         PauseMenuUI.SetActive(false);
         SceneTheme.Play();
     }
 
     void Update()
     {
+        Counts.TotalPlayTime += Time.deltaTime;
         if(Input.GetAxisRaw("Pause") == 1 && WaitPause == false)
         {
             if(GameIsPaused)
@@ -32,6 +35,8 @@ public class SceneControl : MonoBehaviour
                 StartCoroutine(KeepPaused());
             }
         }
+
+
     }
 
     public void Pause()
