@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MDM.unity
     guid: a31748a03e340824387dd69885a3da75
   - enabled: 1
+    path: Assets/Scenes/CorredorTristeza.unity
+    guid: ec1f6e0fc2d927048885c3236042eb80
+  - enabled: 1
     path: Assets/Scenes/CorredorCarinho.unity
     guid: 67a9848f6e4ed7943b153e73d798716a
   - enabled: 1
