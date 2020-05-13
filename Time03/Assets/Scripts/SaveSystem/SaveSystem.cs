@@ -50,7 +50,6 @@ public class SaveSystem : MonoBehaviour
             {
                 generalCounts = GameObject.Instantiate(emptySave);
                 string path = Path.Combine(Application.persistentDataPath, saveFileName + ".dat");
-                Debug.Log("new save on path:" + path);
             }
         }
         DontDestroyOnLoad(this.gameObject);
