@@ -49,7 +49,6 @@ public class SaveSystem : MonoBehaviour
             if(!LoadState())
             {
                 generalCounts = GameObject.Instantiate(emptySave);
-                SaveState();
                 string path = Path.Combine(Application.persistentDataPath, saveFileName + ".dat");
                 Debug.Log("new save on path:" + path);
             }
@@ -124,6 +123,13 @@ public class SaveSystem : MonoBehaviour
 
     public void ClearState() {
         generalCounts = GameObject.Instantiate(emptySave);
+    }
+
+    public void NewGame() {
+        generalCounts = GameObject.Instantiate(emptySave);
+        SaveState();
+        string path = Path.Combine(Application.persistentDataPath, saveFileName + ".dat");
+        Debug.Log("new save on path:" + path);
     }
 
     public static void DeleteSaveFile() {

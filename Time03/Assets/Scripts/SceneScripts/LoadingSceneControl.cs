@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewSceneControl : MonoBehaviour
+public class LoadingSceneControl : MonoBehaviour
 {
 
     void Awake()

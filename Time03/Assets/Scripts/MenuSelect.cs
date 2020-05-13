@@ -10,9 +10,15 @@ public class MenuSelect : MonoBehaviour
     private int CoordenadaPlayer;
     private bool ControlAcess;
     
-
+    private SaveSystem save;
     void Start()
     {
+        // Isso eh soh pro Main Menu ////// Obs: se vc nao tiver um file com save ele vai bugar com certeza
+        save = SaveSystem.GetInstance();
+        if(!save.LoadState()) {
+            MenuButtons.RemoveAt(0);
+        }
+        ////////////////////////////////////
         CoordenadaPlayer = 0;
         ControlAcess = true;
         SelectPlayer.gameObject.SetActive(true);

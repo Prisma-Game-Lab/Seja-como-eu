@@ -55,7 +55,7 @@ public class SceneControl : MonoBehaviour
 
     public void ChangeScene(string SceneName)
     {
-        NewSceneControl.CurrentScene = SceneName;
+        LoadingSceneControl.CurrentScene = SceneName;
         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
 
         Time.timeScale = 1f;
@@ -83,9 +83,5 @@ public class SceneControl : MonoBehaviour
     public void SaveGame() {
         SaveSystem s = SaveSystem.GetInstance();
         s.SaveState();
-    }
-
-    public void NewGame() {
-
     }
 }

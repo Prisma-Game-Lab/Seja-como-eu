@@ -20,7 +20,7 @@ public class PortalScript : MonoBehaviour
     }
 
     public void YesButton(string SceneName) {
-        NewSceneControl.CurrentScene = SceneName;
+        LoadingSceneControl.CurrentScene = SceneName;
         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
         Time.timeScale = 1f;
     }

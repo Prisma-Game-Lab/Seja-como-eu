@@ -11,7 +11,7 @@ public class PotalExit : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player")) {
-            NewSceneControl.CurrentScene = SceneName;
+            LoadingSceneControl.CurrentScene = SceneName;
             SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
         }
     }
