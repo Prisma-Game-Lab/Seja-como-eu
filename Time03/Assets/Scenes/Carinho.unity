@@ -1936,12 +1936,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 65299715}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &65602286 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4020961676110360556, guid: 73ae7e773f714c14e9890fd8f08afbaf,
-    type: 3}
-  m_PrefabInstance: {fileID: 4019056282019898482}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &68116615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8855,7 +8849,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a3fedf0289d0049899099557b8a9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuUI: {fileID: 65602286}
   SceneTheme: {fileID: 659461021}
 --- !u!4 &327366995
 Transform:
@@ -8919,6 +8912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831795dd0eb76d24bb60326c501c7ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseMenuUI: {fileID: 0}
   DeathScreen: {fileID: 971127820}
   player: {fileID: 724779494848353160}
 --- !u!1 &327485870
@@ -65815,6 +65809,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160702874246658408, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: SceneName
+      value: Hub
       objectReference: {fileID: 0}
     - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
         type: 3}

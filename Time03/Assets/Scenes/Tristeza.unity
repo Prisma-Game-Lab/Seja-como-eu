@@ -234,12 +234,6 @@ MonoBehaviour:
   apagado: {fileID: 2100000, guid: 36b94246bfeb1b04195fdbb9fd5237ee, type: 2}
   acesoMat: {fileID: 2100000, guid: 1074e8fead7a5684e9e5e26875376583, type: 2}
   aceso: 1
---- !u!1 &195108491 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3339431884247068, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff,
-    type: 3}
-  m_PrefabInstance: {fileID: 597124754}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &195108492 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3339431884247056, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff,
@@ -1357,7 +1351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a3fedf0289d0049899099557b8a9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuUI: {fileID: 195108491}
   SceneTheme: {fileID: 232530585}
 --- !u!114 &1064139323
 MonoBehaviour:
@@ -1421,6 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831795dd0eb76d24bb60326c501c7ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseMenuUI: {fileID: 0}
   DeathScreen: {fileID: 543572094}
   player: {fileID: 1548817916}
 --- !u!1 &1089495604
@@ -1650,7 +1644,6 @@ MonoBehaviour:
   - {fileID: 66915487}
   - {fileID: 1503080072}
   - {fileID: 454577920}
-  deathScreen: {fileID: 543572094}
   Cooldown: 3
   damageCounter: 0
   health: 3
@@ -2257,6 +2250,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4160702874246658408, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: SceneName
+      value: Hub
+      objectReference: {fileID: 0}
     - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2656,7 +2654,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrenght: 20
   knockbackHeight: 1
-  deathScreen: {fileID: 543572094}
 --- !u!1001 &1634781466
 PrefabInstance:
   m_ObjectHideFlags: 0
