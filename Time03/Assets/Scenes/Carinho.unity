@@ -66009,6 +66009,11 @@ PrefabInstance:
       propertyPath: dano
       value: 
       objectReference: {fileID: 724779494848353161}
+    - target: {fileID: 7997187475700378184, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: ProbabilidadeOrbit
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378185, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: playerPosition
@@ -66019,11 +66024,36 @@ PrefabInstance:
       propertyPath: cooldownLaunch
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7997187475700378185, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: probabilidadeLaunch
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378186, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 724779494848353160}
+    - target: {fileID: 7997187475700378186, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: Probabilidade
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997187475700378186, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: CoolDown
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997187475700378186, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: windup
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997187475700378186, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: hugRadius
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7997187476177213821, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_Radius

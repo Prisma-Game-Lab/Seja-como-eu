@@ -42,6 +42,10 @@ public class Skills
         }
     }
 
+    public void setReady(bool b){
+        isReady = b;
+    }
+
     public void ActivateSkill() {
         ActiveSkill();
     }

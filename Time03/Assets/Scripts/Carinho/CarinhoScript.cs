@@ -93,6 +93,16 @@ public class CarinhoScript : MonoBehaviour
 
             hoScript.OrbitAround();
 
+            if(distance<=hcScript.hugRadius && health == 1)
+            {
+                Clap.setReady(true);
+            }
+            else
+            {
+                Clap.setReady(false);
+            }
+
+
         }
     }
 
