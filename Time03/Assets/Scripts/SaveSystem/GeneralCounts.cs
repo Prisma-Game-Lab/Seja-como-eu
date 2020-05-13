@@ -28,5 +28,5 @@ public class GeneralCounts : ScriptableObject
 
    public int Index = 0;
 
-   // To Do Guardar lista de eventos
+   public Dictionary<string,bool> Events;
 }

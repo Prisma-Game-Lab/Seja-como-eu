@@ -8,6 +8,7 @@ public class DialogueTrigger : MonoBehaviour
     private MovimentPlayer mp;
     private bool EventTriggered = false;
     private GeneralCounts Counts;
+
     void Start()
     {
         mp = Player.GetComponent<MovimentPlayer>();
@@ -20,10 +21,11 @@ public class DialogueTrigger : MonoBehaviour
         
     }
 
-    public void TriggerConversation(int index) {
+    public void TriggerConversation(int index, string Key) {
         mp.enabled = false;
         EventTriggered = true;
         Counts.Index = index;
+        Counts.Events[Key] = false;
     }
 
     public void EndConversation() {

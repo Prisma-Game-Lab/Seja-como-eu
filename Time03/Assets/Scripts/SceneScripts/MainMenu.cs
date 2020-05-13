@@ -11,13 +11,21 @@ public class MainMenu : MonoBehaviour
 
     private SaveSystem save;
 
+    public List<string> EventKeys;
+
+    private GeneralCounts Counts;
+
     void Start()
     {
         save = SaveSystem.GetInstance();
+        Counts = save.generalCounts;
         SceneTheme.Play();
 
         if(!save.LoadState()) {
             ContinueButton.SetActive(false);
+            foreach(string s in EventKeys) {
+                Counts.Events.Add(s,true);
+            }
         }
     }
 
