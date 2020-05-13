@@ -6,23 +6,22 @@ using UnityEngine;
 public class PersonagemFraseSO : ScriptableObject
 {
     public List<Dialogue> Frase;
+    private GeneralCounts Counts;
 
-    private int Index = 0;
+    void Start()
+    {
+        Counts = SaveSystem.GetInstance().generalCounts;
+    }
 
     public Dialogue CurrentFrase() {
-        return Frase[Index];
+        return Frase[Counts.Index];
     }
 
     public void NextFrase() {
-        if(Index + 1 >= Frase.Count) {
-            Index = 0;
+        /*if(Counts.Index + 1 >= Frase.Count) {
+            Counts.Index = 0;
             return;
-        }
-        Index++;
-    }
-
-    private void OnEnable()
-    {
-        Index = 0;
+        }*/
+        Counts.Index++;
     }
 }

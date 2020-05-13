@@ -23,7 +23,7 @@ public class DisplayFrase : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.J)) {
+        if(Trigger.CanChat()) {
             if((Frases.CurrentFrase().Turn != MyTurn) && FraseEnd) {
                 HideFrase();
                 return;
@@ -40,9 +40,7 @@ public class DisplayFrase : MonoBehaviour
 
             if(!ChatBox.gameObject.activeSelf && Frases.CurrentFrase().Turn == MyTurn) {
                 ShowFrase();
-                Trigger.TriggerConversation();
             }
-
         }
     }
 

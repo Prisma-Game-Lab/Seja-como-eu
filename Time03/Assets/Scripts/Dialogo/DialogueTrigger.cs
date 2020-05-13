@@ -6,9 +6,12 @@ public class DialogueTrigger : MonoBehaviour
 {
     public GameObject Player;
     private MovimentPlayer mp;
+    private bool EventTriggered = false;
+    private GeneralCounts Counts;
     void Start()
     {
         mp = Player.GetComponent<MovimentPlayer>();
+        Counts = SaveSystem.GetInstance().generalCounts;
     }
 
     
@@ -17,11 +20,18 @@ public class DialogueTrigger : MonoBehaviour
         
     }
 
-    public void TriggerConversation() {
+    public void TriggerConversation(int index) {
         mp.enabled = false;
+        EventTriggered = true;
+        Counts.Index = index;
     }
 
     public void EndConversation() {
         mp.enabled = true;
+        EventTriggered = false;
+    }
+
+    public bool CanChat() {
+        return EventTriggered;
     }
 }

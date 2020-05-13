@@ -25,4 +25,8 @@ public class GeneralCounts : ScriptableObject
    public float MDMCompleteTimer = 0f;
 
    public float TotalPlayTime = 0f;
+
+   public int Index = 0;
+
+   // To Do Guardar lista de eventos
 }
