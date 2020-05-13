@@ -18,6 +18,7 @@ public class Skills
     private float CoolDown;
 
     private bool isReady;
+    private bool onCoolDown = false;
 
     private SkillFunction ActiveSkill;
 
@@ -27,6 +28,19 @@ public class Skills
 
     public float GetCoolDown() {
         return CoolDown;
+    }
+
+    public bool IsOnCoolDown(){
+        return onCoolDown;
+    }
+
+    public void SwitchCoolDown() {
+        if(onCoolDown) {
+            onCoolDown = false;
+        }
+        else {
+            onCoolDown = true;
+        }
     }
 
     public bool IsSkillReady() {

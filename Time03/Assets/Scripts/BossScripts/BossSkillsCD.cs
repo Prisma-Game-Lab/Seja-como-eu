@@ -13,7 +13,7 @@ public class BossSkillsCD : MonoBehaviour
         foreach(Skills s in skills)
         {
 
-            if(s.IsSkillReady())
+            if(s.IsSkillReady() && !(s.IsOnCoolDown()))
             {
                 probTotal+=s.GetProbabilidade();
                 skillProbs.Add(probTotal);
@@ -38,9 +38,9 @@ public class BossSkillsCD : MonoBehaviour
     }
 
     private IEnumerator ActiveCoolDown(Skills s) {
-        s.SwitchReady();
+        s.SwitchCoolDown();
         yield return new WaitForSeconds(s.GetCoolDown());
-        s.SwitchReady();
+        s.SwitchCoolDown();
     }
 
 }
