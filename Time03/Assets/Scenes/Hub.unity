@@ -4096,6 +4096,11 @@ PrefabInstance:
       propertyPath: SelectPlayer
       value: 
       objectReference: {fileID: 8489818886270728810}
+    - target: {fileID: 8489818885395128899, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: CorredorCarinho
+      objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
