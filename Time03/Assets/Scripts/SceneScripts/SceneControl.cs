@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneControl : MonoBehaviour
 {
-    public GameObject PauseMenuUI;
+    //public GameObject PauseMenuUI;
     public AudioSource SceneTheme;
 
     private bool GameIsPaused = false;
@@ -15,7 +15,7 @@ public class SceneControl : MonoBehaviour
     void Start()
     {
         Counts = SaveSystem.GetInstance().generalCounts;
-        PauseMenuUI.SetActive(false);
+        //PauseMenuUI.SetActive(false);
         SceneTheme.Play();
     }
 
@@ -41,21 +41,23 @@ public class SceneControl : MonoBehaviour
 
     public void Pause()
     {
-        PauseMenuUI.SetActive(true);
+        //PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
 
     public void Resume()
     {
-        PauseMenuUI.SetActive(false);
+        //PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
     public void ChangeScene(string SceneName)
     {
-        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
+        NewSceneControl.CurrentScene = SceneName;
+        SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
+
         Time.timeScale = 1f;
         GeneralCounts.Kill = false;
     }
@@ -81,5 +83,9 @@ public class SceneControl : MonoBehaviour
     public void SaveGame() {
         SaveSystem s = SaveSystem.GetInstance();
         s.SaveState();
+    }
+
+    public void NewGame() {
+
     }
 }

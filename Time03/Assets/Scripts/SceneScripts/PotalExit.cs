@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PotalExit : MonoBehaviour
 {
-    public string sceneName;
+    public string SceneName;
     
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
-            SceneManager.LoadScene(sceneName);
+        if(other.gameObject.CompareTag("Player")) {
+            NewSceneControl.CurrentScene = SceneName;
+            SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
+        }
     }
 }
