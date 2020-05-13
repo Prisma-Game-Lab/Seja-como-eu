@@ -80,6 +80,8 @@ public class SaveSystem : MonoBehaviour
         {
             streamWriter.Write (saveVersion.ToString());
         }
+
+        Debug.Log("Salved!");
     }
 
     public bool LoadState() {

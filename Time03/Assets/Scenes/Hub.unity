@@ -2629,6 +2629,62 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3339431926429513, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_Name
+      value: MainMenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339431926429515, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1806064549}
+    - target: {fileID: 3339431926429515, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339431926429515, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339431926429515, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Main Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339432026102108, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339432026102108, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339432167179766, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_Text
+      value: Main Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339432167179766, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339432167179766, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339432525367131, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339432525367131, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339433268977621, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1806064547}
+    - target: {fileID: 3339433268977621, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
     - target: {fileID: 3339433352111365, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
       propertyPath: m_Name
       value: SaveButton
@@ -2636,7 +2692,7 @@ PrefabInstance:
     - target: {fileID: 3339433352111367, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1806064549}
+      objectReference: {fileID: 1806064547}
     - target: {fileID: 3339433352111367, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SaveGame
@@ -2645,9 +2701,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3339433547137128, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1806064549}
+    - target: {fileID: 3339433547137128, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 3339433581138264, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
       propertyPath: m_Text
       value: Save Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339433581138264, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339433581138264, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}

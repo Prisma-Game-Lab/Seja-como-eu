@@ -35,9 +35,4 @@ public class SceneControl : MonoBehaviour
 	{
 		Application.Quit();
 	}
-
-    public void SaveGame() {
-        SaveSystem s = SaveSystem.GetInstance();
-        s.SaveState();
-    }
 }
