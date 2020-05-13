@@ -915,6 +915,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff, type: 3}
+--- !u!1 &597124755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3339431884247068, guid: 4bf42ab69c3baa240be8eb8fcd90b9ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 597124754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &652164663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,7 +1420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831795dd0eb76d24bb60326c501c7ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuUI: {fileID: 0}
+  PauseMenuUI: {fileID: 597124755}
   DeathScreen: {fileID: 543572094}
   player: {fileID: 1548817916}
 --- !u!1 &1089495604

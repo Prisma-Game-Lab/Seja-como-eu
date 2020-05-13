@@ -8,6 +8,8 @@ TagManager:
   - rock
   - orb
   - Tears
+  - wall
+  - Porta
   layers:
   - Default
   - TransparentFX

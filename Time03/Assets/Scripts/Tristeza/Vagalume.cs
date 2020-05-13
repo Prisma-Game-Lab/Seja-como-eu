@@ -42,7 +42,14 @@ public class Vagalume : MonoBehaviour
         if(other.CompareTag("Player") && aceso)
         {
             aceso = false;
-            tristeza.GetComponent<TristezaScript>().damageCounter += 1;
+            if(tristeza.tag == "Porta")
+            {
+                tristeza.GetComponent<PortaTristeza>().OpenCounter += 1;
+            }
+            else
+            {
+                tristeza.GetComponent<TristezaScript>().damageCounter += 1;
+            }
         }
     }
 }
