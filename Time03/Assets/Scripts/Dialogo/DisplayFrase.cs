@@ -18,9 +18,11 @@ public class DisplayFrase : MonoBehaviour
     private bool ControlAcess = true;
 
     private bool StartIt;
+    private GeneralCounts Counts;
 
     void Start()
     {
+        Counts = SaveSystem.GetInstance().generalCounts;
         Chat = ChatBox.transform.GetChild(0).GetComponent<Text>();
     }
 
@@ -28,17 +30,17 @@ public class DisplayFrase : MonoBehaviour
     void Update()
     {
         if(Trigger.CanChat()) {
-            if((Frases.CurrentFrase().Turn != MyTurn) && FraseEnd) {
+            if((Frases.Frase[Counts.Index].Turn != MyTurn) && FraseEnd) {
                 HideFrase();
                 return;
             }
 
-            if(Frases.CurrentFrase().Options.Count > 0) {
+            if(Frases.Frase[Counts.Index].Options.Count > 0) {
                 HideFrase();
                 return;
             }
 
-            if(!ChatBox.gameObject.activeSelf && Frases.CurrentFrase().Turn == MyTurn && StartIt) {
+            if(!ChatBox.gameObject.activeSelf && Frases.Frase[Counts.Index].Turn == MyTurn && StartIt) {
                 ShowFrase();
             }
         }
@@ -53,7 +55,7 @@ public class DisplayFrase : MonoBehaviour
 
     private void Next() {
         if(!FraseEnd) {
-            Chat.text = Frases.CurrentFrase().Texto;
+            Chat.text = Frases.Frase[Counts.Index].Texto;
             FraseEnd = true;
         }
         else {
@@ -69,7 +71,7 @@ public class DisplayFrase : MonoBehaviour
 
     private void HideFrase() {
         ChatBox.gameObject.SetActive(false);
-        if(Frases.CurrentFrase().Turn == 0) {
+        if(Frases.Frase[Counts.Index].Turn == 0) {
             Trigger.EndConversation();
         }
         StartIt = false;
@@ -78,7 +80,7 @@ public class DisplayFrase : MonoBehaviour
     private IEnumerator ShowLetters() {
         Chat.text = "";
         FraseEnd = false;
-        foreach(char c in Frases.CurrentFrase().Texto) {
+        foreach(char c in Frases.Frase[Counts.Index].Texto) {
             if(FraseEnd) {
                 break;
             }
@@ -86,7 +88,7 @@ public class DisplayFrase : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         FraseEnd = true;
-        Frases.NextFrase();
+        Counts.Index++;
     }
 
     private IEnumerator GrantAcess()

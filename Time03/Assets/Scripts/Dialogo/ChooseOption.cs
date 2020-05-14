@@ -13,8 +13,10 @@ public class ChooseOption : MonoBehaviour
     private bool ControlAcess;
     private int NumberOfChoices;
     private DisplayFrase NormalDialogue;
+    private GeneralCounts Counts;
     void Start()
     {
+        Counts = SaveSystem.GetInstance().generalCounts;
         NormalDialogue = GetComponent<DisplayFrase>();
         CoordenadaPlayer = 0;
         NumberOfChoices = 0;
@@ -27,12 +29,12 @@ public class ChooseOption : MonoBehaviour
     }
 
     private void Choose() {
-        if(Frases.CurrentFrase().Options.Count == 0) {
+        if(Frases.Frase[Counts.Index].Options.Count == 0) {
             return;
         }
         OptionBox.gameObject.SetActive(true);
         MovePlayer(Options);
-        CheckCoordinateValue(Frases.CurrentFrase().Options.Count);
+        CheckCoordinateValue(Frases.Frase[Counts.Index].Options.Count);
         GetOption();
     }
 
@@ -50,8 +52,8 @@ public class ChooseOption : MonoBehaviour
     }
 
     private void PassValueSO(int Index) {
-        Frases.NextFrase();
-        Frases.CurrentFrase().SetTexto(Options[Index].text);
+        Counts.Index++;
+        Frases.Frase[Counts.Index].SetTexto(Options[Index].text);
         OptionBox.gameObject.SetActive(false);
         NormalDialogue.ShowFrase();
     }
@@ -63,8 +65,8 @@ public class ChooseOption : MonoBehaviour
     }
 
     private void GiveValue() {
-        for(int i=0;i<Frases.CurrentFrase().Options.Count;i++) {
-            Options[i].text = Frases.CurrentFrase().Options[i];
+        for(int i=0;i<Frases.Frase[Counts.Index].Options.Count;i++) {
+            Options[i].text = Frases.Frase[Counts.Index].Options[i];
         }
     }
 

@@ -31,3 +31,4 @@ MonoBehaviour:
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
+  Save: {fileID: 783061751847050879, guid: 84d80e307823a0e45bf33512dddbf097, type: 3}
