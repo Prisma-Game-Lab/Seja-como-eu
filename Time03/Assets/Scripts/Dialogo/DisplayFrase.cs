@@ -15,6 +15,10 @@ public class DisplayFrase : MonoBehaviour
 
     private bool FraseEnd;
 
+    private bool ControlAcess = true;
+
+    private bool StartIt;
+
     void Start()
     {
         Chat = ChatBox.transform.GetChild(0).GetComponent<Text>();
@@ -34,13 +38,16 @@ public class DisplayFrase : MonoBehaviour
                 return;
             }
 
+            if(!ChatBox.gameObject.activeSelf && Frases.CurrentFrase().Turn == MyTurn && StartIt) {
+                ShowFrase();
+            }
+        }
+
+        if(Input.GetAxisRaw("PressButton") > 0 && ControlAcess) {
             if(ChatBox.gameObject.activeSelf) {
                 Next();
             }
-
-            if(!ChatBox.gameObject.activeSelf && Frases.CurrentFrase().Turn == MyTurn) {
-                ShowFrase();
-            }
+            StartCoroutine(GrantAcess());
         }
     }
 
@@ -57,7 +64,7 @@ public class DisplayFrase : MonoBehaviour
     public void ShowFrase() {
         ChatBox.gameObject.SetActive(true);
         StartCoroutine(ShowLetters());
-
+        StartIt = false;
     }
 
     private void HideFrase() {
@@ -65,6 +72,7 @@ public class DisplayFrase : MonoBehaviour
         if(Frases.CurrentFrase().Turn == 0) {
             Trigger.EndConversation();
         }
+        StartIt = false;
     }
 
     private IEnumerator ShowLetters() {
@@ -79,5 +87,12 @@ public class DisplayFrase : MonoBehaviour
         }
         FraseEnd = true;
         Frases.NextFrase();
+    }
+
+    private IEnumerator GrantAcess()
+    {
+        ControlAcess = false;
+        yield return new WaitForSecondsRealtime(0.3f);
+        ControlAcess = true;
     }
 }
