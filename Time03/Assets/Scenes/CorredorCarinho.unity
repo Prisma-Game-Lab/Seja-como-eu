@@ -287,6 +287,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &251318228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4160702874246658407, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1699945140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &280637668
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,6 +896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portaEsquerda: {fileID: 280637668}
   portaDireita: {fileID: 1974041208}
+  portalArena: {fileID: 251318228}
 --- !u!65 &1035899810
 BoxCollider:
   m_ObjectHideFlags: 0

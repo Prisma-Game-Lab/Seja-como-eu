@@ -9,14 +9,21 @@ public class PortaTristeza : MonoBehaviour
     private Quaternion RotE = Quaternion.Euler(0, 90, 0);
     private Quaternion RotD = Quaternion.Euler(0, -90, 0);
     public int OpenCounter = 0;
+    public GameObject portalArena;
+
+    private void Start()
+    {
+        portalArena.SetActive(false);
+    }
     void Update()
     {
-
         if (OpenCounter == 3)
         {
             portaDireita.transform.rotation = Quaternion.Slerp(portaDireita.transform.rotation, RotD, Time.deltaTime);
             portaEsquerda.transform.rotation = Quaternion.Slerp(portaEsquerda.transform.rotation, RotE, Time.deltaTime);
+            portalArena.SetActive(true);
         }
+
     }
 
 
