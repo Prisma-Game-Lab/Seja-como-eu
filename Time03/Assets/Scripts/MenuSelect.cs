@@ -15,7 +15,7 @@ public class MenuSelect : MonoBehaviour
     {
         // Isso eh soh pro Main Menu ////// Obs: se vc nao tiver um file com save ele vai bugar com certeza
         save = SaveSystem.GetInstance();
-        if(!save.LoadState()) {
+        if(!SaveSystem.SucessfulLoad) {
             MenuButtons.RemoveAt(0);
         }
         ////////////////////////////////////
