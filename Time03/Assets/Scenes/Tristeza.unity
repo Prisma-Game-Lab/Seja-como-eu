@@ -1622,7 +1622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78bd7c1613e7b404a881d5fd71c43614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumeroGotas: 40
+  NumeroGotas: 20
   RainInterval: 1
   Cooldown: 0
   PrefabGota: {fileID: 5973786886215369571, guid: 26dd2b34cca856749b49e76bf54cf877,
