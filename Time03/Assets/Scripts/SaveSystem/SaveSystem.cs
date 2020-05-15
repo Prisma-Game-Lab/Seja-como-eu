@@ -15,6 +15,8 @@ public class SaveSystem : MonoBehaviour
     public static float saveVersion = 1.0f;
     
     private static string saveFileName = "save";
+
+    public static bool SucessfulLoad = false;
     private static string SavePath
     {
         get
@@ -48,8 +50,7 @@ public class SaveSystem : MonoBehaviour
             instance = this;
             if(!LoadState())
             {
-                generalCounts = GameObject.Instantiate(emptySave);
-                string path = Path.Combine(Application.persistentDataPath, saveFileName + ".dat");
+                
             }
         }
         DontDestroyOnLoad(this.gameObject);
@@ -81,7 +82,7 @@ public class SaveSystem : MonoBehaviour
             streamWriter.Write (saveVersion.ToString());
         }
 
-        Debug.Log("Salved!");
+        Debug.Log("Salved!" + generalCounts.TotalPlayTime);
     }
 
     public bool LoadState() {
@@ -114,6 +115,7 @@ public class SaveSystem : MonoBehaviour
             string jsonString = Encoding.UTF8.GetString(buffer);
             generalCounts = ScriptableObject.CreateInstance<GeneralCounts>();
             JsonUtility.FromJsonOverwrite(jsonString, generalCounts);
+            SucessfulLoad = true;
             return true;
         }
         catch (Exception e) {

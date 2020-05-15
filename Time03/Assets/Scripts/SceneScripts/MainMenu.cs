@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
         Counts = save.generalCounts;
         SceneTheme.Play();
 
-        if(!save.LoadState()) {
+        if(!SaveSystem.SucessfulLoad) {
             ContinueButton.SetActive(false);
             foreach(string s in EventKeys) {
                 Counts.Events.Add(s,true);
