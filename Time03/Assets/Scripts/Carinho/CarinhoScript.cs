@@ -125,7 +125,8 @@ public class CarinhoScript : MonoBehaviour
 
     void Damage(GameObject feno)
     {        
-        if(agent.enabled && !invulneravel)
+        FenoScript fs = feno.GetComponent<FenoScript>();
+        if(agent.enabled && !invulneravel && fs.lancado)
         {
             health -= 1;
             carinhoHearts[health].gameObject.SetActive(false);

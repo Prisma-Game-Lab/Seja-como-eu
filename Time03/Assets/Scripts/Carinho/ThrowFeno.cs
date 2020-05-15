@@ -8,34 +8,26 @@ public class ThrowFeno : MonoBehaviour
     public float knockbackHeight = 1.0f;
 
     private GeneralCounts Counts;
-
-    private Rigidbody rb;
+    private MovimentPlayer _mp;
 
     void Start()
     {
         Counts = SaveSystem.GetInstance().generalCounts;
-        rb = GetComponent<Rigidbody>();
+        _mp = GetComponent<MovimentPlayer>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.CompareTag("rock"))
         {
-            if(gameObject.GetComponent<MovimentPlayer>().dashing)
+            if(_mp.dashing)
             {
                 Vector3 dir = collision.transform.position - transform.position;
-                rb.AddForce(dir.normalized * knockbackStrenght, ForceMode.Impulse);
+                collision.rigidbody.AddForce(dir.normalized * knockbackStrenght, ForceMode.Impulse);
+                collision.gameObject.GetComponent<FenoScript>().Throw();
             }
         }
     }
 
-    public void Hit()
-    {
-        if(gameObject.GetComponent<MovimentPlayer>().dashing){
-            return;
-        }
-        else{
-            Debug.Log("Hit!");
-        }
-    }
+
 }

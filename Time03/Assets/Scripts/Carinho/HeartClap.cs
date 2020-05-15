@@ -16,6 +16,7 @@ public class HeartClap : MonoBehaviour
 
     private ThrowFeno eCol;
     private Transform _t;
+    private Rigidbody _rb;
     private UnityEngine.AI.NavMeshAgent agent;
 
     private Animator anim;
@@ -23,6 +24,7 @@ public class HeartClap : MonoBehaviour
     void Start()
     {
         _t = GetComponent<Transform>();
+        _rb = GetComponent<Rigidbody>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         eCol = player.GetComponent<ThrowFeno>();
         anim = GetComponentInChildren<Animator>();
@@ -39,6 +41,8 @@ public class HeartClap : MonoBehaviour
     	Collider[] hitColliders;
     	bool inBox = false;
     	
+        _rb.velocity = Vector3.zero;
+        _rb.angularVelocity = Vector3.zero;
     	
 
         anim.SetTrigger("Hug 1");
@@ -68,7 +72,7 @@ public class HeartClap : MonoBehaviour
 	        	if(hitColliders[i].tag == "Player")
 	        	{
 	        		
-	            	eCol.Hit();
+	            	GeneralCounts.Kill = true;
 	            	break;
 	            }
 	            i+=1;

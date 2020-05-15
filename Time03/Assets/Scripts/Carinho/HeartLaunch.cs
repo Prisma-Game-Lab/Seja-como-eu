@@ -7,6 +7,7 @@ public class HeartLaunch : MonoBehaviour
 {
 	private Vector3 target;
 	private Transform _t;
+    private Rigidbody _rb;
 	private NavMeshAgent agent;
 
 	public float risingDuration;
@@ -30,6 +31,7 @@ public class HeartLaunch : MonoBehaviour
     void Start()
     {
         _t = GetComponent<Transform>();
+        _rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
         cScript = GetComponent<CarinhoScript>();
@@ -45,7 +47,7 @@ public class HeartLaunch : MonoBehaviour
     {
         agent.enabled = false; //desativa agente do carinho
     	StartCoroutine(HLaunch());
-    	Debug.Log("Launch!");
+    	//Debug.Log("Launch!");
     }
 
 	private IEnumerator HLaunch()
@@ -54,7 +56,8 @@ public class HeartLaunch : MonoBehaviour
     	Vector3 startPos = _t.position;
     	float time = 0f;
 
-		
+		_rb.velocity = Vector3.zero;
+        _rb.angularVelocity = Vector3.zero;
 
 		target = _t.position + height*_t.up;
 
@@ -68,7 +71,7 @@ public class HeartLaunch : MonoBehaviour
     		yield return new WaitForEndOfFrame ();
     	} 
     	// End Rising
-        Debug.Log("Chegou no alto");
+        //Debug.Log("Chegou no alto");
 
     	target = playerPosition.position; //alvo definido
         
@@ -79,10 +82,6 @@ public class HeartLaunch : MonoBehaviour
         float distTol = 0.05f;
         while(Vector3.Distance(_t.position,target) > distTol)//vai pro jogador
         {
-            if(agent.enabled)
-            {
-                Debug.Log("Bugou :(");
-            }
             
         	_t.position = Vector3.MoveTowards(_t.position, target, launchingSpeed * Time.deltaTime);
         	//cScript.FaceTarget(target);
@@ -93,7 +92,6 @@ public class HeartLaunch : MonoBehaviour
         anim.SetTrigger("Ground");
         yield return new WaitForSeconds(posLaunch); //tempo pos launch
         agent.enabled = true; //reativa agente do carinho
-        Debug.Log("Launch ACABOU!");
     }
 
     public float getProb()
