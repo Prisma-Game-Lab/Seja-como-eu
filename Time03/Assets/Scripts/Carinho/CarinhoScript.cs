@@ -150,6 +150,9 @@ public class CarinhoScript : MonoBehaviour
                 }
                 hoScript.orbitSpeed += 100.0f;
                 hoScript.maxRadius += 5.0f;
+                
+                agent.enabled = false;
+                invulneravel = true;
                 StartCoroutine(Stun());
             }
             
@@ -175,8 +178,7 @@ public class CarinhoScript : MonoBehaviour
     private IEnumerator Stun()
     {
         //Debug.Log("Start Stun!");
-        agent.enabled = false;
-        invulneravel = true;
+
         yield return new WaitForSeconds(damageStun);      
         //Debug.Log("End Stun!");
         agent.enabled = true;
