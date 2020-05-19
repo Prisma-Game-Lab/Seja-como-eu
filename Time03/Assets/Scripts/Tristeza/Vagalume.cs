@@ -9,6 +9,7 @@ public class Vagalume : MonoBehaviour
     public float radius;
     public GameObject tristeza;
     public Material apagado, acesoMat;
+    public ParticleSystem luzinha;
     private MeshRenderer mesh;
 
     public bool aceso = true;
@@ -30,10 +31,12 @@ public class Vagalume : MonoBehaviour
         if(!aceso)
         {
             mesh.material = apagado;
+            luzinha.enableEmission = false;
         }
         else
         {
             mesh.material = acesoMat;
+            luzinha.enableEmission = true;
         }
     }
 
