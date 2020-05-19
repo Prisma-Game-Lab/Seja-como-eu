@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
-  - rock
   - orb
   - Tears
   - wall
   - Porta
+  - Feno
+  - Touched
   layers:
   - Default
   - TransparentFX

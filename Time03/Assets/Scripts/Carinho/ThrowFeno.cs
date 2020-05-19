@@ -17,13 +17,13 @@ public class ThrowFeno : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if(collision.collider.CompareTag("rock"))
+        if(collision.collider.CompareTag("Feno"))
         {
             if(_mp.dashing)
             {
                 Vector3 dir = collision.transform.position - transform.position;
-                collision.rigidbody.AddForce(dir.normalized * knockbackStrenght, ForceMode.Impulse);
-                collision.gameObject.GetComponent<FenoScript>().Throw();
+                //collision.rigidbody.AddForce(dir.normalized * knockbackStrenght, ForceMode.Impulse);
+                collision.gameObject.GetComponent<FenoScript>().Throw(dir, knockbackStrenght);
             }
         }
     }

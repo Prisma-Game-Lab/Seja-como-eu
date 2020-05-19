@@ -161,7 +161,7 @@ public class CarinhoScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("rock"))
+        if(collision.collider.CompareTag("Feno"))
         {
             Damage(collision.gameObject);
         }
