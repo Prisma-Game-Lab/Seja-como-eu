@@ -79,7 +79,7 @@ public class HeartLaunch : MonoBehaviour
 
         // Launching
         anim.SetTrigger("Fall");
-        float distTol = 0.05f;
+        float distTol = 0.5f;
         while(Vector3.Distance(_t.position,target) > distTol)//vai pro jogador
         {
             
