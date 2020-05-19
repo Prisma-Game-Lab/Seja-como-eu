@@ -5,7 +5,6 @@ using UnityEngine;
 public class ThrowFeno : MonoBehaviour
 {
     public float knockbackStrenght = 20.0f;
-    public float knockbackHeight = 1.0f;
 
     private GeneralCounts Counts;
     private MovimentPlayer _mp;
@@ -16,7 +15,7 @@ public class ThrowFeno : MonoBehaviour
         _mp = GetComponent<MovimentPlayer>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if(collision.collider.CompareTag("rock"))
         {
