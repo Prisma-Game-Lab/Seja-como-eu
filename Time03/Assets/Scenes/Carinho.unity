@@ -65260,8 +65260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 559a1232f69757b478585ef99ba66950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackStrenght: 20
-  knockbackHeight: 1
+  knockbackStrenght: 12
 --- !u!1001 &4019056282019898482
 PrefabInstance:
   m_ObjectHideFlags: 0
