@@ -17,6 +17,7 @@ public class SadPistol : MonoBehaviour
     private NavMeshAgent agent;
     public float telegraph;
     private float bulletDuration;
+    public float bulletSpeed;
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
@@ -43,7 +44,8 @@ public class SadPistol : MonoBehaviour
         int Arc = 360 / NumeroBullets;
         for (int i = 0; i < 360; i += Arc)
         {
-            Instantiate(PrefabBulletGota, transform.position, Quaternion.AngleAxis(i, Vector3.up));
+            GameObject bullet = Instantiate(PrefabBulletGota, transform.position, Quaternion.AngleAxis(i, Vector3.up));
+            bullet.GetComponent<BulletMove>().speed = bulletSpeed;
         }
 
         agent.isStopped = false;
