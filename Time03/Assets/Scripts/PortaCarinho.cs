@@ -15,20 +15,29 @@ public class PortaCarinho : MonoBehaviour
     {
         portalArena.SetActive(false);
     }
-    void Update() {
 
-        if(Open == true){
-            portaDireita.transform.rotation = Quaternion.Slerp(portaDireita.transform.rotation, RotD, Time.deltaTime);
-            portaEsquerda.transform.rotation = Quaternion.Slerp(portaEsquerda.transform.rotation, RotE, Time.deltaTime);
-            portalArena.SetActive(true);
+    void Update() 
+    {
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.CompareTag("Feno"))
+        {
+            StartCoroutine(AbrePortas());
+            GetComponent<Collider>().enabled = false;
         }
     }
-    void OnTriggerEnter(Collider other)
+    private IEnumerator AbrePortas()
     {
-        if(other.gameObject.CompareTag("rock")){
-            Open = true;
-            Destroy(other.gameObject);
-        }
-            
+    	while(portaDireita.transform.rotation != RotD)
+    	{
+	    	portaDireita.transform.rotation = Quaternion.Slerp(portaDireita.transform.rotation, RotD, Time.deltaTime);
+	        portaEsquerda.transform.rotation = Quaternion.Slerp(portaEsquerda.transform.rotation, RotE, Time.deltaTime);
+	        portalArena.SetActive(true);
+	        yield return new WaitForEndOfFrame ();
+    	}
+    	
     }
 }
