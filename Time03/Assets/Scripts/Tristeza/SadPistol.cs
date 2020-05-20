@@ -40,22 +40,13 @@ public class SadPistol : MonoBehaviour
 
         yield return new WaitForSeconds(telegraph);
 
-        GameObject initialShot = Instantiate(PrefabBulletGota, gameObject.transform.position, gameObject.transform.rotation);
-        initialShot.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        StartCoroutine(PistolSpread(initialShot));
+        int Arc = 360 / NumeroBullets;
+        for (int i = 0; i < 360; i += Arc)
+        {
+            Instantiate(PrefabBulletGota, transform.position, Quaternion.AngleAxis(i, Vector3.up));
+        }
 
         agent.isStopped = false;
-    }
-
-    private IEnumerator PistolSpread(GameObject splitPoint)
-    {
-        yield return new WaitForSeconds(bulletDuration);
-
-        int Arc = 360/NumeroBullets;
-        for(int i = 0; i < 360; i += Arc)
-        {
-            Instantiate(PrefabBulletGota,splitPoint.transform.position,Quaternion.AngleAxis(i,Vector3.up));
-        }
     }
 
     public float getProb()

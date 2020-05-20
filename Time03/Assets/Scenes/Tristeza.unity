@@ -514,7 +514,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 51544a65eae3b314c96e470616d7c77f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1643,7 +1643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ceea0d7ccddff246af4ba42b3a252bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumeroBullets: 12
+  NumeroBullets: 36
   Probabilidade: 100
   Cooldown: 8
   PrefabBulletGota: {fileID: 4035445688948290335, guid: 532c3a64bdc73ca4d9bba67b29bd851e,
