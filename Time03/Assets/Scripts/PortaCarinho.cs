@@ -25,7 +25,7 @@ public class PortaCarinho : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("rock")){
+        if(other.gameObject.CompareTag("Feno")){
             Open = true;
             Destroy(other.gameObject);
         }
