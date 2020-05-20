@@ -136,6 +136,7 @@ public class CarinhoScript : MonoBehaviour
                 Counts.CarinhoIsMorto = true;
                 anim.SetTrigger("Death");
                 portalExit.SetActive(true);
+                hoScript.carinhoArea.enabled = false;
             }
             else
             {

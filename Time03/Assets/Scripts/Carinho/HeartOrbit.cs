@@ -17,9 +17,9 @@ public class HeartOrbit : MonoBehaviour
     public float expansionSpeed;
     public Transform center;
     public GameObject hearts;
-    public Vector3 newOrbit;
+    private Vector3 newOrbit;
     public Transform[] carinhoHearts;
-    private ParticleSystem.ShapeModule carinhoArea;
+    public ParticleSystem.ShapeModule carinhoArea;
     private bool canExpand = true;
 
     public void Start(){
