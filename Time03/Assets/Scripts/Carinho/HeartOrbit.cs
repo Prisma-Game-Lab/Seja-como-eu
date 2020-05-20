@@ -19,8 +19,14 @@ public class HeartOrbit : MonoBehaviour
     public GameObject hearts;
     public Vector3 newOrbit;
     public Transform[] carinhoHearts;
+    private ParticleSystem.ShapeModule carinhoArea;
     private bool canExpand = true;
 
+    public void Start(){
+        //encontra e define carinhoArea, emissor de partículas que demonstra raio dos corações
+        ParticleSystem ps = hearts.GetComponentInChildren<ParticleSystem>();
+        carinhoArea = ps.shape;
+    }
     public void OrbitAround()
     {
         hearts.transform.position = center.position;
@@ -28,8 +34,10 @@ public class HeartOrbit : MonoBehaviour
         {
             carinhoHearts[i].RotateAround(gameObject.transform.position, Vector3.up, orbitSpeed * Time.deltaTime);
             newOrbit = (carinhoHearts[i].position - center.position).normalized * radius + center.position;
-            carinhoHearts[i].position = Vector3.MoveTowards(carinhoHearts[i].position, newOrbit, Time.deltaTime * expansionSpeed);
+            carinhoHearts[i].position = Vector3.MoveTowards(carinhoHearts[i].position, newOrbit, Time.deltaTime * expansionSpeed); 
         }
+        //Ajeita raio do emissor de particulas de acordo com raio dos corações
+        carinhoArea.radius = Mathf.MoveTowards(carinhoArea.radius, radius, Time.deltaTime * expansionSpeed);
     }
 
     public void Expansion()
