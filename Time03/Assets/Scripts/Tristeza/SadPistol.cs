@@ -42,11 +42,14 @@ public class SadPistol : MonoBehaviour
         yield return new WaitForSeconds(telegraph);
 
         int Arc = 360 / NumeroBullets;
-        for (int i = 0; i < 360; i += Arc)
+        for (int i = 0; i < 720; i += Arc)
         {
             GameObject bullet = Instantiate(PrefabBulletGota, transform.position, Quaternion.AngleAxis(i, Vector3.up));
             bullet.GetComponent<BulletMove>().speed = bulletSpeed;
+            yield return new WaitForSeconds(0.05f);
         }
+
+        yield return new WaitForEndOfFrame();
 
         agent.isStopped = false;
     }
