@@ -23,12 +23,11 @@ public class PortaCarinho : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-
         if(collision.collider.CompareTag("Feno"))
         {
             StartCoroutine(AbrePortas());
             GetComponent<Collider>().enabled = false;
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
     }
     
