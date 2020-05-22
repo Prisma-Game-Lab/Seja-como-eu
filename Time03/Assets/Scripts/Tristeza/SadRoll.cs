@@ -39,7 +39,7 @@ public class SadRoll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rolling)
+        if(rolling && t_rb.velocity != Vector3.zero)
         {
             transform.forward = t_rb.velocity;
         }

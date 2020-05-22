@@ -65,11 +65,6 @@ public class TristezaScript : MonoBehaviour
             Counts.TristezaCompleteTimer += Time.deltaTime;
         }
 
-        if(health <= 0)
-        {
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-        }
-
         if(health > 0 && Agent.enabled)
         {
             FleeFromPlayer();
@@ -107,6 +102,7 @@ public class TristezaScript : MonoBehaviour
             portaExit.SetActive(true);
             srScript.StopAllCoroutines();
             Agent.enabled = false;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
         else
         {
