@@ -21,6 +21,7 @@ public class SadRain : MonoBehaviour
     {
         StartCoroutine(StartRain());
         PrefabHelper.transform.localScale.Set(PrefabGota.transform.localScale.x,0.05f,PrefabGota.transform.localScale.z);
+        PrefabHelper.GetComponent<Despawner4>().TimetoDespawn = 1.7f;
     }
 
     
@@ -41,7 +42,7 @@ public class SadRain : MonoBehaviour
             zPosition = Random.Range(-19,19);
             GameObject rain = Instantiate(PrefabGota, new Vector3(xPosition, 15, zPosition), Quaternion.identity);
             GameObject helper = Instantiate(PrefabHelper, new Vector3(xPosition, 0, zPosition), Quaternion.identity);
-            StartCoroutine(RainSplit(rain, helper));
+            StartCoroutine(RainSplit(rain));
             yield return new WaitForSeconds(RainInterval);                                                                
         }
         yield return new WaitForSeconds(Cooldown);
@@ -53,11 +54,10 @@ public class SadRain : MonoBehaviour
         isReady = true;
     }
 
-    private IEnumerator RainSplit(GameObject gota, GameObject helper)
+    private IEnumerator RainSplit(GameObject gota)
     {
         yield return new WaitForSeconds(1.7f);
 
-        Destroy(helper);
         int Arc = 360 / numeroBullets;
         for(int i = 0; i < 360; i += Arc)
         {
