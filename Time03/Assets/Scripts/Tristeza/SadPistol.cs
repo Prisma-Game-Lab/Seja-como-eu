@@ -18,10 +18,13 @@ public class SadPistol : MonoBehaviour
     public float telegraph;
     private float bulletDuration;
     public float bulletSpeed;
+    private bool nightmare;
+
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         bulletDuration = PrefabBulletGota.GetComponent<BulletMove>().bulletDuration;
+        nightmare = GetComponent<TristezaScript>().nightmareMode;
     }
 
 
@@ -46,12 +49,20 @@ public class SadPistol : MonoBehaviour
         {
             GameObject bullet = Instantiate(PrefabBulletGota, transform.position, Quaternion.AngleAxis(i, Vector3.up));
             bullet.GetComponent<BulletMove>().speed = bulletSpeed;
+            if(nightmare)
+            {
+                GameObject bullet2 = Instantiate(PrefabBulletGota, transform.position, Quaternion.AngleAxis(i + 180, Vector3.up));
+                bullet2.GetComponent<BulletMove>().speed = bulletSpeed;
+            }
             yield return new WaitForSeconds(0.05f);
         }
 
         yield return new WaitForEndOfFrame();
 
-        agent.isStopped = false;
+        if(agent.enabled)
+        {
+            agent.isStopped = false;    
+        }
     }
 
     public float getProb()

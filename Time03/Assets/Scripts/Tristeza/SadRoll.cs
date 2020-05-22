@@ -24,6 +24,8 @@ public class SadRoll : MonoBehaviour
     public PhysicMaterial bounceMat;
     private Collider t_col;
     public Transform Player;
+    public GameObject PrefabBulletGota;
+    private bool nightmare;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,7 @@ public class SadRoll : MonoBehaviour
         agent = gameObject.GetComponent<NavMeshAgent>();
         t_rb = gameObject.GetComponent<Rigidbody>();
         t_col = gameObject.GetComponent<Collider>();
+        nightmare = GetComponent<TristezaScript>().nightmareMode;
     }
 
     // Update is called once per frame
@@ -59,10 +62,31 @@ public class SadRoll : MonoBehaviour
 
         yield return new WaitForSeconds(rollDuration);
 
+        if(agent.enabled)
+        {
+            agent.isStopped = false;
+        }
         t_rb.velocity = Vector3.zero;
-        t_col.material = null;
-        agent.isStopped = false;
+        t_col.material = null;      
         rolling = false;
+    }
+
+    private IEnumerator Explode()
+    {
+        int Arc = 360 / 12;
+        for (int i = 0; i < 720; i += Arc)
+        {
+            Instantiate(PrefabBulletGota, transform.position, Quaternion.AngleAxis(i, Vector3.up));
+        }
+
+        yield return new WaitForSeconds(0.1f);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.CompareTag("wall") && rolling && nightmare)
+        {
+            StartCoroutine(Explode());
+        }
     }
     public float getProb()
     {

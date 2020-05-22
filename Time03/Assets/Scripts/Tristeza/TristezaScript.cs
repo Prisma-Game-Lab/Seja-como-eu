@@ -24,6 +24,7 @@ public class TristezaScript : MonoBehaviour
     private GeneralCounts Counts;
     public int damageCounter = 0;
     public int health = 3;
+    public bool nightmareMode = false;
 
     public float RunAwayDistance;
 
@@ -62,6 +63,11 @@ public class TristezaScript : MonoBehaviour
 
         if(!Counts.TristezaIsMorto) {
             Counts.TristezaCompleteTimer += Time.deltaTime;
+        }
+
+        if(Counts.TristezaIsMorto)
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
         if(health > 0 && Agent.enabled)
