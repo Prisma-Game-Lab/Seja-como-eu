@@ -3981,7 +3981,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Quer enfrentar a Tristeza?
+      value: "Quer enfrentar a Tristeza (modo dif\xEDcil)?"
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -4633,7 +4633,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Quer enfrentar o Carinho?
+      value: "Quer enfrentar o Carinho (modo dif\xEDcil)?"
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}

@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Carinho.unity
     guid: a471ff12b648f85469b0692b5c2c92ef
   - enabled: 1
-    path: "Assets/Scenes/Carinho F\xE1cil.unity"
+    path: Assets/Scenes/CarinhoFacil.unity
     guid: 6a29a0fb7d107eb4cb80a3fe0f25fbbb
   - enabled: 1
     path: Assets/Scenes/CorredorCarinho 1.unity
