@@ -18,11 +18,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Carinho.unity
     guid: a471ff12b648f85469b0692b5c2c92ef
   - enabled: 1
+    path: "Assets/Scenes/Carinho F\xE1cil.unity"
+    guid: 6a29a0fb7d107eb4cb80a3fe0f25fbbb
+  - enabled: 1
+    path: Assets/Scenes/CorredorCarinho 1.unity
+    guid: acfac68028f2b384183e6d212de941a4
+  - enabled: 1
     path: Assets/Scenes/CorredorTristeza.unity
     guid: ec1f6e0fc2d927048885c3236042eb80
   - enabled: 1
+    path: Assets/Scenes/CorredorTristeza 1.unity
+    guid: 56b4172d801d941488d1e6da8db823ad
+  - enabled: 1
     path: Assets/Scenes/Tristeza.unity
     guid: aac37ff6d0925b84b90261cc726ecf84
+  - enabled: 1
+    path: Assets/Scenes/TristezaNightmare.unity
+    guid: 37ba7d221590f744ea4f1a269ba70a1f
   - enabled: 1
     path: Assets/Scenes/Expressividade.unity
     guid: c59b40d43b111bd4a9451e2e8bdc1d71

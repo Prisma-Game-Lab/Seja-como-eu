@@ -1618,7 +1618,7 @@ MonoBehaviour:
   Cooldown: 3
   damageCounter: 0
   health: 3
-  nightmareMode: 0
+  nightmareMode: 1
   RunAwayDistance: 10
 --- !u!114 &1138785820
 MonoBehaviour:
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rollWindup: 1
   rollDuration: 5
-  rollSpeed: 20
+  rollSpeed: 30
   Probabilidade: 100
   Cooldown: 10
   rolling: 0
