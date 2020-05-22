@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimentPlayer : MonoBehaviour
+public class DannyMovimentPlayer : MonoBehaviour
 {
     public float MovimentSpeed;
     public float RotationSpeed;
