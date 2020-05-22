@@ -2930,7 +2930,7 @@ PrefabInstance:
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.97
+      value: -4.54
       objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -2990,7 +2990,7 @@ PrefabInstance:
     - target: {fileID: 1510187175226471896, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Name
-      value: PortalEntranceC (1)
+      value: PortalEntranceC(A)
       objectReference: {fileID: 0}
     - target: {fileID: 6999902754095812543, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -3015,12 +3015,12 @@ PrefabInstance:
     - target: {fileID: 8489818885395128899, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: CorredorCarinho 1
+      value: CorredorCarinho(A)
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Quer enfrentar o Carinho?
+      value: Quer enfrentar o Carinho (A)?
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -3541,7 +3541,7 @@ PrefabInstance:
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.4
+      value: 14.2
       objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -3601,7 +3601,7 @@ PrefabInstance:
     - target: {fileID: 1510187175226471896, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Name
-      value: PortalEntranceT
+      value: PortalEntranceT(B)
       objectReference: {fileID: 0}
     - target: {fileID: 6999902754095812543, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -3626,7 +3626,7 @@ PrefabInstance:
     - target: {fileID: 8489818885395128899, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: CorredorTristeza
+      value: CorredorTristeza(B)
       objectReference: {fileID: 0}
     - target: {fileID: 8489818885711256980, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -3641,7 +3641,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Quer enfrentar a Tristeza?
+      value: Quer enfrentar a Tristeza (B)?
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -3881,7 +3881,7 @@ PrefabInstance:
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.6
+      value: 8.9
       objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -3941,7 +3941,7 @@ PrefabInstance:
     - target: {fileID: 1510187175226471896, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Name
-      value: PortalEntranceT (1)
+      value: PortalEntranceT(A)
       objectReference: {fileID: 0}
     - target: {fileID: 6999902754095812543, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -3966,7 +3966,7 @@ PrefabInstance:
     - target: {fileID: 8489818885395128899, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: CorredorTristeza 1
+      value: CorredorTristeza(A)
       objectReference: {fileID: 0}
     - target: {fileID: 8489818885711256980, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -3981,7 +3981,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: "Quer enfrentar a Tristeza (modo dif\xEDcil)?"
+      value: Quer enfrentar a Tristeza (A)?
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -4543,7 +4543,7 @@ PrefabInstance:
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.34
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -4603,7 +4603,7 @@ PrefabInstance:
     - target: {fileID: 1510187175226471896, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Name
-      value: PortalEntranceC
+      value: PortalEntranceC(B)
       objectReference: {fileID: 0}
     - target: {fileID: 6999902754095812543, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -4628,12 +4628,12 @@ PrefabInstance:
     - target: {fileID: 8489818885395128899, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: CorredorCarinho
+      value: CorredorCarinho(B)
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: "Quer enfrentar o Carinho (modo dif\xEDcil)?"
+      value: Quer enfrentar o Carinho (B)?
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
