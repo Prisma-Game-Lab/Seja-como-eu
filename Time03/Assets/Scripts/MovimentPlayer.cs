@@ -20,8 +20,9 @@ public class MovimentPlayer : MonoBehaviour
     private Rigidbody _rb;
     private Animator anim;
 
+    private Vector3 previousDirection;
     private Quaternion Rotation => Quaternion.LookRotation(RotationDirection);
-    private Vector3 RotationDirection => Vector3.RotateTowards(transform.forward, Vector3.Normalize(Direction()), RotationSpeed * Time.deltaTime, 0.0f);
+    private Vector3 RotationDirection => Vector3.RotateTowards(transform.forward, previousDirection, RotationSpeed * Time.deltaTime, 0.0f);
 
     //teclado
     private Vector2 kInput;
@@ -39,6 +40,8 @@ public class MovimentPlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        
         if(dashing == false)
         {
             float translationV = 0;
@@ -50,12 +53,12 @@ public class MovimentPlayer : MonoBehaviour
             translationV *= Time.deltaTime;
             translationH *= Time.deltaTime;
 
-            transform.rotation = Rotation;
-
             transform.position += Vector3.Normalize(Direction())* MovimentSpeed * Time.deltaTime;
 
     
             if((translationV != 0) || (translationH != 0)){
+                previousDirection = Vector3.Normalize(Direction());
+
                 anim.SetBool("Idle",false);
 
                 Footsteps.pitch = Random.Range(0.7f, 1.3f);
@@ -67,15 +70,20 @@ public class MovimentPlayer : MonoBehaviour
             {
                 anim.SetBool("Idle",true);
                 Footsteps.Stop();
-            }            
+            }  
+
+                  
         }
+
+        //garante que Player virará para sua direção, mesmo em dash
+        transform.rotation = Rotation;  
     }
 
     private void Update()
     {
         if(!dashing && dashEnabled)
         {
-            Dash(Vector3.Normalize(Direction()));
+            Dash(previousDirection);
         }
     }
 
@@ -102,6 +110,7 @@ public class MovimentPlayer : MonoBehaviour
 
     IEnumerator StopTheDash() {
         yield return new WaitForSeconds(tempoDash);
+        _rb.velocity = Vector3.zero; //eliminar qualquer força restante de outro dash
         anim.SetBool("Dash", false);
         dashing = false;
         yield return new WaitForSeconds(dashCooldown);
