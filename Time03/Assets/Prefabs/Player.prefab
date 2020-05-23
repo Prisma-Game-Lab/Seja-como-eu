@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovimentSpeed: 8
-  RotationSpeed: 1000
+  RotationSpeed: 10
   DashSpeed: 18
   dashCooldown: 0.3
   Footsteps: {fileID: 0}
