@@ -1588,7 +1588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumeroGotas: 20
-  RainInterval: 1
+  RainInterval: 1.5
   Cooldown: 0
   PrefabGota: {fileID: 5973786886215369571, guid: 26dd2b34cca856749b49e76bf54cf877,
     type: 3}
@@ -1618,7 +1618,6 @@ MonoBehaviour:
   Cooldown: 3
   damageCounter: 0
   health: 3
-  nightmareMode: 1
   RunAwayDistance: 10
 --- !u!114 &1138785820
 MonoBehaviour:
@@ -1652,6 +1651,7 @@ MonoBehaviour:
   Player: {fileID: 1548817916}
   telegraph: 1
   bulletSpeed: 600
+  nightmareMode: 1
 --- !u!195 &1138785822
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1696,6 +1696,8 @@ MonoBehaviour:
   Player: {fileID: 1548817917}
   PrefabBulletGota: {fileID: 4035445688948290335, guid: 532c3a64bdc73ca4d9bba67b29bd851e,
     type: 3}
+  nightmareMode: 1
+  numeroBullets: 12
 --- !u!135 &1138785824
 SphereCollider:
   m_ObjectHideFlags: 0

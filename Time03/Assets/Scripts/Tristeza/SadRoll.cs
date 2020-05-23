@@ -25,7 +25,8 @@ public class SadRoll : MonoBehaviour
     private Collider t_col;
     public Transform Player;
     public GameObject PrefabBulletGota;
-    private bool nightmare;
+    public bool nightmareMode;
+    public int numeroBullets;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,6 @@ public class SadRoll : MonoBehaviour
         agent = gameObject.GetComponent<NavMeshAgent>();
         t_rb = gameObject.GetComponent<Rigidbody>();
         t_col = gameObject.GetComponent<Collider>();
-        nightmare = GetComponent<TristezaScript>().nightmareMode;
     }
 
     // Update is called once per frame
@@ -73,7 +73,7 @@ public class SadRoll : MonoBehaviour
 
     private IEnumerator Explode()
     {
-        int Arc = 360 / 12;
+        int Arc = 360 / numeroBullets;
         for (int i = 0; i < 720; i += Arc)
         {
             Instantiate(PrefabBulletGota, transform.position, Quaternion.AngleAxis(i, Vector3.up));
@@ -83,7 +83,7 @@ public class SadRoll : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("wall") && rolling && nightmare)
+        if(collision.collider.CompareTag("wall") && rolling && nightmareMode)
         {
             StartCoroutine(Explode());
         }

@@ -24,7 +24,6 @@ public class TristezaScript : MonoBehaviour
     private GeneralCounts Counts;
     public int damageCounter = 0;
     public int health = 3;
-    public bool nightmareMode = false;
 
     public float RunAwayDistance;
 
