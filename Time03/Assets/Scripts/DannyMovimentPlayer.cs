@@ -44,8 +44,18 @@ public class DannyMovimentPlayer : MonoBehaviour
             float translationV = 0;
             float translationH = 0;
 
-            translationV = Input.GetAxisRaw("Vertical") *  MovimentSpeed;
-            translationH = Input.GetAxisRaw("Horizontal") *  MovimentSpeed;
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)) 
+            {
+                translationV = Input.GetAxisRaw("VerticalKeyboard") * MovimentSpeed;
+                translationH = Input.GetAxisRaw("HorizontalKeyboard") * MovimentSpeed;
+            }
+
+            else
+            {
+                translationV = Input.GetAxisRaw("Vertical") * MovimentSpeed;
+                translationH = Input.GetAxisRaw("Horizontal") * MovimentSpeed;
+            }
+            
 
             translationV *= Time.deltaTime;
             translationH *= Time.deltaTime;
