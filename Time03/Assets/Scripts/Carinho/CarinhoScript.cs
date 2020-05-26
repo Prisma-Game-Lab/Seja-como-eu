@@ -62,6 +62,7 @@ public class CarinhoScript : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         _rb = GetComponent<Rigidbody>();
 
+
         StartCoroutine(ResetCooldown());
     }
 
@@ -103,6 +104,10 @@ public class CarinhoScript : MonoBehaviour
             }
 
 
+        }
+        else
+        {
+            GetComponent<Collider>().enabled = false;
         }
     }
 
