@@ -11,6 +11,7 @@ TagManager:
   - Porta
   - Feno
   - Touched
+  - rock
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Sem Luz
+  - Player Luz
   - 
   - 
   - 
