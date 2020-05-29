@@ -23,6 +23,8 @@ public class CarinhoScript : MonoBehaviour
 
     public float damageStun;
 
+    public GameObject impactParticle;
+
     private bool SkillIsReady = false;
 
     private Animator anim;
@@ -135,6 +137,7 @@ public class CarinhoScript : MonoBehaviour
         {
             health -= 1;
             carinhoHearts[health].gameObject.SetActive(false);
+            Instantiate(impactParticle, this.transform.position, Quaternion.identity);
             Destroy(feno);
             if (health <= 0)
             {

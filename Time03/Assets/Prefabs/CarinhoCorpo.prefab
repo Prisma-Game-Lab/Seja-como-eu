@@ -161,7 +161,6 @@ MonoBehaviour:
   portalExit: {fileID: 0}
   Cooldown: 3
   damageStun: 1
-  damageInvuln: 1
 --- !u!114 &7520953614679747948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +201,6 @@ MonoBehaviour:
   expansionSpeed: 2.5
   center: {fileID: 7520953614679747936}
   hearts: {fileID: 0}
-  newOrbit: {x: 0, y: 0, z: 0}
   carinhoHearts:
   - {fileID: 0}
   - {fileID: 0}
