@@ -28,5 +28,7 @@ public class GeneralCounts : ScriptableObject
 
    public int Index = 0;
 
+   public bool HardMode;
+
    public Dictionary<string,bool> Events;
 }

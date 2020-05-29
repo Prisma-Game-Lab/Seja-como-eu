@@ -25,7 +25,7 @@ public class SadRoll : MonoBehaviour
     private Collider t_col;
     public Transform Player;
     public GameObject PrefabBulletGota;
-    public bool nightmareMode;
+    private bool nightmareMode;
     public int numeroBullets;
 
     // Start is called before the first frame update
@@ -34,6 +34,7 @@ public class SadRoll : MonoBehaviour
         agent = gameObject.GetComponent<NavMeshAgent>();
         t_rb = gameObject.GetComponent<Rigidbody>();
         t_col = gameObject.GetComponent<Collider>();
+        nightmareMode = GetComponent<TristezaScript>().hard;
     }
 
     // Update is called once per frame

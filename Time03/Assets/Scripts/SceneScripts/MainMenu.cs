@@ -44,8 +44,8 @@ public class MainMenu : MonoBehaviour
 		Application.Quit();
 	}
 
-    public void NewGame() {
-        save.NewGame();
+    public void NewGame(bool dificuldade) {
+        save.NewGame(dificuldade);
         LoadingSceneControl.CurrentScene = "Hub";
         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
     }

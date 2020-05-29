@@ -1618,6 +1618,7 @@ MonoBehaviour:
   Cooldown: 3
   damageCounter: 0
   health: 3
+  hard: 1
   RunAwayDistance: 10
 --- !u!114 &1138785820
 MonoBehaviour:
@@ -1651,7 +1652,6 @@ MonoBehaviour:
   Player: {fileID: 1548817916}
   telegraph: 1
   bulletSpeed: 600
-  nightmareMode: 1
 --- !u!195 &1138785822
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1696,7 +1696,6 @@ MonoBehaviour:
   Player: {fileID: 1548817917}
   PrefabBulletGota: {fileID: 4035445688948290335, guid: 532c3a64bdc73ca4d9bba67b29bd851e,
     type: 3}
-  nightmareMode: 1
   numeroBullets: 12
 --- !u!135 &1138785824
 SphereCollider:

@@ -128,8 +128,9 @@ public class SaveSystem : MonoBehaviour
         generalCounts = GameObject.Instantiate(emptySave);
     }
 
-    public void NewGame() {
+    public void NewGame(bool dificuldade) {
         generalCounts = GameObject.Instantiate(emptySave);
+        generalCounts.HardMode = dificuldade;
         SaveState();
         string path = Path.Combine(Application.persistentDataPath, saveFileName + ".dat");
         Debug.Log("new save on path:" + path);

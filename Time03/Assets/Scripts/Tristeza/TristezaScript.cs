@@ -24,12 +24,15 @@ public class TristezaScript : MonoBehaviour
     private GeneralCounts Counts;
     public int damageCounter = 0;
     public int health = 3;
+    public bool hard;
 
     public float RunAwayDistance;
 
     void Start()
     {
         Counts = SaveSystem.GetInstance().generalCounts;
+
+        hard = SaveSystem.GetInstance().generalCounts.HardMode;
 
         Agent = GetComponent<NavMeshAgent>();
 

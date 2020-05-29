@@ -18,12 +18,13 @@ public class SadPistol : MonoBehaviour
     public float telegraph;
     private float bulletDuration;
     public float bulletSpeed;
-    public bool nightmareMode;
+    private bool nightmareMode;
 
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         bulletDuration = PrefabBulletGota.GetComponent<BulletMove>().bulletDuration;
+        nightmareMode = GetComponent<TristezaScript>().hard;
     }
 
 
