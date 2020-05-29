@@ -7,15 +7,25 @@ using UnityEngine.SceneManagement;
 public class PortalScript : MonoBehaviour
 {
     public GameObject ChooseUI;
+    public GameObject DefeatedUI;
+    public bool CanEnter = true;
 
     void Start()
     {
         ChooseUI.SetActive(false);
+        DefeatedUI.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        ChooseUI.SetActive(true);
+        if(CanEnter)
+        {
+            ChooseUI.SetActive(true);
+        }
+        else
+        {
+            DefeatedUI.SetActive(true);
+        }
         Time.timeScale = 0f;
     }
 
@@ -25,8 +35,8 @@ public class PortalScript : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void NoButton() {
-        ChooseUI.SetActive(false);
+    public void NoButton(GameObject ui) {
+        ui.SetActive(false);
         Time.timeScale = 1f;
     }
 }
