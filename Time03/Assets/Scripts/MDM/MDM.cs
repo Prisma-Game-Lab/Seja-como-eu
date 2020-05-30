@@ -10,7 +10,7 @@ public class MDM : MonoBehaviour
     public float Cooldown;
     public Image HpBar;
     public Image SpecBar;
-    public GameObject DamagePlatform;
+    public List<GameObject> DamagePlatforms;
     private Skills Rain;
     private Skills Floor;
     private Skills Follow;
@@ -35,7 +35,7 @@ public class MDM : MonoBehaviour
     {
         Counts = SaveSystem.GetInstance().generalCounts;
 
-        Level = 1;
+        Level = 0;
 
         Charger = 0;
         
@@ -65,7 +65,7 @@ public class MDM : MonoBehaviour
         Ultimate = new Skills(100,0,true,PUScript.Ultimate);
 
         StartCoroutine(ResetCooldown());
-        StartCoroutine(ResetPlatform());
+        Platform();
     }
 
     
@@ -102,10 +102,7 @@ public class MDM : MonoBehaviour
         UltimateExecuteNow = true;
         UltimateNow = true;
         Charger = 0;
-        
-        Platform();
-        StartCoroutine(ResetPlatform());
-        
+        DamagePlatforms[Level].SetActive(false);
     }
 
     public void WinGame() {
@@ -121,31 +118,24 @@ public class MDM : MonoBehaviour
     }
 
     public void Platform() {
-        float xPosition = Random.Range(-19,19);
-        float zPosition = Random.Range(-18,18);
-        if(!DamagePlatform.activeSelf) {
-            DamagePlatform.transform.position = new Vector3(xPosition,0,zPosition);
-            DamagePlatform.SetActive(true);
-        }
-        else {
-            DamagePlatform.SetActive(false);
-        }
-    }
-
-    private IEnumerator ResetPlatform() {
-        yield return new WaitForSeconds(3);
-        Platform();
+        DamagePlatforms[Level].SetActive(true);
     }
 
     public void RaiseLevel() {
+        if(Level == 2) return;
         Level++;
     }
 
     public void FinishUltimate() {
         UltimateNow = false;
+        if(CurrentHP != 1) Platform();
     }
 
     public void Charge() {
         Charger++;
+    }
+
+    public int GetLevel() {
+        return Level;
     }
 }
