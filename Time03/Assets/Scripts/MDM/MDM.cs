@@ -55,7 +55,7 @@ public class MDM : MonoBehaviour
 
         PPScript = GetComponent<PunchPrison>();
         Prison = new Skills(100,PPScript.GetCD(),true,PPScript.Prison);
-        skills.Add(Prison);
+        //skills.Add(Prison);
 
         PRScript = GetComponent<PunchRain>();
         Rain = new Skills(100,0,true,PRScript.Rain);

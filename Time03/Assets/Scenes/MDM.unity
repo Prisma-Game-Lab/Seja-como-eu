@@ -410,7 +410,7 @@ PrefabInstance:
     - target: {fileID: 9020859789426494174, guid: 3512443ab4549e04aa118ef2ebf068c9,
         type: 3}
       propertyPath: TimeInside
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9020859789426494175, guid: 3512443ab4549e04aa118ef2ebf068c9,
         type: 3}
@@ -631,7 +631,7 @@ PrefabInstance:
     - target: {fileID: 9020859789426494174, guid: 3512443ab4549e04aa118ef2ebf068c9,
         type: 3}
       propertyPath: TimeInside
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9020859789426494175, guid: 3512443ab4549e04aa118ef2ebf068c9,
         type: 3}
@@ -1291,7 +1291,7 @@ PrefabInstance:
     - target: {fileID: 9020859789426494174, guid: 3512443ab4549e04aa118ef2ebf068c9,
         type: 3}
       propertyPath: TimeInside
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9020859789426494175, guid: 3512443ab4549e04aa118ef2ebf068c9,
         type: 3}
@@ -2298,9 +2298,7 @@ MonoBehaviour:
     type: 3}
   PrefabHelper: {fileID: 7542135265080225965, guid: 0ba70cbaa6a2acf44b6aea668f85016c,
     type: 3}
-  Cooldown: 7
   Frequency: 0.5
-  Duration: 7
   Altura: 6
 --- !u!114 &1877664321
 MonoBehaviour:
@@ -2315,7 +2313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoints: 15
-  FullSpecial: 20
+  FullSpecial: 10
   Cooldown: 4
   HpBar: {fileID: 1699464408}
   SpecBar: {fileID: 1648334294}
@@ -2403,8 +2401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbba688b6fbc0614fa242667c28a5803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberOfWaves: 1
-  TimeBetweenWaves: 4
+  NumberOfWaves: 5
+  TimeBetweenWaves: 3
   UltimateBarrier: {fileID: 226525978}
   UltimateWave: {fileID: 8265045737443100536, guid: 40bc74987f07d704a8f209a2c88d30b6,
     type: 3}
