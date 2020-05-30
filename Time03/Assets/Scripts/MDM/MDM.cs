@@ -45,10 +45,6 @@ public class MDM : MonoBehaviour
 
         SkillCD = GetComponent<NewBossSkillCD>();
 
-        PRScript = GetComponent<PunchRain>();
-        Rain = new Skills(100,PRScript.GetCD(),true,PRScript.Rain);
-        skills.Add(Rain);
-
         PFScript = GetComponent<PunchFloor>();
         Floor = new Skills(100,PFScript.GetCD(),true,PFScript.Floor);
         skills.Add(Floor);
@@ -60,6 +56,9 @@ public class MDM : MonoBehaviour
         PPScript = GetComponent<PunchPrison>();
         Prison = new Skills(100,PPScript.GetCD(),true,PPScript.Prison);
         skills.Add(Prison);
+
+        PRScript = GetComponent<PunchRain>();
+        Rain = new Skills(100,0,true,PRScript.Rain);
 
         PUScript = GetComponent<PunchUltimate>();
         Ultimate = new Skills(100,0,true,PUScript.Ultimate);
@@ -94,6 +93,10 @@ public class MDM : MonoBehaviour
 
         if(Charger >= FullSpecial) {
             PerdeVida();
+        }
+
+        if(!PRScript.ItsRainingMan() && Level == 2) {
+            Rain.ActivateSkill();
         }
     }
 
@@ -137,5 +140,9 @@ public class MDM : MonoBehaviour
 
     public int GetLevel() {
         return Level;
+    }
+
+    public float GetHP() {
+        return CurrentHP;
     }
 }
