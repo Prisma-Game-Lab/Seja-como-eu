@@ -900,7 +900,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839284937}
   m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: 0.24, y: 28.29, z: -23.4}
+  m_LocalPosition: {x: 0.24, y: 27.74, z: -24.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2367,6 +2367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PrefabPunchesFollow: {fileID: 8435792613004044729, guid: 422cbb090845b854698221e19cbd1b60,
+    type: 3}
+  PrefabPunchesFollowLevel2: {fileID: 8167098236750006656, guid: 05a866948272b934782b85232e2f81ad,
     type: 3}
   PlayerPosition: {fileID: 1498068568}
   Cooldown: 6
