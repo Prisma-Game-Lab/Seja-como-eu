@@ -63,9 +63,15 @@ public class DisplayFrase : MonoBehaviour
         }
     }
 
-    public void ShowFrase() {
+    private void ShowFrase() {
         ChatBox.gameObject.SetActive(true);
         StartCoroutine(ShowLetters());
+        StartIt = false;
+    }
+
+    public void ShowFrase(int NewIndex) {
+        ChatBox.gameObject.SetActive(true);
+        StartCoroutine(ShowLetters(NewIndex));
         StartIt = false;
     }
 
@@ -74,7 +80,7 @@ public class DisplayFrase : MonoBehaviour
         if(Frases.Frase[Counts.Index].Turn == 0) {
             Trigger.EndConversation();
         }
-        StartIt = false;
+        StartIt = true;
     }
 
     private IEnumerator ShowLetters() {
@@ -89,6 +95,20 @@ public class DisplayFrase : MonoBehaviour
         }
         FraseEnd = true;
         Counts.Index++;
+    }
+
+    private IEnumerator ShowLetters(int Index) {
+        Chat.text = "";
+        FraseEnd = false;
+        foreach(char c in Frases.Frase[Counts.Index].Texto) {
+            if(FraseEnd) {
+                break;
+            }
+            Chat.text += c;
+            yield return new WaitForSeconds(0.1f);
+        }
+        FraseEnd = true;
+        Counts.Index = Index;
     }
 
     private IEnumerator GrantAcess()

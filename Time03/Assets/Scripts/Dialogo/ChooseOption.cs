@@ -55,7 +55,7 @@ public class ChooseOption : MonoBehaviour
         Counts.Index++;
         Frases.Frase[Counts.Index].SetTexto(Options[Index].text);
         OptionBox.gameObject.SetActive(false);
-        NormalDialogue.ShowFrase();
+        NormalDialogue.ShowFrase(Frases.Frase[Counts.Index].Options[Index].NextChat);
     }
 
     private void ResetTexto() {
@@ -66,7 +66,7 @@ public class ChooseOption : MonoBehaviour
 
     private void GiveValue() {
         for(int i=0;i<Frases.Frase[Counts.Index].Options.Count;i++) {
-            Options[i].text = Frases.Frase[Counts.Index].Options[i];
+            Options[i].text = Frases.Frase[Counts.Index].Options[i].Texto;
         }
     }
 
