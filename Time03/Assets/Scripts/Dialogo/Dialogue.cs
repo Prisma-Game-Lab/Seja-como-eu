@@ -7,10 +7,8 @@ public class Dialogue
 {
     [TextArea(8,12)]
     public string Texto;
-
     public int Turn;
-    [TextArea(2,3)]
-    public List<string> Options;
+    public List<Options> Options;
 
     public void SetTexto(string Choice) {
         Texto = Choice;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HeartOrbit : MonoBehaviour
 {
+    private GeneralCounts Counts;
 
     public float orbitSpeed = 100.0f;
     [Range(0, 100)]
@@ -20,12 +21,16 @@ public class HeartOrbit : MonoBehaviour
     private Vector3 newOrbit;
     public Transform[] carinhoHearts;
     public ParticleSystem.ShapeModule carinhoArea;
+    private ParticleSystem ps;
     private bool canExpand = true;
 
     public void Start(){
         //encontra e define carinhoArea, emissor de partículas que demonstra raio dos corações
-        ParticleSystem ps = hearts.GetComponentInChildren<ParticleSystem>();
+        ps = hearts.GetComponentInChildren<ParticleSystem>();
         carinhoArea = ps.shape;
+
+        Counts = SaveSystem.GetInstance().generalCounts;
+        StartCoroutine(DestroyParticles());
     }
     public void OrbitAround()
     {
@@ -78,5 +83,15 @@ public class HeartOrbit : MonoBehaviour
     public float getCD()
     {
     	return CooldownOrbit;
+    }
+
+    private IEnumerator DestroyParticles()
+    {
+
+        yield return new WaitUntil(() => Counts.CarinhoIsMorto);
+        ps.Clear();
+        ps.Stop();
+        Debug.Log("ioioioi");
+        Destroy(hearts);
     }
 }
