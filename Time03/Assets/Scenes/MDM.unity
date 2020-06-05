@@ -2403,6 +2403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumberOfWaves: 5
   TimeBetweenWaves: 3
+  TimeBetweenWavesLevel1: 0
   UltimateBarrier: {fileID: 226525978}
   UltimateWave: {fileID: 8265045737443100536, guid: 40bc74987f07d704a8f209a2c88d30b6,
     type: 3}

@@ -64,7 +64,7 @@ public class PunchFollow : MonoBehaviour
 
     private void Level2() {
         Instantiate(PrefabPunchesFollowLevel2,new Vector3(-21,0,0),Quaternion.identity);
-        GameObject go = Instantiate(PrefabPunchesFollowLevel2,new Vector3(21,0,-1.25f),Quaternion.identity);
+        GameObject go = Instantiate(PrefabPunchesFollowLevel2,new Vector3(21,0,2.5f),Quaternion.identity);
 
         go.transform.Rotate(new Vector3(0,180,0));
     }
