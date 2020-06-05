@@ -6,6 +6,7 @@ public class PunchUltimate : MonoBehaviour
 {
     public float NumberOfWaves;
     public float TimeBetweenWaves;
+    public float TimeBetweenWavesLevel1;
     public GameObject UltimateBarrier;
     public GameObject UltimateWave;
     public Transform Player;
@@ -57,7 +58,7 @@ public class PunchUltimate : MonoBehaviour
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
             Destroy(wave.transform.GetChild(i).gameObject);
             Destroy(wave.transform.GetChild(i+1).gameObject);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(TimeBetweenWavesLevel1);
         }
         yield return new WaitForSeconds(8);
         UltimateBarrier.SetActive(false);
@@ -76,13 +77,13 @@ public class PunchUltimate : MonoBehaviour
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
             Destroy(wave.transform.GetChild(i).gameObject);
             Destroy(wave.transform.GetChild(i+1).gameObject);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(TimeBetweenWavesLevel1);
         }
         for(int i=14;i>0;i--) {
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
             Destroy(wave.transform.GetChild(i).gameObject);
             Destroy(wave.transform.GetChild(i-1).gameObject);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(TimeBetweenWavesLevel1);
         }
         yield return new WaitForSeconds(8);
         UltimateBarrier.SetActive(false);
