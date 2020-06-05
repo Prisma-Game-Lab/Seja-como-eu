@@ -30,7 +30,7 @@ public class PunchUltimate : MonoBehaviour
     private IEnumerator Level0() {
         GameObject wave;
         int rnd;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         Player.position = new Vector3(0,0.5f,0);
         yield return new WaitForSeconds(0.5f);
         UltimateBarrier.SetActive(true);
@@ -49,7 +49,7 @@ public class PunchUltimate : MonoBehaviour
 
     private IEnumerator Level1() {
         GameObject wave;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         Player.position = new Vector3(0,0.5f,0);
         yield return new WaitForSeconds(0.5f);
         UltimateBarrier.SetActive(true);
@@ -68,7 +68,7 @@ public class PunchUltimate : MonoBehaviour
 
     private IEnumerator Level2() {
         GameObject wave;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         Player.position = new Vector3(0,0.5f,0);
         yield return new WaitForSeconds(0.5f);
         UltimateBarrier.SetActive(true);

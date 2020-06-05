@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe5f62222af1fb408e5a1dcb641cfa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimetoDespawn: 1.5
+  TimetoDespawn: 0.8
 --- !u!114 &8182009804414985592
 MonoBehaviour:
   m_ObjectHideFlags: 0
