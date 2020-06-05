@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6056aa7d4c41992438bb6fa94436da9e, type: 3}
+  m_Name: DialogoHUB
+  m_EditorClassIdentifier: 
+  Frase:
+  - Texto: oi meu nome eh joao
+    Turn: 1
+    Options: []
+  - Texto: Oi joao, voce gosta de torrada?
+    Turn: 2
+    Options: []
+  - Texto: '*Responde a Pergunta*'
+    Turn: 1
+    Options:
+    - Eu gosto de torrada
+    - Eu odeio torrada
+    - Eu nunca comi torrada
+  - Texto: Eu nunca comi torrada
+    Turn: 1
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  Save: {fileID: 783061751847050879, guid: 84d80e307823a0e45bf33512dddbf097, type: 3}
