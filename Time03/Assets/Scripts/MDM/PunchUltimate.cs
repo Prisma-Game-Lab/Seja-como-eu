@@ -30,11 +30,11 @@ public class PunchUltimate : MonoBehaviour
     private IEnumerator Level0() {
         GameObject wave;
         int rnd;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         Player.position = new Vector3(0,0.5f,0);
         yield return new WaitForSeconds(0.5f);
         UltimateBarrier.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         for(int i=0;i<NumberOfWaves;i++) {
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
             rnd = Random.Range(0,15);
@@ -49,11 +49,11 @@ public class PunchUltimate : MonoBehaviour
 
     private IEnumerator Level1() {
         GameObject wave;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         Player.position = new Vector3(0,0.5f,0);
         yield return new WaitForSeconds(0.5f);
         UltimateBarrier.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         for(int i=0;i<14;i++) {
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
             Destroy(wave.transform.GetChild(i).gameObject);
@@ -68,11 +68,11 @@ public class PunchUltimate : MonoBehaviour
 
     private IEnumerator Level2() {
         GameObject wave;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         Player.position = new Vector3(0,0.5f,0);
         yield return new WaitForSeconds(0.5f);
         UltimateBarrier.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         for(int i=0;i<14;i++) {
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
             Destroy(wave.transform.GetChild(i).gameObject);
