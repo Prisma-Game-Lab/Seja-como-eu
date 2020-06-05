@@ -23,7 +23,7 @@ public class PunchFollow : MonoBehaviour
 
     public void Follow() {
         if(Mestre.GetLevel() == 0)
-            Level2();
+            Level0();
         if(Mestre.GetLevel() == 1)
             Level1();
         if(Mestre.GetLevel() == 2)
