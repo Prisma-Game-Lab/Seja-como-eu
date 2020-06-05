@@ -10,6 +10,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6056aa7d4c41992438bb6fa94436da9e, type: 3}
-  m_Name: Dialogo
+  m_Name: DialogoCarinho
   m_EditorClassIdentifier: 
-  Frase: []
+  Frase:
+  - Texto: "Porque voc\xEA est\xE1 me tratando assim?"
+    Turn: 3
+    Options: []
+  - Texto: "Aposto que voc\xEA n\xE3o gostaria que algu\xE9m fizesse isso com voc\xEA.\r"
+    Turn: 3
+    Options: []
+  - Texto: "Eu s\xF3 estava tentando ser seu amigo..."
+    Turn: 3
+    Options: []
+  - Texto: "Afastar as pessoas n\xE3o vai te fazer mais Macho. S\xF3 vai te fazer
+      mais sozinho.\r"
+    Turn: 3
+    Options: []
+  - Texto: "N\xE3o tem caminho mais curto para a bondade do que atrav\xE9s da ternura,
+      da gentileza e do amor."
+    Turn: 3
+    Options: []
+  - Texto: "E ao afastar essas caracter\xEDsticas, voc\xEA afasta as pessoas."
+    Turn: 3
+    Options: []
+  - Texto: "Todos precisam do calor de um abra\xE7o e da conex\xE3o com os outros.\r"
+    Turn: 3
+    Options: []
+  - Texto: "Pode correr, pode tentar fugir, pode at\xE9 atirar fenos em mim. Mas
+      ningu\xE9m consegue viver sozinho."
+    Turn: 3
+    Options: []
+  - Texto: "Nem mesmo voc\xEA."
+    Turn: 3
+    Options: []
+  - Texto: E nem mesmo o Mestre dos Machos...
+    Turn: 3
+    Options: []
+  - Texto: '*Acaba dialogo*'
+    Turn: 0
+    Options: []

@@ -12,4 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6056aa7d4c41992438bb6fa94436da9e, type: 3}
   m_Name: DialogoFraqueza
   m_EditorClassIdentifier: 
-  Frase: []
+  Frase:
+  - Texto: "Valent\xE3o, eu sei que voc\xEA humilha os mais fracos s\xF3 para poder
+      se sentir mais forte."
+    Turn: 4
+    Options: []
+  - Texto: "Eu sei que, no fundo, voc\xEA faz isso porque se sente inseguro. "
+    Turn: 4
+    Options: []
+  - Texto: "Voc\xEA tem medo."
+    Turn: 4
+    Options: []
+  - Texto: 'Medo de fracassar, de ser rejeitado. '
+    Turn: 4
+    Options: []
+  - Texto: "E, principalmente, voc\xEA tem medo de \u201Csentir medo\u201D."
+    Turn: 4
+    Options: []
+  - Texto: "Mas saiba que esconder sua dor n\xE3o te faz dur\xE3o."
+    Turn: 4
+    Options: []
+  - Texto: "Isso \xE9 fugir do problema."
+    Turn: 4
+    Options: []
+  - Texto: "Fugir dos problemas e diminuir os outros para se sentir melhor, s\xF3
+      faz de voc\xEA um covarde.\r\n"
+    Turn: 4
+    Options: []
+  - Texto: "\xC9 preciso chorar para a dor ir embora e \xE9 preciso aceitar o medo
+      para enfrent\xE1-lo.\r\n"
+    Turn: 4
+    Options: []
+  - Texto: "Porque admitir as nossas fraquezas \xE9 o que nos faz corajosos.\r\n"
+    Turn: 4
+    Options: []
+  - Texto: '*Acaba dialogo*'
+    Turn: 0
+    Options: []
