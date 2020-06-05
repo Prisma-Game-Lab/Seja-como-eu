@@ -16,17 +16,17 @@ public class PunchUltimate : MonoBehaviour
         Mestre = GetComponent<MDM>();
     }
 
-    
-    void Update()
-    {
-        
-    }
 
     public void Ultimate() {
-        StartCoroutine(EUltimate());
+        if(Mestre.GetLevel() == 0)
+            StartCoroutine(Level0());
+        if(Mestre.GetLevel() == 1)
+            StartCoroutine(Level1());
+        if(Mestre.GetLevel() == 2)
+            StartCoroutine(Level2());
     }
 
-    private IEnumerator EUltimate() {
+    private IEnumerator Level0() {
         GameObject wave;
         int rnd;
         yield return new WaitForSeconds(5);
@@ -41,6 +41,50 @@ public class PunchUltimate : MonoBehaviour
             yield return new WaitForSeconds(TimeBetweenWaves);
         }
         yield return new WaitForSeconds(5);
+        UltimateBarrier.SetActive(false);
+        Mestre.RaiseLevel();
+        Mestre.FinishUltimate();
+    }
+
+    private IEnumerator Level1() {
+        GameObject wave;
+        yield return new WaitForSeconds(5);
+        Player.position = new Vector3(0,0.5f,0);
+        yield return new WaitForSeconds(0.5f);
+        UltimateBarrier.SetActive(true);
+        yield return new WaitForSeconds(3);
+        for(int i=0;i<14;i++) {
+            wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
+            Destroy(wave.transform.GetChild(i).gameObject);
+            Destroy(wave.transform.GetChild(i+1).gameObject);
+            yield return new WaitForSeconds(0.3f);
+        }
+        yield return new WaitForSeconds(8);
+        UltimateBarrier.SetActive(false);
+        Mestre.RaiseLevel();
+        Mestre.FinishUltimate();
+    }
+
+    private IEnumerator Level2() {
+        GameObject wave;
+        yield return new WaitForSeconds(5);
+        Player.position = new Vector3(0,0.5f,0);
+        yield return new WaitForSeconds(0.5f);
+        UltimateBarrier.SetActive(true);
+        yield return new WaitForSeconds(3);
+        for(int i=0;i<14;i++) {
+            wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
+            Destroy(wave.transform.GetChild(i).gameObject);
+            Destroy(wave.transform.GetChild(i+1).gameObject);
+            yield return new WaitForSeconds(0.3f);
+        }
+        for(int i=14;i>0;i--) {
+            wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
+            Destroy(wave.transform.GetChild(i).gameObject);
+            Destroy(wave.transform.GetChild(i-1).gameObject);
+            yield return new WaitForSeconds(0.3f);
+        }
+        yield return new WaitForSeconds(8);
         UltimateBarrier.SetActive(false);
         Mestre.RaiseLevel();
         Mestre.FinishUltimate();

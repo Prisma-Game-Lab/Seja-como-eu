@@ -9,20 +9,12 @@ public class PunchFloor : MonoBehaviour
     public int Quantity;
     public float Cooldown;
     public float Delay;
-
     private MDM Mestre;
 
-    private int RealQuantity;
     void Start()
     {
         Cooldown += Delay;
         Mestre = GetComponent<MDM>();
-    }
-
-    
-    void Update()
-    {
-        RealQuantity = Quantity * (Mestre.GetLevel() + 1);
     }
 
     public void Floor() {
@@ -38,7 +30,7 @@ public class PunchFloor : MonoBehaviour
         List<float> PosListz = new List<float>();
         float xPosition;
         float zPosition;
-        for(int i=0; i < RealQuantity; i++) {
+        for(int i=0; i < Quantity * (Mestre.GetLevel() + 1); i++) {
             xPosition = Random.Range(-19,19);
             PosListx.Add(xPosition);
             zPosition = Random.Range(-17,17);
@@ -49,7 +41,7 @@ public class PunchFloor : MonoBehaviour
         yield return new WaitForSeconds(Delay);
 
 
-        for(int i=0; i < RealQuantity; i++) {
+        for(int i=0; i < Quantity * (Mestre.GetLevel() + 1); i++) {
             Instantiate(PrefabPunches,new Vector3(PosListx[i],0.7f,PosListz[i]),Quaternion.identity);
         }
     }
