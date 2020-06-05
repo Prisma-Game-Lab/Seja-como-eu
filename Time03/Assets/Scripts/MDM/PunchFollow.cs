@@ -23,7 +23,7 @@ public class PunchFollow : MonoBehaviour
 
     public void Follow() {
         if(Mestre.GetLevel() == 0)
-            Level0();
+            Level2();
         if(Mestre.GetLevel() == 1)
             Level1();
         if(Mestre.GetLevel() == 2)
@@ -64,7 +64,7 @@ public class PunchFollow : MonoBehaviour
 
     private void Level2() {
         Instantiate(PrefabPunchesFollowLevel2,new Vector3(-21,0,0),Quaternion.identity);
-        GameObject go = Instantiate(PrefabPunchesFollowLevel2,new Vector3(21,0,2.5f),Quaternion.identity);
+        GameObject go = Instantiate(PrefabPunchesFollowLevel2,new Vector3(21,0,0),Quaternion.identity);
 
         go.transform.Rotate(new Vector3(0,180,0));
     }
