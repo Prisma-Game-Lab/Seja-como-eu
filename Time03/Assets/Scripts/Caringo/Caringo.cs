@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Caringo : MonoBehaviour
 {
     public float Cooldown;
     public GameObject Player;
+    public Text TimerText;
+    public float SurvivalTime;
+    public GameObject DanceFloor;
     private NewBossSkillCD SkillCD;
     private bool SkillIsReady = false;
     private List<Skills> skills;
@@ -49,17 +53,28 @@ public class Caringo : MonoBehaviour
     
     void Update()
     {
-        if(SkillIsReady) {
+        if(SkillIsReady && SurvivalTime > 0) {
             SkillCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
         }
-        transform.LookAt(Player.transform.position);
-        
+        SurvivalTime -= Time.deltaTime;
+        TimerText.text = SurvivalTime.ToString("F0"); 
+        if(SurvivalTime <= 0) {
+            MiniGame();
+        }
+        else {
+            transform.LookAt(Player.transform.position);
+        }
     }
 
     private IEnumerator ResetCooldown() {
         SkillIsReady = false;
         yield return new WaitForSeconds(Cooldown);
         SkillIsReady = true;
+    }
+
+    private void MiniGame() {
+        TimerText.gameObject.SetActive(false);
+        DanceFloor.SetActive(true);
     }
 }
