@@ -11,8 +11,12 @@ public class Caringo : MonoBehaviour
     private List<Skills> skills;
     private Skills Shoot;
     private Skills Teleport;
+    private Skills Clone;
+    private Skills Minion;
     private CrazyShoot CSScript;
     private CrazyTeleport CTScript;
+    private CrazyClone CCScript;
+    private CrazyMinion CMSCript;
     private GeneralCounts Counts;
 
     void Start()
@@ -30,6 +34,14 @@ public class Caringo : MonoBehaviour
         CTScript = GetComponent<CrazyTeleport>();
         Teleport = new Skills(100,CTScript.Cooldown,true,CTScript.Teleport);
         skills.Add(Teleport);
+
+        CCScript = GetComponent<CrazyClone>();
+        Clone = new Skills(100,CCScript.Cooldown,true,CCScript.Clone);
+        skills.Add(Clone);
+
+        CMSCript = GetComponent<CrazyMinion>();
+        Minion = new Skills(100,CMSCript.Cooldown,true,CMSCript.Minion);
+        skills.Add(Minion);
 
         StartCoroutine(ResetCooldown());
     }

@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrazyShoot : MonoBehaviour
+public class Minion : MonoBehaviour
 {
-    public GameObject CrazyBullet;
-    public Transform PlayerPosition;
-    public float Cooldown;
+    public GameObject Bullet;
+
+    public float RepeatRate;
+
     void Start()
     {
-        
+        InvokeRepeating("ShootBullet",0,RepeatRate);
     }
 
     
@@ -18,14 +19,14 @@ public class CrazyShoot : MonoBehaviour
         
     }
 
-    public void Shoot() {
+    private void ShootBullet() {
+        if(!transform.parent.gameObject.activeSelf) return;
         Vector3 Pos = transform.position;
         Vector3 Direction = transform.forward;
         Quaternion Rotation = transform.rotation;
 
         Vector3 SpawnPos = Pos + Direction*1.2f;
 
-        Instantiate(CrazyBullet,new Vector3(SpawnPos.x,0.5f,SpawnPos.z),new Quaternion(0,Rotation.y,0,Rotation.w));
-        
+        Instantiate(Bullet,new Vector3(SpawnPos.x,0.5f,SpawnPos.z),new Quaternion(0,Rotation.y,0,Rotation.w));
     }
 }
