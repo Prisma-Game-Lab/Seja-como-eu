@@ -22,7 +22,7 @@ public class Follow : MonoBehaviour
     }
 
     private IEnumerator WaitForLaunch() {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         canGo = true;
     }
 }
