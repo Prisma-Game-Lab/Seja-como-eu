@@ -121,6 +121,27 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &232867315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3186571090284223016, guid: 538c844e2d4eebc408c96da8c0c1ae9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3186571090051391451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &232867325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232867315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46860f5cb9173a4fbffb3a8581eaf0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cooldown: 4
+  MinionDuration: 3
+  Minions: {fileID: 1433604165}
 --- !u!1 &627204037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +1091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1433604166
 Transform:
   m_ObjectHideFlags: 0
@@ -1652,6 +1673,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 232867316, guid: 538c844e2d4eebc408c96da8c0c1ae9c, type: 3}
+      propertyPath: CloneDuration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3186571090284223010, guid: 538c844e2d4eebc408c96da8c0c1ae9c,
         type: 3}
       propertyPath: Player
