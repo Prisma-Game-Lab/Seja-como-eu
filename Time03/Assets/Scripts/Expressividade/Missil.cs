@@ -8,12 +8,10 @@ public class Missil : MonoBehaviour
     public float speed;
     public float autoTime;
     private bool following = true;
-    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
         StartCoroutine(Autopilot());
     }
 
@@ -22,7 +20,12 @@ public class Missil : MonoBehaviour
     {
         if(following)
         {
+            FaceTarget(target.position + new Vector3(0, 0.5f, 0));
             transform.position = Vector3.MoveTowards(transform.position, target.position + new Vector3(0,0.5f,0), speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
     }
 
@@ -31,8 +34,15 @@ public class Missil : MonoBehaviour
         yield return new WaitForSeconds(autoTime);
 
         following = false;
-        rb.velocity = target.position.normalized * speed;
     }
+
+    public void FaceTarget(Vector3 target)
+    {
+        Vector3 direction = (target - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if(!collision.collider.CompareTag("orb"))

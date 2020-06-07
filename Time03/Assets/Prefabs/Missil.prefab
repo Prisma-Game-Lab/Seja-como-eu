@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8871606399373020745}
   - component: {fileID: -3885379173064863378}
   - component: {fileID: 5379268719179038253}
-  - component: {fileID: 1930138467460513959}
+  - component: {fileID: 65750946478859092}
   m_Layer: 0
   m_Name: Missil
   m_TagString: orb
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 5
+  speed: 8
   autoTime: 5
 --- !u!114 &5379268719179038253
 MonoBehaviour:
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6efed85234b641f44930c7157dd306fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &1930138467460513959
+--- !u!54 &65750946478859092
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
