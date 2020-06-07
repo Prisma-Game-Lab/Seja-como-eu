@@ -28,5 +28,5 @@ public class GeneralCounts : ScriptableObject
 
    public int Index = 0;
 
-   public Dictionary<string,bool> Events;
+   public Dictionary<string,bool> Events = new Dictionary<string, bool>();
 }

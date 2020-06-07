@@ -18,14 +18,10 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         save = SaveSystem.GetInstance();
-        Counts = save.generalCounts;
         SceneTheme.Play();
 
         if(!SaveSystem.SucessfulLoad) {
             ContinueButton.SetActive(false);
-            foreach(string s in EventKeys) {
-                Counts.Events.Add(s,true);
-            }
         }
     }
 
@@ -46,6 +42,10 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame() {
         save.NewGame();
+        Counts = save.generalCounts;
+        foreach(string s in EventKeys) {
+            Counts.Events.Add(s,true);
+        }
         LoadingSceneControl.CurrentScene = "Hub";
         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
     }

@@ -12,6 +12,7 @@ TagManager:
   - Feno
   - Touched
   - rock
+  - ChatTrigger
   layers:
   - Default
   - TransparentFX

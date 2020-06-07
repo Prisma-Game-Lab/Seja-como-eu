@@ -131,6 +131,7 @@ public class SaveSystem : MonoBehaviour
     public void NewGame() {
         generalCounts = GameObject.Instantiate(emptySave);
         SaveState();
+        SucessfulLoad = true;
         string path = Path.Combine(Application.persistentDataPath, saveFileName + ".dat");
         Debug.Log("new save on path:" + path);
     }

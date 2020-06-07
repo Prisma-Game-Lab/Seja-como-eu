@@ -17,7 +17,8 @@ public class DisplayFrase : MonoBehaviour
 
     private bool ControlAcess = true;
 
-    private bool StartIt;
+    private bool StartIt = true;
+    private bool EndChat = false;
     private GeneralCounts Counts;
 
     void Start()
@@ -30,12 +31,7 @@ public class DisplayFrase : MonoBehaviour
     void Update()
     {
         if(Trigger.CanChat()) {
-            if((Frases.Frase[Counts.Index].Turn != MyTurn) && FraseEnd) {
-                HideFrase();
-                return;
-            }
-
-            if(Frases.Frase[Counts.Index].Options.Count > 0) {
+            if(EndChat) {
                 HideFrase();
                 return;
             }
@@ -46,6 +42,11 @@ public class DisplayFrase : MonoBehaviour
         }
 
         if(Input.GetAxisRaw("PressButton") > 0 && ControlAcess) {
+            if(Frases.Frase[Counts.Index].Options.Count > 0) {
+                HideFrase();
+                return;
+            }
+
             if(ChatBox.gameObject.activeSelf) {
                 Next();
             }
@@ -54,6 +55,11 @@ public class DisplayFrase : MonoBehaviour
     }
 
     private void Next() {
+        if(FraseEnd && Frases.Frase[Counts.Index].Turn != MyTurn ) {
+            EndChat = true;
+            return;
+        }
+
         if(!FraseEnd) {
             Chat.text = Frases.Frase[Counts.Index].Texto;
             FraseEnd = true;

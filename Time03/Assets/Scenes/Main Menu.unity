@@ -437,6 +437,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneTheme: {fileID: 1886486246}
   ContinueButton: {fileID: 1180296375}
+  EventKeys:
+  - CarinhoMorre
+  - TristezaMorre
+  - PrimeiraConversa
 --- !u!1 &628172171
 GameObject:
   m_ObjectHideFlags: 0

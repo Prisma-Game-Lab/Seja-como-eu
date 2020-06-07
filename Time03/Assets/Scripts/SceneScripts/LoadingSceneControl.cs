@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LoadingSceneControl : MonoBehaviour
 {
-
+    private GeneralCounts Counts;
     void Awake()
     {
+        Counts = SaveSystem.GetInstance().generalCounts;
+        Counts.Index = 0;
         LoadScene();
     }
 

@@ -22,13 +22,15 @@ MonoBehaviour:
   - Texto: '*Responde a Pergunta*'
     Turn: 1
     Options:
-    - Eu gosto de torrada
-    - Eu odeio torrada
-    - Eu nunca comi torrada
+    - Texto: sim
+      NextChat: 4
+    - Texto: nao
+      NextChat: 4
+    - Texto: talvez
+      NextChat: 4
   - Texto: Eu nunca comi torrada
     Turn: 1
     Options: []
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
-  Save: {fileID: 783061751847050879, guid: 84d80e307823a0e45bf33512dddbf097, type: 3}

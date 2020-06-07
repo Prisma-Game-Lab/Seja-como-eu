@@ -19,7 +19,6 @@ public class SceneControl : MonoBehaviour
     {
         LoadingSceneControl.CurrentScene = SceneName;
         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
-
         Time.timeScale = 1f;
         GeneralCounts.Kill = false;
     }

@@ -36,10 +36,13 @@ public class CarinhoScript : MonoBehaviour
     private bool invulneravel = false;
 
     private GeneralCounts Counts;
+    private DisplayFrase DF;
 
     void Start()
     {
         Counts = SaveSystem.GetInstance().generalCounts;
+
+        DF = GetComponent<DisplayFrase>();
 
         fullhealth = health;
 
@@ -142,6 +145,7 @@ public class CarinhoScript : MonoBehaviour
             if (health <= 0)
             {
                 Counts.CarinhoIsMorto = true;
+                DF.Trigger.TriggerConversation(0,"CarinhoMorre");
                 anim.SetTrigger("Death");
                 portalExit.SetActive(true);
                 hoScript.carinhoArea.enabled = false;
