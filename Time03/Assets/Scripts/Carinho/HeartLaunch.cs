@@ -68,7 +68,7 @@ public class HeartLaunch : MonoBehaviour
     		time += Time.deltaTime / risingDuration;
     		_t.position = Vector3.Lerp(startPos,target,time);
     		cScript.FaceTarget(playerPosition.position);
-    		yield return new WaitForEndOfFrame ();
+    		yield return new null;
     	} 
     	// End Rising
         //Debug.Log("Chegou no alto");
@@ -85,7 +85,7 @@ public class HeartLaunch : MonoBehaviour
             
         	_t.position = Vector3.MoveTowards(_t.position, target, launchingSpeed * Time.deltaTime);
         	//cScript.FaceTarget(target);
-        	yield return new WaitForEndOfFrame ();
+        	yield return null;
         }
         // End Launching
 
