@@ -43,9 +43,9 @@ public class Missil : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(!collision.collider.CompareTag("orb"))
+        if(!other.CompareTag("orb"))
         {
             Destroy(gameObject);
         }
