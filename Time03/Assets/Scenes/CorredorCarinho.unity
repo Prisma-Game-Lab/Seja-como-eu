@@ -22651,7 +22651,7 @@ PrefabInstance:
     - target: {fileID: 4160702874246658408, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
         type: 3}
       propertyPath: SceneName
-      value: Carinho(A)
+      value: Carinho
       objectReference: {fileID: 0}
     - target: {fileID: 5732601204192538289, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
         type: 3}
