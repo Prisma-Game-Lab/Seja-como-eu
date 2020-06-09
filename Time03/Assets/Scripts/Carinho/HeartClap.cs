@@ -51,6 +51,8 @@ public class HeartClap : MonoBehaviour
 
         anim.SetTrigger("Hug");
 
+        yield return new WaitForSeconds(0.15f); //atraso da animacao
+
     	int i = 0;
 
     	hitColliders = Physics.OverlapBox(_t.position + _t.forward * hugRadius/2f + _t.up * hugRadius/2, new Vector3(hugRadius,hugRadius/2f,hugRadius/2f), _t.rotation);
