@@ -28,7 +28,7 @@ MonoBehaviour:
       NextChat: 4
     - Texto: talvez
       NextChat: 4
-  - Texto: Eu nunca comi torrada
+  - Texto: sim
     Turn: 1
     Options: []
   - Texto: '*Acaba o Dialogo*'

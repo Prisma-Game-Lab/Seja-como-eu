@@ -30,18 +30,12 @@ public class DisplayFrase : MonoBehaviour
     
     void Update()
     {
-        if(Trigger.CanChat()) {
-            if(EndChat) {
+        if(Trigger.CanChat() && Input.GetAxisRaw("PressButton") > 0 && ControlAcess) {
+            if(FraseEnd && Frases.Frase[Counts.Index].Turn != MyTurn) {
                 HideFrase();
                 return;
             }
 
-            if(!ChatBox.gameObject.activeSelf && Frases.Frase[Counts.Index].Turn == MyTurn && StartIt) {
-                ShowFrase();
-            }
-        }
-
-        if(Input.GetAxisRaw("PressButton") > 0 && ControlAcess) {
             if(Frases.Frase[Counts.Index].Options.Count > 0) {
                 HideFrase();
                 return;
@@ -50,6 +44,11 @@ public class DisplayFrase : MonoBehaviour
             if(ChatBox.gameObject.activeSelf) {
                 Next();
             }
+
+            if(!ChatBox.gameObject.activeSelf && Frases.Frase[Counts.Index].Turn == MyTurn && StartIt) {
+                ShowFrase();
+            }
+
             StartCoroutine(GrantAcess());
         }
     }
@@ -64,7 +63,13 @@ public class DisplayFrase : MonoBehaviour
             Chat.text = Frases.Frase[Counts.Index].Texto;
             FraseEnd = true;
         }
+
         else {
+            Counts.Index++;
+            if(Frases.Frase[Counts.Index].Turn != MyTurn) {
+                HideFrase();
+                return;
+            } 
             StartCoroutine(ShowLetters());
         }
     }
@@ -100,7 +105,7 @@ public class DisplayFrase : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         FraseEnd = true;
-        Counts.Index++;
+        //Counts.Index++;
     }
 
     private IEnumerator ShowLetters(int Index) {
@@ -114,7 +119,7 @@ public class DisplayFrase : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         FraseEnd = true;
-        Counts.Index = Index;
+        //Counts.Index = Index;
     }
 
     private IEnumerator GrantAcess()

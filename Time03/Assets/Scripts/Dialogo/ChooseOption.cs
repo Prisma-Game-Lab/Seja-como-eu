@@ -44,18 +44,18 @@ public class ChooseOption : MonoBehaviour
         GiveValue();
         if (Input.GetAxisRaw("PressButton") > 0 && ControlAcess)
         {
-            PassValueSO(CoordenadaPlayer);
+            PassValueSO();
             ControlAcess = false;
             StartCoroutine(GrantAcess());
         }
         
     }
 
-    private void PassValueSO(int Index) {
+    private void PassValueSO() {
         Counts.Index++;
-        Frases.Frase[Counts.Index].SetTexto(Options[Index].text);
+        Frases.Frase[Counts.Index].SetTexto(Options[CoordenadaPlayer].text);
         OptionBox.gameObject.SetActive(false);
-        NormalDialogue.ShowFrase(Frases.Frase[Counts.Index].Options[Index].NextChat);
+        NormalDialogue.ShowFrase(Frases.Frase[Counts.Index-1].Options[CoordenadaPlayer].NextChat);
     }
 
     private void ResetTexto() {
