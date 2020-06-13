@@ -19,6 +19,7 @@ public class DisplayFrase : MonoBehaviour
 
     private bool StartIt = true;
     private bool EndChat = false;
+    private int NextIndex = 0;
     private GeneralCounts Counts;
 
     void Start()
@@ -31,6 +32,7 @@ public class DisplayFrase : MonoBehaviour
     void Update()
     {
         if(Trigger.CanChat() && Input.GetAxisRaw("PressButton") > 0 && ControlAcess) {
+            StartCoroutine(GrantAcess());
             if(FraseEnd && Frases.Frase[Counts.Index].Turn != MyTurn) {
                 HideFrase();
                 return;
@@ -48,8 +50,6 @@ public class DisplayFrase : MonoBehaviour
             if(!ChatBox.gameObject.activeSelf && Frases.Frase[Counts.Index].Turn == MyTurn && StartIt) {
                 ShowFrase();
             }
-
-            StartCoroutine(GrantAcess());
         }
     }
 
@@ -65,7 +65,13 @@ public class DisplayFrase : MonoBehaviour
         }
 
         else {
-            Counts.Index++;
+            if(NextIndex == 0) {
+                Counts.Index++;
+            }  
+            else {
+                Counts.Index = NextIndex;
+                NextIndex = 0;
+            }
             if(Frases.Frase[Counts.Index].Turn != MyTurn) {
                 HideFrase();
                 return;
@@ -82,8 +88,9 @@ public class DisplayFrase : MonoBehaviour
 
     public void ShowFrase(int NewIndex) {
         ChatBox.gameObject.SetActive(true);
-        StartCoroutine(ShowLetters(NewIndex));
+        StartCoroutine(ShowLetters());
         StartIt = false;
+        NextIndex = NewIndex;
     }
 
     private void HideFrase() {
@@ -105,21 +112,6 @@ public class DisplayFrase : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         FraseEnd = true;
-        //Counts.Index++;
-    }
-
-    private IEnumerator ShowLetters(int Index) {
-        Chat.text = "";
-        FraseEnd = false;
-        foreach(char c in Frases.Frase[Counts.Index].Texto) {
-            if(FraseEnd) {
-                break;
-            }
-            Chat.text += c;
-            yield return new WaitForSeconds(0.1f);
-        }
-        FraseEnd = true;
-        //Counts.Index = Index;
     }
 
     private IEnumerator GrantAcess()
@@ -131,5 +123,9 @@ public class DisplayFrase : MonoBehaviour
 
     public bool GetAcess() {
         return ControlAcess;
+    }
+
+    private void GoToIndex(int i) {
+        Counts.Index = i;
     }
 }
