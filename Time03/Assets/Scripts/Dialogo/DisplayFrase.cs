@@ -128,4 +128,8 @@ public class DisplayFrase : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.3f);
         ControlAcess = true;
     }
+
+    public bool GetAcess() {
+        return ControlAcess;
+    }
 }

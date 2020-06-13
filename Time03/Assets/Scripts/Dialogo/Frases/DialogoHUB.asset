@@ -19,7 +19,7 @@ MonoBehaviour:
   - Texto: Oi joao, voce gosta de torrada?
     Turn: 2
     Options: []
-  - Texto: '*Responde a Pergunta*'
+  - Texto: 
     Turn: 1
     Options:
     - Texto: sim
@@ -28,7 +28,7 @@ MonoBehaviour:
       NextChat: 4
     - Texto: talvez
       NextChat: 4
-  - Texto: sim
+  - Texto: fffffffffffffffffffffffffffffffffffffffffffffffff
     Turn: 1
     Options: []
   - Texto: '*Acaba o Dialogo*'

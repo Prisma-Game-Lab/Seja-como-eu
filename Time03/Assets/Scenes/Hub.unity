@@ -3598,6 +3598,7 @@ MonoBehaviour:
   - {fileID: 796153238}
   - {fileID: 1426125405}
   Frases: {fileID: 11400000, guid: 4280fb102b947f7458438a8c32226d9b, type: 2}
+  MDMDialogue: {fileID: 1397728201}
 --- !u!136 &958304173
 CapsuleCollider:
   m_ObjectHideFlags: 0
