@@ -13,23 +13,50 @@ MonoBehaviour:
   m_Name: DialogoHUB
   m_EditorClassIdentifier: 
   Frase:
-  - Texto: oi meu nome eh joao
-    Turn: 1
-    Options: []
-  - Texto: Oi joao, voce gosta de torrada?
+  - Texto: Bem vindo ao Projeto Alfa!
     Turn: 2
     Options: []
-  - Texto: 
-    Turn: 1
-    Options:
-    - Texto: sim
-      NextChat: 4
-    - Texto: nao
-      NextChat: 4
-    - Texto: talvez
-      NextChat: 4
-  - Texto: fffffffffffffffffffffffffffffffffffffffffffffffff
-    Turn: 1
+  - Texto: "Aten\xE7\xE3o novato!"
+    Turn: 2
+    Options: []
+  - Texto: Eu sou o MESTRE DOS MACHOS!
+    Turn: 2
+    Options: []
+  - Texto: "O macho mais macho de tudo que \xE9 M\xC1SCULO!"
+    Turn: 2
+    Options: []
+  - Texto: "Sou o chefe aqui, ent\xE3o escute bem!"
+    Turn: 2
+    Options: []
+  - Texto: "Vou te ensinar como ser forte como um tuf\xE3o, r\xE1pido como um rio
+      e honrado como um homem."
+    Turn: 2
+    Options: []
+  - Texto: "Ent\xE3o se voc\xEA quiser ser que nem eu"
+    Turn: 2
+    Options: []
+  - Texto: "siga minhas instru\xE7\xF5es e voc\xEA ser\xE1 recompensado ao final
+      de sua jornada"
+    Turn: 2
+    Options: []
+  - Texto: ' com o PODER INFINITO!'
+    Turn: 2
+    Options: []
+  - Texto: "Para isso voc\xEA precisar\xE1 derrotar as suas maiores fraquezas: AS
+      SUAS EMO\xC7\xD5ES!"
+    Turn: 2
+    Options: []
+  - Texto: "Cada uma das tr\xEAs tem uma forma diferente de ser derrotada"
+    Turn: 2
+    Options: []
+  - Texto: "e provavelmente, o seu rolamento tem algo a ver com isso.\r"
+    Turn: 2
+    Options: []
+  - Texto: "N\xE3o vai amarelar n\xE9? Estou confiando em voc\xEA.\r"
+    Turn: 2
+    Options: []
+  - Texto: "Seja homem e v\xE1 a luta."
+    Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
