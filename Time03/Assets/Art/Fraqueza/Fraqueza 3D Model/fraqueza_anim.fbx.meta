@@ -24,7 +24,32 @@ ModelImporter:
   - first:
       74: -2558612854741873888
     second: Plane|SunAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Casco
+    second: {fileID: 2100000, guid: 65d125f6517b22049ac3ddd27b1c9cbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corpo
+    second: {fileID: 2100000, guid: 9e9fe5802ff4a654fb3c813957ce59b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corpo 2
+    second: {fileID: 2100000, guid: 24b7317468286234692e18402457c3ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: ad6b6fc927e4af04fb566003e44e4e3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rosto
+    second: {fileID: 2100000, guid: 934a1d16ea8ad2147936f7a867473690, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
