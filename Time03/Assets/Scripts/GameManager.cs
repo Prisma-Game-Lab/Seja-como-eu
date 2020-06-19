@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject DeathScreen;
     public GameObject GameConfigUI;
     public GameObject player;
+    public GameObject Canvas;
 
     private GeneralCounts Counts;
 
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Counts = SaveSystem.GetInstance().generalCounts;
+        Canvas.SetActive(false);
         DeathScreen.SetActive(false);
         PauseMenuUI.SetActive(false);
         GameConfigUI.SetActive(false);
@@ -48,12 +50,14 @@ public class GameManager : MonoBehaviour
     public void Death() {
         player.GetComponent<RagdollController>().DoRagdoll(true);
         player.GetComponent<MovimentPlayer>().enabled = false;
+        Canvas.SetActive(true);
         DeathScreen.SetActive(true);
         Counts.DeathCount++;
     }
 
     public void Pause()
     {
+        Canvas.SetActive(true);
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -61,6 +65,7 @@ public class GameManager : MonoBehaviour
 
     public void Resume()
     {
+        Canvas.SetActive(false);
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
