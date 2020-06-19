@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject PauseMenuUI;
     public GameObject DeathScreen;
+    public GameObject GameConfigUI;
     public GameObject player;
 
     private GeneralCounts Counts;
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
         Counts = SaveSystem.GetInstance().generalCounts;
         DeathScreen.SetActive(false);
         PauseMenuUI.SetActive(false);
+        GameConfigUI.SetActive(false);
     }
 
     
@@ -73,5 +75,15 @@ public class GameManager : MonoBehaviour
     public void SaveGame() {
         SaveSystem s = SaveSystem.GetInstance();
         s.SaveState();
+    }
+
+    public void SetConfig(){
+        PauseMenuUI.SetActive(false);
+        GameConfigUI.SetActive(true);
+    }
+
+    public void Voltar(){
+        PauseMenuUI.SetActive(true);
+        GameConfigUI.SetActive(false);
     }
 }

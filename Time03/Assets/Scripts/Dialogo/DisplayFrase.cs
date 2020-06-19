@@ -19,6 +19,7 @@ public class DisplayFrase : MonoBehaviour
 
     private bool StartIt = true;
     private bool EndChat = false;
+    private int NextIndex = 0;
     private GeneralCounts Counts;
 
     void Start()
@@ -30,18 +31,13 @@ public class DisplayFrase : MonoBehaviour
     
     void Update()
     {
-        if(Trigger.CanChat()) {
-            if(EndChat) {
+        if(Trigger.CanChat() && Input.GetAxisRaw("PressButton") > 0 && ControlAcess) {
+            StartCoroutine(GrantAcess());
+            if(FraseEnd && Frases.Frase[Counts.Index].Turn != MyTurn) {
                 HideFrase();
                 return;
             }
 
-            if(!ChatBox.gameObject.activeSelf && Frases.Frase[Counts.Index].Turn == MyTurn && StartIt) {
-                ShowFrase();
-            }
-        }
-
-        if(Input.GetAxisRaw("PressButton") > 0 && ControlAcess) {
             if(Frases.Frase[Counts.Index].Options.Count > 0) {
                 HideFrase();
                 return;
@@ -50,7 +46,10 @@ public class DisplayFrase : MonoBehaviour
             if(ChatBox.gameObject.activeSelf) {
                 Next();
             }
-            StartCoroutine(GrantAcess());
+
+            if(!ChatBox.gameObject.activeSelf && Frases.Frase[Counts.Index].Turn == MyTurn && StartIt) {
+                ShowFrase();
+            }
         }
     }
 
@@ -64,7 +63,19 @@ public class DisplayFrase : MonoBehaviour
             Chat.text = Frases.Frase[Counts.Index].Texto;
             FraseEnd = true;
         }
+
         else {
+            if(NextIndex == 0) {
+                Counts.Index++;
+            }  
+            else {
+                Counts.Index = NextIndex;
+                NextIndex = 0;
+            }
+            if(Frases.Frase[Counts.Index].Turn != MyTurn) {
+                HideFrase();
+                return;
+            } 
             StartCoroutine(ShowLetters());
         }
     }
@@ -77,8 +88,9 @@ public class DisplayFrase : MonoBehaviour
 
     public void ShowFrase(int NewIndex) {
         ChatBox.gameObject.SetActive(true);
-        StartCoroutine(ShowLetters(NewIndex));
+        StartCoroutine(ShowLetters());
         StartIt = false;
+        NextIndex = NewIndex;
     }
 
     private void HideFrase() {
@@ -100,21 +112,6 @@ public class DisplayFrase : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         FraseEnd = true;
-        Counts.Index++;
-    }
-
-    private IEnumerator ShowLetters(int Index) {
-        Chat.text = "";
-        FraseEnd = false;
-        foreach(char c in Frases.Frase[Counts.Index].Texto) {
-            if(FraseEnd) {
-                break;
-            }
-            Chat.text += c;
-            yield return new WaitForSeconds(0.1f);
-        }
-        FraseEnd = true;
-        Counts.Index = Index;
     }
 
     private IEnumerator GrantAcess()
@@ -122,5 +119,13 @@ public class DisplayFrase : MonoBehaviour
         ControlAcess = false;
         yield return new WaitForSecondsRealtime(0.3f);
         ControlAcess = true;
+    }
+
+    public bool GetAcess() {
+        return ControlAcess;
+    }
+
+    private void GoToIndex(int i) {
+        Counts.Index = i;
     }
 }

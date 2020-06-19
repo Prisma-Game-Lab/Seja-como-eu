@@ -9,6 +9,7 @@ public class ChooseOption : MonoBehaviour
     public Image OptionBox;
     public List<Text> Options;
     public PersonagemFraseSO Frases;
+    public DisplayFrase MDMDialogue;
     private int CoordenadaPlayer;
     private bool ControlAcess;
     private int NumberOfChoices;
@@ -32,6 +33,7 @@ public class ChooseOption : MonoBehaviour
         if(Frases.Frase[Counts.Index].Options.Count == 0) {
             return;
         }
+        if(!MDMDialogue.GetAcess()) return;
         OptionBox.gameObject.SetActive(true);
         MovePlayer(Options);
         CheckCoordinateValue(Frases.Frase[Counts.Index].Options.Count);
@@ -44,18 +46,18 @@ public class ChooseOption : MonoBehaviour
         GiveValue();
         if (Input.GetAxisRaw("PressButton") > 0 && ControlAcess)
         {
-            PassValueSO(CoordenadaPlayer);
+            PassValueSO();
             ControlAcess = false;
             StartCoroutine(GrantAcess());
         }
         
     }
 
-    private void PassValueSO(int Index) {
+    private void PassValueSO() {
         Counts.Index++;
-        Frases.Frase[Counts.Index].SetTexto(Options[Index].text);
+        Frases.Frase[Counts.Index].SetTexto(Options[CoordenadaPlayer].text);
         OptionBox.gameObject.SetActive(false);
-        NormalDialogue.ShowFrase(Frases.Frase[Counts.Index].Options[Index].NextChat);
+        NormalDialogue.ShowFrase(Frases.Frase[Counts.Index-1].Options[CoordenadaPlayer].NextChat);
     }
 
     private void ResetTexto() {

@@ -7,6 +7,7 @@ public class AudioMixerControl : MonoBehaviour
 {
     public AudioMixer mixer;
 
+
     public void SetMasterVolume(float sliderValue)
     {
         mixer.SetFloat("masterVol", Mathf.Log10(sliderValue) * 20);

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6056aa7d4c41992438bb6fa94436da9e, type: 3}
+  m_Name: DialogoExpressividade
+  m_EditorClassIdentifier: 
+  Frase:
+  - Texto: "N\xE3o se censure por ser voc\xEA mesmo.\r"
+    Turn: 5
+    Options: []
+  - Texto: "Voc\xEA n\xE3o precisa se esconder atr\xE1s dessa armadura."
+    Turn: 5
+    Options: []
+  - Texto: "Fale o que voc\xEA sente, se expresse."
+    Turn: 5
+    Options: []
+  - Texto: "Se voc\xEA guardar essa dor em sil\xEAncio, coisas ruins acontecem.\r"
+    Turn: 5
+    Options: []
+  - Texto: "Ser sens\xEDvel \xE9 ser humano."
+    Turn: 5
+    Options: []
+  - Texto: "N\xE3o existe regras, f\xF3rmulas ou limites do que \xE9 \u201Cser um
+      homem\u201D."
+    Turn: 5
+    Options: []
+  - Texto: "Voc\xEA n\xE3o precisa da aprova\xE7\xE3o do Mestre dos Machos.\r\n"
+    Turn: 5
+    Options: []
+  - Texto: "Se voc\xEA se sente um homem, voc\xEA j\xE1 \xE9 homem.\r\n"
+    Turn: 5
+    Options: []
+  - Texto: "Voc\xEA s\xF3 precisa ser voc\xEA."
+    Turn: 5
+    Options: []
+  - Texto: "Tudo que voc\xEA fizer ser\xE1 \u201Ccoisa de homem\u201D."
+    Turn: 0
+    Options: []
+  - Texto: acaba dialogo
+    Turn: 0
+    Options: []
