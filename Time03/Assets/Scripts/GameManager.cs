@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void Voltar(){
-        PauseMenuUI.SetActive(false);
+        PauseMenuUI.SetActive(true);
         GameConfigUI.SetActive(false);
     }
 }
