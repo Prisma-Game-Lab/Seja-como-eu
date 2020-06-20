@@ -3,7 +3,82 @@ guid: 15189b18bb15fa1468c86b43009cc889
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Caule 1
+    second: {fileID: 2100000, guid: b9e769810e04a9d478c4610c96c73774, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cogumelo 1
+    second: {fileID: 2100000, guid: b50d8f8d51e76864985b1536720c5f2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cogumelo 2
+    second: {fileID: 2100000, guid: 236969dc074ded343bb62a5296003705, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combo 1
+    second: {fileID: 2100000, guid: 32c50e2935586b140beccb13d148eb45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combo 2
+    second: {fileID: 2100000, guid: add445ca411500d448552111b79e0215, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cristal
+    second: {fileID: 2100000, guid: cd901c8c1ba86fe44b100105c49df5da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Folha.003
+    second: {fileID: 2100000, guid: 1c02b8cdfdb7e9946ab4a292081a39fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Folha.004
+    second: {fileID: 2100000, guid: 3cfbf0ac033dac749a9e2d13e3cb22e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Folha.1
+    second: {fileID: 2100000, guid: bf54f87e6f172b24d96f05cff5069ce9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Folha.2
+    second: {fileID: 2100000, guid: 030e563cbd179f94c98c5e6cfcaa8dee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: e2def4af80a99534f9873e135aa89627, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parede
+    second: {fileID: 2100000, guid: d2faaafd570b38e4db458d3f2176ec13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planta 1
+    second: {fileID: 2100000, guid: f3d8b3f60196c4c4b9260f58063c48ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rachadura
+    second: {fileID: 2100000, guid: 9fe44c87365441f4ba477478d424c249, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Topo
+    second: {fileID: 2100000, guid: d7b8d8f5d36eae4479687993232497fc, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
