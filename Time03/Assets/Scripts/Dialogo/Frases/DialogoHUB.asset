@@ -32,14 +32,10 @@ MonoBehaviour:
       e honrado como um homem."
     Turn: 2
     Options: []
-  - Texto: "Ent\xE3o se voc\xEA quiser ser que nem eu"
+  - Texto: "Se voc\xEA quiser ser que nem eu, siga minhas instru\xE7\xF5es."
     Turn: 2
     Options: []
-  - Texto: "siga minhas instru\xE7\xF5es e voc\xEA ser\xE1 recompensado ao final
-      de sua jornada"
-    Turn: 2
-    Options: []
-  - Texto: ' com o PODER INFINITO!'
+  - Texto: "E voc\xEA ser\xE1 recompensado ao final de sua jornada com o PODER INFINITO!"
     Turn: 2
     Options: []
   - Texto: "Para isso voc\xEA precisar\xE1 derrotar as suas maiores fraquezas: AS
@@ -49,15 +45,338 @@ MonoBehaviour:
   - Texto: "Cada uma das tr\xEAs tem uma forma diferente de ser derrotada"
     Turn: 2
     Options: []
-  - Texto: "e provavelmente, o seu rolamento tem algo a ver com isso.\r"
+  - Texto: E provavelmente, o seu rolamento tem algo a ver com isso.
     Turn: 2
     Options: []
-  - Texto: "N\xE3o vai amarelar n\xE9? Estou confiando em voc\xEA.\r"
+  - Texto: "N\xE3o vai amarelar n\xE9? Estou confiando em voc\xEA."
     Turn: 2
     Options: []
   - Texto: "Seja homem e v\xE1 a luta."
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "\xC9 hoje que voc\xEA vira homem."
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Voc\xEA n\xE3o pode deixar que ningu\xE9m te desrespeite!"
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "\xC9 o homem quem manda, e no caso, eu sou o maior de todos os homens."
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "\rSabe o que voc\xEA faz com a dor? D\xE1 um soco na cara dela e mostra
+      quem \xE9 que manda.\r"
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Homem de verdade n\xE3o precisa de ningu\xE9m."
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Emo\xE7\xF5es? Est\xE1 me estranhando? Eu sou macho feito de puro m\xFAsculo,
+      n\xE3o tenho essas fraquezas."
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Olha s\xF3 para esses m\xFAsculos! Eu sou demais!"
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Chega de tagarelar! T\xE1 na hora de enfrentar os inimigos."
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Voc\xEA n\xE3o tem uma miss\xE3o para cumprir?"
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Parab\xE9ns guerreiro, voc\xEA completou sua miss\xE3o!"
+    Turn: 2
+    Options: []
+  - Texto: "Agora est\xE1 pronto para se tornar um verdadeiro Macho Alfa."
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: Um homem faz o que deve ser feito.
+      NextChat: 109
+    - Texto: Acho que isso foi um erro.
+      NextChat: 36
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "N\xE3o me diga que voc\xEA est\xE1 sentindo peninha deles?"
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: "Eu acho que eu n\xE3o gostaria que fizessem isso comigo."
+      NextChat: 39
+    - Texto: "Pena? Eu n\xE3o! Antes eles do que eu..."
+      NextChat: 80
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "N\xE3o faz sentido humilhar algu\xE9m para se sentir mais forte... Isso
+      s\xF3 faz de voc\xEA... um covarde."
+    Turn: 1
+    Options: []
+  - Texto: "Francamente, voc\xEA n\xE3o passa de um beb\xEA medroso... "
+    Turn: 2
+    Options: []
+  - Texto: "Que tipo de guerreiro \xE9 esse que amarela diante de um desafio?"
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: "Beb\xEA medroso? Voc\xEA esqueceu que eu derrotei todos os chef\xF5es?"
+      NextChat: 83
+    - Texto: "Um guerreiro que muda de ideia quando percebe que est\xE1 errado."
+      NextChat: 44
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "Um homem nunca volta atr\xE1s. \xC9 por isso que existe palavra de homem.
+      Porque temos honra!"
+    Turn: 2
+    Options: []
+  - Texto: "Parece que voc\xEA passou tempo demais com aquelas emo\xE7\xF5es e est\xE1
+      todo sentimentalzinho agora."
+    Turn: 2
+    Options: []
+  - Texto: "Seja homem e esque\xE7a essa historinha de sentimentos! Eu j\xE1 lhe
+      disse: Sentimentos te deixam fraco."
+    Turn: 2
+    Options: []
+  - Texto: "Olha s\xF3 voc\xEA! Est\xE1 ficando vulner\xE1vel. Se quiser ser um guerreiro,
+      tem que se livrar disso.\r"
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: "N\xE3o estou ficando sentimental! Eu derrotei todas as minhas fraquezas."
+      NextChat: 88
+    - Texto: "N\xE3o faz sentido lutar com meus sentimentos, eles s\xE3o parte de
+        mim."
+      NextChat: 50
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "Eu sei que falar sobre sentimentos me deixa vulner\xE1vel. E sim, isso\u2026
+      Me assusta... Mas..."
+    Turn: 1
+    Options: []
+  - Texto: "Ah t\xE1 assustadinho? Se tremendo todo? Eu sabia que voc\xEA era um
+      fracote... Que decep\xE7\xE3o."
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
+  - Texto: 
     Turn: 0
     Options: []
