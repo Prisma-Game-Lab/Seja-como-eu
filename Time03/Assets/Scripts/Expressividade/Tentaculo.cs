@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tentaculo : MonoBehaviour
 {
 	public GameObject tentaculo;
+	public GameObject wavyTentacle;
 	public int gapSize = 3;
 	public float gapPeriod = 4;
 	public float speed = 5;
@@ -18,7 +19,7 @@ public class Tentaculo : MonoBehaviour
         StartCoroutine(AddGap());
     }
 
-    // Update is called once per frame
+    // Update is called once per 
     void Update()
     {
         
@@ -30,14 +31,24 @@ public class Tentaculo : MonoBehaviour
     	 if(gaps>0)
     	 {
     	 	gaps=gaps - 1;
-    	 }
-    	 else
-    	 {
-    	 	t = Instantiate(tentaculo,this.transform);
-    	 	t.GetComponent<Rigidbody>().AddForce(transform.forward * speed * 10);
-    	 	StartCoroutine(Despawn(t));
+    	 	if(gaps < gapSize-1)
+    	 	{
+    	 		return;
+    	 	}
+    	 	else
+    	 	{
+    	 		t = Instantiate(wavyTentacle, this.transform);
+    	 	}
+
     	 }
 
+    	 else
+    	 {
+    	 	t = Instantiate(tentaculo ,this.transform);
+    	 }
+
+    	 t.GetComponent<Rigidbody>().AddForce(transform.forward * speed * 10);
+    	 StartCoroutine(Despawn(t));
 
     }
 
