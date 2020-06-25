@@ -20,10 +20,14 @@ public class SadPistol : MonoBehaviour
     public float bulletSpeed;
     public bool nightmareMode;
 
+    private Animator anim;
+    public GameObject choro1, choro2;
+
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         bulletDuration = PrefabBulletGota.GetComponent<BulletMove>().bulletDuration;
+        anim = GetComponentInChildren<Animator>();
     }
 
 
@@ -40,6 +44,13 @@ public class SadPistol : MonoBehaviour
     private IEnumerator Shoot()
     {
         agent.isStopped = true;
+
+        if(!anim.GetBool("isRoll"))
+        {
+            choro1.SetActive(true);
+            choro2.SetActive(true);
+            anim.SetTrigger("Cry");
+        }
 
         yield return new WaitForSeconds(telegraph);
 

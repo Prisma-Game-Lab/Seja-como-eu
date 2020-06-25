@@ -26,6 +26,8 @@ public class TristezaScript : MonoBehaviour
     public int health = 3;
 
     public float RunAwayDistance;
+    
+    private Animator anim;
 
     void Start()
     {
@@ -48,6 +50,7 @@ public class TristezaScript : MonoBehaviour
         skills.Add(Roll);
 
         SkillCD = GetComponent<BossSkillsCD>();
+        anim = GetComponentInChildren<Animator>();
 
         StartCoroutine(ResetCooldown());
     }
@@ -97,6 +100,7 @@ public class TristezaScript : MonoBehaviour
         damageCounter = 0;
         if(health<=0)
         {
+            anim.SetTrigger("Death");
             Counts.TristezaIsMorto = true;
             portaExit.SetActive(true);
             srScript.StopAllCoroutines();

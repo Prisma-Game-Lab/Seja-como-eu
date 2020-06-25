@@ -28,12 +28,15 @@ public class SadRoll : MonoBehaviour
     public bool nightmareMode;
     public int numeroBullets;
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         t_rb = gameObject.GetComponent<Rigidbody>();
         t_col = gameObject.GetComponent<Collider>();
+        anim = gameObject.GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -53,7 +56,8 @@ public class SadRoll : MonoBehaviour
     private IEnumerator RollDestination()
     {
         agent.isStopped = true;       
-
+        anim.SetBool("isRoll", true);
+        anim.SetTrigger("Roll");
         yield return new WaitForSeconds(rollWindup);
 
         t_rb.AddForce(transform.forward * rollSpeed, ForceMode.Impulse);
@@ -69,6 +73,7 @@ public class SadRoll : MonoBehaviour
         t_rb.velocity = Vector3.zero;
         t_col.material = null;      
         rolling = false;
+        anim.SetBool("isRoll", false);
     }
 
     private IEnumerator Explode()
