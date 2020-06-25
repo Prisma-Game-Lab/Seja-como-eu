@@ -14,6 +14,10 @@ public class Vagalume : MonoBehaviour
 
     public bool aceso = true;
 
+    private Animator anim;
+    public GameObject corpoVagalume;
+    private Material[] mats;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,22 +25,31 @@ public class Vagalume : MonoBehaviour
         transform.position = orbit;
 
         mesh = GetComponent<MeshRenderer>();
+        anim = GetComponentInChildren<Animator>();
+        mats = corpoVagalume.GetComponent<Renderer>().materials;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(center, Vector3.up, orbitSpeed * Time.deltaTime);
 
         if(!aceso)
         {
-            mesh.material = apagado;
+            //mesh.material = apagado;
+            mats[0] = apagado;
+            corpoVagalume.GetComponent<Renderer>().materials = mats;
             luzinha.enableEmission = false;
+            anim.SetBool("Fly", false);
+            transform.RotateAround(center, Vector3.up, 0f);
         }
         else
         {
-            mesh.material = acesoMat;
+            //mesh.material = acesoMat;
+            mats[0] = acesoMat;
+            corpoVagalume.GetComponent<Renderer>().materials = mats;
             luzinha.enableEmission = true;
+            anim.SetBool("Fly", true);
+            transform.RotateAround(center, Vector3.up, orbitSpeed * Time.deltaTime);
         }
     }
 

@@ -112,10 +112,11 @@ MonoBehaviour:
   orbitSpeed: 100
   radius: 3.5
   tristeza: {fileID: 0}
-  apagado: {fileID: 2100000, guid: 36b94246bfeb1b04195fdbb9fd5237ee, type: 2}
-  acesoMat: {fileID: 2100000, guid: 1074e8fead7a5684e9e5e26875376583, type: 2}
+  apagado: {fileID: 2100000, guid: 1e59637c2c0648a4faefb1d3dbd6db69, type: 2}
+  acesoMat: {fileID: 2100000, guid: 55ade3105b560204b8fc1e092f2568af, type: 2}
   luzinha: {fileID: 1678290999996894189}
   aceso: 1
+  corpoVagalume: {fileID: 7835550015740521446}
 --- !u!95 &6380425246753330211
 Animator:
   serializedVersion: 3
@@ -161,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7181366044262836321}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.02, y: 0, z: 0}
+  m_LocalPosition: {x: 0.065, y: 0, z: 0}
   m_LocalScale: {x: 0.030301519, y: 0.030301519, z: 0.030301519}
   m_Children: []
   m_Father: {fileID: 9102158561275104010}
@@ -182,7 +183,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -190,7 +191,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.1
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -250,7 +251,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.4
+      scalar: 0.9
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -881,7 +882,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 2.74
       mode: 0
       spread: 0
       speed:
@@ -1438,7 +1439,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 1, b: 0.90212274, a: 1}
+        key0: {r: 1, g: 0.8875204, b: 0.08018869, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 0}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -4982,6 +4983,12 @@ GameObject:
 --- !u!4 &828203514246877893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 785f7429439dfe14bbdd08838575ce8e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5621876052322417119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7835550015740521446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2502203975881118265, guid: 785f7429439dfe14bbdd08838575ce8e,
     type: 3}
   m_PrefabInstance: {fileID: 5621876052322417119}
   m_PrefabAsset: {fileID: 0}
