@@ -2639,6 +2639,11 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4808632618381966012, guid: 15189b18bb15fa1468c86b43009cc889,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: -4550945205057640868, guid: 15189b18bb15fa1468c86b43009cc889,
         type: 3}
       propertyPath: m_ReceiveShadows
