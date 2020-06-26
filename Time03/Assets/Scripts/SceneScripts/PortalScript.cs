@@ -8,16 +8,20 @@ public class PortalScript : MonoBehaviour
 {
     public GameObject ChooseUI;
     public GameObject DefeatedUI;
+    public GameObject PortalCanvas;
     public bool CanEnter = true;
 
     void Start()
     {
+        PortalCanvas.SetActive(false);
         ChooseUI.SetActive(false);
         DefeatedUI.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
     {
+        PortalCanvas.SetActive(true);
+
         if(CanEnter)
         {
             ChooseUI.SetActive(true);
