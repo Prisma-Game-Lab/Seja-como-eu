@@ -28,6 +28,9 @@ public class TristezaScript : MonoBehaviour
     public float RunAwayDistance;
     
     private Animator anim;
+    public Renderer casco;
+    public Texture quebrado1, quebrado2;
+    public Animator animLuz;
 
     void Start()
     {
@@ -90,6 +93,7 @@ public class TristezaScript : MonoBehaviour
             if (damageCounter >= 3)
             {
                 Damage();
+                animLuz.SetBool("acende", false);
             }
         }
     }
@@ -113,10 +117,12 @@ public class TristezaScript : MonoBehaviour
             if(health == 2)
             {
                 Roll.SwitchReady();
+                casco.material.mainTexture = quebrado1;
             }
             if(health == 1)
             {
                 Pistol.SwitchReady();
+                casco.material.mainTexture = quebrado2;
             }
             StartCoroutine(Stun());
         }
@@ -130,6 +136,7 @@ public class TristezaScript : MonoBehaviour
         for(int i = 0; i < vagalumes.Length; i++)
         {
             vagalumes[i].aceso = true;
+            animLuz.SetBool("acende", true);
         }
     }
     private IEnumerator ResetCooldown() {
