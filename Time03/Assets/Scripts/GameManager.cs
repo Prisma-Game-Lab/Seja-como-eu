@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     private bool GameIsPaused = false;
     private bool WaitPause = false;
+    private bool canPause = true; 
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
         Counts.TotalPlayTime += Time.deltaTime;
         if(GeneralCounts.Kill && !DeathScreen.activeSelf) {
             Death();
+            canPause = false;
         }
 
         if(Input.GetAxisRaw("Pause") == 1 && WaitPause == false)
@@ -39,7 +41,7 @@ public class GameManager : MonoBehaviour
                 Resume();
                 StartCoroutine(KeepPaused());
             }
-            else if(!GameIsPaused)
+            else if(!GameIsPaused && canPause)
             {
                 Pause();
                 StartCoroutine(KeepPaused());
@@ -67,6 +69,7 @@ public class GameManager : MonoBehaviour
     {
         Canvas.SetActive(false);
         PauseMenuUI.SetActive(false);
+        GameConfigUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
