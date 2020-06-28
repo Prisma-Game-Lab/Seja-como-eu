@@ -22,12 +22,14 @@ public class SadPistol : MonoBehaviour
 
     private Animator anim;
     public GameObject choro1, choro2;
+    private TristezaScript Tscript;
 
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
         bulletDuration = PrefabBulletGota.GetComponent<BulletMove>().bulletDuration;
         anim = GetComponentInChildren<Animator>();
+        Tscript = GetComponent<TristezaScript>();
     }
 
 
@@ -43,6 +45,7 @@ public class SadPistol : MonoBehaviour
 
     private IEnumerator Shoot()
     {
+        Tscript.SkillIsReady = false;
         agent.isStopped = true;
 
         if(!anim.GetBool("isRoll"))
@@ -73,6 +76,7 @@ public class SadPistol : MonoBehaviour
         {
             agent.isStopped = false;    
         }
+        StartCoroutine(Tscript.ResetCooldown());
     }
 
     public float getProb()

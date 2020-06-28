@@ -27,6 +27,7 @@ public class SadRoll : MonoBehaviour
     public GameObject PrefabBulletGota;
     public bool nightmareMode;
     public int numeroBullets;
+    private TristezaScript Tscript;
 
     private Animator anim;
 
@@ -37,6 +38,7 @@ public class SadRoll : MonoBehaviour
         t_rb = gameObject.GetComponent<Rigidbody>();
         t_col = gameObject.GetComponent<Collider>();
         anim = gameObject.GetComponentInChildren<Animator>();
+        Tscript = GetComponent<TristezaScript>();
     }
 
     // Update is called once per frame
@@ -55,6 +57,7 @@ public class SadRoll : MonoBehaviour
 
     private IEnumerator RollDestination()
     {
+        Tscript.SkillIsReady = false;
         agent.isStopped = true;       
         anim.SetBool("isRoll", true);
         anim.SetTrigger("Roll");
@@ -73,6 +76,7 @@ public class SadRoll : MonoBehaviour
         t_rb.velocity = Vector3.zero;
         t_col.material = null;      
         rolling = false;
+        StartCoroutine(Tscript.ResetCooldown());
         anim.SetBool("isRoll", false);
     }
 

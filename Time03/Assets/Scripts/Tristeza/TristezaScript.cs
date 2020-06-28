@@ -16,7 +16,8 @@ public class TristezaScript : MonoBehaviour
     private List<Skills> skills;
     private BossSkillsCD SkillCD;
     public float Cooldown;
-    private bool SkillIsReady = false;
+    [HideInInspector]
+    public bool SkillIsReady = false;
     private NavMeshAgent Agent;
     private NavMeshPath Path;
     private Vector3 Direction;
@@ -77,7 +78,6 @@ public class TristezaScript : MonoBehaviour
             if (SkillIsReady)
             {
                 SkillCD.ChooseSkill(skills);
-                StartCoroutine(ResetCooldown());
             }
 
             if (srScript.RainReady())
@@ -139,8 +139,7 @@ public class TristezaScript : MonoBehaviour
             animLuz.SetBool("acende", true);
         }
     }
-    private IEnumerator ResetCooldown() {
-        SkillIsReady = false;
+    public IEnumerator ResetCooldown() {
         yield return new WaitForSeconds(Cooldown);
         SkillIsReady = true;
     }
