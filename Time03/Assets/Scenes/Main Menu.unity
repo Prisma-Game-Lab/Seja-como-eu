@@ -421,7 +421,10 @@ MonoBehaviour:
   EventKeys:
   - CarinhoMorre
   - TristezaMorre
+  - ExpressividadeMorre
   - PrimeiraConversa
+  - FraseRandom
+  - DialogoFinal
 --- !u!1 &628172171
 GameObject:
   m_ObjectHideFlags: 0
