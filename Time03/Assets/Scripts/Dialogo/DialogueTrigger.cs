@@ -22,7 +22,6 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     public void TriggerConversation(int index, string Key) {
-        //if(!Counts.Events[Key]) return;
         mp.enabled = false;
         EventTriggered = true;
         Counts.Index = index;

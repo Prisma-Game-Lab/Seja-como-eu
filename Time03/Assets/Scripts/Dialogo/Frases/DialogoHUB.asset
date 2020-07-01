@@ -123,7 +123,7 @@ MonoBehaviour:
     Turn: 1
     Options:
     - Texto: Um homem faz o que deve ser feito.
-      NextChat: 109
+      NextChat: 106
     - Texto: Acho que isso foi um erro.
       NextChat: 36
   - Texto: '*resposta*'
@@ -275,10 +275,8 @@ MonoBehaviour:
     Options:
     - Texto: Cerveja e futebol.
       NextChat: 99
-    - Texto: Muita grana, carros e farra.
-      NextChat: 102
     - Texto: Uma mulher de valor.
-      NextChat: 105
+      NextChat: 102
     - Texto: Pessoas.
       NextChat: 72
   - Texto: '*resposta*'
@@ -318,7 +316,7 @@ MonoBehaviour:
     Turn: 2
     Options:
     - Texto: "\xC9 isso a\xED, voc\xEA mostrou para eles quem \xE9 o Macho Alfa!"
-      NextChat: 107
+      NextChat: 104
   - Texto: '*resposta*'
     Turn: 0
     Options: []
@@ -337,7 +335,7 @@ MonoBehaviour:
     Turn: 1
     Options:
     - Texto: Eu adoraria te encher de sopapo.
-      NextChat: 107
+      NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
     Options: []
@@ -346,7 +344,7 @@ MonoBehaviour:
     Options:
     - Texto: Estou pronto para ser um guerreiro. Preciso saber como essa jornada
         termina!
-      NextChat: 107
+      NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
     Options: []
@@ -354,7 +352,7 @@ MonoBehaviour:
     Turn: 1
     Options:
     - Texto: "Eu sou muito mais forte que o medo. Por isso voc\xEA deveria me temer. "
-      NextChat: 107
+      NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
     Options: []
@@ -362,7 +360,7 @@ MonoBehaviour:
     Turn: 1
     Options:
     - Texto: "Afinal de contas, eu sou homem. Homem n\xE3o chora."
-      NextChat: 107
+      NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
     Options: []
@@ -374,7 +372,7 @@ MonoBehaviour:
     Turn: 1
     Options:
     - Texto: Isso se chama poder. Eu estou pronto para ser um Macho Alfa!
-      NextChat: 107
+      NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
     Options: []
@@ -383,7 +381,7 @@ MonoBehaviour:
     Options:
     - Texto: " Engolindo o choro como se deve. Realmente no fundo voc\xEA \xE9 um
         homem de verdade! \r"
-      NextChat: 107
+      NextChat: 104
   - Texto: '*resposta*'
     Turn: 2
     Options: []
@@ -395,19 +393,7 @@ MonoBehaviour:
     Turn: 2
     Options:
     - Texto: "HAHAHA No fundo, voc\xEA realmente \xE9 um homem de verdade.\r"
-      NextChat: 107
-  - Texto: '*resposta*'
-    Turn: 2
-    Options: []
-  - Texto: "Ent\xE3o voc\xEA est\xE1 fazendo esse drama todo s\xF3 por causa de ostenta\xE7\xE3o?"
-    Turn: 2
-    Options: []
-  - Texto: 
-    Turn: 2
-    Options:
-    - Texto: "HAHAHA Que ambicioso! No fundo, voc\xEA realmente \xE9 um homem de
-        verdade."
-      NextChat: 107
+      NextChat: 104
   - Texto: '*resposta*'
     Turn: 2
     Options: []
