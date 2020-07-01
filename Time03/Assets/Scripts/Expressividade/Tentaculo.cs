@@ -12,9 +12,12 @@ public class Tentaculo : MonoBehaviour
 	public float despawnDuration = 5;
 	private int gaps = 0;
 
+	private WaitForSeconds despawnDelay; 
+
     // Start is called before the first frame update
     void Start()
     {
+		despawnDelay = new WaitForSeconds(despawnDuration);
         InvokeRepeating("spawnTentacle",1.0f,1.0f);
         StartCoroutine(AddGap());
     }
@@ -65,7 +68,7 @@ public class Tentaculo : MonoBehaviour
 
     private IEnumerator Despawn(GameObject obj)
     {
-    	yield return new WaitForSeconds(despawnDuration);
+    	yield return despawnDelay;
         Destroy(obj);
     }
 }

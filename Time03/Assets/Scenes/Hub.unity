@@ -5422,6 +5422,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 732308937, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e6999ab6035353048b8a4e89cbe74725,
+        type: 3}
+    - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5487,6 +5500,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e6999ab6035353048b8a4e89cbe74725,
+        type: 3}
+    - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_Text
+      value: Vamo Monstro!!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8489818885711256980, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -5503,6 +5532,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 7c835bf85c4824f488739db6404b95cc,
         type: 3}
+    - target: {fileID: 8489818886281238565, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e6999ab6035353048b8a4e89cbe74725,
+        type: 3}
+    - target: {fileID: 8489818886281238565, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e6999ab6035353048b8a4e89cbe74725,
+        type: 3}
+    - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
 --- !u!1001 &1542039140
@@ -6334,9 +6390,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 732308937, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Text
       value: "Voc\xEA j\xE1 derrotou a Tristeza."
+      objectReference: {fileID: 0}
+    - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e6999ab6035353048b8a4e89cbe74725,
+        type: 3}
+    - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -6408,15 +6477,58 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: CorredorTristeza
       objectReference: {fileID: 0}
+    - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e6999ab6035353048b8a4e89cbe74725,
+        type: 3}
+    - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_Text
+      value: Vamo Monstro!!!!
+      objectReference: {fileID: 0}
     - target: {fileID: 8489818885711256980, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8489818886281238565, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e6999ab6035353048b8a4e89cbe74725,
+        type: 3}
+    - target: {fileID: 8489818886281238565, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Quer enfrentar a Tristeza?
+      value: Quer enfrentar a Fraqueza?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e6999ab6035353048b8a4e89cbe74725,
+        type: 3}
+    - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
