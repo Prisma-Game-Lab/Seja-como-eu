@@ -7,6 +7,7 @@ public class EspressividadeScript : MonoBehaviour
 
     private int health = 3;
     private Skills Missile;
+    private Skills Pillar;
     private List<Skills> skills;
     private BossSkillsCD skillsCD;
     public float cooldown;
@@ -14,6 +15,7 @@ public class EspressividadeScript : MonoBehaviour
     private bool painting = false;
     private GeneralCounts counts;
     private ExMissile exmScript;
+    private ExPillar expScript;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +27,12 @@ public class EspressividadeScript : MonoBehaviour
         skillsCD = GetComponent<BossSkillsCD>();
 
         exmScript = GetComponent<ExMissile>();
-        Missile = new Skills(exmScript.getProb(), exmScript.getCD(), true, exmScript.Shoot);
+        Missile = new Skills(exmScript.getProb(), exmScript.getCD(), false, exmScript.Shoot);
         skills.Add(Missile);
+
+        expScript = GetComponent<ExPillar>();
+        Pillar = new Skills(expScript.getProb(), expScript.getCD(), true, expScript.InkPillar);
+        skills.Add(Pillar);
 
         StartCoroutine(ResetCooldown());
     }
