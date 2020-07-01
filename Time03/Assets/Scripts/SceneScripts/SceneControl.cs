@@ -10,9 +10,12 @@ public class SceneControl : MonoBehaviour
     private bool GameIsPaused = false;
     private bool WaitPause = false;
 
+    private GeneralCounts Counts;
+
     void Start()
     {
         SceneTheme.Play();
+        Counts = SaveSystem.GetInstance().generalCounts;
     }
 
     public void ChangeScene(string SceneName)
@@ -34,6 +37,13 @@ public class SceneControl : MonoBehaviour
 	{
 		Application.Quit();
 	}
+
+    void Update()
+    {
+        if(Counts.Index == 79) {
+            ChangeScene("MDM");
+        }
+    }
 
 
 }
