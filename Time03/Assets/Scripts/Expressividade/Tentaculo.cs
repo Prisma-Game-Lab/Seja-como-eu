@@ -22,12 +22,6 @@ public class Tentaculo : MonoBehaviour
         StartCoroutine(AddGap());
     }
 
-    // Update is called once per 
-    void Update()
-    {
-        
-    }
-
     private void spawnTentacle()
     {
     	 GameObject t;

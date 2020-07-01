@@ -12,7 +12,6 @@ public class EspressividadeScript : MonoBehaviour
     private BossSkillsCD skillsCD;
     public float cooldown;
     private bool skillIsReady = false;
-    private bool painting = false;
     private GeneralCounts counts;
     private ExMissile exmScript;
     private ExPillar expScript;
@@ -35,6 +34,13 @@ public class EspressividadeScript : MonoBehaviour
         skills.Add(Pillar);
 
         StartCoroutine(ResetCooldown());
+
+
+        HitTentacle.tentacleHit += TakeDamage; //registra a funcao TakeDamage ao evento tentacleHit
+    }
+    void OnDestroy()
+    {
+        HitTentacle.tentacleHit -= TakeDamage; //remove a funcao TakeDamage do evento tentacleHit
     }
 
     // Update is called once per frame
@@ -44,14 +50,6 @@ public class EspressividadeScript : MonoBehaviour
         {
             skillsCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
-        }
-
-        if(!painting)
-        {
-            //findTentacle
-            //lowertentacle
-            //spawn paintingTentacle with same rotation
-            painting = true;
         }
     }
 

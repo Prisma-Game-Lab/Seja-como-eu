@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tentaculo: {fileID: 3350548869434212449, guid: 51ba55382dff9e8468ade3c29af1cab5,
     type: 3}
-  wavyTentacle: {fileID: 489174312774745751, guid: 9ed27d203cbe80740aa0ba953cc47ebf,
+  wavyTentacle: {fileID: 3689703874797072747, guid: 5b89a4f61d5190243863065597d008d2,
     type: 3}
   gapSize: 2
   gapPeriod: 5
