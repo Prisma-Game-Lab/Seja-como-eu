@@ -11,7 +11,8 @@ public class EspressividadeScript : MonoBehaviour
     private List<Skills> skills;
     private BossSkillsCD skillsCD;
     public float cooldown;
-    private bool SkillIsReady = false;
+    private bool skillIsReady = false;
+    private bool painting = false;
     private GeneralCounts counts;
     private ExMissile exmScript;
     private ExPillar expScript;
@@ -39,17 +40,30 @@ public class EspressividadeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SkillIsReady)
+        if(skillIsReady)
         {
             skillsCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
+        }
+
+        if(!painting)
+        {
+            //findTentacle
+            //lowertentacle
+            //spawn paintingTentacle with same rotation
+            painting = true;
         }
     }
 
     private IEnumerator ResetCooldown()
     {
-        SkillIsReady = false;
+        skillIsReady = false;
         yield return new WaitForSeconds(cooldown);
-        SkillIsReady = true;
+        skillIsReady = true;
+    }
+
+    private void TakeDamage()
+    {
+        health -=1;
     }
 }
