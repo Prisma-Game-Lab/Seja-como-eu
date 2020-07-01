@@ -45,7 +45,7 @@ public class Missil : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!other.CompareTag("orb"))
+        if(other.CompareTag("Player") || other.CompareTag("wall"))
         {
             Destroy(gameObject);
         }

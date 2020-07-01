@@ -22,7 +22,7 @@ public class FenoScript : MonoBehaviour
      private IEnumerator trackMovement()
      {
      	lancado = true;
-     	yield return new WaitUntil(() => (_rb.velocity == Vector3.zero)&&(_rb.angularVelocity == Vector3.zero));
+     	yield return new WaitUntil(() => (_rb.velocity.sqrMagnitude <= 0.5f)&&(_rb.angularVelocity.sqrMagnitude <= 0.5f));
      	lancado = false;
      	//Debug.Log("Parou");
      }
