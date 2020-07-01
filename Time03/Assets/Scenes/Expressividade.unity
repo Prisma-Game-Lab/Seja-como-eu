@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 423537699}
   - component: {fileID: 423537701}
   - component: {fileID: 423537700}
+  - component: {fileID: 423537702}
   m_Layer: 0
   m_Name: Expressividade
   m_TagString: Untagged
@@ -561,6 +562,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb1c7f2e8c381143af9f3910fcf094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &423537702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423537694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8fae24eab301d7418d81a97ea2425eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  probablidade: 100
+  cooldown: 5
+  PillarPrefab: {fileID: 8082269151583788502, guid: 2f86e9fb4609f474fb0aa5e208357c0f,
+    type: 3}
+  prefabHelper: {fileID: 7542135265080225965, guid: 0ba70cbaa6a2acf44b6aea668f85016c,
+    type: 3}
+  numPilares: 5
+  PillarInterval: 0.5
+  windup: 0.5
 --- !u!1001 &446917760
 PrefabInstance:
   m_ObjectHideFlags: 0
