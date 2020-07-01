@@ -11,16 +11,19 @@ public class TentacleManager : MonoBehaviour
     private int currentlyPainting;
     private Transform currentlyPaintingTransform;
     private Transform paintingTentacleTransform;
+    private Vector3 hiddenLocation;
+    private Vector3 myPosition;
 
     void Start()
     {
         Transform _T = GetComponent<Transform>();
-        Vector3 position = _T.position;
+        myPosition = _T.position;
+        hiddenLocation = new Vector3(-20,-20,-20);
         allTentacles = new GameObject[8];
         for(int i=0;i<8;i++)
         {
            GameObject tent = Instantiate(tentaclePrefab, //gameObject a ser instanciado
-           position,            //posicao
+           myPosition,            //posicao
            Quaternion.LookRotation(new Vector3(Mathf.Sin(i*Mathf.PI*0.25f),0,Mathf.Cos(i*Mathf.PI*0.25f)),_T.up)  //rotacao
            ,_T);                //objeto pai
 
@@ -33,7 +36,7 @@ public class TentacleManager : MonoBehaviour
         currentlyPaintingTransform = allTentacles[currentlyPainting].GetComponent<Transform>();
         paintingTentacle = Instantiate(paintingTentaclePrefab,currentlyPaintingTransform.position,currentlyPaintingTransform.rotation,_T); //spawna o tentaculo pintando
         paintingTentacleTransform = paintingTentacle.GetComponent<Transform>();
-        currentlyPaintingTransform.position = (currentlyPaintingTransform.up * -20); //esconde o tentaculo original
+        currentlyPaintingTransform.position = hiddenLocation; //esconde o tentaculo original
     }
     void OnDestroy() 
     {
@@ -42,12 +45,19 @@ public class TentacleManager : MonoBehaviour
 
     private void SwapTentacles()
     {
-        currentlyPaintingTransform.position = (paintingTentacleTransform.position);             //traz o tentaculo escondido de volta
-        currentlyPainting = (currentlyPainting + (int)Random.Range(1.0f,6.9999f))%8;            //sorteia novo tentaculo 
-        currentlyPaintingTransform = allTentacles[currentlyPainting].GetComponent<Transform>(); //pega seu Transform
-        paintingTentacleTransform.rotation = (currentlyPaintingTransform.rotation);             //traz o tentaculo pintando para sua posicao
-        currentlyPaintingTransform.position = (currentlyPaintingTransform.up * -20);            //esconde o tentaculo sorteado
+        paintingTentacleTransform.position = hiddenLocation;
+        StartCoroutine(ChangeTentacles());
     }
 
+    private IEnumerator ChangeTentacles()
+    {
+        yield return new WaitForSeconds(1);
+        currentlyPaintingTransform.position = myPosition;                                       //traz o tentaculo escondido de volta
+        currentlyPainting = (currentlyPainting + (int)Random.Range(1.0f,6.9999f))%8;            //sorteia novo tentaculo 
+        currentlyPaintingTransform = allTentacles[currentlyPainting].GetComponent<Transform>(); //pega seu Transform
+        paintingTentacleTransform.rotation = (currentlyPaintingTransform.rotation);             //traz o tentaculo pintando para sua posicao e rotacao
+        paintingTentacleTransform.position = myPosition;
+        currentlyPaintingTransform.position = hiddenLocation;                                   //esconde o tentaculo sorteado
+    }
 
 }
