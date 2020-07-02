@@ -24,7 +24,7 @@ public class TentacleManager : MonoBehaviour
         {
            GameObject tent = Instantiate(tentaclePrefab, //gameObject a ser instanciado
            myPosition,            //posicao
-           Quaternion.LookRotation(new Vector3(Mathf.Sin(i*Mathf.PI*0.25f),0,Mathf.Cos(i*Mathf.PI*0.25f)),_T.up)  //rotacao
+           Quaternion.LookRotation(new Vector3(Mathf.Sin(i*Mathf.PI*0.25f+Mathf.PI/8),0,Mathf.Cos(i*Mathf.PI*0.25f+Mathf.PI/8)),_T.up)  //rotacao
            ,_T);                //objeto pai
 
             allTentacles[i]=tent;
