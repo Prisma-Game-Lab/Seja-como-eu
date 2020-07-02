@@ -30,7 +30,7 @@ public class PunchFloor : MonoBehaviour
         List<float> PosListz = new List<float>();
         float xPosition;
         float zPosition;
-        for(int i=0; i < Quantity * (Mestre.GetLevel() + 1); i++) {
+        for(int i=0; i < Quantity * 0.5 * (Mestre.GetLevel() + 1); i++) {
             xPosition = Random.Range(-19,19);
             PosListx.Add(xPosition);
             zPosition = Random.Range(-17,17);

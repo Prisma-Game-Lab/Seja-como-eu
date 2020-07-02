@@ -49,5 +49,5 @@ MonoBehaviour:
     type: 3}
   gapSize: 2
   gapPeriod: 5
-  speed: 10
+  speed: 15
   despawnDuration: 15

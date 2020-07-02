@@ -26,7 +26,7 @@ public class EspressividadeScript : MonoBehaviour
         skillsCD = GetComponent<BossSkillsCD>();
 
         exmScript = GetComponent<ExMissile>();
-        Missile = new Skills(exmScript.getProb(), exmScript.getCD(), false, exmScript.Shoot);
+        Missile = new Skills(exmScript.getProb(), exmScript.getCD(), true, exmScript.Shoot);
         skills.Add(Missile);
 
         expScript = GetComponent<ExPillar>();
