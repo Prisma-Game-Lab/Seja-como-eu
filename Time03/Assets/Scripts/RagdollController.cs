@@ -18,7 +18,9 @@ public class RagdollController : MonoBehaviour
         AllColliders = GetComponentsInChildren<Collider>(true);
         AllRigidbodies = GetComponentsInChildren<Rigidbody>();
         DoRagdoll(false);
-    }}
+    }
+
+    
     
     public void DoRagdoll(bool isRagdoll)
     {
