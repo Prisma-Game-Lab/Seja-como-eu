@@ -20,7 +20,6 @@ public class Tentaculo : MonoBehaviour
 	public static int instances=0;
 	private bool amLeader = false;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -57,13 +56,13 @@ public class Tentaculo : MonoBehaviour
     	GameObject t;
     	if(gap)
     	{
-    	 	t = Instantiate(wavyTentacle, this.transform);
+    	 	t = TentPooling.instance.NewTent(this.transform, true);
 			gap=false;
     	}
 
     	else
     	{
-    	 	t = Instantiate(tentaculo ,this.transform);
+    	 	t = TentPooling.instance.NewTent(this.transform ,false);
 			 gapCounter +=1;
 			 if (gapCounter >= gapPeriod)
 			 {

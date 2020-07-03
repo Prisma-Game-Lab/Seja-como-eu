@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 6804359937535430487}
   m_Layer: 0
   m_Name: WavyTentaclePiece
-  m_TagString: TentPiece
+  m_TagString: WavyPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

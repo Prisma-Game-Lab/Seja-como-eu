@@ -39,7 +39,7 @@ public class TentPieceScript : MonoBehaviour
     {
         if(other.transform.CompareTag("Finish"))
         {
-            _t.position=parentTr.position;
+            TentPooling.instance.Dispose(this.gameObject);
         }
     }
 }
