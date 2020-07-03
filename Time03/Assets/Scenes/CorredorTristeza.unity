@@ -761,12 +761,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bef5c2e3cc88ec46816594d038c2713, type: 3}
---- !u!1 &480320332 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262538834594752, guid: 85ca990acc848844f9a17d5f104c07c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 932161953}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &614902964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6453,6 +6447,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ca990acc848844f9a17d5f104c07c2, type: 3}
+--- !u!1 &932161954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3171760154614470068, guid: 85ca990acc848844f9a17d5f104c07c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 932161953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &932161955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3644157911624506905, guid: 85ca990acc848844f9a17d5f104c07c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 932161953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &932161956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1972429104186462775, guid: 85ca990acc848844f9a17d5f104c07c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 932161953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1031167290
 GameObject:
   m_ObjectHideFlags: 0
@@ -11363,12 +11375,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1 &1187504102 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262538129757936, guid: 85ca990acc848844f9a17d5f104c07c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 932161953}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1192569984
 GameObject:
   m_ObjectHideFlags: 0
@@ -26586,12 +26592,6 @@ Transform:
   m_Father: {fileID: 1086365275}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1895234797 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262540138908968, guid: 85ca990acc848844f9a17d5f104c07c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 932161953}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1972908322
 GameObject:
   m_ObjectHideFlags: 0
@@ -26638,9 +26638,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831795dd0eb76d24bb60326c501c7ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuUI: {fileID: 1187504102}
-  DeathScreen: {fileID: 480320332}
-  GameConfigUI: {fileID: 1895234797}
+  PauseMenuUI: {fileID: 932161955}
+  DeathScreen: {fileID: 932161954}
+  GameConfigUI: {fileID: 932161956}
   player: {fileID: 1514459248}
   Canvas: {fileID: 1616852029}
 --- !u!114 &1972908326

@@ -571,7 +571,7 @@ MonoBehaviour:
   cooldown: 5
   PillarPrefab: {fileID: 8082269151583788502, guid: 2f86e9fb4609f474fb0aa5e208357c0f,
     type: 3}
-  prefabHelper: {fileID: 7542135265080225965, guid: 0ba70cbaa6a2acf44b6aea668f85016c,
+  prefabHelper: {fileID: 5173153875949292562, guid: 4f1239a98da544049bf6e8863822428d,
     type: 3}
   numPilares: 5
   PillarInterval: 0.5
@@ -630,7 +630,7 @@ MonoBehaviour:
   - {x: -9.5, y: 0, z: -8}
   - {x: -15, y: 0, z: -15.5}
   playerPos: {fileID: 1743933139}
-  FollowPlayer: 1
+  FollowPlayer: 0
 --- !u!114 &423537703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,19 +1306,19 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1272835562 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262538129757936, guid: 85ca990acc848844f9a17d5f104c07c2,
+  m_CorrespondingSourceObject: {fileID: 3171760154614470068, guid: 85ca990acc848844f9a17d5f104c07c2,
     type: 3}
   m_PrefabInstance: {fileID: 1272835560}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1272835563 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262540138908968, guid: 85ca990acc848844f9a17d5f104c07c2,
+  m_CorrespondingSourceObject: {fileID: 3644157911624506905, guid: 85ca990acc848844f9a17d5f104c07c2,
     type: 3}
   m_PrefabInstance: {fileID: 1272835560}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1272835564 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262538834594752, guid: 85ca990acc848844f9a17d5f104c07c2,
+  m_CorrespondingSourceObject: {fileID: 1972429104186462775, guid: 85ca990acc848844f9a17d5f104c07c2,
     type: 3}
   m_PrefabInstance: {fileID: 1272835560}
   m_PrefabAsset: {fileID: 0}
@@ -1761,9 +1761,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831795dd0eb76d24bb60326c501c7ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuUI: {fileID: 1272835562}
-  DeathScreen: {fileID: 1272835564}
-  GameConfigUI: {fileID: 1272835563}
+  PauseMenuUI: {fileID: 1272835563}
+  DeathScreen: {fileID: 1272835562}
+  GameConfigUI: {fileID: 1272835564}
   player: {fileID: 1743933132}
   Canvas: {fileID: 1272835561}
 --- !u!114 &1735569712

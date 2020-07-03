@@ -26,11 +26,11 @@ public class EspressividadeScript : MonoBehaviour
         skillsCD = GetComponent<BossSkillsCD>();
 
         exmScript = GetComponent<ExMissile>();
-        Missile = new Skills(exmScript.getProb(), exmScript.getCD(), true, exmScript.Shoot);
+        Missile = new Skills(exmScript.getProb(), exmScript.getCD(), false, exmScript.Shoot);
         skills.Add(Missile);
 
         expScript = GetComponent<ExPillar>();
-        Pillar = new Skills(expScript.getProb(), expScript.getCD(), true, expScript.InkPillar);
+        Pillar = new Skills(expScript.getProb(), expScript.getCD(), false, expScript.InkPillar);
         skills.Add(Pillar);
 
         StartCoroutine(ResetCooldown());
@@ -46,6 +46,10 @@ public class EspressividadeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!counts.ExpressividadeIsMorto) {
+            counts.ExpressividadeCompleteTimer += Time.deltaTime;
+        }
+
         if(skillIsReady)
         {
             skillsCD.ChooseSkill(skills);
@@ -65,7 +69,19 @@ public class EspressividadeScript : MonoBehaviour
         health -=1;
         if (health == 0)
         {
+            counts.ExpressividadeIsMorto = true;
             Destroy(this.gameObject);
+        }
+        else
+        {
+            if(health == 6)
+            {
+                Missile.SwitchReady();
+            }
+            if(health == 3)
+            {
+                Pillar.SwitchReady();
+            }
         }
     }
 }
