@@ -28,4 +28,10 @@ public class GeneralCounts : ScriptableObject
 
    public Dictionary<string,bool> Events = new Dictionary<string, bool>();
    public Dictionary<string,int> Stats = new Dictionary<string, int>();
+
+   public List<string> StatsStrings = new List<string>();
+   public List<string> EventsStrings = new List<string>();
+
+   public List<int> StatsInts = new List<int>();
+   public List<bool> EventsBools = new List<bool>();
 }

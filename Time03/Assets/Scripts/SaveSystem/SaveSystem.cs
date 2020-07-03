@@ -62,6 +62,14 @@ public class SaveSystem : MonoBehaviour
     }
 
     public void SaveState() {
+        for(int i=0;i<generalCounts.Events.Count;i++) {
+            generalCounts.EventsBools[i] = generalCounts.Events[generalCounts.EventsStrings[i]];
+        }
+
+        for(int i=0;i<generalCounts.Stats.Count;i++) {
+            generalCounts.StatsInts[i] = generalCounts.Stats[generalCounts.StatsStrings[i]];
+        }
+
         string json_ps = JsonUtility.ToJson(generalCounts);
         byte[] buffer = Encoding.UTF8.GetBytes(json_ps);
         for(int i = 0; i < buffer.Length; i++)
@@ -81,8 +89,6 @@ public class SaveSystem : MonoBehaviour
         {
             streamWriter.Write (saveVersion.ToString());
         }
-
-        Debug.Log("Salved!" + generalCounts.TotalPlayTime);
     }
 
     public bool LoadState() {
@@ -91,7 +97,6 @@ public class SaveSystem : MonoBehaviour
         if(!File.Exists(path) || !File.Exists(versionPath)) {
             return false;
         }
-
         using(StreamReader streamReader = File.OpenText(versionPath)) {
             string str = streamReader.ReadToEnd();
             try {
@@ -115,6 +120,15 @@ public class SaveSystem : MonoBehaviour
             string jsonString = Encoding.UTF8.GetString(buffer);
             generalCounts = ScriptableObject.CreateInstance<GeneralCounts>();
             JsonUtility.FromJsonOverwrite(jsonString, generalCounts);
+
+            for(int i=0;i<generalCounts.EventsStrings.Count;i++) {
+                generalCounts.Events.Add(generalCounts.EventsStrings[i],generalCounts.EventsBools[i]);
+            }
+
+            for(int i=0;i<generalCounts.StatsStrings.Count;i++) {
+                generalCounts.Stats.Add(generalCounts.StatsStrings[i],generalCounts.StatsInts[i]);
+            }
+
             SucessfulLoad = true;
             return true;
         }

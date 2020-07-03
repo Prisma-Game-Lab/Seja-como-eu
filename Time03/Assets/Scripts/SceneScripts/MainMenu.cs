@@ -46,9 +46,13 @@ public class MainMenu : MonoBehaviour
         Counts = save.generalCounts;
         foreach(string s in EventKeys) {
             Counts.Events.Add(s,true);
+            Counts.EventsStrings.Add(s);
+            Counts.EventsBools.Add(true);
         }
         foreach(string s in CounterKeys) {
             Counts.Stats.Add(s,0);
+            Counts.StatsStrings.Add(s);
+            Counts.StatsInts.Add(0);
         }
         LoadingSceneControl.CurrentScene = "Hub";
         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
