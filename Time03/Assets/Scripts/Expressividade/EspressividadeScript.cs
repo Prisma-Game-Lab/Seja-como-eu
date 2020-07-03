@@ -65,6 +65,7 @@ public class EspressividadeScript : MonoBehaviour
         health -=1;
         if (health == 0)
         {
+            counts.ExpressividadeIsMorto = true;
             Destroy(this.gameObject);
         }
     }
