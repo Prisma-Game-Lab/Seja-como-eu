@@ -18,23 +18,7 @@ public class RagdollController : MonoBehaviour
         AllColliders = GetComponentsInChildren<Collider>(true);
         AllRigidbodies = GetComponentsInChildren<Rigidbody>();
         DoRagdoll(false);
-    }
-
-    void Update(){
-        
-        //Ativar ou desativar o ragdoll
-        if(Input.GetKeyDown(KeyCode.LeftControl) && rag == false)
-        {
-            DoRagdoll(true);
-            rag = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftControl) && rag == true)
-        {
-            DoRagdoll(false);
-            rag = false;
-        }
-            
-    }
+    }}
     
     public void DoRagdoll(bool isRagdoll)
     {
