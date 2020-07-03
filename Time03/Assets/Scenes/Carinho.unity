@@ -24426,6 +24426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameLabel: {fileID: 1519954885}
+  MainCamera: {fileID: 949558224}
 --- !u!135 &826659017
 SphereCollider:
   m_ObjectHideFlags: 0

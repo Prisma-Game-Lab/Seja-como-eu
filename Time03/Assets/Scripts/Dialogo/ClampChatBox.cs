@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ClampChatBox : MonoBehaviour
 {
     public Image nameLabel;
+    public Camera MainCamera;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class ClampChatBox : MonoBehaviour
     
     void Update()
     {
-        Vector3 namePos = Camera.main.WorldToScreenPoint(this.transform.position);
+        Vector3 namePos = MainCamera.WorldToScreenPoint(this.transform.position);
         nameLabel.transform.position = namePos;
     }
 }
