@@ -10,6 +10,7 @@ public class LoadingSceneControl : MonoBehaviour
     {
         Counts = SaveSystem.GetInstance().generalCounts;
         Counts.Index = 0;
+        SaveSystem.GetInstance().SaveState();
         LoadScene();
     }
 

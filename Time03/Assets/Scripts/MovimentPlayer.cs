@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovimentPlayer : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class MovimentPlayer : MonoBehaviour
     private Vector2 kInput;
 
     private GeneralCounts Counts;
+    private string CurrentScene;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,7 @@ public class MovimentPlayer : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
         Counts = SaveSystem.GetInstance().generalCounts;
+        CurrentScene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -100,7 +103,7 @@ public class MovimentPlayer : MonoBehaviour
         if (Input.GetAxis("Dash") == 1)
         {
             anim.SetBool("Dash", true);
-            Counts.DashCount++;
+            DashCounter();
             _rb.AddForce(dir * DashSpeed, ForceMode.Impulse);
             dashing = true;
             dashEnabled = false;
@@ -115,5 +118,28 @@ public class MovimentPlayer : MonoBehaviour
         dashing = false;
         yield return new WaitForSeconds(dashCooldown);
         dashEnabled = true;
+    }
+
+    private void DashCounter() {
+        if(CurrentScene.Contains("Carinho")) {
+            Counts.Stats["CarinhoDashCount"]++;
+            return;
+        }
+        if(CurrentScene.Contains("Tristeza")) {
+            Counts.Stats["TristezaDashCount"]++;
+            return;
+        }
+        if(CurrentScene.Contains("Expressividade")) {
+            Counts.Stats["ExpressividadeDashCount"]++;
+            return;
+        }
+        if(CurrentScene.Contains("MDM")) {
+            Counts.Stats["MDMDashCount"]++;
+            return;
+        }
+        if(CurrentScene.Contains("Hub")) {
+            Counts.Stats["HubDashCount"]++;
+            return;
+        }
     }
 }

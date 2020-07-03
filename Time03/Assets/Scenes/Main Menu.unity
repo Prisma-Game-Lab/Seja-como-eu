@@ -425,6 +425,16 @@ MonoBehaviour:
   - PrimeiraConversa
   - FraseRandom
   - DialogoFinal
+  CounterKeys:
+  - HubDashCount
+  - CarinhoDashCount
+  - TristezaDashCount
+  - ExpressividadeDashCount
+  - MDMDashCount
+  - CarinhoDeathCount
+  - TristezaDeathCount
+  - ExpressividadeDeathCount
+  - MDMDeathCount
 --- !u!1 &628172171
 GameObject:
   m_ObjectHideFlags: 0

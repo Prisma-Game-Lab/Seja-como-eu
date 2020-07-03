@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class GameManager : MonoBehaviour
 
     private bool GameIsPaused = false;
     private bool WaitPause = false;
-    private bool canPause = true; 
+    private bool canPause = true;
+    private string CurrentScene; 
 
     void Start()
     {
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
         DeathScreen.SetActive(false);
         PauseMenuUI.SetActive(false);
         GameConfigUI.SetActive(false);
+        CurrentScene = SceneManager.GetActiveScene().name;
     }
 
     
@@ -54,7 +57,7 @@ public class GameManager : MonoBehaviour
         player.GetComponent<MovimentPlayer>().enabled = false;
         Canvas.SetActive(true);
         DeathScreen.SetActive(true);
-        Counts.DeathCount++;
+        DeathCounter();
     }
 
     public void Pause()
@@ -93,5 +96,24 @@ public class GameManager : MonoBehaviour
     public void Voltar(){
         PauseMenuUI.SetActive(true);
         GameConfigUI.SetActive(false);
+    }
+
+    private void DeathCounter() {
+         if(CurrentScene.Contains("Carinho")) {
+            Counts.Stats["CarinhoDeathCount"]++;
+            return;
+        }
+        if(CurrentScene.Contains("Tristeza")) {
+            Counts.Stats["TristezaDeathCount"]++;
+            return;
+        }
+        if(CurrentScene.Contains("Expressividade")) {
+            Counts.Stats["ExpressividadeDeathCount"]++;
+            return;
+        }
+        if(CurrentScene.Contains("MDM")) {
+            Counts.Stats["MDMDeathCount"]++;
+            return;
+        }
     }
 }
