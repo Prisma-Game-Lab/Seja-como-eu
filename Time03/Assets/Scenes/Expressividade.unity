@@ -1306,19 +1306,19 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1272835562 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262538129757936, guid: 85ca990acc848844f9a17d5f104c07c2,
+  m_CorrespondingSourceObject: {fileID: 3171760154614470068, guid: 85ca990acc848844f9a17d5f104c07c2,
     type: 3}
   m_PrefabInstance: {fileID: 1272835560}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1272835563 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262540138908968, guid: 85ca990acc848844f9a17d5f104c07c2,
+  m_CorrespondingSourceObject: {fileID: 3644157911624506905, guid: 85ca990acc848844f9a17d5f104c07c2,
     type: 3}
   m_PrefabInstance: {fileID: 1272835560}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1272835564 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262538834594752, guid: 85ca990acc848844f9a17d5f104c07c2,
+  m_CorrespondingSourceObject: {fileID: 1972429104186462775, guid: 85ca990acc848844f9a17d5f104c07c2,
     type: 3}
   m_PrefabInstance: {fileID: 1272835560}
   m_PrefabAsset: {fileID: 0}
@@ -1715,9 +1715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831795dd0eb76d24bb60326c501c7ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuUI: {fileID: 1272835562}
-  DeathScreen: {fileID: 1272835564}
-  GameConfigUI: {fileID: 1272835563}
+  PauseMenuUI: {fileID: 1272835563}
+  DeathScreen: {fileID: 1272835562}
+  GameConfigUI: {fileID: 1272835564}
   player: {fileID: 1743933132}
   Canvas: {fileID: 1272835561}
 --- !u!114 &1735569712

@@ -518,9 +518,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ca990acc848844f9a17d5f104c07c2, type: 3}
---- !u!1 &154914254 stripped
+--- !u!1 &91809283 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262540138908968, guid: 85ca990acc848844f9a17d5f104c07c2,
+  m_CorrespondingSourceObject: {fileID: 3171760154614470068, guid: 85ca990acc848844f9a17d5f104c07c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 91809282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &91809284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3644157911624506905, guid: 85ca990acc848844f9a17d5f104c07c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 91809282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &91809285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1972429104186462775, guid: 85ca990acc848844f9a17d5f104c07c2,
     type: 3}
   m_PrefabInstance: {fileID: 91809282}
   m_PrefabAsset: {fileID: 0}
@@ -788,21 +800,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &280879901 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262538834594752, guid: 85ca990acc848844f9a17d5f104c07c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 91809282}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &326353162 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4167262539870400719, guid: 85ca990acc848844f9a17d5f104c07c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 91809282}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &334757151 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262538129757936, guid: 85ca990acc848844f9a17d5f104c07c2,
     type: 3}
   m_PrefabInstance: {fileID: 91809282}
   m_PrefabAsset: {fileID: 0}
@@ -836,9 +836,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831795dd0eb76d24bb60326c501c7ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuUI: {fileID: 334757151}
-  DeathScreen: {fileID: 280879901}
-  GameConfigUI: {fileID: 154914254}
+  PauseMenuUI: {fileID: 91809284}
+  DeathScreen: {fileID: 91809285}
+  GameConfigUI: {fileID: 91809283}
   player: {fileID: 1498068562}
   Canvas: {fileID: 326353162}
 --- !u!114 &360947279
