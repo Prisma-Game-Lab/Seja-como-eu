@@ -101,7 +101,6 @@ public class DannyMovimentPlayer : MonoBehaviour
         if (Input.GetAxis("Dash") == 1)
         {
             anim.SetBool("Dash", true);
-            Counts.DashCount++;
             _rb.AddForce(dir * DashSpeed, ForceMode.Impulse);
             dashing = true;
             dashEnabled = false;

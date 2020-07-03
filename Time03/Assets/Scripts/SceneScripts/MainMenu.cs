@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     private SaveSystem save;
 
     public List<string> EventKeys;
+    public List<string> CounterKeys;
 
     private GeneralCounts Counts;
 
@@ -45,6 +46,9 @@ public class MainMenu : MonoBehaviour
         Counts = save.generalCounts;
         foreach(string s in EventKeys) {
             Counts.Events.Add(s,true);
+        }
+        foreach(string s in CounterKeys) {
+            Counts.Stats.Add(s,0);
         }
         LoadingSceneControl.CurrentScene = "Hub";
         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);

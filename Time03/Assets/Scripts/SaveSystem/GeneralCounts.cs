@@ -10,9 +10,7 @@ using System.Linq;
 public class GeneralCounts : ScriptableObject
 {
    public static bool Kill = false;
-   public int DashCount = 0;
-   public int DeathCount = 0;
-
+   
    public bool CarinhoIsMorto = false;
    public bool TristezaIsMorto = false;
 
@@ -29,4 +27,5 @@ public class GeneralCounts : ScriptableObject
    public int Index = 0;
 
    public Dictionary<string,bool> Events = new Dictionary<string, bool>();
+   public Dictionary<string,int> Stats = new Dictionary<string, int>();
 }
