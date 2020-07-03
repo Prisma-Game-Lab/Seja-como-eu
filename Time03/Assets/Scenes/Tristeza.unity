@@ -604,6 +604,11 @@ PrefabInstance:
       propertyPath: tristeza
       value: 
       objectReference: {fileID: 1138785812}
+    - target: {fileID: 6576314444486030692, guid: 5bef5c2e3cc88ec46816594d038c2713,
+        type: 3}
+      propertyPath: orbitSpeed
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6624044440236895203, guid: 5bef5c2e3cc88ec46816594d038c2713,
         type: 3}
       propertyPath: m_Layer
@@ -3748,6 +3753,11 @@ PrefabInstance:
       propertyPath: tristeza
       value: 
       objectReference: {fileID: 1138785812}
+    - target: {fileID: 6576314444486030692, guid: 5bef5c2e3cc88ec46816594d038c2713,
+        type: 3}
+      propertyPath: orbitSpeed
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6624044440236895203, guid: 5bef5c2e3cc88ec46816594d038c2713,
         type: 3}
       propertyPath: m_Layer
@@ -4922,6 +4932,11 @@ PrefabInstance:
       propertyPath: tristeza
       value: 
       objectReference: {fileID: 1138785812}
+    - target: {fileID: 6576314444486030692, guid: 5bef5c2e3cc88ec46816594d038c2713,
+        type: 3}
+      propertyPath: orbitSpeed
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6624044440236895203, guid: 5bef5c2e3cc88ec46816594d038c2713,
         type: 3}
       propertyPath: m_Layer
@@ -7274,5 +7289,15 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1548817917}
+    - target: {fileID: 130749954619186814, guid: 59cab00c6194dc8438fe78a6d1a6b5c4,
+        type: 3}
+      propertyPath: Cooldown
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 130749954619186814, guid: 59cab00c6194dc8438fe78a6d1a6b5c4,
+        type: 3}
+      propertyPath: numeroBullets
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cab00c6194dc8438fe78a6d1a6b5c4, type: 3}

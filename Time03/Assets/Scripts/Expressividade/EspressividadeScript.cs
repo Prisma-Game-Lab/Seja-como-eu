@@ -46,6 +46,10 @@ public class EspressividadeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!counts.ExpressividadeIsMorto) {
+            counts.ExpressividadeCompleteTimer += Time.deltaTime;
+        }
+
         if(skillIsReady)
         {
             skillsCD.ChooseSkill(skills);

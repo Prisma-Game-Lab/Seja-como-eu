@@ -29,6 +29,7 @@ public class SceneControl : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SaveSystem.GetInstance().SaveState();
         Time.timeScale = 1f;
         GeneralCounts.Kill = false;
     }
@@ -41,6 +42,7 @@ public class SceneControl : MonoBehaviour
     void Update()
     {
         if(Counts.Index == 79) {
+            SaveSystem.GetInstance().SaveState();
             ChangeScene("MDM");
         }
     }
