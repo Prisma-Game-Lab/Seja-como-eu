@@ -25,7 +25,6 @@ public class HubConversationTrigger : MonoBehaviour
         if(other.gameObject.CompareTag("Player")) {
             if(!Counts.CarinhoIsMorto || !Counts.TristezaIsMorto || !Counts.ExpressividadeIsMorto) {
                 if(Counts.Events["PrimeiraConversa"]) {
-                    Debug.Log("entrei");
                     DF.Trigger.TriggerConversation(0,"PrimeiraConversa");
                 }
                 else {
@@ -34,7 +33,13 @@ public class HubConversationTrigger : MonoBehaviour
                 }
             }
             else {
-                DF.Trigger.TriggerConversation(32,"DialogoFinal");
+                if(Counts.Events["DialogoFinal"]) {
+                    DF.Trigger.TriggerConversation(32,"DialogoFinal");
+                }
+                else {
+                    DF.Trigger.TriggerConversation(78,"DialogoFinal");
+                }
+                
             }
         }
     }
