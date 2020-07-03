@@ -8,8 +8,8 @@ public class Tentaculo : MonoBehaviour
 	public GameObject tentaculo;
 	public GameObject wavyTentacle;
 	public GameObject spawnZone;
-	public int gapPeriod = 6;
-	public int gapVar = 5;
+	public int gapPeriod;
+	public int gapVar;
 	private int gapCounter = 0;
 	public float startingSpeed = 10;
 	public static float speed = 50;
@@ -65,7 +65,7 @@ public class Tentaculo : MonoBehaviour
     	{
     	 	t = Instantiate(tentaculo ,this.transform);
 			 gapCounter +=1;
-			 if (gapCounter == gapPeriod)
+			 if (gapCounter >= gapPeriod)
 			 {
 				 gap = true;
 				 gapCounter = (int)(UnityEngine.Random.Range(0.0f,gapVar));
