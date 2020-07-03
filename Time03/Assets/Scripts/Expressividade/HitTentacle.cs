@@ -12,6 +12,7 @@ public class HitTentacle : MonoBehaviour
     void Start()
     {
         _mp = GetComponent<MovimentPlayer>();
+
     }
 
     private void OnCollisionStay(Collision collision)

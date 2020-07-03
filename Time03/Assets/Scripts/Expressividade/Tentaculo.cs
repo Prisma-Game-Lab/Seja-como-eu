@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,65 +7,56 @@ public class Tentaculo : MonoBehaviour
 {
 	public GameObject tentaculo;
 	public GameObject wavyTentacle;
-	public int gapSize = 3;
-	public float gapPeriod = 4;
-	public float speed = 5;
-	public float despawnDuration = 5;
-	private int gaps = 0;
+	public int gapPeriod = 4;
+	private int gapCounter = 0;
+	public float startingSpeed = 10;
+	private float speed = 100;
+	private bool gap;
+	public static event Action<float> speedChange;
 
-	private WaitForSeconds despawnDelay; 
 
     // Start is called before the first frame update
     void Start()
     {
-		despawnDelay = new WaitForSeconds(despawnDuration);
-        InvokeRepeating("spawnTentacle",1.0f,1.0f);
-        StartCoroutine(AddGap());
+		spawnTentacle();
+		StartCoroutine(Startup());
     }
 
-    private void spawnTentacle()
+    public void spawnTentacle()
     {
-    	 GameObject t;
-    	 if(gaps>0)
-    	 {
-    	 	gaps=gaps - 1;
-    	 	if(gaps < gapSize-1)
-    	 	{
-    	 		return;
-    	 	}
-    	 	else
-    	 	{
-    	 		t = Instantiate(wavyTentacle, this.transform);
-    	 	}
-
-    	 }
-
-    	 else
-    	 {
-    	 	t = Instantiate(tentaculo ,this.transform);
-    	 }
-
-    	 t.GetComponent<Rigidbody>().AddForce(transform.forward * speed * 10);
-    	 StartCoroutine(Despawn(t));
-
-    }
-
-    private IEnumerator AddGap()
-    {
-    	yield return new WaitForSeconds(1.0f);
-    	while (true)
+    	GameObject t;
+    	if(gap)
     	{
-	    	yield return new WaitForSeconds(Random.Range(0.0f,2.0f));
-	    	gaps += gapSize;
-	    	yield return new WaitForSeconds(gapPeriod);
+    	 	t = Instantiate(wavyTentacle, this.transform);
+			gap=false;
     	}
+
+    	else
+    	{
+    	 	t = Instantiate(tentaculo ,this.transform);
+			 gapCounter +=1;
+			 if (gapCounter == gapPeriod)
+			 {
+				 gap = true;
+				 gapCounter = 0;
+			 }
+    	}
+		t.GetComponent<TentPieceScript>().Boost(speed * 10);
+    	
     }
 
-    private IEnumerator Despawn(GameObject obj)
-    {
-    	yield return despawnDelay;
-        Destroy(obj);
-    }
+	public void SpeedUp(float newSpeed)
+	{
+		speedChange?.Invoke(newSpeed * 10);
+		speed = newSpeed;
+	}
+
+
+	private IEnumerator Startup()
+	{
+		yield return new WaitForSeconds(2);
+		SpeedUp(startingSpeed);
+	}
 }
     
 
