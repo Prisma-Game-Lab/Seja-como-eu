@@ -32,9 +32,12 @@ public class TristezaScript : MonoBehaviour
     public Renderer casco;
     public Texture quebrado1, quebrado2;
     public Animator animLuz;
+    private DisplayFrase DF;
 
     void Start()
     {
+        DF = GetComponent<DisplayFrase>();
+
         Counts = SaveSystem.GetInstance().generalCounts;
 
         Agent = GetComponent<NavMeshAgent>();
@@ -110,6 +113,7 @@ public class TristezaScript : MonoBehaviour
             srScript.StopAllCoroutines();
             Agent.enabled = false;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
+            DF.Trigger.TriggerConversation(0,"TristezaMorre");
         }
         else
         {
