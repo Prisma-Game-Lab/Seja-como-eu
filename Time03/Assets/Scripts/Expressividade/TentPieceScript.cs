@@ -7,9 +7,11 @@ public class TentPieceScript : MonoBehaviour
 
     public float despawnTimer;
     private Rigidbody _rb;
-    private Tentaculo parent;
+    private Tentaculo parentTe;
+    private Transform parentTr;
     private Transform _t;
     private float lastForce;
+    private float size;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +19,11 @@ public class TentPieceScript : MonoBehaviour
             _rb = GetComponent<Rigidbody>();
         if(_t == null)
             _t = GetComponent<Transform>();
-            
-        parent = transform.parent.GetComponent<Tentaculo>();
+
+        parentTr = transform.parent;
+        parentTe = parentTr.GetComponent<Tentaculo>();
         Tentaculo.speedChange += Boost;
+        size = 5.0f;
         StartCoroutine(Despawn());
     }
     void OnDestroy()
@@ -38,17 +42,10 @@ public class TentPieceScript : MonoBehaviour
 
     }
 
-    private void OnCollisionExit(Collision other) 
-    {
-        if(other.transform.CompareTag("enemy"))
-        {
-            parent.spawnTentacle();
-        }
-    }
     private IEnumerator Despawn()
     {
-        yield return new WaitUntil(()=>Vector3.Distance(_t.position,new Vector3(0,0,0) ) >= _t.lossyScale[2]*2);
-        parent.spawnTentacle();
+        yield return new WaitUntil(()=>Vector3.Distance(_t.position,parentTr.position ) >= size);
+        parentTe.spawnTentacle();
         yield return new WaitForSeconds(despawnTimer);
         Destroy(this);
     }

@@ -7,7 +7,8 @@ public class Tentaculo : MonoBehaviour
 {
 	public GameObject tentaculo;
 	public GameObject wavyTentacle;
-	public int gapPeriod = 4;
+	public int gapPeriod = 20;
+	public int gapVar = 8;
 	private int gapCounter = 0;
 	public float startingSpeed = 10;
 	private float speed = 100;
@@ -38,7 +39,7 @@ public class Tentaculo : MonoBehaviour
 			 if (gapCounter == gapPeriod)
 			 {
 				 gap = true;
-				 gapCounter = 0;
+				 gapCounter = (int)UnityEngine.Random.value*gapVar;
 			 }
     	}
 		t.GetComponent<TentPieceScript>().Boost(speed * 10);
