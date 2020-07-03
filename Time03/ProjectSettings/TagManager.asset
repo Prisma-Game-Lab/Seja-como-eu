@@ -15,6 +15,7 @@ TagManager:
   - ChatTrigger
   - VulnTent
   - TentPiece
+  - WavyPiece
   layers:
   - Default
   - TransparentFX

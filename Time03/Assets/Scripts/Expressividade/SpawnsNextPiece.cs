@@ -9,7 +9,7 @@ public class SpawnsNextPiece : MonoBehaviour
     private int spawns;
     private void OnTriggerExit(Collider other) 
     {
-        if(other.transform.CompareTag("TentPiece"))
+        if(other.transform.CompareTag("TentPiece") || other.transform.CompareTag("WavyPiece"))
         {
             tt.spawnTentacle();
             spawns++;
