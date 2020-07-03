@@ -5,12 +5,9 @@ using UnityEngine;
 public class TentPieceScript : MonoBehaviour
 {
 
-    public float despawnTimer;
     private Rigidbody _rb;
-    private Tentaculo parentTe;
     private Transform parentTr;
     private Transform _t;
-    private float lastForce;
     private float size;
     // Start is called before the first frame update
     void Start()
@@ -20,11 +17,9 @@ public class TentPieceScript : MonoBehaviour
         if(_t == null)
             _t = GetComponent<Transform>();
 
-        parentTr = transform.parent;
-        parentTe = parentTr.GetComponent<Tentaculo>();
+        parentTr = _t.parent;
         Tentaculo.speedChange += Boost;
         size = 5.0f;
-        StartCoroutine(Despawn());
     }
     void OnDestroy()
     {
@@ -37,16 +32,14 @@ public class TentPieceScript : MonoBehaviour
         if(_t == null)
             _t = GetComponent<Transform>();
 
-        _rb.AddForce((force-lastForce) * _t.forward);
-        lastForce = force;
-
+        _rb.AddForce((force) * _t.forward);
     }
 
-    private IEnumerator Despawn()
+    private void OnTriggerEnter(Collider other)
     {
-        yield return new WaitUntil(()=>Vector3.Distance(_t.position,parentTr.position ) >= size);
-        parentTe.spawnTentacle();
-        yield return new WaitForSeconds(despawnTimer);
-        Destroy(this);
+        if(other.transform.CompareTag("Finish"))
+        {
+            _t.position=parentTr.position;
+        }
     }
 }

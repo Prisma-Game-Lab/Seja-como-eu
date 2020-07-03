@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1799420791554617859}
   m_Layer: 0
   m_Name: TentaclePiece
-  m_TagString: Untagged
+  m_TagString: TentPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f121421e6adf3b42bd4c602abccf944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawnTimer: 10
 --- !u!1 &6488028899187129173
 GameObject:
   m_ObjectHideFlags: 0
