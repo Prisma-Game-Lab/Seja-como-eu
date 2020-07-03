@@ -38,6 +38,19 @@ public class Tentaculo : MonoBehaviour
 			Destroy(spawnZone);
 		}
     }
+	private void OnDestroy() 
+	{
+		if(amLeader)
+		{
+			speed = 50;
+			leader = null;
+		}
+		else
+		{
+			nextSpawn-=spawnTentacle;
+		}
+		instances-=1;
+	}
 
     public void spawnTentacle()
     {
