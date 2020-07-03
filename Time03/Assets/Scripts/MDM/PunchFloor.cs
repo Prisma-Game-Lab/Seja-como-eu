@@ -41,7 +41,7 @@ public class PunchFloor : MonoBehaviour
         yield return new WaitForSeconds(Delay);
 
 
-        for(int i=0; i < Quantity * (Mestre.GetLevel() + 1); i++) {
+        for(int i=0; i < Quantity * 0.5 * (Mestre.GetLevel() + 1); i++) {
             Instantiate(PrefabPunches,new Vector3(PosListx[i],0.7f,PosListz[i]),Quaternion.identity);
         }
     }

@@ -70,6 +70,8 @@ public class MDM : MonoBehaviour
     
     void Update()
     {
+        if(Counts.MDMIsMorto) return;
+
         if(!Counts.MDMIsMorto) {
             Counts.MDMCompleteTimer += Time.deltaTime;
         }
@@ -110,8 +112,6 @@ public class MDM : MonoBehaviour
 
     public void WinGame() {
         Counts.MDMIsMorto = true;
-        gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        gameObject.AddComponent<Rigidbody>();
     }
 
     private IEnumerator ResetCooldown() {
