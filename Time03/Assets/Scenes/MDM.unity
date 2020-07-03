@@ -837,8 +837,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuUI: {fileID: 91809284}
-  DeathScreen: {fileID: 91809285}
-  GameConfigUI: {fileID: 91809283}
+  DeathScreen: {fileID: 91809283}
+  GameConfigUI: {fileID: 91809285}
   player: {fileID: 1498068562}
   Canvas: {fileID: 326353162}
 --- !u!114 &360947279
