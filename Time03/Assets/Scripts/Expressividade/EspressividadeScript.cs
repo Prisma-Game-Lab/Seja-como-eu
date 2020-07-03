@@ -65,7 +65,7 @@ public class EspressividadeScript : MonoBehaviour
         health -=1;
         if (health == 0)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
