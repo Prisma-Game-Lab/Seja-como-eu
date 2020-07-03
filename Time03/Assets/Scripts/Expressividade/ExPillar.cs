@@ -12,6 +12,9 @@ public class ExPillar : MonoBehaviour
     public int numPilares;
     public float PillarInterval;
     public float windup;
+    public Vector3[] spawnPoints;
+    public Transform playerPos;
+    public bool FollowPlayer = false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,15 +37,23 @@ public class ExPillar : MonoBehaviour
 
     private IEnumerator ShootInk()
     {
-        float xposition;
-        float zposition;
+        Vector3 spawnPos;
+        int index;
         for (int i = 0;i<numPilares;i++)
         {
-            xposition = Random.Range(-19, 19);
-            zposition = Random.Range(-19, 19);
-            Instantiate(prefabHelper, new Vector3(xposition, 0, zposition), Quaternion.identity);
+            if(FollowPlayer)
+            {
+                spawnPos = playerPos.position;
+            }
+            else
+            {
+                index = Random.Range(0, spawnPoints.Length);
+                spawnPos = spawnPoints[index];
+            }
+
+            Instantiate(prefabHelper, spawnPos, Quaternion.identity);
             yield return new WaitForSeconds(windup);
-            Instantiate(PillarPrefab, new Vector3(xposition, 0, zposition), Quaternion.identity);
+            Instantiate(PillarPrefab, spawnPos, Quaternion.identity);
             yield return new WaitForSeconds(PillarInterval);
         }
     }
