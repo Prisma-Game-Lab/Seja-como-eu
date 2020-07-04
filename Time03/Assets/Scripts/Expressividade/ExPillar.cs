@@ -43,7 +43,7 @@ public class ExPillar : MonoBehaviour
         {
             if(FollowPlayer)
             {
-                spawnPos = playerPos.position;
+                spawnPos = new Vector3(playerPos.position.x,0,playerPos.position.z) + new Vector3(Random.insideUnitSphere.x,0,Random.insideUnitSphere.z) * 2;
             }
             else
             {
