@@ -3012,6 +3012,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994892489}
   m_Mesh: {fileID: -4453806867672132484, guid: 66b4293fd3a29514db69b7c8801e0cae, type: 3}
+--- !u!1 &1003978543 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 310013178, guid: 6fbff826f6439f94d9e5464a5868b869,
+    type: 3}
+  m_PrefabInstance: {fileID: 1525891359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1011588673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5355,6 +5361,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 310013179, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 310013179, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310013179, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 732308937, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_SizeDelta.x
       value: 500
@@ -5429,6 +5447,16 @@ PrefabInstance:
       value: PortalEntranceC
       objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471896, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572477274830637653, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 1003978543}
+    - target: {fileID: 6297552214853782588, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -6355,6 +6383,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 310013179, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 310013179, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310013179, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 732308937, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_SizeDelta.x
       value: 500
@@ -6433,6 +6473,16 @@ PrefabInstance:
       value: PortalEntranceT
       objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471896, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572477274830637653, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 2062444289}
+    - target: {fileID: 6297552214853782588, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -8057,6 +8107,12 @@ Transform:
   m_Father: {fileID: 554615987}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &2062444289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 310013178, guid: 6fbff826f6439f94d9e5464a5868b869,
+    type: 3}
+  m_PrefabInstance: {fileID: 1627371997}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2074577051
 GameObject:
   m_ObjectHideFlags: 0
