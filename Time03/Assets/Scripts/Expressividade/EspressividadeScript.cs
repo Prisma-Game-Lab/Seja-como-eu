@@ -15,6 +15,7 @@ public class EspressividadeScript : MonoBehaviour
     private GeneralCounts counts;
     private ExMissile exmScript;
     private ExPillar expScript;
+    public GameObject portalExit;
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +72,7 @@ public class EspressividadeScript : MonoBehaviour
         {
             counts.ExpressividadeIsMorto = true;
             Destroy(this.gameObject);
+            portalExit.SetActive(true);
         }
         else
         {

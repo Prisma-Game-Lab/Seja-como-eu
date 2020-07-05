@@ -190,6 +190,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84d80e307823a0e45bf33512dddbf097, type: 3}
+--- !u!1 &168924636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4160702874246658407, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+    type: 3}
+  m_PrefabInstance: {fileID: 633938881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &192459578
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1
+  portalExit: {fileID: 168924636}
 --- !u!114 &423537700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,6 +654,85 @@ MonoBehaviour:
     type: 3}
   paintingTentaclePrefab: {fileID: 8496457499895050011, guid: fe561daf5f61bee4a8d0461417ccac00,
     type: 3}
+--- !u!1001 &633938881
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4160702874246658407, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_Name
+      value: PortalExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160702874246658407, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160702874246658408, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: SceneName
+      value: Hub
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2461ed97e38f7c740a2edb8c3a2b291d, type: 3}
 --- !u!1 &681780773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,6 +1568,9 @@ MonoBehaviour:
   regTent: {fileID: 3350548869434212449, guid: 51ba55382dff9e8468ade3c29af1cab5, type: 3}
   wavyTent: {fileID: 3689703874797072747, guid: 5b89a4f61d5190243863065597d008d2,
     type: 3}
+  regsInPool: 0
+  wavsInPool: 0
+  recycles: 0
 --- !u!4 &1422943115
 Transform:
   m_ObjectHideFlags: 0
