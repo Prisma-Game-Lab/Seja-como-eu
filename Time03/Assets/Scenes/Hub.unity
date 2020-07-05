@@ -288,6 +288,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1525891359}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &163489964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 310013178, guid: 6fbff826f6439f94d9e5464a5868b869,
+    type: 3}
+  m_PrefabInstance: {fileID: 549562479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &170740266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,6 +1235,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_Text
+      value: "Voc\xEA j\xE1 derrotou a expressividade."
+      objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1312,6 +1322,16 @@ PrefabInstance:
     - target: {fileID: 1510187175226471898, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572477274830637653, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 163489964}
+    - target: {fileID: 6297552214853782588, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8489818885395128899, guid: 6fbff826f6439f94d9e5464a5868b869,
