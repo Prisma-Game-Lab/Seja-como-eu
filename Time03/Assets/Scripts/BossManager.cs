@@ -6,6 +6,7 @@ public class BossManager : MonoBehaviour
 {
     public GameObject PortalCarinho;
     public GameObject PortalTristeza;
+    public GameObject portalExpressividade;
 
     private GeneralCounts Counts;
 
@@ -21,6 +22,10 @@ public class BossManager : MonoBehaviour
         if (Counts.TristezaIsMorto)
         {
             PortalTristeza.GetComponent<PortalScript>().CanEnter = false;
+        }
+        if(Counts.ExpressividadeIsMorto)
+        {
+            portalExpressividade.GetComponent<PortalScript>().CanEnter = false;
         }
     }
 

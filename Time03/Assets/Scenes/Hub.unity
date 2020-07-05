@@ -1222,6 +1222,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 310013179, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 310013179, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310013179, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 732308937, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_SizeDelta.x
       value: 500
@@ -5220,6 +5232,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426125403}
   m_CullTransparentMesh: 0
+--- !u!1 &1461323119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1510187175226471896, guid: 6fbff826f6439f94d9e5464a5868b869,
+    type: 3}
+  m_PrefabInstance: {fileID: 549562479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1512402277
 GameObject:
   m_ObjectHideFlags: 0
@@ -7223,6 +7241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PortalCarinho: {fileID: 111317396}
   PortalTristeza: {fileID: 715798474}
+  portalExpressividade: {fileID: 1461323119}
 --- !u!114 &1806064552
 MonoBehaviour:
   m_ObjectHideFlags: 0
