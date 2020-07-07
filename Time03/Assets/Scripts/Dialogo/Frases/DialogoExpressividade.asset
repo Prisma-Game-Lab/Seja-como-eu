@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DialogoExpressividade
   m_EditorClassIdentifier: 
   Frase:
-  - Texto: "N\xE3o se censure por ser voc\xEA mesmo.\r"
+  - Texto: "Garotinho, n\xE3o se censure por ser voc\xEA mesmo.\r"
     Turn: 5
     Options: []
   - Texto: "Voc\xEA n\xE3o precisa se esconder atr\xE1s dessa armadura."
