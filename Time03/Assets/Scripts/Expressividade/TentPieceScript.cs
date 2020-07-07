@@ -8,7 +8,7 @@ public class TentPieceScript : MonoBehaviour
     private Rigidbody _rb;
     private Transform parentTr;
     private Transform _t;
-    private float size;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +16,12 @@ public class TentPieceScript : MonoBehaviour
             _rb = GetComponent<Rigidbody>();
         if(_t == null)
             _t = GetComponent<Transform>();
-
-        parentTr = _t.parent;
-        Tentaculo.speedChange += Boost;
-        size = 5.0f;
     }
-    void OnDestroy()
+   
+    private void OnEnable() 
     {
-        Tentaculo.speedChange -= Boost;
+        Tentaculo.speedChange += Boost;
+        parentTr = _t.parent;
     }
     public void Boost(float force)
     {
@@ -39,6 +37,7 @@ public class TentPieceScript : MonoBehaviour
     {
         if(other.transform.CompareTag("Finish"))
         {
+            Tentaculo.speedChange -= Boost;
             TentPooling.instance.Dispose(this.gameObject);
         }
     }

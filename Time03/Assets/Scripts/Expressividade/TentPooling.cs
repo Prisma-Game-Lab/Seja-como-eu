@@ -65,6 +65,7 @@ public class TentPooling : MonoBehaviour
             recycles +=1;
             GameObject t = lis[0];
             lis.RemoveAt(0);
+            t.SetActive(true);
             Transform tentT= t.GetComponent<Transform>();
             tentT.parent = parent;
             tentT.position = parent.position;
@@ -89,5 +90,6 @@ public class TentPooling : MonoBehaviour
         tentT.parent = this.transform; 
         tentT.position = new Vector3(16*wavsInPool,-128,16*regsInPool);
         tentT.rotation = Quaternion.identity;
+        tent.SetActive(false);
     }
 }
