@@ -65,8 +65,8 @@ public class TentPooling : MonoBehaviour
             recycles +=1;
             GameObject t = lis[0];
             lis.RemoveAt(0);
-            t.SetActive(true);
             Transform tentT= t.GetComponent<Transform>();
+            t.SetActive(true);
             tentT.parent = parent;
             tentT.position = parent.position;
             tentT.rotation = parent.rotation;
