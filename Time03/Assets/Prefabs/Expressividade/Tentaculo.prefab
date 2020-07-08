@@ -153,5 +153,5 @@ MonoBehaviour:
     type: 3}
   spawnZone: {fileID: 4366576179679829192}
   gapPeriod: 2
-  gapVar: 5
-  startingSpeed: 10
+  gapVar: 2
+  speed: 30

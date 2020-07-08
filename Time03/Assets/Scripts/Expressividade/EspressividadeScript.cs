@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -50,7 +50,7 @@ public class EspressividadeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!counts.ExpressividadeIsMorto) {
+        if (!counts.ExpressividadeIsMorto) {
             counts.ExpressividadeCompleteTimer += Time.deltaTime;
         }
 

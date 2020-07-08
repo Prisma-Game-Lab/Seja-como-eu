@@ -618,6 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 1
   portalExit: {fileID: 168924636}
+  Player: {fileID: 1743933132}
 --- !u!114 &423537700
 MonoBehaviour:
   m_ObjectHideFlags: 0

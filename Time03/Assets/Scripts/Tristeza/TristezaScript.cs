@@ -114,6 +114,7 @@ public class TristezaScript : MonoBehaviour
             Agent.enabled = false;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             DF.Trigger.TriggerConversation(0,"TristezaMorre");
+            Player.GetComponentInChildren<Animator>().SetBool("Idle", true);
         }
         else
         {
