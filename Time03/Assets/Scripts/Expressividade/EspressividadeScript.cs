@@ -16,10 +16,13 @@ public class EspressividadeScript : MonoBehaviour
     private ExMissile exmScript;
     private ExPillar expScript;
     public GameObject portalExit;
+    private DisplayFrase df;
 
     // Start is called before the first frame update
     void Start()
     {
+        df = GetComponent<DisplayFrase>();
+
         counts = SaveSystem.GetInstance().generalCounts;
 
         skills = new List<Skills>();
@@ -51,7 +54,7 @@ public class EspressividadeScript : MonoBehaviour
             counts.ExpressividadeCompleteTimer += Time.deltaTime;
         }
 
-        if(skillIsReady)
+        if(skillIsReady && health > 0)
         {
             skillsCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
@@ -71,8 +74,10 @@ public class EspressividadeScript : MonoBehaviour
         if (health == 0)
         {
             counts.ExpressividadeIsMorto = true;
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
             portalExit.SetActive(true);
+            expScript.StopAllCoroutines();
+            df.Trigger.TriggerConversation(0,"ExpressividadeMorre");
         }
         else
         {

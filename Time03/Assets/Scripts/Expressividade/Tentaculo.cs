@@ -12,7 +12,7 @@ public class Tentaculo : MonoBehaviour
 	public int gapVar;
 	private int gapCounter = 0;
 	public float startingSpeed = 10;
-	public static float speed = 50;
+	public static float speed = 150;
 	private bool gap;
 	public static event Action<float> speedChange;
 	private static event Action nextSpawn;
