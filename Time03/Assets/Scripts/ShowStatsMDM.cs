@@ -3,39 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShowStats : MonoBehaviour
+public class ShowStatsMDM : MonoBehaviour
 {
-    public Text StatsText;
     private GeneralCounts Counts;
+    public GameObject Canvas;
 
-    private bool CanActivate = false;
-    private bool ControlAcess = true;
+    public Text StatsText;
 
     private int TotalDashs;
     private int TotalDeaths;
 
+    
     void Start()
     {
         Counts = SaveSystem.GetInstance().generalCounts;
     }
-    
-    void Update()
-    {
-        if(CanActivate) {
-            if(Input.GetAxisRaw("PressButton") == 1 && ControlAcess) {
-                if(transform.GetChild(0).gameObject.activeSelf) {
-                    StartCoroutine(GrantAcess());
-                    transform.GetChild(0).gameObject.SetActive(false);
-                    Time.timeScale = 1f;
-                    return;
-                }
-                StartCoroutine(GrantAcess()); 
-                DisplayStats();
-            }
-        }
-    }
 
-    private void DisplayStats() {
+   public void DisplayStats() {
+        Canvas.SetActive(true);
         TotalDashs = Counts.Stats["HubDashCount"] + Counts.Stats["CarinhoDashCount"] + Counts.Stats["TristezaDashCount"] +
         Counts.Stats["ExpressividadeDashCount"] + Counts.Stats["MDMDashCount"];
         TotalDeaths = Counts.Stats["CarinhoDeathCount"] + Counts.Stats["TristezaDeathCount"] + Counts.Stats["MDMDeathCount"] +
@@ -91,26 +76,5 @@ public class ShowStats : MonoBehaviour
         string min = minutes.ToString("00");
         string sec = seconds.ToString("00");
         return $"{min}:{sec}";
-    }
-
-    void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.CompareTag("Player")) {
-            CanActivate = true;
-        }
-    }
-
-    void OnCollisionExit(Collision other)
-    {
-        if(other.gameObject.CompareTag("Player")) {
-            CanActivate = false;
-        }
-    }
-
-    IEnumerator GrantAcess()
-    {
-        ControlAcess = false;
-        yield return new WaitForSecondsRealtime(0.3f);
-        ControlAcess = true;
     }
 }

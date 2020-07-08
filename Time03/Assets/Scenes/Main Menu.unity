@@ -626,6 +626,7 @@ MonoBehaviour:
   - PrimeiraConversa
   - FraseRandom
   - DialogoFinal
+  - MDMMorre
   CounterKeys:
   - HubDashCount
   - CarinhoDashCount

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MDM : MonoBehaviour
 {
+    public GameObject RedBar;
     public float HitPoints;
     public float FullSpecial;
     public float Cooldown;
@@ -30,9 +31,12 @@ public class MDM : MonoBehaviour
     private float Charger;
     private int Level;
     private GeneralCounts Counts;
+    private DisplayFrase DF;
 
     void Start()
     {
+        DF = GetComponent<DisplayFrase>();
+
         Counts = SaveSystem.GetInstance().generalCounts;
 
         Level = 0;
@@ -70,11 +74,18 @@ public class MDM : MonoBehaviour
     
     void Update()
     {
-        if(Counts.MDMIsMorto) return;
+        HpBar.fillAmount = CurrentHP/HitPoints;
+        SpecBar.fillAmount = Charger/FullSpecial;
+
+        if(Charger >= FullSpecial) {
+            PerdeVida();
+        }
 
         if(!Counts.MDMIsMorto) {
             Counts.MDMCompleteTimer += Time.deltaTime;
         }
+
+        if(Level >= 3) return;
 
         if(SkillIsReady && !UltimateNow) {
             SkillCD.ChooseSkill(skills);
@@ -86,32 +97,30 @@ public class MDM : MonoBehaviour
             UltimateExecuteNow = false;
         }
 
-        HpBar.fillAmount = CurrentHP/HitPoints;
-        SpecBar.fillAmount = Charger/FullSpecial;
-
-        if(CurrentHP <= 0) {
-            WinGame();
-        }
-
-        if(Charger >= FullSpecial) {
-            PerdeVida();
-        }
-
         if(!PRScript.ItsRainingMan() && Level == 2) {
             Rain.ActivateSkill();
         }
     }
 
     private void PerdeVida() {
+        if(Level < 3) {
+            UltimateExecuteNow = true;
+            UltimateNow = true;
+        }
         CurrentHP -= 5;
-        UltimateExecuteNow = true;
-        UltimateNow = true;
         Charger = 0;
         DamagePlatforms[Level].SetActive(false);
+        if(CurrentHP <= 0) {
+            WinGame();
+        }
     }
 
     public void WinGame() {
         Counts.MDMIsMorto = true;
+        DF.Trigger.TriggerConversation(0,"MDMMorre");
+        HpBar.gameObject.SetActive(false);
+        SpecBar.gameObject.SetActive(false);
+        RedBar.SetActive(false);
     }
 
     private IEnumerator ResetCooldown() {
@@ -125,7 +134,7 @@ public class MDM : MonoBehaviour
     }
 
     public void RaiseLevel() {
-        if(Level == 2) return;
+        if(Level == 3) return;
         Level++;
     }
 

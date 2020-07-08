@@ -45,6 +45,14 @@ public class SceneControl : MonoBehaviour
             SaveSystem.GetInstance().SaveState();
             ChangeScene("MDM");
         }
+
+        if(SceneManager.GetActiveScene().name == "MDM") {
+            if(Counts.Index == 15) {
+                SaveSystem.GetInstance().SaveState();
+                GetComponent<GameManager>().canPause = false;
+                GetComponent<ShowStatsMDM>().DisplayStats();
+            }
+        }
     }
 
 

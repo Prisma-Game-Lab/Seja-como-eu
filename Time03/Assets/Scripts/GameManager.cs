@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     private bool GameIsPaused = false;
     private bool WaitPause = false;
-    private bool canPause = true;
+    public bool canPause = true;
     private string CurrentScene; 
 
     void Start()
