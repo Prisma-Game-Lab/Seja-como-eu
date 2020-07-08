@@ -20,6 +20,8 @@ public class CarinhoScript : MonoBehaviour
     private HeartClap hcScript;
     private BossSkillsCD SkillCD; 
     public float Cooldown;
+    private bool lutando = false;
+    public float startTime;
 
     public float damageStun;
 
@@ -67,8 +69,7 @@ public class CarinhoScript : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         _rb = GetComponent<Rigidbody>();
 
-
-        StartCoroutine(ResetCooldown());
+        StartCoroutine(StartBattle());
     }
 
     void Update() 
@@ -80,7 +81,7 @@ public class CarinhoScript : MonoBehaviour
         {
             float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
 
-            if (agent != null && agent.enabled)
+            if (agent != null && agent.enabled && lutando)
             {
                 if (distance <= lookRadius)
                 {
@@ -188,6 +189,13 @@ public class CarinhoScript : MonoBehaviour
         SkillIsReady = true;
     }
 
+    private IEnumerator StartBattle()
+    {
+        lutando = false;
+        yield return new WaitForSeconds(startTime);
+        StartCoroutine(ResetCooldown());
+        lutando = true;
+    }
 
     private IEnumerator Stun()
     {

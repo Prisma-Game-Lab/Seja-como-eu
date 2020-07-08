@@ -65873,7 +65873,7 @@ PrefabInstance:
     - target: {fileID: 7997187474781481670, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7997187474781481670, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
@@ -65883,7 +65883,7 @@ PrefabInstance:
     - target: {fileID: 7997187474781481670, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7997187474781481670, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
@@ -65898,7 +65898,7 @@ PrefabInstance:
     - target: {fileID: 7997187474781481670, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7997187474781481670, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
@@ -66010,6 +66010,11 @@ PrefabInstance:
       propertyPath: dano
       value: 
       objectReference: {fileID: 724779494848353161}
+    - target: {fileID: 7997187475700378183, guid: e038351f0774806489b8203beb393a7f,
+        type: 3}
+      propertyPath: startTime
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7997187475700378184, guid: e038351f0774806489b8203beb393a7f,
         type: 3}
       propertyPath: ProbabilidadeOrbit
