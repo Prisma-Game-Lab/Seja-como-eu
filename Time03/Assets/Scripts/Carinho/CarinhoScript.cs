@@ -149,6 +149,7 @@ public class CarinhoScript : MonoBehaviour
                 anim.SetTrigger("Death");
                 portalExit.SetActive(true);
                 hoScript.carinhoArea.enabled = false;
+                PlayerPosition.gameObject.GetComponentInChildren<Animator>().SetBool("Idle", true);
             }
             else
             {
