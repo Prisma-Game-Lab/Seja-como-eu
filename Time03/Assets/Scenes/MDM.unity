@@ -3363,7 +3363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RedBar: {fileID: 205061387}
-  HitPoints: 5
+  HitPoints: 16
   FullSpecial: 10
   Cooldown: 4
   HpBar: {fileID: 1699464408}
