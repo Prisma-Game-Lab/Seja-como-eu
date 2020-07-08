@@ -11,8 +11,9 @@ public class Tentaculo : MonoBehaviour
 	public int gapPeriod;
 	public int gapVar;
 	private int gapCounter = 0;
-	public float startingSpeed = 10;
-	public static float speed = 150;
+	private float startingSpeed = 150;
+	public float speed = 10;
+	public static float currentSpeed = 150;
 	private bool gap;
 	public static event Action<float> speedChange;
 	private static event Action nextSpawn;
@@ -20,8 +21,8 @@ public class Tentaculo : MonoBehaviour
 	public static int instances=0;
 	private bool amLeader = false;
 
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
 		gapCounter = (int)(UnityEngine.Random.Range(0.0f,gapVar));
 		instances+=1;
@@ -29,7 +30,6 @@ public class Tentaculo : MonoBehaviour
 		{
 			leader = this;
 			amLeader=true;
-			StartCoroutine(Startup());
 		}
 		else
 		{
@@ -37,11 +37,17 @@ public class Tentaculo : MonoBehaviour
 			Destroy(spawnZone);
 		}
     }
+	void Start() 
+	{
+		if(amLeader)
+		{
+			StartCoroutine(Startup());
+		}
+	}
 	private void OnDestroy() 
 	{
 		if(amLeader)
 		{
-			speed = 50;
 			leader = null;
 		}
 		else
@@ -70,7 +76,7 @@ public class Tentaculo : MonoBehaviour
 				 gapCounter = (int)(UnityEngine.Random.Range(0.0f,gapVar));
 			 }
     	}
-		t.GetComponent<TentPieceScript>().Boost(speed * 10);
+		t.GetComponent<TentPieceScript>().Boost(currentSpeed * 10);
     	if(amLeader)
 		{
 			nextSpawn?.Invoke();
@@ -79,17 +85,18 @@ public class Tentaculo : MonoBehaviour
 
 	public void SpeedUp(float newSpeed)
 	{
-		speedChange?.Invoke((newSpeed-speed) * 10);
-		speed = newSpeed;
+		speedChange?.Invoke((newSpeed-currentSpeed) * 10);
+		currentSpeed = newSpeed;
 	}
 
 
 	private IEnumerator Startup()
 	{
 		yield return new WaitUntil(()=>instances == 8);
+		currentSpeed=startingSpeed;
 		spawnTentacle();
 		yield return new WaitForSeconds(2);
-		SpeedUp(startingSpeed);
+		SpeedUp(speed);
 	}
 }
     
