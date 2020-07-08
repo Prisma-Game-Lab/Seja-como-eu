@@ -25,6 +25,8 @@ public class TristezaScript : MonoBehaviour
     private GeneralCounts Counts;
     public int damageCounter = 0;
     public int health = 3;
+    private bool lutando = false;
+    public float startTime;
 
     public float RunAwayDistance;
     
@@ -59,7 +61,7 @@ public class TristezaScript : MonoBehaviour
         SkillCD = GetComponent<BossSkillsCD>();
         anim = GetComponentInChildren<Animator>();
 
-        StartCoroutine(ResetCooldown());
+        StartCoroutine(StartBattle());
     }
 
     
@@ -74,7 +76,7 @@ public class TristezaScript : MonoBehaviour
             Counts.TristezaCompleteTimer += Time.deltaTime;
         }
 
-        if(health > 0 && Agent.enabled)
+        if(health > 0 && Agent.enabled && lutando)
         {
             FleeFromPlayer();
 
@@ -184,6 +186,14 @@ public class TristezaScript : MonoBehaviour
         float zPosition = Random.Range(-19,19);
         Vector3 newPos = new Vector3(xPosition,0,zPosition);
         return newPos;
+    }
+
+    private IEnumerator StartBattle()
+    {
+        lutando = false;
+        yield return new WaitForSeconds(startTime);
+        StartCoroutine(ResetCooldown());
+        lutando = true;
     }
 
     private void OnCollisionEnter(Collision collision)

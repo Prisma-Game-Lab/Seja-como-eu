@@ -7774,7 +7774,7 @@ PrefabInstance:
     - target: {fileID: 130749954619186808, guid: 59cab00c6194dc8438fe78a6d1a6b5c4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 130749954619186808, guid: 59cab00c6194dc8438fe78a6d1a6b5c4,
         type: 3}
@@ -7784,7 +7784,7 @@ PrefabInstance:
     - target: {fileID: 130749954619186808, guid: 59cab00c6194dc8438fe78a6d1a6b5c4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 130749954619186808, guid: 59cab00c6194dc8438fe78a6d1a6b5c4,
         type: 3}
@@ -7799,7 +7799,7 @@ PrefabInstance:
     - target: {fileID: 130749954619186808, guid: 59cab00c6194dc8438fe78a6d1a6b5c4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 130749954619186808, guid: 59cab00c6194dc8438fe78a6d1a6b5c4,
         type: 3}
@@ -7851,6 +7851,11 @@ PrefabInstance:
       propertyPath: animLuz
       value: 
       objectReference: {fileID: 1815425551}
+    - target: {fileID: 130749954619186810, guid: 59cab00c6194dc8438fe78a6d1a6b5c4,
+        type: 3}
+      propertyPath: startTime
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 130749954619186812, guid: 59cab00c6194dc8438fe78a6d1a6b5c4,
         type: 3}
       propertyPath: Player
