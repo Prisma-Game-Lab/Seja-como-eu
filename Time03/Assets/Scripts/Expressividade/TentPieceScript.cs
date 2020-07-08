@@ -6,7 +6,6 @@ public class TentPieceScript : MonoBehaviour
 {
 
     private Rigidbody _rb;
-    private Transform parentTr;
     private Transform _t;
 
     // Start is called before the first frame update
@@ -21,7 +20,6 @@ public class TentPieceScript : MonoBehaviour
     private void OnEnable() 
     {
         Tentaculo.speedChange += Boost;
-        parentTr = _t.parent;
     }
     public void Boost(float force)
     {
