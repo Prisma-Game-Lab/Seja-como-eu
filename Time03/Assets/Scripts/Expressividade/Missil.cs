@@ -8,16 +8,22 @@ public class Missil : MonoBehaviour
     public float speed;
     public float autoTime;
     private bool following = true;
+    private GeneralCounts counts;
 
     // Start is called before the first frame update
     void Start()
     {
+        counts = SaveSystem.GetInstance().generalCounts;
         StartCoroutine(Autopilot());
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(counts.ExpressividadeIsMorto)
+        {
+            Destroy(gameObject);
+        }
         if(following)
         {
             FaceTarget(target.position + new Vector3(0, 0.5f, 0));
