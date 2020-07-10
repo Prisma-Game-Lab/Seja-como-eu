@@ -11,13 +11,17 @@ public class PunchFloor : MonoBehaviour
     public float Delay;
     private MDM Mestre;
 
+    private Animator anim;
+
     void Start()
     {
         Cooldown += Delay;
         Mestre = GetComponent<MDM>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     public void Floor() {
+        anim.SetTrigger("atq4");
         StartCoroutine(EFloor());
     }
 

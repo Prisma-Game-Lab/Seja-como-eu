@@ -1,0 +1,309 @@
+fileFormatVersion: 2
+guid: b76bfc93c26c2424cbf48d36c0205b9e
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: -623603649343465320
+    second: Scene
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Banco 1
+    second: {fileID: 2100000, guid: 824536d3dd6a5d64aa55f21345abaa28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Banco 2
+    second: {fileID: 2100000, guid: df6a10a5a58ccb643929cffdd1e52a0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bau 1
+    second: {fileID: 2100000, guid: 85d9d999b7d51434195b434b71475d6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bau 2
+    second: {fileID: 2100000, guid: eeb48d33d7d527745934cef12c206875, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabo
+    second: {fileID: 2100000, guid: abce2b57ea9b7744ca7852f978382885, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chao
+    second: {fileID: 2100000, guid: 0440faebccce6d34bbb28960189ea5f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chao 2
+    second: {fileID: 2100000, guid: d84ab205199d0a74dbc16ac45bbb9581, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chao 3
+    second: {fileID: 2100000, guid: d79141338a9393845a134f3b612e529d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corda
+    second: {fileID: 2100000, guid: 46c1d019c5728e149b0001616553cfa7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corrente
+    second: {fileID: 2100000, guid: bd4b0c8f60e754b4486bcbe0f991c516, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cortina Frente 1.001
+    second: {fileID: 2100000, guid: f692911ad6bf95d4ea69726e9d691185, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cortina Frente 2.001
+    second: {fileID: 2100000, guid: 32591ea752e4d4e459dcb878a17d5704, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cortina Frente 3
+    second: {fileID: 2100000, guid: 88c4047a73fd7984cb88631459c0a950, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cortina Tras 1.001
+    second: {fileID: 2100000, guid: c9fab336afb2c904399dc1aa5a5c96a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cortina Tras 2.001
+    second: {fileID: 2100000, guid: 2cc53e9fecf051a4aa8cd30cb702421a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escudo
+    second: {fileID: 2100000, guid: 3d4e1b5cf488ca14a8dd7b7a22c656c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Janela
+    second: {fileID: 2100000, guid: 4fbf1d105ec773f4899cece81e1c0293, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Janela 2
+    second: {fileID: 2100000, guid: 07c8915a3b6f7be4b92f547b53181474, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jarro
+    second: {fileID: 2100000, guid: 99b7afcc24c0a67499137931d0dbc691, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamina
+    second: {fileID: 2100000, guid: 915c99f86b4657642afa36fccede2969, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Luva
+    second: {fileID: 2100000, guid: a33d492f5ec7032468e0c05316ff177e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Macaneta
+    second: {fileID: 2100000, guid: c8d316e0bff2e7d4585d29d29df62996, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Palco
+    second: {fileID: 2100000, guid: 684b7d42f06b3614eab8babe55d552f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parede
+    second: {fileID: 2100000, guid: 50e907fa9d746b94fa5924d1b2bada63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Parede 2
+    second: {fileID: 2100000, guid: 7b071a970fde9c746a808e11740e1e59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ponta
+    second: {fileID: 2100000, guid: 8a9a51154287edf47bc8a44d9790c296, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Porta
+    second: {fileID: 2100000, guid: 4cd2bdcfe16583d43a4b4b85c797aebf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Porta 2
+    second: {fileID: 2100000, guid: 2d80f85719f32324b9788f94ff6c8c1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Quadro 1
+    second: {fileID: 2100000, guid: cd6324114bcc4a0448e7cf91bd8f7ad4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Quadro 2
+    second: {fileID: 2100000, guid: 6b59f5ce048306f4190d392e935588ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rodape
+    second: {fileID: 2100000, guid: 5b813d4842baf9d49b60316c5e2c7701, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tapete
+    second: {fileID: 2100000, guid: efa0924ffbe374e4893c523b457efa30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tapete 1
+    second: {fileID: 2100000, guid: eaac058aa0822664fb6d030ffd2fe363, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tapete 2
+    second: {fileID: 2100000, guid: cff5a276d1617d74e9e501c31dfbc87c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tapete2
+    second: {fileID: 2100000, guid: 71d875cb0480d5a43bdfc433c325158f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teto
+    second: {fileID: 2100000, guid: 0e4e471f2f229094c8346de7ea0e8454, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tranca
+    second: {fileID: 2100000, guid: a0e657391835d854ba59da32f2e5f3c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trono
+    second: {fileID: 2100000, guid: eebe54335baa9794abf50d89ae67b5d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trono 2
+    second: {fileID: 2100000, guid: b99a8e0d96fbee44eba9c92200ebf644, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trono 3
+    second: {fileID: 2100000, guid: c4ba133ba658666419c0c0d9c8cb018a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: luz 1
+    second: {fileID: 2100000, guid: 0eb605e5d7352334e853ec297e091ed0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: luz 2
+    second: {fileID: 2100000, guid: fadbe10941340e24c8253f1baba16f6b, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

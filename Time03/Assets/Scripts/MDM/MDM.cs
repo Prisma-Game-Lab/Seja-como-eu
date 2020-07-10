@@ -33,6 +33,9 @@ public class MDM : MonoBehaviour
     private GeneralCounts Counts;
     private DisplayFrase DF;
 
+    private Animator anim;
+    public GameObject armor1,armor2,armor3,armor4,armor5,armor6;
+
     void Start()
     {
         DF = GetComponent<DisplayFrase>();
@@ -66,6 +69,8 @@ public class MDM : MonoBehaviour
 
         PUScript = GetComponent<PunchUltimate>();
         Ultimate = new Skills(100,0,true,PUScript.Ultimate);
+
+        anim = GetComponentInChildren<Animator>();
 
         StartCoroutine(ResetCooldown());
         Platform();
@@ -112,6 +117,13 @@ public class MDM : MonoBehaviour
         DamagePlatforms[Level].SetActive(false);
         if(CurrentHP <= 0) {
             WinGame();
+            anim.SetTrigger("death");
+            armor1.SetActive(false);
+            armor2.SetActive(false);
+            armor3.SetActive(false);
+            armor4.SetActive(false);
+            armor5.SetActive(false);
+            armor6.SetActive(false);
         }
     }
 

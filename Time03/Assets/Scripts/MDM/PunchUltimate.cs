@@ -12,13 +12,17 @@ public class PunchUltimate : MonoBehaviour
     public Transform Player;
     private MDM Mestre;
 
+    private Animator anim;
+
     void Start()
     {
         Mestre = GetComponent<MDM>();
+        anim = GetComponentInChildren<Animator>();
     }
 
 
     public void Ultimate() {
+        anim.SetTrigger("atq1");
         if(Mestre.GetLevel() == 0)
             StartCoroutine(Level0());
         if(Mestre.GetLevel() == 1)

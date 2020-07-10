@@ -12,9 +12,11 @@ public class PunchPrison : MonoBehaviour
     public GameObject PrefabPrisonWarning;
     public Transform Player;
 
+    private Animator anim;
+
     void Start()
     {
-        
+        anim = GetComponentInChildren<Animator>();
     }
 
     
@@ -24,6 +26,7 @@ public class PunchPrison : MonoBehaviour
     }
 
     public void Prison() {
+        anim.SetTrigger("atq1");
         StartCoroutine(EPrison());
     }
 

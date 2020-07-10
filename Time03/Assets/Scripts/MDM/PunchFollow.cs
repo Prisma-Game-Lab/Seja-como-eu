@@ -10,9 +10,13 @@ public class PunchFollow : MonoBehaviour
     public Transform PlayerPosition;
     public float Cooldown;
     private MDM Mestre;
+
+    private Animator anim;
+
     void Start()
     {
         Mestre = GetComponent<MDM>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     
@@ -22,6 +26,7 @@ public class PunchFollow : MonoBehaviour
     }
 
     public void Follow() {
+        anim.SetTrigger("atq2");
         if(Mestre.GetLevel() == 0)
             Level0();
         if(Mestre.GetLevel() == 1)

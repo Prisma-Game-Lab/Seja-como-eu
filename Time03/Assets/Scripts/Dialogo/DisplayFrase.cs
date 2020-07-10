@@ -22,16 +22,20 @@ public class DisplayFrase : MonoBehaviour
     private int NextIndex = 0;
     private GeneralCounts Counts;
 
+    private Animator anim;
+
     void Start()
     {
         Counts = SaveSystem.GetInstance().generalCounts;
         Chat = ChatBox.transform.GetChild(0).GetComponent<Text>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     
     void Update()
     {
         if(Trigger.CanChat() && Input.GetAxisRaw("PressButton") > 0 && ControlAcess) {
+            anim.SetBool("Talk", true);
             StartCoroutine(GrantAcess());
             if(FraseEnd && Frases.Frase[Counts.Index].Turn != MyTurn) {
                 HideFrase();
@@ -97,6 +101,7 @@ public class DisplayFrase : MonoBehaviour
         ChatBox.gameObject.SetActive(false);
         if(Frases.Frase[Counts.Index].Turn == 0) {
             Trigger.EndConversation();
+            anim.SetBool("Talk", false);
         }
         StartIt = true;
     }

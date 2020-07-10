@@ -12,14 +12,17 @@ public class PunchRain : MonoBehaviour
     private bool RainingMan = false;
     private MDM Mestre;
 
+    private Animator anim;
 
     void Start()
     {
         Mestre = GetComponent<MDM>();
         PrefabHelper.transform.localScale.Set(PrefabPunches.transform.localScale.x,0.05f,PrefabPunches.transform.localScale.z);
+        anim = GetComponentInChildren<Animator>();
     }
 
     public void Rain() {
+        anim.SetTrigger("atq3");
         StartCoroutine(ERain());
         RainingMan = true;
     }
