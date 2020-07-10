@@ -2232,7 +2232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Text
-      value: "Voc\xEA j\xE1 derrotou a expressividade."
+      value: "Voc\xEA j\xE1 derrotou a Expressividade."
       objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -2396,7 +2396,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
@@ -7962,6 +7962,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_Text
+      value: "Voc\xEA j\xE1 derrotou o Carinho."
+      objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8988,7 +8992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Text
-      value: "Voc\xEA j\xE1 derrotou a Tristeza."
+      value: "Voc\xEA j\xE1 derrotou a Fraqueza."
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_FontData.m_Font

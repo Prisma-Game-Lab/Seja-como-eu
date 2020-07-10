@@ -1041,6 +1041,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5640498321835401035, guid: 19159773f6d86e942a71f39eb6db8f85,
+        type: 3}
+      propertyPath: m_Text
+      value: Madu Venancio
+      objectReference: {fileID: 0}
     - target: {fileID: 5896853681034347128, guid: 19159773f6d86e942a71f39eb6db8f85,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1070,6 +1075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138948553389547000, guid: 19159773f6d86e942a71f39eb6db8f85,
+        type: 3}
+      propertyPath: m_Name
+      value: Madu Venancio
       objectReference: {fileID: 0}
     - target: {fileID: 6398228030235390782, guid: 19159773f6d86e942a71f39eb6db8f85,
         type: 3}
