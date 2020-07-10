@@ -59,6 +59,12 @@ public class EspressividadeScript : MonoBehaviour
             skillsCD.ChooseSkill(skills);
             StartCoroutine(ResetCooldown());
         }
+        #if UNITY_EDITOR
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            TakeDamage();
+        }
+        #endif
     }
 
     private IEnumerator ResetCooldown()
