@@ -42,14 +42,14 @@ public class ShowStats : MonoBehaviour
         Counts.Stats["ExpressividadeDeathCount"];
         Time.timeScale = 0f;
         transform.GetChild(0).gameObject.SetActive(true);
-        StatsText.text = $"Número de Dashes: {TotalDashs}\n\nNúmero de Mortes: {TotalDeaths}\n\n";
+        StatsText.text = $"Número de Rolamentos: {TotalDashs}\n\nNúmero de Mortes: {TotalDeaths}\n\n";
 
-        StatsText.text += $"Número de Dashes no Hub: {Counts.Stats["HubDashCount"]}\n\n";
+        StatsText.text += $"Número de Rolamentos no Hub: {Counts.Stats["HubDashCount"]}\n\n";
 
         StatsText.text += Counts.CarinhoIsMorto?$"Tempo de Batalha do Carinho: {ConvertToTime(Counts.CarinhoCompleteTimer)}\n\n"
         :"Carinho Ainda não foi Derrotado.\n\n";
 
-        StatsText.text += Counts.CarinhoIsMorto?$"Número de Dashes no Carinho: {Counts.Stats["CarinhoDashCount"]}\n\n"
+        StatsText.text += Counts.CarinhoIsMorto?$"Número de Rolamentos no Carinho: {Counts.Stats["CarinhoDashCount"]}\n\n"
         :"";
 
         StatsText.text += Counts.CarinhoIsMorto?$"Número de Mortes no Carinho: {Counts.Stats["CarinhoDeathCount"]}\n\n"
@@ -58,7 +58,7 @@ public class ShowStats : MonoBehaviour
         StatsText.text += Counts.TristezaIsMorto?$"Tempo de Batalha da Tristeza: {ConvertToTime(Counts.TristezaCompleteTimer)}\n\n"
         :"Fraqueza Ainda não foi Derrotada.\n\n";
 
-        StatsText.text += Counts.TristezaIsMorto?$"Número de Dashes na Tristeza: {Counts.Stats["TristezaDashCount"]}\n\n"
+        StatsText.text += Counts.TristezaIsMorto?$"Número de Rolamentos na Tristeza: {Counts.Stats["TristezaDashCount"]}\n\n"
         :"";
 
         StatsText.text += Counts.TristezaIsMorto?$"Número de Mortes na Tristeza: {Counts.Stats["TristezaDeathCount"]}\n\n"
@@ -67,7 +67,7 @@ public class ShowStats : MonoBehaviour
         StatsText.text += Counts.ExpressividadeIsMorto?$"Tempo de Batalha da Expressividade: {ConvertToTime(Counts.ExpressividadeCompleteTimer)}\n\n"
         :"Expressividade Ainda não foi Derrotada.\n\n";
 
-        StatsText.text += Counts.ExpressividadeIsMorto?$"Número de Dashes na Expressividade: {Counts.Stats["ExpressividadeDashCount"]}\n\n"
+        StatsText.text += Counts.ExpressividadeIsMorto?$"Número de Rolamentos na Expressividade: {Counts.Stats["ExpressividadeDashCount"]}\n\n"
         :"";
 
         StatsText.text += Counts.ExpressividadeIsMorto?$"Número de Mortes na Expressividade: {Counts.Stats["ExpressividadeDeathCount"]}\n\n"
@@ -76,7 +76,7 @@ public class ShowStats : MonoBehaviour
         StatsText.text += Counts.MDMIsMorto?$"Tempo de Batalha do Mestre dos Machos: {ConvertToTime(Counts.MDMCompleteTimer)}\n\n"
         :"????????????????????????????\n\n";
 
-        StatsText.text += Counts.MDMIsMorto?$"Número de Dashes no Mestre dos Machos: {Counts.Stats["MDMDashCount"]}\n\n"
+        StatsText.text += Counts.MDMIsMorto?$"Número de Rolamentos no Mestre dos Machos: {Counts.Stats["MDMDashCount"]}\n\n"
         :"";
 
         StatsText.text += Counts.MDMIsMorto?$"Número de Mortes no Mestre dos Machos: {Counts.Stats["MDMDeathCount"]}\n\n"
