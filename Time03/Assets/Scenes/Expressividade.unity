@@ -891,6 +891,26 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 8580737412242739418, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412242739418, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412278036082, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412278036082, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 084637cc4a0561949bd0613bd7107333, type: 3}
 --- !u!114 &462092582 stripped
