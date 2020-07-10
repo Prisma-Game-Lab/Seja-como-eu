@@ -67,11 +67,13 @@ public class TristezaScript : MonoBehaviour
     
     void Update()
     {
+        #if UNITY_EDITOR
         if(Input.GetKeyDown(KeyCode.K))
         {
             Damage();
         }
-
+        #endif
+        
         if(!Counts.TristezaIsMorto) {
             Counts.TristezaCompleteTimer += Time.deltaTime;
         }

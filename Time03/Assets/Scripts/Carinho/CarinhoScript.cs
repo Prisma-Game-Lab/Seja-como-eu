@@ -77,12 +77,14 @@ public class CarinhoScript : MonoBehaviour
         if(!Counts.CarinhoIsMorto) {
             Counts.CarinhoCompleteTimer += Time.deltaTime;
         }
+
         #if UNITY_EDITOR
         if(Input.GetKeyDown(KeyCode.K))
         {
             Damage(null);
         }
         #endif
+        
         if(health > 0)
         {
             float distance = Vector3.Distance(PlayerPosition.position, transform.position); //Atual distancia entre o carinho e o player
