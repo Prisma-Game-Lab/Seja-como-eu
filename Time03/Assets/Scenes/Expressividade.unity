@@ -618,7 +618,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 1
   portalExit: {fileID: 168924636}
-  Player: {fileID: 1743933132}
 --- !u!114 &423537700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,6 +874,42 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412242739417, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412242739417, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: aab377c63ac751c45bc6ae4d8138b548,
+        type: 3}
+    - target: {fileID: 8580737412242739417, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412242739418, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412242739418, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412278036082, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412278036082, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 084637cc4a0561949bd0613bd7107333, type: 3}
@@ -2199,6 +2234,7 @@ MonoBehaviour:
   GameConfigUI: {fileID: 1272835564}
   player: {fileID: 1743933132}
   Canvas: {fileID: 1272835561}
+  canPause: 1
 --- !u!114 &1735569712
 MonoBehaviour:
   m_ObjectHideFlags: 0

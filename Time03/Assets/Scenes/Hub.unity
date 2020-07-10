@@ -2332,7 +2332,7 @@ PrefabInstance:
     - target: {fileID: 8489818885395128899, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Expressividade
+      value: CorredorExpressividade
       objectReference: {fileID: 0}
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
