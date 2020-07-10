@@ -152,7 +152,7 @@ public class MDM : MonoBehaviour
 
     public void FinishUltimate() {
         UltimateNow = false;
-        if(CurrentHP != 1) Platform();
+        Platform();
     }
 
     public void Charge() {

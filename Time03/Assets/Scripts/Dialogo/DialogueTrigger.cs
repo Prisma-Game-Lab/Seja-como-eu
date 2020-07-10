@@ -22,6 +22,7 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     public void TriggerConversation(int index, string Key) {
+        mp.DesligaAnim();
         mp.enabled = false;
         EventTriggered = true;
         Counts.Index = index;

@@ -142,4 +142,9 @@ public class MovimentPlayer : MonoBehaviour
             return;
         }
     }
+
+    public void DesligaAnim() {
+        anim.SetBool("Idle",true);
+        Footsteps.Stop();
+    }
 }
