@@ -1167,7 +1167,7 @@ Transform:
   m_LocalScale: {x: 0.29, y: 6.464946, z: 5.474082}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &424947938 stripped
 GameObject:
@@ -12077,7 +12077,7 @@ PrefabInstance:
     - target: {fileID: 8097534614779577005, guid: 6bb749f2a0aa6db4b90be0d7a9ce40d0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 8097534614779577005, guid: 6bb749f2a0aa6db4b90be0d7a9ce40d0,
         type: 3}
@@ -12271,7 +12271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameLabel: {fileID: 1121371330}
-  MainCamera: {fileID: 0}
+  MainCamera: {fileID: 517646523}
 --- !u!135 &1107967719
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13349,7 +13349,7 @@ Transform:
   - {fileID: 1306594828}
   - {fileID: 1629740318}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1416947968
 GameObject:
@@ -13559,7 +13559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameLabel: {fileID: 141840880}
-  MainCamera: {fileID: 0}
+  MainCamera: {fileID: 517646523}
 --- !u!135 &1498099021
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14697,7 +14697,7 @@ Transform:
   m_Children:
   - {fileID: 1525771148}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1835724301
 GameObject:
