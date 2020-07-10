@@ -32,10 +32,10 @@ MonoBehaviour:
       homem\u201D."
     Turn: 5
     Options: []
-  - Texto: "Voc\xEA n\xE3o precisa da aprova\xE7\xE3o do Mestre dos Machos.\r\n"
+  - Texto: "Voc\xEA n\xE3o precisa da aprova\xE7\xE3o do Mestre dos Machos."
     Turn: 5
     Options: []
-  - Texto: "Se voc\xEA se sente um homem, voc\xEA j\xE1 \xE9 homem.\r\n"
+  - Texto: "Se voc\xEA se sente um homem, voc\xEA j\xE1 \xE9 homem."
     Turn: 5
     Options: []
   - Texto: "Voc\xEA s\xF3 precisa ser voc\xEA."
