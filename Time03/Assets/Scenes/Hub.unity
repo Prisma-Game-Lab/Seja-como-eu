@@ -1349,7 +1349,7 @@ PrefabInstance:
     - target: {fileID: 8489818885395128899, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Expressividade
+      value: CorredorExpressividade
       objectReference: {fileID: 0}
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -7123,6 +7123,7 @@ MonoBehaviour:
   GameConfigUI: {fileID: 964509620}
   player: {fileID: 958304170}
   Canvas: {fileID: 1227211379}
+  canPause: 1
 --- !u!114 &1806064549
 MonoBehaviour:
   m_ObjectHideFlags: 0
