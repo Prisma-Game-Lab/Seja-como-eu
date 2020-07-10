@@ -15,11 +15,13 @@ public class TentPieceScript : MonoBehaviour
             _rb = GetComponent<Rigidbody>();
         if(_t == null)
             _t = GetComponent<Transform>();
+        Tentaculo.speedChange += Boost;
     }
    
-    private void OnEnable() 
+    private void OnDestroy() 
     {
-        Tentaculo.speedChange += Boost;
+        Tentaculo.speedChange -= Boost;
+
     }
     public void Boost(float force)
     {
@@ -35,7 +37,6 @@ public class TentPieceScript : MonoBehaviour
     {
         if(other.transform.CompareTag("Finish"))
         {
-            Tentaculo.speedChange -= Boost;
             TentPooling.instance.Dispose(this.gameObject);
         }
     }

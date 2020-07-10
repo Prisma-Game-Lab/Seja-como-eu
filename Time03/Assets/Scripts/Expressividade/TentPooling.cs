@@ -66,6 +66,7 @@ public class TentPooling : MonoBehaviour
             GameObject t = lis[0];
             lis.RemoveAt(0);
             Transform tentT= t.GetComponent<Transform>();
+            t.GetComponent<Rigidbody>().velocity = Vector3.zero;
             t.SetActive(true);
             tentT.parent = parent;
             tentT.position = parent.position;
