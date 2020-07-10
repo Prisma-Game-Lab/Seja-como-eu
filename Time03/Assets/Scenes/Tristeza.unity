@@ -4409,6 +4409,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Luz
       objectReference: {fileID: 0}
+    - target: {fileID: 8097534614779577004, guid: 6bb749f2a0aa6db4b90be0d7a9ce40d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8097534614779577005, guid: 6bb749f2a0aa6db4b90be0d7a9ce40d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4580,6 +4585,7 @@ MonoBehaviour:
   GameConfigUI: {fileID: 539616000}
   player: {fileID: 1548817916}
   Canvas: {fileID: 539615997}
+  canPause: 1
 --- !u!1 &1097841678
 GameObject:
   m_ObjectHideFlags: 0
