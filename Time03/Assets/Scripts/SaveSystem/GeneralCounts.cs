@@ -34,4 +34,6 @@ public class GeneralCounts : ScriptableObject
 
    public List<int> StatsInts = new List<int>();
    public List<bool> EventsBools = new List<bool>();
+
+   public bool DictionaryExists = false;
 }

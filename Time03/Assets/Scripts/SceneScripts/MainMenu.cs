@@ -54,6 +54,8 @@ public class MainMenu : MonoBehaviour
             Counts.StatsStrings.Add(s);
             Counts.StatsInts.Add(0);
         }
+        Counts.DictionaryExists = true;
+        save.WriteFeedbackLog();
         LoadingSceneControl.CurrentScene = "Hub";
         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
     }

@@ -34,6 +34,21 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
+    // Feedback ---------------
+
+    private static string FeedbackFileName = "feedback";
+
+    public static string FeedbackPath
+    {
+        get
+        {
+            return Path.Combine(Application.persistentDataPath, FeedbackFileName + ".log");
+        }
+    }
+
+    // --------------------------
+
+
     private static SaveSystem instance;
     public static SaveSystem GetInstance()
     {
@@ -88,6 +103,10 @@ public class SaveSystem : MonoBehaviour
         using (StreamWriter streamWriter = File.CreateText (VersionSavePath))
         {
             streamWriter.Write (saveVersion.ToString());
+        }
+
+        if(generalCounts.DictionaryExists) {
+            WriteFeedbackLog();
         }
     }
 
@@ -161,5 +180,40 @@ public class SaveSystem : MonoBehaviour
         catch (Exception e) {
             Debug.LogWarning("Could not delete file:" + e.Message);
         }
+    }
+
+    public void WriteFeedbackLog() {
+        int TotalDashs;
+        int TotalDeaths;
+        TotalDashs = generalCounts.Stats["HubDashCount"] + generalCounts.Stats["CarinhoDashCount"] + generalCounts.Stats["TristezaDashCount"] +
+        generalCounts.Stats["ExpressividadeDashCount"] + generalCounts.Stats["MDMDashCount"];
+        TotalDeaths = generalCounts.Stats["CarinhoDeathCount"] + generalCounts.Stats["TristezaDeathCount"] + generalCounts.Stats["MDMDeathCount"] +
+        generalCounts.Stats["ExpressividadeDeathCount"];
+        using(StreamWriter sw = new StreamWriter(FeedbackPath,false)) {
+            sw.WriteLine($"Número de Rolamentos: {TotalDashs}");
+            sw.WriteLine($"Número de Mortes: {TotalDeaths}");
+            sw.WriteLine($"Número de Rolamentos no Hub: {generalCounts.Stats["HubDashCount"]}");
+            sw.WriteLine($"Tempo de Batalha do Carinho: {ConvertToTime(generalCounts.CarinhoCompleteTimer)}");
+            sw.WriteLine($"Número de Rolamentos no Carinho: {generalCounts.Stats["CarinhoDashCount"]}");
+            sw.WriteLine($"Número de Mortes no Carinho: {generalCounts.Stats["CarinhoDeathCount"]}");
+            sw.WriteLine($"Tempo de Batalha da Tristeza: {ConvertToTime(generalCounts.TristezaCompleteTimer)}");
+            sw.WriteLine($"Número de Rolamentos na Tristeza: {generalCounts.Stats["TristezaDashCount"]}");
+            sw.WriteLine($"Número de Mortes na Tristeza: {generalCounts.Stats["TristezaDeathCount"]}");
+            sw.WriteLine($"Tempo de Batalha da Expressividade: {ConvertToTime(generalCounts.ExpressividadeCompleteTimer)}");
+            sw.WriteLine($"Número de Rolamentos na Expressividade: {generalCounts.Stats["ExpressividadeDashCount"]}");
+            sw.WriteLine($"Número de Mortes na Expressividade: {generalCounts.Stats["ExpressividadeDeathCount"]}");
+            sw.WriteLine($"Tempo de Batalha do Mestre dos Machos: {ConvertToTime(generalCounts.MDMCompleteTimer)}");
+            sw.WriteLine($"Número de Rolamentos no Mestre dos Machos: {generalCounts.Stats["MDMDashCount"]}");
+            sw.WriteLine($"Número de Mortes no Mestre dos Machos: {generalCounts.Stats["MDMDeathCount"]}");
+            sw.WriteLine($"Tempo Total de Jogo: {ConvertToTime(generalCounts.TotalPlayTime)}");
+        }
     }  
+
+    private string ConvertToTime(float time) {
+        float minutes = time/60;
+        float seconds = time%60;
+        string min = minutes.ToString("00");
+        string sec = seconds.ToString("00");
+        return $"{min}:{sec}";
+    }
 }
