@@ -9,7 +9,7 @@ public class MovimentPlayer : MonoBehaviour
     public float RotationSpeed;
     public float DashSpeed;
     public float dashCooldown;
-    public AudioSource Footsteps;
+    private AudioSource Footsteps;
 
     [HideInInspector]
     public bool dashing = false;
@@ -34,6 +34,7 @@ public class MovimentPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Footsteps = GetComponent<AudioSource>();
         _rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
         Counts = SaveSystem.GetInstance().generalCounts;
@@ -64,7 +65,7 @@ public class MovimentPlayer : MonoBehaviour
 
                 anim.SetBool("Idle",false);
 
-                Footsteps.pitch = Random.Range(0.7f, 1.3f);
+                Footsteps.pitch = Random.Range(0.75f, 1.25f);
                 if(!Footsteps.isPlaying) {
                 Footsteps.Play();
                 }
