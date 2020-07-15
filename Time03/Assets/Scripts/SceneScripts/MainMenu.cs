@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public AudioSource SceneTheme;
 
-    public GameObject ContinueButton;
+    public Button ContinueButton; 
 
     private SaveSystem save;
 
@@ -22,7 +23,7 @@ public class MainMenu : MonoBehaviour
         SceneTheme.Play();
 
         if(!SaveSystem.SucessfulLoad) {
-            ContinueButton.SetActive(false);
+            ContinueButton.interactable = false;
         }
     }
 
@@ -31,6 +32,14 @@ public class MainMenu : MonoBehaviour
     {
         LoadingSceneControl.CurrentScene = SceneName;
         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Single);
+
+        Time.timeScale = 1f;
+        GeneralCounts.Kill = false;
+    }
+
+    public void ChangeSceneDireto(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
 
         Time.timeScale = 1f;
         GeneralCounts.Kill = false;

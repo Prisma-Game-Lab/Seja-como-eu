@@ -26,6 +26,14 @@ public class SceneControl : MonoBehaviour
         GeneralCounts.Kill = false;
     }
 
+    public void ChangeSceneDireto(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
+
+        Time.timeScale = 1f;
+        GeneralCounts.Kill = false;
+    }
+
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
