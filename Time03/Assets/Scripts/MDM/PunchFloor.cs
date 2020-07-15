@@ -10,6 +10,9 @@ public class PunchFloor : MonoBehaviour
     public float Cooldown;
     public float Delay;
     private MDM Mestre;
+    public AudioSource mtasFacas;
+    public AudioSource MDM;
+
 
     private Animator anim;
 
@@ -21,8 +24,11 @@ public class PunchFloor : MonoBehaviour
     }
 
     public void Floor() {
+        MDM.pitch = Random.Range(1f, 1.75f);
+        MDM.Play();
         anim.SetTrigger("atq4");
         StartCoroutine(EFloor());
+        mtasFacas.Play();
     }
 
     public float GetCD() {

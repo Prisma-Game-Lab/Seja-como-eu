@@ -1008,7 +1008,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 927959280}
+      objectReference: {fileID: 0}
     - target: {fileID: 4167262538542067892, guid: 85ca990acc848844f9a17d5f104c07c2,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1164,7 +1164,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1871274912}
+      objectReference: {fileID: 0}
     - target: {fileID: 4167262539250013613, guid: 85ca990acc848844f9a17d5f104c07c2,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -7342,6 +7342,7 @@ MonoBehaviour:
   GameConfigUI: {fileID: 287512634}
   player: {fileID: 170001851}
   Canvas: {fileID: 287010143}
+  canPause: 1
 --- !u!1 &897249398
 GameObject:
   m_ObjectHideFlags: 0
@@ -7476,25 +7477,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2127816344}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &927959278 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262538542067894, guid: 85ca990acc848844f9a17d5f104c07c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 287512631}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &927959280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927959278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a607b92de81cf5345b8b64cc45bb844c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: 76f8dfee6a5ac944b95721976104ebf6, type: 2}
 --- !u!1001 &944605139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23356,7 +23338,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2157238324347343886, guid: 76f8dfee6a5ac944b95721976104ebf6,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 089ae591adee7744aa1858f7c0097206, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d002e681309584ec2aa7624a50af991a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -28373,25 +28355,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1871274910 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4167262539250013615, guid: 85ca990acc848844f9a17d5f104c07c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 287512631}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1871274912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1871274910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a607b92de81cf5345b8b64cc45bb844c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: 76f8dfee6a5ac944b95721976104ebf6, type: 2}
 --- !u!1 &1875316381
 GameObject:
   m_ObjectHideFlags: 0
