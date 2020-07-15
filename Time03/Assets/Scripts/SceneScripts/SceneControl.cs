@@ -49,7 +49,7 @@ public class SceneControl : MonoBehaviour
 
     void Update()
     {
-        if(Counts.Index == 79) {
+        if(SceneManager.GetActiveScene().name != "Credits" && Counts.Index == 79) {
             SaveSystem.GetInstance().SaveState();
             ChangeScene("MDM");
         }
