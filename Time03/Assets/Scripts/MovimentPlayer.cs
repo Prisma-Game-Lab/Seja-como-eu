@@ -24,10 +24,8 @@ public class MovimentPlayer : MonoBehaviour
     private Vector3 previousDirection;
     private Quaternion Rotation => Quaternion.LookRotation(RotationDirection);
     private Vector3 RotationDirection => Vector3.RotateTowards(transform.forward, previousDirection, RotationSpeed * Time.deltaTime, 0.0f);
-
     //teclado
     private Vector2 kInput;
-
     private GeneralCounts Counts;
     private string CurrentScene;
 
@@ -122,6 +120,34 @@ public class MovimentPlayer : MonoBehaviour
     }
 
     private void DashCounter() {
+        switch(CurrentScene)
+        {
+            case "Carinho":
+            case "CorredorCarinho" :
+                Counts.Stats["CarinhoDashCount"]++;
+                return;
+
+            case "Tristeza":
+            case "CorredorTristeza":
+                Counts.Stats["TristezaDashCount"]++;
+                return;
+
+            case "Expressividade":
+            case "CorredorExpressividade":
+                Counts.Stats["ExpressividadeDashCount"]++;
+                return;
+
+            case "MDM":
+                Counts.Stats["MDMDashCount"]++;
+                return;
+
+            case "Hub":
+                Counts.Stats["HubDashCount"]++;
+                return;
+            default:
+                return;
+        }
+        /*
         if(CurrentScene.Contains("Carinho")) {
             Counts.Stats["CarinhoDashCount"]++;
             return;
@@ -142,10 +168,12 @@ public class MovimentPlayer : MonoBehaviour
             Counts.Stats["HubDashCount"]++;
             return;
         }
+        */
     }
 
     public void DesligaAnim() {
         anim.SetBool("Idle",true);
         Footsteps.Stop();
     }
+
 }
