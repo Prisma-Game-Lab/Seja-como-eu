@@ -55,9 +55,15 @@ public class GameManager : MonoBehaviour
     public void Death() {
         player.GetComponent<RagdollController>().DoRagdoll(true);
         player.GetComponent<MovimentPlayer>().enabled = false;
+        DeathCounter();
+        StartCoroutine("DeathDelay");
+    }
+
+    private IEnumerator DeathDelay()
+    {
+        yield return new WaitForSeconds(0.8f);
         Canvas.SetActive(true);
         DeathScreen.SetActive(true);
-        DeathCounter();
     }
 
     public void Pause()
