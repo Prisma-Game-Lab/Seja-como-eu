@@ -88,7 +88,7 @@ public class HeartOrbit : MonoBehaviour
     private IEnumerator DestroyParticles()
     {
 
-        yield return new WaitUntil(() => Counts.CarinhoIsMorto);
+        yield return new WaitUntil(() => carinhoHearts.Length == 0);
         ps.Clear();
         ps.Stop();
         Debug.Log("ioioioi");
