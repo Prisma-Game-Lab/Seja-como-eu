@@ -81,7 +81,40 @@ public class CarinhoScript : MonoBehaviour
         #if UNITY_EDITOR
         if(Input.GetKeyDown(KeyCode.K))
         {
-            Damage(null);
+            if(agent.enabled && !invulneravel)
+            {
+                health -= 1;
+                carinhoHearts[health].gameObject.SetActive(false);
+                Instantiate(impactParticle, this.transform.position, Quaternion.identity);
+                if (health <= 0)
+                {
+                    Counts.CarinhoIsMorto = true;
+                    DF.Trigger.TriggerConversation(0,"CarinhoMorre");
+                    anim.SetTrigger("Death");
+                    portalExit.SetActive(true);
+                    hoScript.carinhoArea.enabled = false;
+                    PlayerPosition.gameObject.GetComponentInChildren<Animator>().SetBool("Idle", true);
+                }
+                else
+                {
+                    anim.SetTrigger("Damage");              
+                    if(health == fullhealth - 1)
+                    {
+                        Launch.SwitchReady();
+                    }
+                    if(health == fullhealth - 2)
+                    {
+                        Clap.SwitchReady();
+                    }
+                    hoScript.orbitSpeed += 100.0f;
+                    hoScript.maxRadius += 5.0f;
+                    
+                    agent.enabled = false;
+                    invulneravel = true;
+                    StartCoroutine(Stun());
+                }
+            
+            }
         }
         #endif
         
