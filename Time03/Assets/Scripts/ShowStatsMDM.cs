@@ -40,13 +40,13 @@ public class ShowStatsMDM : MonoBehaviour
         StatsText.text += Counts.CarinhoIsMorto?$"Número de Mortes no Carinho: {Counts.Stats["CarinhoDeathCount"]}\n\n"
         :"";
 
-        StatsText.text += Counts.TristezaIsMorto?$"Tempo de Batalha da Tristeza: {ConvertToTime(Counts.TristezaCompleteTimer)}\n\n"
+        StatsText.text += Counts.TristezaIsMorto?$"Tempo de Batalha da Fraqueza: {ConvertToTime(Counts.TristezaCompleteTimer)}\n\n"
         :"Fraqueza Ainda não foi Derrotada.\n\n";
 
-        StatsText.text += Counts.TristezaIsMorto?$"Número de Dashes na Tristeza: {Counts.Stats["TristezaDashCount"]}\n\n"
+        StatsText.text += Counts.TristezaIsMorto?$"Número de Dashes na Fraqueza: {Counts.Stats["TristezaDashCount"]}\n\n"
         :"";
 
-        StatsText.text += Counts.TristezaIsMorto?$"Número de Mortes na Tristeza: {Counts.Stats["TristezaDeathCount"]}\n\n"
+        StatsText.text += Counts.TristezaIsMorto?$"Número de Mortes na Fraqueza: {Counts.Stats["TristezaDeathCount"]}\n\n"
         :"";
 
         StatsText.text += Counts.ExpressividadeIsMorto?$"Tempo de Batalha da Expressividade: {ConvertToTime(Counts.ExpressividadeCompleteTimer)}\n\n"
