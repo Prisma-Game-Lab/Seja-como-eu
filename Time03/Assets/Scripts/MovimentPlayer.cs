@@ -10,6 +10,8 @@ public class MovimentPlayer : MonoBehaviour
     public float DashSpeed;
     public float dashCooldown;
     private AudioSource Footsteps;
+    public AudioClip dashsound;
+    private AudioClip pegadas;
 
     [HideInInspector]
     public bool dashing = false;
@@ -33,6 +35,7 @@ public class MovimentPlayer : MonoBehaviour
     void Start()
     {
         Footsteps = GetComponent<AudioSource>();
+        pegadas = Footsteps.clip;
         _rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
         Counts = SaveSystem.GetInstance().generalCounts;
@@ -102,21 +105,30 @@ public class MovimentPlayer : MonoBehaviour
         if (Input.GetAxis("Dash") == 1)
         {
             anim.SetBool("Dash", true);
+            Footsteps.clip = dashsound;
+            Footsteps.volume = Random.Range(0.68f, 0.72f); 
+            Footsteps.pitch = Random.Range(0.95f, 1.05f);
+            Footsteps.Play();
             DashCounter();
             _rb.AddForce(dir * DashSpeed, ForceMode.Impulse);
             dashing = true;
             dashEnabled = false;
             StartCoroutine(StopTheDash());
+
         }
     }
 
     IEnumerator StopTheDash() {
+
         yield return new WaitForSeconds(tempoDash);
+        Footsteps.volume = 0.26f;
+        Footsteps.clip = pegadas;
         _rb.velocity = Vector3.zero; //eliminar qualquer força restante de outro dash
         anim.SetBool("Dash", false);
         dashing = false;
         yield return new WaitForSeconds(dashCooldown);
         dashEnabled = true;
+
     }
 
     private void DashCounter() {
