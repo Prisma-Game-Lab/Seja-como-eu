@@ -21,22 +21,37 @@ public class HubConversationTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        DF = other.gameObject.GetComponent<DisplayFrase>();
-        if(other.gameObject.CompareTag("Player")) {
-            if(!Counts.CarinhoIsMorto || !Counts.TristezaIsMorto || !Counts.ExpressividadeIsMorto) {
-                if(Counts.Events["PrimeiraConversa"]) {
+        
+        if(other.gameObject.CompareTag("Player")) 
+        {
+            DF = other.gameObject.GetComponent<DisplayFrase>();
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.CompareTag("Player") && Input.GetAxis("Dash") == 1)  
+        {
+            if(!Counts.CarinhoIsMorto || !Counts.TristezaIsMorto || !Counts.ExpressividadeIsMorto) 
+                {
+                if(Counts.Events["PrimeiraConversa"]) 
+                {
                     DF.Trigger.TriggerConversation(0,"PrimeiraConversa");
                 }
-                else {
+                else 
+                {
                     rnd = Random.Range(0,IndexList.Length);
                     DF.Trigger.TriggerConversation(IndexList[rnd],"FraseRandom");
                 }
             }
-            else {
-                if(Counts.Events["DialogoFinal"]) {
+            else 
+            {
+                if(Counts.Events["DialogoFinal"]) 
+                {
                     DF.Trigger.TriggerConversation(32,"DialogoFinal");
                 }
-                else {
+                else 
+                {
                     DF.Trigger.TriggerConversation(78,"DialogoFinal");
                 }
                 
