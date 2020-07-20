@@ -11722,7 +11722,7 @@ GameObject:
   - component: {fileID: 2027183148}
   - component: {fileID: 2027183147}
   m_Layer: 0
-  m_Name: sfx_footsteps
+  m_Name: Click
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
