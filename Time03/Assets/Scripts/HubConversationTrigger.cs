@@ -8,6 +8,7 @@ public class HubConversationTrigger : MonoBehaviour
     private GeneralCounts Counts;
     private int rnd;
     private int[] IndexList = {14,16,18,20,22,24,26,28,30};
+    private bool firstTime;
     void Start()
     {
         Counts = SaveSystem.GetInstance().generalCounts;
@@ -25,12 +26,13 @@ public class HubConversationTrigger : MonoBehaviour
         if(other.gameObject.CompareTag("Player")) 
         {
             DF = other.gameObject.GetComponent<DisplayFrase>();
+            firstTime=true;
         }
     }
 
     void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.CompareTag("Player") && Input.GetAxis("Dash") == 1)  
+        if(firstTime && other.gameObject.CompareTag("Player") && Input.GetAxis("Dash") == 1)  
         {
             if(!Counts.CarinhoIsMorto || !Counts.TristezaIsMorto || !Counts.ExpressividadeIsMorto) 
                 {
@@ -56,6 +58,7 @@ public class HubConversationTrigger : MonoBehaviour
                 }
                 
             }
+            firstTime=false;
         }
     }
 }

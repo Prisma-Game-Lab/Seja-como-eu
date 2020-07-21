@@ -15,7 +15,7 @@ public class MovimentPlayer : MonoBehaviour
 
     [HideInInspector]
     public bool dashing = false;
-    
+    private bool inChat=false;
     private bool dashEnabled = true;
 
     public float tempoDash = 1.0f;
@@ -86,7 +86,7 @@ public class MovimentPlayer : MonoBehaviour
 
     private void Update()
     {
-        if(!dashing && dashEnabled)
+        if(!dashing && dashEnabled && !inChat)
         {
             Dash(previousDirection);
         }
@@ -159,28 +159,6 @@ public class MovimentPlayer : MonoBehaviour
             default:
                 return;
         }
-        /*
-        if(CurrentScene.Contains("Carinho")) {
-            Counts.Stats["CarinhoDashCount"]++;
-            return;
-        }
-        if(CurrentScene.Contains("Tristeza")) {
-            Counts.Stats["TristezaDashCount"]++;
-            return;
-        }
-        if(CurrentScene.Contains("Expressividade")) {
-            Counts.Stats["ExpressividadeDashCount"]++;
-            return;
-        }
-        if(CurrentScene.Contains("MDM")) {
-            Counts.Stats["MDMDashCount"]++;
-            return;
-        }
-        if(CurrentScene.Contains("Hub")) {
-            Counts.Stats["HubDashCount"]++;
-            return;
-        }
-        */
     }
 
     public void DesligaAnim() {
@@ -188,4 +166,21 @@ public class MovimentPlayer : MonoBehaviour
         Footsteps.Stop();
     }
 
+    /// <summary>
+    /// OnTriggerEnter is called when the Collider other enters the trigger.
+    /// </summary>
+    /// <param name="other">The other Collider involved in this collision.</param>
+    void OnTriggerEnter(Collider other)
+    {
+        inChat=true;
+    }
+
+    /// <summary>
+    /// OnTriggerExit is called when the Collider other has stopped touching the trigger.
+    /// </summary>
+    /// <param name="other">The other Collider involved in this collision.</param>
+    void OnTriggerExit(Collider other)
+    {
+        inChat=false;
+    }
 }
