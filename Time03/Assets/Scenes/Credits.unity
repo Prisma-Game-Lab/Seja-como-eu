@@ -1593,6 +1593,41 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9036430675333678215, guid: 19159773f6d86e942a71f39eb6db8f85,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9036430675333678215, guid: 19159773f6d86e942a71f39eb6db8f85,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9036430675333678215, guid: 19159773f6d86e942a71f39eb6db8f85,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9036430675333678215, guid: 19159773f6d86e942a71f39eb6db8f85,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 672431044}
+    - target: {fileID: 9036430675333678215, guid: 19159773f6d86e942a71f39eb6db8f85,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeSceneDireto
+      objectReference: {fileID: 0}
+    - target: {fileID: 9036430675333678215, guid: 19159773f6d86e942a71f39eb6db8f85,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9036430675333678215, guid: 19159773f6d86e942a71f39eb6db8f85,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Main Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 9062138939477823401, guid: 19159773f6d86e942a71f39eb6db8f85,
         type: 3}
       propertyPath: m_AnchorMin.y
