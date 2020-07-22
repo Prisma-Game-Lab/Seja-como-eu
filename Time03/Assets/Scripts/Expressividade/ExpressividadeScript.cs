@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EspressividadeScript : MonoBehaviour
+public class ExpressividadeScript : MonoBehaviour
 {
 
     private int health = 9;
@@ -84,6 +84,7 @@ public class EspressividadeScript : MonoBehaviour
             portalExit.SetActive(true);
             expScript.StopAllCoroutines();
             df.Trigger.TriggerConversation(0,"ExpressividadeMorre");
+            GetComponent<TentacleManager>().StopAllTents();
         }
         else
         {

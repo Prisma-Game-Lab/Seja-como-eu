@@ -25,7 +25,7 @@ public class TentacleManager : MonoBehaviour
            GameObject tent = Instantiate(tentaclePrefab, //gameObject a ser instanciado
            myPosition,            //posicao
            Quaternion.LookRotation(new Vector3(Mathf.Sin(i*Mathf.PI*0.25f+Mathf.PI/8),0,Mathf.Cos(i*Mathf.PI*0.25f+Mathf.PI/8)),_T.up)  //rotacao
-           ,_T);                //objeto pai
+           ,_T);                 //objeto pai
 
             allTentacles[i]=tent;
         }
@@ -58,6 +58,15 @@ public class TentacleManager : MonoBehaviour
         paintingTentacleTransform.rotation = (currentlyPaintingTransform.rotation);             //traz o tentaculo pintando para sua posicao e rotacao
         paintingTentacleTransform.position = myPosition;
         currentlyPaintingTransform.position = hiddenLocation;                                   //esconde o tentaculo sorteado
+    }
+
+    public void StopAllTents()
+    {
+        for(int i=0; i<8; i++)
+        {
+            allTentacles[i].SetActive(false);
+        }
+        paintingTentacle.SetActive(false);
     }
 
 }
