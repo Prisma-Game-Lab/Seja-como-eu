@@ -1024,7 +1024,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4177,6 +4177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TristezaChatBox
       objectReference: {fileID: 0}
+    - target: {fileID: 8580737412242011578, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8580737412242011582, guid: 084637cc4a0561949bd0613bd7107333,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4302,6 +4307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412278036083, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 084637cc4a0561949bd0613bd7107333, type: 3}
@@ -6092,7 +6102,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 4003841823643300776, guid: 76f8dfee6a5ac944b95721976104ebf6,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fe3112371ff31084d8f53ae27bf5a08a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
