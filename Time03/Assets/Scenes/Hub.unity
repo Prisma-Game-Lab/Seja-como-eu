@@ -12686,6 +12686,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MDMChatBox
       objectReference: {fileID: 0}
+    - target: {fileID: 8580737412242011578, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8580737412242011582, guid: 084637cc4a0561949bd0613bd7107333,
         type: 3}
       propertyPath: m_LocalPosition.x
