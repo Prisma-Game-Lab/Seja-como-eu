@@ -17,11 +17,14 @@ public class ExpressividadeScript : MonoBehaviour
     private ExPillar expScript;
     public GameObject portalExit;
     private DisplayFrase df;
+    private Animator headAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
         df = GetComponent<DisplayFrase>();
+        
+        headAnimator = GetComponentInChildren<Animator>();
 
         counts = SaveSystem.GetInstance().generalCounts;
 
@@ -79,6 +82,7 @@ public class ExpressividadeScript : MonoBehaviour
         health -=1;
         if (health == 0)
         {
+            headAnimator.SetTrigger("death");
             counts.ExpressividadeIsMorto = true;
             //Destroy(this.gameObject);
             portalExit.SetActive(true);
@@ -88,6 +92,7 @@ public class ExpressividadeScript : MonoBehaviour
         }
         else
         {
+            headAnimator.SetTrigger("damage");
             if(health == 6)
             {
                 Missile.SwitchReady();

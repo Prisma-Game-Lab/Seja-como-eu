@@ -81,6 +81,9 @@ ModelImporter:
   - first:
       74: 4129519356171919049
     second: death_cavalete
+  - first:
+      74: 4993584605162389042
+    second: parado
   externalObjects:
   - first:
       type: UnityEngine:Material

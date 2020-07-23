@@ -8,8 +8,8 @@ public class Tentaculo : MonoBehaviour
 	public GameObject tentaculo;
 	public GameObject wavyTentacle;
 	public GameObject spawnZone;
-	public int gapPeriod;
 	public int gapVar;
+	public int defaultPeriod=3;
 	private int gapCounter = 0;
 	private float startingSpeed = 150;
 	public float speed = 10;
@@ -19,17 +19,20 @@ public class Tentaculo : MonoBehaviour
 	private static event Action nextSpawn;
 	public static Tentaculo leader = null;
 	public static int instances=0;
+	public static int gapPeriod;
 	private bool amLeader = false;
+	private Animator tentAnim;
 
 
     void Awake()
     {
-		gapCounter = (int)(UnityEngine.Random.Range(0.0f,gapVar));
+		gapCounter = (UnityEngine.Random.Range(0,gapVar));
 		instances+=1;
 		if(leader == null)
 		{
 			leader = this;
 			amLeader=true;
+			gapPeriod=defaultPeriod;
 		}
 		else
 		{
@@ -49,6 +52,7 @@ public class Tentaculo : MonoBehaviour
 		if(amLeader)
 		{
 			leader = null;
+			gapPeriod = 3;
 		}
 		else
 		{
@@ -64,17 +68,18 @@ public class Tentaculo : MonoBehaviour
     	{
     	 	t = TentPooling.instance.NewTent(this.transform, true);
 			gap=false;
+			tentAnim.SetTrigger("newWave");
     	}
 
     	else
     	{
     	 	t = TentPooling.instance.NewTent(this.transform ,false);
-			 gapCounter +=1;
-			 if (gapCounter >= gapPeriod)
-			 {
-				 gap = true;
-				 gapCounter = (int)(UnityEngine.Random.Range(0.0f,gapVar));
-			 }
+			gapCounter +=1;
+			if (gapCounter%gapPeriod == 0)
+			{
+				gap = true;
+				gapCounter = 0;
+			}
     	}
 		t.GetComponent<TentPieceScript>().Boost(currentSpeed * 10);
     	if(amLeader)
@@ -93,10 +98,20 @@ public class Tentaculo : MonoBehaviour
 	private IEnumerator Startup()
 	{
 		yield return new WaitUntil(()=>instances == 8);
+		int period=gapPeriod;
+		gapPeriod=99999999;
+
 		currentSpeed=startingSpeed;
 		spawnTentacle();
 		yield return new WaitForSeconds(2);
+
 		SpeedUp(speed);
+		gapPeriod=period;
+	}
+
+	public void setAnim(Animator anim)
+	{
+		tentAnim=anim;
 	}
 }
     
