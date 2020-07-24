@@ -69,6 +69,7 @@ public class Tentaculo : MonoBehaviour
     	 	t = TentPooling.instance.NewTent(this.transform, true);
 			gap=false;
 			tentAnim.SetTrigger("newWave");
+			t.GetComponent<GuideWave>().anim=tentAnim;
     	}
 
     	else
