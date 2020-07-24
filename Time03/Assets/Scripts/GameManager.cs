@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         Counts.TotalPlayTime += Time.deltaTime;
-        if(GeneralCounts.Kill && !DeathScreen.activeSelf) {
+        if(GeneralCounts.Kill && player.GetComponent<MovimentPlayer>().enabled) {
             Death();
             canPause = false;
         }
