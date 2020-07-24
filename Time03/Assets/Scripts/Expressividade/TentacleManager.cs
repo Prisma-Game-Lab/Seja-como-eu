@@ -15,8 +15,11 @@ public class TentacleManager : MonoBehaviour
     private Vector3 hiddenLocation;
     private Vector3 myPosition;
 
+    private ExpressividadeScript expressividadeScript;
+
     void Start()
     {
+        expressividadeScript = GetComponent<ExpressividadeScript>();
         Transform _T = GetComponent<Transform>();
         myPosition = _T.position;
         hiddenLocation = new Vector3(-20,-20,-20);
@@ -40,6 +43,15 @@ public class TentacleManager : MonoBehaviour
         paintingTentacleTransform = paintingTentacle.GetComponent<Transform>();
         tentAnims[currentlyPaintingIndex].SetTrigger("prePaint");
         currentlyPaintingTransform.position = hiddenLocation; //esconde o tentaculo original
+    }
+    void Update(){
+        if(expressividadeScript.health==0){
+            for(int i=0; i<8; i++){
+                tentAnims[i].SetTrigger("deathMesmo");
+                //menos esse tentAnims[currentlyPaintingIndex]
+            }
+        }
+
     }
     void OnDestroy() 
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExpressividadeScript : MonoBehaviour
 {
 
-    private int health = 9;
+    public int health = 9;
     private Skills Missile;
     private Skills Pillar;
     private List<Skills> skills;
