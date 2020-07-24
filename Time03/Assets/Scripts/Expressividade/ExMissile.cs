@@ -13,12 +13,14 @@ public class ExMissile : MonoBehaviour
     public int NumMissiles;
     public float gap;
     public float speed;
+    private Animator headAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         MissilePrefab.GetComponent<Missil>().target = target;
         MissilePrefab.GetComponent<Missil>().speed = speed;
+        headAnim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class ExMissile : MonoBehaviour
     public void Shoot()
     {
         StartCoroutine(MissileLaunch());
+        headAnim.SetTrigger("tiro");
     }
 
     private IEnumerator MissileLaunch()

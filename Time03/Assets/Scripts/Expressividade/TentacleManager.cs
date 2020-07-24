@@ -7,8 +7,9 @@ public class TentacleManager : MonoBehaviour
     public GameObject tentaclePrefab;
     public GameObject paintingTentaclePrefab;
     private GameObject[] allTentacles;
+    public Animator[] tentAnims;
     private GameObject paintingTentacle;
-    private int currentlyPainting;
+    private int currentlyPaintingIndex;
     private Transform currentlyPaintingTransform;
     private Transform paintingTentacleTransform;
     private Vector3 hiddenLocation;
@@ -28,14 +29,16 @@ public class TentacleManager : MonoBehaviour
            ,_T);                 //objeto pai
 
             allTentacles[i]=tent;
+            tent.GetComponent<Tentaculo>().setAnim(tentAnims[i]);
         }
         HitTentacle.tentacleHit += SwapTentacles; //registra a funcao ao evento
 
         
-        currentlyPainting = (int)Random.Range(0.0f,7.9999f); //escolhe o tentaculo que vai pintar
-        currentlyPaintingTransform = allTentacles[currentlyPainting].GetComponent<Transform>();
+        currentlyPaintingIndex = (int)Random.Range(0.0f,7.9999f); //escolhe o tentaculo que vai pintar
+        currentlyPaintingTransform = allTentacles[currentlyPaintingIndex].GetComponent<Transform>();
         paintingTentacle = Instantiate(paintingTentaclePrefab,currentlyPaintingTransform.position,currentlyPaintingTransform.rotation,_T); //spawna o tentaculo pintando
         paintingTentacleTransform = paintingTentacle.GetComponent<Transform>();
+        tentAnims[currentlyPaintingIndex].SetTrigger("prePaint");
         currentlyPaintingTransform.position = hiddenLocation; //esconde o tentaculo original
     }
     void OnDestroy() 
@@ -47,16 +50,18 @@ public class TentacleManager : MonoBehaviour
     {
         paintingTentacleTransform.position = hiddenLocation;
         StartCoroutine(ChangeTentacles());
+        tentAnims[currentlyPaintingIndex].SetTrigger("death");
     }
 
     private IEnumerator ChangeTentacles()
     {
         yield return new WaitForSeconds(1);
         currentlyPaintingTransform.position = myPosition;                                       //traz o tentaculo escondido de volta
-        currentlyPainting = (currentlyPainting + (int)Random.Range(1.0f,6.9999f))%8;            //sorteia novo tentaculo 
-        currentlyPaintingTransform = allTentacles[currentlyPainting].GetComponent<Transform>(); //pega seu Transform
+        currentlyPaintingIndex = (currentlyPaintingIndex + (int)Random.Range(1.0f,6.9999f))%8;            //sorteia novo tentaculo 
+        currentlyPaintingTransform = allTentacles[currentlyPaintingIndex].GetComponent<Transform>(); //pega seu Transform
         paintingTentacleTransform.rotation = (currentlyPaintingTransform.rotation);             //traz o tentaculo pintando para sua posicao e rotacao
         paintingTentacleTransform.position = myPosition;
+        tentAnims[currentlyPaintingIndex].SetTrigger("prePaint");
         currentlyPaintingTransform.position = hiddenLocation;                                   //esconde o tentaculo sorteado
     }
 
