@@ -3712,6 +3712,21 @@ PrefabInstance:
       propertyPath: SceneName
       value: Hub
       objectReference: {fileID: 0}
+    - target: {fileID: 7736420757417328391, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736420757417328391, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736420757417328391, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7736420758159406787, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.r
@@ -3785,17 +3800,17 @@ PrefabInstance:
     - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.54
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.07
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.79
+      value: -5.23
       objectReference: {fileID: 0}
     - target: {fileID: 8132870317075436849, guid: 2461ed97e38f7c740a2edb8c3a2b291d,
         type: 3}
