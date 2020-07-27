@@ -2533,6 +2533,7 @@ MonoBehaviour:
   NumMissiles: 3
   gap: 2
   speed: 5
+  Expressividade: {fileID: 423537694}
 --- !u!114 &423537701
 MonoBehaviour:
   m_ObjectHideFlags: 0
