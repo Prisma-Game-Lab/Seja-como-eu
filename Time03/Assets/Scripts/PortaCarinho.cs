@@ -8,6 +8,7 @@ public class PortaCarinho : MonoBehaviour
     public GameObject portaDireita;
     private Quaternion RotE = Quaternion.Euler(0, 90, 0);
     private Quaternion RotD = Quaternion.Euler(0, -90, 0);
+    public Animator animPapelao;
     private bool Open = false;
     public GameObject portalArena;
 
@@ -25,6 +26,7 @@ public class PortaCarinho : MonoBehaviour
     {
         if(collision.collider.CompareTag("Feno"))
         {
+            animPapelao.SetTrigger("voa");
             StartCoroutine(AbrePortas());
             GetComponent<Collider>().enabled = false;
             Destroy(collision.gameObject);
