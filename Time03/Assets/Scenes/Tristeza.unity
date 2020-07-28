@@ -4291,7 +4291,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: aab377c63ac751c45bc6ae4d8138b548,
+      objectReference: {fileID: 12800000, guid: e6999ab6035353048b8a4e89cbe74725,
         type: 3}
     - target: {fileID: 8580737412242739417, guid: 084637cc4a0561949bd0613bd7107333,
         type: 3}
@@ -4303,10 +4303,40 @@ PrefabInstance:
       propertyPath: m_FontData.m_Alignment
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8580737412242739417, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412242739417, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412242739417, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8580737412278036081, guid: 084637cc4a0561949bd0613bd7107333,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.5882353
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412278036081, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.0035599943
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412278036081, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4344869
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580737412278036081, guid: 084637cc4a0561949bd0613bd7107333,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.754717
       objectReference: {fileID: 0}
     - target: {fileID: 8580737412278036083, guid: 084637cc4a0561949bd0613bd7107333,
         type: 3}
@@ -4624,7 +4654,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097841678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.15, y: 5.53, z: 0}
+  m_LocalPosition: {x: -1.68, y: 9.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 130749955644711010}
