@@ -45,12 +45,7 @@ public class TentacleManager : MonoBehaviour
         currentlyPaintingTransform.position = hiddenLocation; //esconde o tentaculo original
     }
     void Update(){
-        if(expressividadeScript.health==0){
-            for(int i=0; i<8; i++){
-                tentAnims[i].SetTrigger("deathMesmo");
-                //menos esse tentAnims[currentlyPaintingIndex]
-            }
-        }
+
 
     }
     void OnDestroy() 
@@ -63,6 +58,8 @@ public class TentacleManager : MonoBehaviour
         paintingTentacleTransform.position = hiddenLocation;
         StartCoroutine(ChangeTentacles());
         tentAnims[currentlyPaintingIndex].SetTrigger("death");
+
+
     }
 
     private IEnumerator ChangeTentacles()
@@ -82,6 +79,7 @@ public class TentacleManager : MonoBehaviour
         for(int i=0; i<8; i++)
         {
             allTentacles[i].SetActive(false);
+            tentAnims[i].SetTrigger("deathMesmo");
         }
         paintingTentacle.SetActive(false);
     }
