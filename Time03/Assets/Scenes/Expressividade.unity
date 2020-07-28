@@ -13695,6 +13695,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6483799569185854051, guid: 87af9f27abf3b77418ee4d70afc01926,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 6603433125135224185, guid: 87af9f27abf3b77418ee4d70afc01926,
         type: 3}
       propertyPath: Footsteps

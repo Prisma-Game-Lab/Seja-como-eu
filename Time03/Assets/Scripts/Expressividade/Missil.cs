@@ -12,6 +12,7 @@ public class Missil : MonoBehaviour
     private bool following = false;
     private bool init = true;
     public GameObject Expressividade;
+    public GameObject tintaParticle;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class Missil : MonoBehaviour
 
         if(HP == 0)
         {
+            Instantiate(tintaParticle, this.transform.position, Quaternion.Euler(-90, 0, 0));
             Destroy(gameObject);
         }
         if(init)
@@ -65,6 +67,7 @@ public class Missil : MonoBehaviour
     {
         if(other.CompareTag("Player") || other.CompareTag("wall"))
         {
+            Instantiate(tintaParticle, this.transform.position, Quaternion.Euler(-90, 0, 0));
             Destroy(gameObject);
         }
     }

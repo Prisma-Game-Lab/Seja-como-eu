@@ -20,7 +20,7 @@ public class ExPillar : MonoBehaviour
     void Start()
     {
         prefabHelper.transform.localScale.Set(PillarPrefab.transform.localScale.x, 0.05f, PillarPrefab.transform.localScale.z);
-        prefabHelper.GetComponent<Despawner4>().TimetoDespawn = 3.0f;
+        prefabHelper.GetComponent<Despawner4>().TimetoDespawn = 3.5f;
         PillarPrefab.GetComponent<Despawner4>().TimetoDespawn = 3.5f;
     }
 
@@ -51,7 +51,7 @@ public class ExPillar : MonoBehaviour
                 spawnPos = spawnPoints[index];
             }
 
-            Instantiate(prefabHelper, spawnPos, Quaternion.identity);
+            Instantiate(prefabHelper, spawnPos + new Vector3(0,0.46f,0), Quaternion.identity);
             yield return new WaitForSeconds(windup);
             Instantiate(PillarPrefab, spawnPos, Quaternion.identity);
             yield return new WaitForSeconds(PillarInterval);
