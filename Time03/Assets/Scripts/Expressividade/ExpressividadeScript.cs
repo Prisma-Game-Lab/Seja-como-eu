@@ -80,7 +80,7 @@ public class ExpressividadeScript : MonoBehaviour
     private void TakeDamage()
     {
         health -=1;
-        if (health == 0)
+        if (health <= 0)
         {
             headAnimator.SetTrigger("death");
             counts.ExpressividadeIsMorto = true;

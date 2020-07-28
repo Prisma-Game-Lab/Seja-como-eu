@@ -36,14 +36,14 @@ MonoBehaviour:
     Turn: 4
     Options: []
   - Texto: "Fugir dos problemas e diminuir os outros para se sentir melhor, s\xF3
-      faz de voc\xEA um COVARDE.\r\n"
+      faz de voc\xEA um COVARDE."
     Turn: 4
     Options: []
   - Texto: "\xC9 preciso chorar para a dor ir embora e \xE9 preciso aceitar o medo
-      para enfrent\xE1-lo.\r\n"
+      para enfrent\xE1-lo."
     Turn: 4
     Options: []
-  - Texto: "Porque admitir as nossas fraquezas \xE9 o que nos faz corajosos.\r\n"
+  - Texto: "Porque admitir as nossas fraquezas \xE9 o que nos faz corajosos."
     Turn: 4
     Options: []
   - Texto: '*Acaba dialogo*'

@@ -6,8 +6,7 @@ public class ExMissile : MonoBehaviour
 {
 
     public GameObject MissilePrefab;
-    [Range(0,100)]
-    public float probablidade;
+    [Range(0,100)] public float probablidade;
     public float cooldown;
     public Transform target;
     public int NumMissiles;

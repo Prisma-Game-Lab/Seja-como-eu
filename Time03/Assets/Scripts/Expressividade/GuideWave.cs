@@ -11,6 +11,7 @@ public class GuideWave : MonoBehaviour
     {
         anim=null;
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -22,7 +23,7 @@ public class GuideWave : MonoBehaviour
             if(t==1)
             {
                 anim.SetTrigger("endWave");
-                //Destroy(this);
+                this.anim = null;
             }
         }
         
