@@ -34,7 +34,7 @@ public class MDM : MonoBehaviour
     private DisplayFrase DF;
 
     private Animator anim;
-    public GameObject armor1,armor2,armor3,armor4,armor5,armor6;
+    public GameObject armor1,armor2,armor3,armor4,armor5,armor6,puff;
 
     void Start()
     {
@@ -118,6 +118,7 @@ public class MDM : MonoBehaviour
         if(CurrentHP <= 0) {
             WinGame();
             anim.SetTrigger("death");
+            puff.SetActive(true);
             armor1.SetActive(false);
             armor2.SetActive(false);
             armor3.SetActive(false);
