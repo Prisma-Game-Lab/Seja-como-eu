@@ -5,9 +5,12 @@ using UnityEngine;
 public class Missil : MonoBehaviour
 {
     public Transform target;
+    public Transform targetInit;
     public float speed;
     public float autoTime;
-    private bool following = true;
+    public float initTime;
+    private bool following = false;
+    private bool init = true;
     public GameObject Expressividade;
 
     // Start is called before the first frame update
@@ -25,6 +28,11 @@ public class Missil : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if(init)
+        {
+            FaceTarget(targetInit.position + new Vector3(0, 0.5f, 0));
+            transform.position = Vector3.MoveTowards(transform.position, targetInit.position + new Vector3(0,0.5f,0), speed * Time.deltaTime);
+        }
         if(following)
         {
             FaceTarget(target.position + new Vector3(0, 0.5f, 0));
@@ -38,8 +46,11 @@ public class Missil : MonoBehaviour
 
     private IEnumerator Autopilot()
     {
-        yield return new WaitForSeconds(autoTime);
+        yield return new WaitForSeconds(initTime);
+        init = false;
+        following = true;
 
+        yield return new WaitForSeconds(autoTime);
         following = false;
     }
 
