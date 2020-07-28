@@ -8,19 +8,20 @@ public class Missil : MonoBehaviour
     public float speed;
     public float autoTime;
     private bool following = true;
-    private GeneralCounts counts;
+    public GameObject Expressividade;
 
     // Start is called before the first frame update
     void Start()
     {
-        counts = SaveSystem.GetInstance().generalCounts;
         StartCoroutine(Autopilot());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(counts.ExpressividadeIsMorto)
+        int HP = Expressividade.GetComponent<ExpressividadeScript>().health;
+
+        if(HP == 0)
         {
             Destroy(gameObject);
         }

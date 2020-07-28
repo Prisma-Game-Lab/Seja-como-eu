@@ -64,7 +64,7 @@ public class PunchUltimate : MonoBehaviour
             Destroy(wave.transform.GetChild(i+1).gameObject);
             yield return new WaitForSeconds(TimeBetweenWavesLevel1);
         }
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(5);
         UltimateBarrier.SetActive(false);
         Mestre.RaiseLevel();
         Mestre.FinishUltimate();
@@ -89,7 +89,7 @@ public class PunchUltimate : MonoBehaviour
             Destroy(wave.transform.GetChild(i-1).gameObject);
             yield return new WaitForSeconds(TimeBetweenWavesLevel1);
         }
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(6);
         UltimateBarrier.SetActive(false);
         Mestre.RaiseLevel();
         Mestre.FinishUltimate();

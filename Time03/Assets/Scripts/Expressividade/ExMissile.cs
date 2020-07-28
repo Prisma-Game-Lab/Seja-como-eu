@@ -14,12 +14,14 @@ public class ExMissile : MonoBehaviour
     public float gap;
     public float speed;
     private Animator headAnim;
+    public GameObject Expressividade;
 
     // Start is called before the first frame update
     void Start()
     {
         MissilePrefab.GetComponent<Missil>().target = target;
         MissilePrefab.GetComponent<Missil>().speed = speed;
+        MissilePrefab.GetComponent<Missil>().Expressividade = Expressividade;
         headAnim = GetComponentInChildren<Animator>();
     }
 
