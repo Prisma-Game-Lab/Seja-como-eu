@@ -2344,20 +2344,20 @@ PrefabInstance:
       objectReference: {fileID: 594709984}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Color.r
-      value: 0.93725497
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Color.g
-      value: 0.93725497
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Color.b
-      value: 0.93725497
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7c835bf85c4824f488739db6404b95cc,
+      objectReference: {fileID: 21300000, guid: b42d9c638f264564e9391b4a8328edf0,
         type: 3}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
@@ -9145,25 +9145,20 @@ PrefabInstance:
       objectReference: {fileID: 1120660055}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Color.r
-      value: 0.93725497
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Color.g
-      value: 0.93725497
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Color.b
-      value: 0.93725497
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7c835bf85c4824f488739db6404b95cc,
-        type: 3}
     - target: {fileID: 559074618, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -9189,6 +9184,11 @@ PrefabInstance:
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Text
       value: "Voc\xEA j\xE1 derrotou o Carinho."
+      objectReference: {fileID: 0}
+    - target: {fileID: 222560418326670744, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -9429,6 +9429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531636323997815688, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
@@ -10475,20 +10480,20 @@ PrefabInstance:
       objectReference: {fileID: 964952117}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Color.r
-      value: 0.93725497
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Color.g
-      value: 0.93725497
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Color.b
-      value: 0.93725497
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7c835bf85c4824f488739db6404b95cc,
+      objectReference: {fileID: 21300000, guid: b42d9c638f264564e9391b4a8328edf0,
         type: 3}
     - target: {fileID: 310013180, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
@@ -11852,7 +11857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1898997696
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -16587,7 +16592,7 @@ Transform:
   m_LocalScale: {x: 0.4539923, y: 0.7216657, z: 0.66597736}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1909450146
 GameObject:
