@@ -681,6 +681,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrisonBarricade (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5876020400876364444, guid: 688cc77139a51f24a9df18e558028620,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7536304684026592823, guid: 688cc77139a51f24a9df18e558028620, type: 3}
     - {fileID: 8182009804414985592, guid: 688cc77139a51f24a9df18e558028620, type: 3}

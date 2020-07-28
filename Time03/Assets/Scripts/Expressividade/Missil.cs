@@ -5,24 +5,35 @@ using UnityEngine;
 public class Missil : MonoBehaviour
 {
     public Transform target;
+    public Transform targetInit;
     public float speed;
     public float autoTime;
-    private bool following = true;
-    private GeneralCounts counts;
+    public float initTime;
+    private bool following = false;
+    private bool init = true;
+    public GameObject Expressividade;
+    public GameObject tintaParticle;
 
     // Start is called before the first frame update
     void Start()
     {
-        counts = SaveSystem.GetInstance().generalCounts;
         StartCoroutine(Autopilot());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(counts.ExpressividadeIsMorto)
+        int HP = Expressividade.GetComponent<ExpressividadeScript>().health;
+
+        if(HP == 0)
         {
+            Instantiate(tintaParticle, this.transform.position, Quaternion.Euler(-90, 0, 0));
             Destroy(gameObject);
+        }
+        if(init)
+        {
+            FaceTarget(targetInit.position + new Vector3(0, 0.5f, 0));
+            transform.position = Vector3.MoveTowards(transform.position, targetInit.position + new Vector3(0,0.5f,0), speed * Time.deltaTime);
         }
         if(following)
         {
@@ -37,8 +48,11 @@ public class Missil : MonoBehaviour
 
     private IEnumerator Autopilot()
     {
-        yield return new WaitForSeconds(autoTime);
+        yield return new WaitForSeconds(initTime);
+        init = false;
+        following = true;
 
+        yield return new WaitForSeconds(autoTime);
         following = false;
     }
 
@@ -53,6 +67,7 @@ public class Missil : MonoBehaviour
     {
         if(other.CompareTag("Player") || other.CompareTag("wall"))
         {
+            Instantiate(tintaParticle, this.transform.position, Quaternion.Euler(-90, 0, 0));
             Destroy(gameObject);
         }
     }
