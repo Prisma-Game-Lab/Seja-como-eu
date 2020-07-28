@@ -155,6 +155,7 @@ public class CarinhoScript : MonoBehaviour
         else
         {
             GetComponent<Collider>().enabled = false;
+            agent.SetDestination(transform.position);
         }
     }
 
