@@ -10,12 +10,22 @@ public class PortalScript : MonoBehaviour
     public GameObject DefeatedUI;
     public GameObject PortalCanvas;
     public bool CanEnter = true;
+    public Material material;
+    public Texture normalTexture, pbTexture;
 
     void Start()
     {
         PortalCanvas.SetActive(false);
         ChooseUI.SetActive(false);
         DefeatedUI.SetActive(false);
+    }
+    void Update()
+    {
+        if(CanEnter){
+            material.SetTexture("_MainTex", normalTexture);
+        }else{
+            material.SetTexture("_MainTex", pbTexture);
+        }
     }
 
     void OnTriggerEnter(Collider other)
