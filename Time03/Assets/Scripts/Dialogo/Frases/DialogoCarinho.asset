@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DialogoCarinho
   m_EditorClassIdentifier: 
   Frase:
-  - Texto: "Porque voc\xEA est\xE1 me tratando assim?"
+  - Texto: "Por que voc\xEA est\xE1 me tratando assim?"
     Turn: 3
     Options: []
   - Texto: "Aposto que voc\xEA n\xE3o gostaria que algu\xE9m fizesse isso com voc\xEA.\r"
