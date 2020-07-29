@@ -104,7 +104,7 @@ public class Tentaculo : MonoBehaviour
 
 		currentSpeed=startingSpeed;
 		spawnTentacle();
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(0.5f);
 
 		SpeedUp(speed);
 		gapPeriod=period;
