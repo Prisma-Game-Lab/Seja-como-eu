@@ -58,7 +58,8 @@ public class SceneControl : MonoBehaviour
             if(Counts.Index == 15) {
                 SaveSystem.GetInstance().SaveState();
                 GetComponent<GameManager>().canPause = false;
-                GetComponent<ShowStatsMDM>().DisplayStats();
+                //GetComponent<ShowStatsMDM>().DisplayStats();
+                ChangeSceneDireto("Credits");
             }
         }
     }

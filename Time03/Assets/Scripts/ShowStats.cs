@@ -35,7 +35,7 @@ public class ShowStats : MonoBehaviour
         }
     }
 
-    private void DisplayStats() {
+    public void DisplayStats() {
         TotalDashs = Counts.Stats["HubDashCount"] + Counts.Stats["CarinhoDashCount"] + Counts.Stats["TristezaDashCount"] +
         Counts.Stats["ExpressividadeDashCount"] + Counts.Stats["MDMDashCount"];
         TotalDeaths = Counts.Stats["CarinhoDeathCount"] + Counts.Stats["TristezaDeathCount"] + Counts.Stats["MDMDeathCount"] +
