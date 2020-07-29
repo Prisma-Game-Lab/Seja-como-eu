@@ -2459,6 +2459,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3.804378
       objectReference: {fileID: 0}
+    - target: {fileID: 1510187175226471895, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 2100000, guid: acee86b99c4d5f74ea16aa1a4184e0d0, type: 2}
+    - target: {fileID: 1510187175226471895, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: normalTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: f6363180afb8cae47a9e8fe10aafa2de, type: 3}
+    - target: {fileID: 1510187175226471895, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: pbTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: c3b01261e50eb0b4290fcbe31ee9b134, type: 3}
     - target: {fileID: 1510187175226471896, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Name
@@ -9255,6 +9270,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5.1830792
       objectReference: {fileID: 0}
+    - target: {fileID: 1510187175226471895, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 2100000, guid: a1eba13e3cec6bd44bafbe892874c9e3, type: 2}
+    - target: {fileID: 1510187175226471895, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: normalTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 8271dde6420c5154db34b975924f0427, type: 3}
+    - target: {fileID: 1510187175226471895, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: pbTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: a8e18730d456c624d83054a35d67db27, type: 3}
     - target: {fileID: 1510187175226471896, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Name
@@ -10590,6 +10620,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.783424
       objectReference: {fileID: 0}
+    - target: {fileID: 1510187175226471895, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 2100000, guid: b42082929f00f29478aaf90826cc5bf4, type: 2}
+    - target: {fileID: 1510187175226471895, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: normalTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 68bac9213801e7a44b1dfd33bbfb309c, type: 3}
+    - target: {fileID: 1510187175226471895, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: pbTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: d576f793cb0e171418d2b9b3da51e6f1, type: 3}
     - target: {fileID: 1510187175226471896, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Name
