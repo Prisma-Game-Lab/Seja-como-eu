@@ -152,6 +152,6 @@ MonoBehaviour:
   wavyTentacle: {fileID: 3689703874797072747, guid: 5b89a4f61d5190243863065597d008d2,
     type: 3}
   spawnZone: {fileID: 4366576179679829192}
-  gapVar: 4
+  gapVar: 3
   defaultPeriod: 4
   speed: 40
