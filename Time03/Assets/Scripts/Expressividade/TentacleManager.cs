@@ -76,6 +76,7 @@ public class TentacleManager : MonoBehaviour
 
     public void StopAllTents()
     {
+        StopAllCoroutines();
         for(int i=0; i<8; i++)
         {
             allTentacles[i].SetActive(false);

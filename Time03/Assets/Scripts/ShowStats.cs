@@ -93,14 +93,15 @@ public class ShowStats : MonoBehaviour
         return $"{min}:{sec}";
     }
 
-    void OnCollisionEnter(Collision other)
+
+    void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player")) {
             CanActivate = true;
         }
     }
 
-    void OnCollisionExit(Collision other)
+    void OnTriggerExit(Collider other)
     {
         if(other.gameObject.CompareTag("Player")) {
             CanActivate = false;
