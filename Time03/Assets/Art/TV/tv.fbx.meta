@@ -18,6 +18,27 @@ ModelImporter:
   - first:
       74: 5449073193131188545
     second: Armature|CubeAction
+  - first:
+      74: -955426095659409086
+    second: Cube.001|Cube.001|Cube|CubeAction|Cube|CubeAction
+  - first:
+      74: 1335641409080456157
+    second: Armature.eyes|Armature.eyes|Armature.eyes|Armature.eyes|Armature.eyes|Armatur
+  - first:
+      74: -3902925272885835193
+    second: Armature.eyes|Armature.eyes|Armature.eyes|CubeAction|Armature.eyes|CubeAction
+  - first:
+      74: -4925776754315055440
+    second: Armature.eyes|Cube.001|Cube|CubeAction|Cube|CubeAction
+  - first:
+      74: 8139763015835497580
+    second: Armature|Armature|Armature|Armature|Armature|ArmatureAction|Armature|Arm
+  - first:
+      74: -6749383019841486393
+    second: Armature|Armature|Armature|CubeAction|Armature|CubeAction
+  - first:
+      74: -5413543065103083001
+    second: Armature|Cube.001|Cube|CubeAction|Cube|CubeAction
   externalObjects:
   - first:
       type: UnityEngine:Material
