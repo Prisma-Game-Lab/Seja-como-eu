@@ -9826,7 +9826,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\"\xC9 isso que \xE9 ser um homem de verdade?\"\n"
+  m_Text: "Ser homem \xE9 mais do que isso.\nN\xE3o existe vida sem emo\xE7\xE3o,\ns\xF3
+    vazio e solid\xE3o."
 --- !u!222 &1551562885
 CanvasRenderer:
   m_ObjectHideFlags: 0
