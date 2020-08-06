@@ -13,37 +13,34 @@ MonoBehaviour:
   m_Name: ingCarinho
   m_EditorClassIdentifier: 
   Frase:
-  - Texto: "Por que voc\xEA est\xE1 me tratando assim?"
+  - Texto: Why are you treating me like this?
     Turn: 3
     Options: []
-  - Texto: "Aposto que voc\xEA n\xE3o gostaria que algu\xE9m fizesse isso com voc\xEA.\r"
+  - Texto: "I bet you wouldn't like it if someone did this to you.\r"
     Turn: 3
     Options: []
-  - Texto: "Eu s\xF3 estava tentando ser seu amigo..."
+  - Texto: ' I was just trying to be your friend.'
     Turn: 3
     Options: []
-  - Texto: "Afastar as pessoas n\xE3o vai te fazer mais Macho. S\xF3 vai te fazer
-      mais sozinho.\r"
+  - Texto: "Pushing others away won\u2019t make you more manly. It will only make
+      you more lonely.\r"
     Turn: 3
     Options: []
-  - Texto: "N\xE3o tem caminho mais curto para a bondade do que atrav\xE9s da ternura,
-      da gentileza e do amor."
+  - Texto: There is no shorter path to kindness than through tenderness, kindness
+      and love.
     Turn: 3
     Options: []
-  - Texto: "E ao afastar essas caracter\xEDsticas, voc\xEA afasta as pessoas."
+  - Texto: We all need the warmth of a hug.
     Turn: 3
     Options: []
-  - Texto: "Todos precisam do calor de um abra\xE7o."
+  - Texto: ' You can run, you can try to deny it, you can even throw bales of hay
+      at me but no one can live alone.'
     Turn: 3
     Options: []
-  - Texto: "Pode correr, pode tentar fugir, pode at\xE9 atirar fenos em mim. Mas
-      ningu\xE9m consegue viver sozinho."
+  - Texto: Not even you.
     Turn: 3
     Options: []
-  - Texto: "Nem mesmo voc\xEA."
-    Turn: 3
-    Options: []
-  - Texto: E nem mesmo o Mestre dos Machos...
+  - Texto: Not even the (Mestre dos Machos)...
     Turn: 3
     Options: []
   - Texto: '*Acaba dialogo*'
