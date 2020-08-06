@@ -13770,7 +13770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyTurn: 1
-  Frases: {fileID: 11400000, guid: 0a266a4d34ff87140bdb912e50a03899, type: 2}
+  Frases: {fileID: 11400000, guid: ad90545a3d84c5e48b2bd6fbdb727026, type: 2}
   Trigger: {fileID: 1909451603}
   ChatBox: {fileID: 141840880}
 --- !u!4 &1498068568 stripped
@@ -20002,7 +20002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyTurn: 2
-  Frases: {fileID: 11400000, guid: 0a266a4d34ff87140bdb912e50a03899, type: 2}
+  Frases: {fileID: 11400000, guid: ad90545a3d84c5e48b2bd6fbdb727026, type: 2}
   Trigger: {fileID: 1909451603}
   ChatBox: {fileID: 1121371330}
 --- !u!82 &1877664328
