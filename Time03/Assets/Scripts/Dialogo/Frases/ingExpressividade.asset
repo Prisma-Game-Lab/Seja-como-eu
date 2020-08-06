@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ingExpressividade
   m_EditorClassIdentifier: 
   Frase:
-  - Texto: "Garotinho, n\xE3o se censure por ser voc\xEA mesmo.\r"
+  - Texto: "Little boy, \rdon't be silent for being you."
     Turn: 5
     Options: []
-  - Texto: "Voc\xEA n\xE3o precisa se esconder atr\xE1s dessa armadura."
+  - Texto: "You don't have to hide yourself behind this armor.\r"
     Turn: 5
     Options: []
   - Texto: "Fale o que voc\xEA sente, se expresse."
