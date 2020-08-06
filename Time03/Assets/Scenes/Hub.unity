@@ -2554,7 +2554,7 @@ PrefabInstance:
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Vamo Monstro!!!!
+      value: It's Killing Time!!!!
       objectReference: {fileID: 0}
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -2652,7 +2652,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Quer enfrentar a Expressividade?
+      value: Do you want to fight Expression?
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -9456,7 +9456,7 @@ PrefabInstance:
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Vamo Monstro!!!!
+      value: It's Killing Time!!!!
       objectReference: {fileID: 0}
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -9554,7 +9554,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Do you wanna face Affection?
+      value: Do you want to fight Affection?
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -10824,7 +10824,7 @@ PrefabInstance:
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Vamo Monstro!!!!
+      value: It's Killing Time!!!!
       objectReference: {fileID: 0}
     - target: {fileID: 8489818885711256980, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -10906,7 +10906,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Quer enfrentar a Fraqueza?
+      value: Do you want to fight Depression?
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
