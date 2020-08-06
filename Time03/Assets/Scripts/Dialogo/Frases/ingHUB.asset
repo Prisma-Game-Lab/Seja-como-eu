@@ -13,51 +13,51 @@ MonoBehaviour:
   m_Name: ingHUB
   m_EditorClassIdentifier: 
   Frase:
-  - Texto: Bem vindo ao Projeto Alfa!
+  - Texto: 'Welcome to Project Alpha! '
     Turn: 2
     Options: []
-  - Texto: "Aten\xE7\xE3o novato!"
+  - Texto: Attention recruit!
     Turn: 2
     Options: []
-  - Texto: Eu sou o MESTRE DOS MACHOS!
+  - Texto: I am the MASTER MACHO!
     Turn: 2
     Options: []
-  - Texto: "O macho mais macho de tudo que \xE9 M\xC1SCULO!"
+  - Texto: The manliest man of all that is manly!
     Turn: 2
     Options: []
-  - Texto: "Sou o chefe aqui, ent\xE3o escute bem!"
+  - Texto: "I\u2019m the boss here so listen well!"
     Turn: 2
     Options: []
-  - Texto: "Vou te ensinar como ser forte como um tuf\xE3o, r\xE1pido como um rio
-      e honrado como um homem."
+  - Texto: "I\u2019m going to teach you how to be  swift as a coursing river with
+      all the force of a great typhoon."
     Turn: 2
     Options: []
-  - Texto: "Se voc\xEA quiser ser que nem eu, siga minhas instru\xE7\xF5es."
+  - Texto: If you want to be like me, follow my instructions.
     Turn: 2
     Options: []
-  - Texto: "E voc\xEA ser\xE1 recompensado ao final de sua jornada com o PODER INFINITO!"
+  - Texto: "And you\u2019ll be rewarded at the end of your journey with INFINITE
+      POWER!\r"
     Turn: 2
     Options: []
-  - Texto: "Para isso voc\xEA precisar\xE1 derrotar as suas maiores fraquezas: AS
-      SUAS EMO\xC7\xD5ES!"
+  - Texto: 'To do this you will need to defeat your biggest weaknesses: YOUR EMOTIONS!'
     Turn: 2
     Options: []
-  - Texto: "Cada uma das tr\xEAs tem uma forma diferente de ser derrotada"
+  - Texto: Each one of your three emotions can be defeated in a different way.
     Turn: 2
     Options: []
-  - Texto: E provavelmente, o seu rolamento tem algo a ver com isso.
+  - Texto: It probably has something to do with your roll...
     Turn: 2
     Options: []
-  - Texto: "N\xE3o vai amarelar n\xE9? Estou confiando em voc\xEA."
+  - Texto: "You\u2019re not scared are you? I\u2019m trusting you."
     Turn: 2
     Options: []
-  - Texto: "Seja homem e v\xE1 a luta."
+  - Texto: Be a man and go fight!
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
-  - Texto: "\xC9 hoje que voc\xEA vira homem."
+  - Texto: Today you become a man.
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'

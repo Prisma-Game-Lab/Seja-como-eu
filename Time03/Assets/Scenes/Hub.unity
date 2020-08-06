@@ -5317,7 +5317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyTurn: 1
-  Frases: {fileID: 11400000, guid: 4280fb102b947f7458438a8c32226d9b, type: 2}
+  Frases: {fileID: 11400000, guid: fe82bd107259bbf4ebf581a6951eff43, type: 2}
   Trigger: {fileID: 543428585}
   ChatBox: {fileID: 1761746974}
 --- !u!114 &958304172
@@ -8338,7 +8338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyTurn: 2
-  Frases: {fileID: 11400000, guid: 4280fb102b947f7458438a8c32226d9b, type: 2}
+  Frases: {fileID: 11400000, guid: fe82bd107259bbf4ebf581a6951eff43, type: 2}
   Trigger: {fileID: 543428585}
   ChatBox: {fileID: 353104546}
 --- !u!1 &1400390277
