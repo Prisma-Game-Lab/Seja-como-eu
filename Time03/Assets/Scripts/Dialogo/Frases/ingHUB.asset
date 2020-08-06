@@ -1,0 +1,429 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6056aa7d4c41992438bb6fa94436da9e, type: 3}
+  m_Name: ingHUB
+  m_EditorClassIdentifier: 
+  Frase:
+  - Texto: Bem vindo ao Projeto Alfa!
+    Turn: 2
+    Options: []
+  - Texto: "Aten\xE7\xE3o novato!"
+    Turn: 2
+    Options: []
+  - Texto: Eu sou o MESTRE DOS MACHOS!
+    Turn: 2
+    Options: []
+  - Texto: "O macho mais macho de tudo que \xE9 M\xC1SCULO!"
+    Turn: 2
+    Options: []
+  - Texto: "Sou o chefe aqui, ent\xE3o escute bem!"
+    Turn: 2
+    Options: []
+  - Texto: "Vou te ensinar como ser forte como um tuf\xE3o, r\xE1pido como um rio
+      e honrado como um homem."
+    Turn: 2
+    Options: []
+  - Texto: "Se voc\xEA quiser ser que nem eu, siga minhas instru\xE7\xF5es."
+    Turn: 2
+    Options: []
+  - Texto: "E voc\xEA ser\xE1 recompensado ao final de sua jornada com o PODER INFINITO!"
+    Turn: 2
+    Options: []
+  - Texto: "Para isso voc\xEA precisar\xE1 derrotar as suas maiores fraquezas: AS
+      SUAS EMO\xC7\xD5ES!"
+    Turn: 2
+    Options: []
+  - Texto: "Cada uma das tr\xEAs tem uma forma diferente de ser derrotada"
+    Turn: 2
+    Options: []
+  - Texto: E provavelmente, o seu rolamento tem algo a ver com isso.
+    Turn: 2
+    Options: []
+  - Texto: "N\xE3o vai amarelar n\xE9? Estou confiando em voc\xEA."
+    Turn: 2
+    Options: []
+  - Texto: "Seja homem e v\xE1 a luta."
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "\xC9 hoje que voc\xEA vira homem."
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Voc\xEA n\xE3o pode deixar que ningu\xE9m te desrespeite!"
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "\xC9 o homem quem manda, e no caso, eu sou o maior de todos os homens."
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "\rSabe o que voc\xEA faz com a dor? D\xE1 um soco na cara dela e mostra
+      quem \xE9 que manda.\r"
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Homem de verdade n\xE3o precisa de ningu\xE9m."
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Emo\xE7\xF5es? Est\xE1 me estranhando? Eu sou macho feito de puro m\xFAsculo,
+      n\xE3o tenho essas fraquezas."
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Olha s\xF3 para esses m\xFAsculos! Eu sou demais!"
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Chega de tagarelar! T\xE1 na hora de enfrentar os inimigos."
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Voc\xEA n\xE3o tem uma miss\xE3o para cumprir?"
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Parab\xE9ns guerreiro, voc\xEA completou sua miss\xE3o!"
+    Turn: 2
+    Options: []
+  - Texto: "Agora est\xE1 pronto para se tornar um verdadeiro Macho Alfa."
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: Um homem faz o que deve ser feito.
+      NextChat: 106
+    - Texto: Acho que isso foi um erro.
+      NextChat: 36
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "N\xE3o me diga que voc\xEA est\xE1 sentindo peninha deles?"
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: "Eu acho que eu n\xE3o gostaria que fizessem isso comigo."
+      NextChat: 39
+    - Texto: "Pena? Eu n\xE3o! Antes eles do que eu..."
+      NextChat: 80
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "N\xE3o faz sentido humilhar algu\xE9m para se sentir mais forte... Isso
+      s\xF3 faz de voc\xEA... um covarde."
+    Turn: 1
+    Options: []
+  - Texto: "Francamente, voc\xEA n\xE3o passa de um beb\xEA medroso... "
+    Turn: 2
+    Options: []
+  - Texto: "Que tipo de guerreiro \xE9 esse que amarela diante de um desafio?"
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: "Beb\xEA medroso? Voc\xEA esqueceu que eu derrotei todos os chef\xF5es?"
+      NextChat: 83
+    - Texto: "Um guerreiro que muda de ideia quando percebe que est\xE1 errado."
+      NextChat: 44
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "Um homem nunca volta atr\xE1s. \xC9 por isso que existe palavra de homem.
+      Porque temos honra!"
+    Turn: 2
+    Options: []
+  - Texto: "Parece que voc\xEA passou tempo demais com aquelas emo\xE7\xF5es e est\xE1
+      todo sentimentalzinho agora."
+    Turn: 2
+    Options: []
+  - Texto: "Seja homem e esque\xE7a essa historinha de sentimentos! Eu j\xE1 lhe
+      disse: Sentimentos te deixam fraco."
+    Turn: 2
+    Options: []
+  - Texto: "Olha s\xF3 voc\xEA! Est\xE1 ficando vulner\xE1vel. Se quiser ser um guerreiro,
+      tem que se livrar disso.\r"
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: "N\xE3o estou ficando sentimental! Eu derrotei todas as minhas fraquezas."
+      NextChat: 88
+    - Texto: "N\xE3o faz sentido lutar com meus sentimentos, eles s\xE3o parte de
+        mim."
+      NextChat: 50
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "Eu sei que falar sobre sentimentos me deixa vulner\xE1vel. E sim, isso\u2026
+      Me assusta... Mas..."
+    Turn: 1
+    Options: []
+  - Texto: "Ah t\xE1 assustadinho? Se tremendo todo? Eu sabia que voc\xEA era um
+      fracote... Que decep\xE7\xE3o."
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: "\xC9 verdade, eu tenho medo... de muitas coisas."
+      NextChat: 54
+    - Texto: Mas sabe o que eu fiz com o medo? Dei uma surra nele.
+      NextChat: 90
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: Eu ainda tenho medo de fracassar, de ser rejeitado...
+    Turn: 1
+    Options: []
+  - Texto: Mas...
+    Turn: 1
+    Options: []
+  - Texto: "Eu n\xE3o preciso mais ter medo de \u201Cter medo\u201D. "
+    Turn: 1
+    Options: []
+  - Texto: "Porque eu aprendi que \xE9 aceitando o meu medo, que eu consigo enfrent\xE1-lo."
+    Turn: 1
+    Options: []
+  - Texto: "Oh, \xE9 mesmo? Voc\xEA quer um lencinho para chorar, medrosinho? HAHAHAHAH
+      Que piada\u2026"
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: "Voc\xEA n\xE3o ouviu nada do que eu disse? O medo \xE9 quem tem que
+        ter medo de mim."
+      NextChat: 90
+    - Texto: "At\xE9 parece que eu vou chorar por uma coisa boba dessas..."
+      NextChat: 92
+    - Texto: E qual o problema de chorar?
+      NextChat: 61
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "As vezes \xE9 preciso chorar para a dor ir embora. "
+    Turn: 1
+    Options: []
+  - Texto: Liberar a dor? Um homem de verdade engole a dor.
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: "\xC9 dif\xEDcil para mim, mas eu engulo."
+      NextChat: 97
+    - Texto: "Se voc\xEA guardar essa dor para si, em sil\xEAncio, coisas ruins acontecem."
+      NextChat: 65
+    - Texto: "Liberar a dor nos outros quando eu fa\xE7o eles chorarem como beb\xEAs."
+      NextChat: 94
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "N\xE3o precisa ter medo de ser quem voc\xEA \xE9 e se esconder atr\xE1s
+      de uma armadura."
+    Turn: 1
+    Options: []
+  - Texto: "N\xE3o precisa ser dur\xE3o o tempo todo. "
+    Turn: 1
+    Options: []
+  - Texto: 'Nem precisa humilhar outras pessoas para se sentir mais forte. '
+    Turn: 1
+    Options: []
+  - Texto: "Muito menos lutar contra as suas emo\xE7\xF5es at\xE9 se tornar pedra."
+    Turn: 1
+    Options: []
+  - Texto: "Ent\xE3o... do que a gente precisa?"
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: Cerveja e futebol.
+      NextChat: 99
+    - Texto: Uma mulher de valor.
+      NextChat: 102
+    - Texto: Pessoas.
+      NextChat: 72
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "O que n\xF3s precisamos \xE9 de pessoas. "
+    Turn: 1
+    Options: []
+  - Texto: 'De afeto. Carinho. '
+    Turn: 1
+    Options: []
+  - Texto: "Ningu\xE9m vive sozinho... Nem mesmo voc\xEA, Mestre."
+    Turn: 1
+    Options: []
+  - Texto: "Eu... eu..... \xE9... "
+    Turn: 2
+    Options: []
+  - Texto: "VOC\xCA SABE COM QUEM EST\xC1 FALANDO? EU! O MESTRE DOS MACHOS! "
+    Turn: 2
+    Options: []
+  - Texto: "SOU O MAIOR MACHO ALFA QUE J\xC1 EXISTIU! EU CRIEI A MASCULINIDADE! EU
+      SOU O MAIS FORTE!"
+    Turn: 2
+    Options: []
+  - Texto: "E N\xC3O OUSE ME COMPARAR COM UM FRACOTE-MARIQUINHA-MANTEIGA DERRETIDA
+      COMO VOC\xCA!"
+    Turn: 2
+    Options: []
+  - Texto: '   ******   Batalha   *******'
+    Turn: 0
+    Options: []
+  - Texto: "Acho que eles n\xE3o mereciam isso... mas... eu tinha que me defender!
+      \r\nAzar o deles por serem fracos.\r"
+    Turn: 1
+    Options: []
+  - Texto: 
+    Turn: 2
+    Options:
+    - Texto: "\xC9 isso a\xED, voc\xEA mostrou para eles quem \xE9 o Macho Alfa!"
+      NextChat: 104
+  - Texto: '*resposta*'
+    Turn: 0
+    Options: []
+  - Texto: "Esqueceu? Eu sou muito mais forte que voc\xEA."
+    Turn: 1
+    Options: []
+  - Texto: "Calma ai, garot\xE3o! N\xE3o esquece quem \xE9 o verdadeiro Macho Alfa
+      aqui."
+    Turn: 2
+    Options: []
+  - Texto: "Caso contr\xE1rio, tenha certeza de que eu vou te dar uma surra para
+      mostrar qual \xE9 o seu lugar."
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: Eu adoraria te encher de sopapo.
+      NextChat: 104
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: Estou pronto para ser um guerreiro. Preciso saber como essa jornada
+        termina!
+      NextChat: 104
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: "Eu sou muito mais forte que o medo. Por isso voc\xEA deveria me temer. "
+      NextChat: 104
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: "Afinal de contas, eu sou homem. Homem n\xE3o chora."
+      NextChat: 104
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: "Estou tentando explicar como eu sou forte. O choro \xE9 a dor, e eu os
+      fa\xE7o chorar.\r"
+    Turn: 1
+    Options: []
+  - Texto: 
+    Turn: 1
+    Options:
+    - Texto: Isso se chama poder. Eu estou pronto para ser um Macho Alfa!
+      NextChat: 104
+  - Texto: '*resposta*'
+    Turn: 1
+    Options: []
+  - Texto: 
+    Turn: 2
+    Options:
+    - Texto: " Engolindo o choro como se deve. Realmente no fundo voc\xEA \xE9 um
+        homem de verdade! \r"
+      NextChat: 104
+  - Texto: '*resposta*'
+    Turn: 2
+    Options: []
+  - Texto: "Ent\xE3o voc\xEA est\xE1 fazendo esse drama todo, s\xF3 porque queria
+      tomar uma cerveja e jogar futebol?"
+    Turn: 2
+    Options: []
+  - Texto: 
+    Turn: 2
+    Options:
+    - Texto: "HAHAHA No fundo, voc\xEA realmente \xE9 um homem de verdade.\r"
+      NextChat: 104
+  - Texto: '*resposta*'
+    Turn: 2
+    Options: []
+  - Texto: "Ent\xE3o voc\xEA est\xE1 fazendo esse drama todo s\xF3 por causa de mulher?\r"
+    Turn: 2
+    Options: []
+  - Texto: "HAHAHA Que garanh\xE3o! No fundo, voc\xEA realmente \xE9 um homem de
+      verdade."
+    Turn: 2
+    Options: []
+  - Texto: "HAHAHAH Esse \xE9 o meu garoto!"
+    Turn: 2
+    Options: []
+  - Texto: "Por um momento pensei que voc\xEA iria me decepcionar, mas eu vejo que
+      o Macho Alfa est\xE1 em voc\xEA."
+    Turn: 2
+    Options: []
+  - Texto: "Agora que voc\xEA derrotou suas fraquezas, voc\xEA est\xE1 pronto para
+      se tornar um homem de verdade."
+    Turn: 2
+    Options: []
+  - Texto: "Sem nenhuma emo\xE7\xE3o..."
+    Turn: 2
+    Options: []
+  - Texto: "Bruto, controlado, frio e dur\xE3o!"
+    Turn: 2
+    Options: []
+  - Texto: Como uma pedra!
+    Turn: 2
+    Options: []
+  - Texto: '*acaba dialogo*'
+    Turn: 0
+    Options: []

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6056aa7d4c41992438bb6fa94436da9e, type: 3}
-  m_Name: DialogoFraqueza
+  m_Name: ingFraqueza
   m_EditorClassIdentifier: 
   Frase:
   - Texto: "Valent\xE3o, eu sei que voc\xEA humilha os mais fracos s\xF3 para poder

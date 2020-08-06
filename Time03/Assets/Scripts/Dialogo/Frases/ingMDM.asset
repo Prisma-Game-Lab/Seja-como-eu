@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6056aa7d4c41992438bb6fa94436da9e, type: 3}
+  m_Name: ingMDM
+  m_EditorClassIdentifier: 
+  Frase:
+  - Texto: "Homens s\xE3o sens\xEDveis tamb\xE9m. Qual o problema nisso?"
+    Turn: 1
+    Options: []
+  - Texto: "Voc\xEA n\xE3o sabe nada sobre ser homem!"
+    Turn: 2
+    Options: []
+  - Texto: "Ser homem n\xE3o tem nada a ver com essas FRESCURAS de sentimentos!"
+    Turn: 2
+    Options: []
+  - Texto: "Ser homem \xE9 ter for\xE7a, poder e controle de TUDO!"
+    Turn: 2
+    Options: []
+  - Texto: "Voc\xEA fica dizendo o que eu devo ou n\xE3o fazer para ser um homem."
+    Turn: 1
+    Options: []
+  - Texto: "Mas essa f\xF3rmula t\xE1 errada."
+    Turn: 1
+    Options: []
+  - Texto: "N\xE3o precisa de nada disso para ser homem."
+    Turn: 1
+    Options: []
+  - Texto: "Isso \xE9 um absurdo! Um homem tem que ser m\xE1sculo!"
+    Turn: 2
+    Options: []
+  - Texto: "Voc\xEA j\xE1 viu um homem cuidando da casa?"
+    Turn: 2
+    Options: []
+  - Texto: "Ou um homem dan\xE7ando bal\xE9? Um homem fazendo as unhas?"
+    Turn: 2
+    Options: []
+  - Texto: "N\xE3o! Porque isso n\xE3o \xE9 coisa de homem."
+    Turn: 2
+    Options: []
+  - Texto: "Isso \xE9 besteira. Eu posso jogar bola, dan\xE7ar, me vestir e ser quem
+      eu quiser."
+    Turn: 1
+    Options: []
+  - Texto: "E qualquer uma dessas coisas vai ser \u201Ccoisa de homem\u201D porque
+      eu me sinto homem."
+    Turn: 1
+    Options: []
+  - Texto: "Eu n\xE3o preciso da sua aprova\xE7\xE3o para me afirmar."
+    Turn: 1
+    Options: []
+  - Texto: " Eu sou homem e isso \xE9 suficiente para mim."
+    Turn: 1
+    Options: []
+  - Texto: 
+    Turn: 0
+    Options: []
