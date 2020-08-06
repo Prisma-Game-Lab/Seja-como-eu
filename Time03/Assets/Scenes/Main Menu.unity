@@ -673,7 +673,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '  Sair'
+  m_Text: '  Quit'
 --- !u!222 &328270292
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -817,7 +817,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Voltar
+  m_Text: Back
 --- !u!222 &404450889
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1295,7 +1295,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "  Configura\xE7\xF5es"
+  m_Text: '  Configurations'
 --- !u!222 &459656884
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1527,7 +1527,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "M\xFAsica"
+  m_Text: Music
 --- !u!222 &534010604
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2030,7 +2030,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Efeitos Sonoros
+  m_Text: Sound Effects
 --- !u!222 &638079036
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2692,7 +2692,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '  Continuar'
+  m_Text: '  Continue'
 --- !u!222 &923541909
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3693,7 +3693,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "M\xFAsica"
+  m_Text: Music
 --- !u!222 &1424217842
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3770,7 +3770,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Efeitos Sonoros
+  m_Text: Sound Effects
 --- !u!222 &1437756953
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5059,7 +5059,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "  Cr\xE9ditos"
+  m_Text: '  Credits'
 --- !u!222 &1766910853
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5734,7 +5734,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '  Novo Jogo'
+  m_Text: '  New Game'
 --- !u!222 &2059336636
 CanvasRenderer:
   m_ObjectHideFlags: 0

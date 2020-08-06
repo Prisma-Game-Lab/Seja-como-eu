@@ -502,6 +502,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 328632144535834588, guid: d77a8ac41e048294a87f58bd43a970f6,
+        type: 3}
+      propertyPath: m_Text
+      value: THANK YOU FOR PLAYING !
+      objectReference: {fileID: 0}
     - target: {fileID: 328632144535834590, guid: d77a8ac41e048294a87f58bd43a970f6,
         type: 3}
       propertyPath: m_IsActive
@@ -626,6 +631,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 328632145614843015, guid: d77a8ac41e048294a87f58bd43a970f6,
+        type: 3}
+      propertyPath: m_Text
+      value: THE END
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77a8ac41e048294a87f58bd43a970f6, type: 3}
@@ -871,6 +881,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 817.9
       objectReference: {fileID: 0}
+    - target: {fileID: 328632144535834588, guid: d77a8ac41e048294a87f58bd43a970f6,
+        type: 3}
+      propertyPath: m_Text
+      value: THANK YOU FOR PLAYING !
+      objectReference: {fileID: 0}
     - target: {fileID: 328632144591019139, guid: d77a8ac41e048294a87f58bd43a970f6,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -999,7 +1014,7 @@ PrefabInstance:
     - target: {fileID: 328632145614843015, guid: d77a8ac41e048294a87f58bd43a970f6,
         type: 3}
       propertyPath: m_Text
-      value: Resultado Final
+      value: Final Results
       objectReference: {fileID: 0}
     - target: {fileID: 328632145614843016, guid: d77a8ac41e048294a87f58bd43a970f6,
         type: 3}
@@ -2151,6 +2166,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8025786142380230821, guid: 19159773f6d86e942a71f39eb6db8f85,
+        type: 3}
+      propertyPath: m_Text
+      value: Back
+      objectReference: {fileID: 0}
     - target: {fileID: 8059826820113130098, guid: 19159773f6d86e942a71f39eb6db8f85,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -2757,7 +2777,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Resultado Final
+  m_Text: Final Results
 --- !u!222 &1350967325
 CanvasRenderer:
   m_ObjectHideFlags: 0
