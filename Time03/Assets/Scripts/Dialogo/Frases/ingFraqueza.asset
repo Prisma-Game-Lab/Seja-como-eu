@@ -28,11 +28,10 @@ MonoBehaviour:
   - Texto: "But most importantly, you\u2019re scared of being afraid.\r"
     Turn: 4
     Options: []
-  - Texto: "But know that hiding your pain doesn\u2019t make you tough. That\u2019s
-      only running away from the problem.\r"
+  - Texto: "But know that hiding your pain doesn\u2019t make you tough."
     Turn: 4
     Options: []
-  - Texto: "Isso \xE9 fugir do problema."
+  - Texto: "That\u2019s only running away from the problem.\r"
     Turn: 4
     Options: []
   - Texto: "Running away from your problems and bullying others to feel better only
