@@ -9559,7 +9559,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 8531636323997815688, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -10922,7 +10922,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
@@ -17355,7 +17355,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Estat\xEDsticas"
+  m_Text: Statistics
 --- !u!222 &1939065213
 CanvasRenderer:
   m_ObjectHideFlags: 0

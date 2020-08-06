@@ -9639,7 +9639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyTurn: 4
-  Frases: {fileID: 11400000, guid: f5ac1be78443e484fafe9ffe4c13e56c, type: 2}
+  Frases: {fileID: 11400000, guid: 9640626915999d648a8f1366fa6c6fa8, type: 2}
   Trigger: {fileID: 1469923915}
   ChatBox: {fileID: 933584654}
 --- !u!1 &1143363419
