@@ -73,13 +73,13 @@ public class ShowStats : MonoBehaviour
         StatsText.text += Counts.ExpressividadeIsMorto?$"Death by Expression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["ExpressividadeDeathCount"]}\n\n"
         :"";
 
-        StatsText.text += Counts.MDMIsMorto?$"Tempo de Batalha do Mestre dos Machos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {ConvertToTime(Counts.MDMCompleteTimer)}\n\n"
+        StatsText.text += Counts.MDMIsMorto?$"Master Macho's Battle Time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {ConvertToTime(Counts.MDMCompleteTimer)}\n\n"
         :"????????????????????????????\n\n";
 
-        StatsText.text += Counts.MDMIsMorto?$"Número de Rolamentos no Mestre dos Machos . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["MDMDashCount"]}\n\n"
+        StatsText.text += Counts.MDMIsMorto?$"Master Macho's Battle Roll Count . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["MDMDashCount"]}\n\n"
         :"";
 
-        StatsText.text += Counts.MDMIsMorto?$"Número de Mortes no Mestre dos Machos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["MDMDeathCount"]}\n\n"
+        StatsText.text += Counts.MDMIsMorto?$"Death by Toxic Masculinity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["MDMDeathCount"]}\n\n"
         :"";
 
         StatsText.text += $"Total Play Time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {ConvertToTime(Counts.TotalPlayTime)}";
