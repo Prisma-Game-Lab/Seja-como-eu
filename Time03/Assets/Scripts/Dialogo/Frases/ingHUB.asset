@@ -309,33 +309,31 @@ MonoBehaviour:
   - Texto: '   ******   Batalha   *******'
     Turn: 0
     Options: []
-  - Texto: "Acho que eles n\xE3o mereciam isso... mas... eu tinha que me defender!
-      \r\nAzar o deles por serem fracos.\r"
+  - Texto: "I don\u2019t think they deserved it... but... I had to defend myself!
+      They were weak!\r\n"
     Turn: 1
     Options: []
   - Texto: 
     Turn: 2
     Options:
-    - Texto: "\xC9 isso a\xED, voc\xEA mostrou para eles quem \xE9 o Macho Alfa!"
+    - Texto: "That\u2019s it! You\u2019ve shown them who is the man!\r"
       NextChat: 104
   - Texto: '*resposta*'
     Turn: 0
     Options: []
-  - Texto: "Esqueceu? Eu sou muito mais forte que voc\xEA."
+  - Texto: "Did you forget? I\u2019m much stronger than you!\r"
     Turn: 1
     Options: []
-  - Texto: "Calma ai, garot\xE3o! N\xE3o esquece quem \xE9 o verdadeiro Macho Alfa
-      aqui."
+  - Texto: "Calm down boy\u2019 don\u2019t forget who is the real alpha around here!\r\n"
     Turn: 2
     Options: []
-  - Texto: "Caso contr\xE1rio, tenha certeza de que eu vou te dar uma surra para
-      mostrar qual \xE9 o seu lugar."
+  - Texto: "Or else I\u2019ll be sure to beat you up and show you your place!"
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: Eu adoraria te encher de sopapo.
+    - Texto: "I would love to beat you up!\r"
       NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
@@ -343,8 +341,7 @@ MonoBehaviour:
   - Texto: 
     Turn: 1
     Options:
-    - Texto: Estou pronto para ser um guerreiro. Preciso saber como essa jornada
-        termina!
+    - Texto: "I\u2019m ready to be a warrior. I need to know how this journey ends!"
       NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
@@ -352,7 +349,8 @@ MonoBehaviour:
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "Eu sou muito mais forte que o medo. Por isso voc\xEA deveria me temer. "
+    - Texto: "I\u2019m much stronger than fear that\u2019s why you should fear me!
+        \r"
       NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
@@ -360,19 +358,19 @@ MonoBehaviour:
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "Afinal de contas, eu sou homem. Homem n\xE3o chora."
+    - Texto: "I am a man after all and men don\u2019t cry!"
       NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: "Estou tentando explicar como eu sou forte. O choro \xE9 a dor, e eu os
-      fa\xE7o chorar.\r"
+  - Texto: "I\u2019m trying to explain how I\u2019m strong! I meant to say I make
+      them cry."
     Turn: 1
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: Isso se chama poder. Eu estou pronto para ser um Macho Alfa!
+    - Texto: "That\u2019s called power. I\u2019m ready to be a man!"
       NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
@@ -380,49 +378,48 @@ MonoBehaviour:
   - Texto: 
     Turn: 2
     Options:
-    - Texto: " Engolindo o choro como se deve. Realmente no fundo voc\xEA \xE9 um
-        homem de verdade! \r"
+    - Texto: "Swallowing your tears as you should. You\u2019re a true man at heart!\r"
       NextChat: 104
   - Texto: '*resposta*'
     Turn: 2
     Options: []
-  - Texto: "Ent\xE3o voc\xEA est\xE1 fazendo esse drama todo, s\xF3 porque queria
-      tomar uma cerveja e jogar futebol?"
+  - Texto: "So all this was because you wanted some beer and to play soccer?\r"
     Turn: 2
     Options: []
   - Texto: 
     Turn: 2
     Options:
-    - Texto: "HAHAHA No fundo, voc\xEA realmente \xE9 um homem de verdade.\r"
+    - Texto: "HAHAHA, deep down you\u2019re a real man!\r"
       NextChat: 104
   - Texto: '*resposta*'
     Turn: 2
     Options: []
-  - Texto: "Ent\xE3o voc\xEA est\xE1 fazendo esse drama todo s\xF3 por causa de mulher?\r"
+  - Texto: "All this because of a woman?\r"
     Turn: 2
     Options: []
-  - Texto: "HAHAHA Que garanh\xE3o! No fundo, voc\xEA realmente \xE9 um homem de
-      verdade."
+  - Texto: "Hahaha what a stud! I can see you\u2019re a true man!"
     Turn: 2
     Options: []
-  - Texto: "HAHAHAH Esse \xE9 o meu garoto!"
+  - Texto: "HAHAHAH That\u2019s my boy!"
     Turn: 2
     Options: []
-  - Texto: "Por um momento pensei que voc\xEA iria me decepcionar, mas eu vejo que
-      o Macho Alfa est\xE1 em voc\xEA."
+  - Texto: 'For a moment I thought you were going to disappoint me but I see the
+      man in you!
+
+'
     Turn: 2
     Options: []
-  - Texto: "Agora que voc\xEA derrotou suas fraquezas, voc\xEA est\xE1 pronto para
-      se tornar um homem de verdade."
+  - Texto: "Now that you\u2019ve defeated your emotions, you\u2019re ready to become
+      a real man.\r"
     Turn: 2
     Options: []
-  - Texto: "Sem nenhuma emo\xE7\xE3o..."
+  - Texto: With no feelings...
     Turn: 2
     Options: []
-  - Texto: "Bruto, controlado, frio e dur\xE3o!"
+  - Texto: Brute, controlled, cold and tough...
     Turn: 2
     Options: []
-  - Texto: Como uma pedra!
+  - Texto: Like a rock.
     Turn: 2
     Options: []
   - Texto: '*acaba dialogo*'
