@@ -13,51 +13,51 @@ MonoBehaviour:
   m_Name: ingMDM
   m_EditorClassIdentifier: 
   Frase:
-  - Texto: "Homens s\xE3o sens\xEDveis tamb\xE9m. Qual o problema nisso?"
+  - Texto: "Men are sensible too. What\u2019s the problem with that?\r"
     Turn: 1
     Options: []
-  - Texto: "Voc\xEA n\xE3o sabe nada sobre ser homem!"
+  - Texto: You know nothing about being a man!
     Turn: 2
     Options: []
-  - Texto: "Ser homem n\xE3o tem nada a ver com essas FRESCURAS de sentimentos!"
+  - Texto: "To be a man has nothing to do with those FOOLISH feelings!\r"
     Turn: 2
     Options: []
-  - Texto: "Ser homem \xE9 ter for\xE7a, poder e controle de TUDO!"
+  - Texto: "To be a man is to have have strength, power and control of ALL!\r"
     Turn: 2
     Options: []
-  - Texto: "Voc\xEA fica dizendo o que eu devo ou n\xE3o fazer para ser um homem."
+  - Texto: "You keep saying what I should and shouldn\u2019t do to be a man.\r"
     Turn: 1
     Options: []
-  - Texto: "Mas essa f\xF3rmula t\xE1 errada."
+  - Texto: But this formula is wrong.
     Turn: 1
     Options: []
-  - Texto: "N\xE3o precisa de nada disso para ser homem."
+  - Texto: You need none of that to be a man.
     Turn: 1
     Options: []
-  - Texto: "Isso \xE9 um absurdo! Um homem tem que ser m\xE1sculo!"
+  - Texto: "This is insane! A man has to be manly.\r"
     Turn: 2
     Options: []
-  - Texto: "Voc\xEA j\xE1 viu um homem cuidando da casa?"
+  - Texto: "Have you ever seen a man doing house chores?\r"
     Turn: 2
     Options: []
-  - Texto: "Ou um homem dan\xE7ando bal\xE9? Um homem fazendo as unhas?"
+  - Texto: "Or a man dancing ballet? A man doing his nails?\r"
     Turn: 2
     Options: []
-  - Texto: "N\xE3o! Porque isso n\xE3o \xE9 coisa de homem."
+  - Texto: "No! That\u2019s not a manly thing.\r"
     Turn: 2
     Options: []
-  - Texto: "Isso \xE9 besteira. Eu posso jogar bola, dan\xE7ar, me vestir e ser quem
-      eu quiser."
+  - Texto: "That\u2019s silly. I can play sports, dance, wear any clothes and be
+      whoever I want.\r"
     Turn: 1
     Options: []
-  - Texto: "E qualquer uma dessas coisas vai ser \u201Ccoisa de homem\u201D porque
-      eu me sinto homem."
+  - Texto: "And any of these things is going to be a \u201Cmanly\u201D thing, because
+      i feel manly.\r"
     Turn: 1
     Options: []
-  - Texto: "Eu n\xE3o preciso da sua aprova\xE7\xE3o para me afirmar."
+  - Texto: "I don\u2019t need your approval to assert me."
     Turn: 1
     Options: []
-  - Texto: " Eu sou homem e isso \xE9 suficiente para mim."
+  - Texto: "I am a man, and that\u2019s enough for me. \n"
     Turn: 1
     Options: []
   - Texto: 
