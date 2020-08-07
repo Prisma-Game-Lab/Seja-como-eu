@@ -40,7 +40,7 @@ MonoBehaviour:
   - Texto: You only need to be yourself.
     Turn: 5
     Options: []
-  - Texto: And anything you do will be a "manly thing".
+  - Texto: And anything you do will be a "manly" thing.
     Turn: 5
     Options: []
   - Texto: acaba dialogo
