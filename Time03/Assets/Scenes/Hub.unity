@@ -2363,6 +2363,10 @@ PrefabInstance:
       propertyPath: m_PixelsPerUnitMultiplier
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 310013182, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.83
+      objectReference: {fileID: 0}
     - target: {fileID: 559074618, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -2374,7 +2378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732308937, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 640
+      objectReference: {fileID: 0}
+    - target: {fileID: 732308937, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -17.9
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_FontData.m_Font
@@ -2387,7 +2395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Text
-      value: You've Already Beaten Expression.
+      value: You've Already Beaten Expressiveness.
       objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -2652,12 +2660,22 @@ PrefabInstance:
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Do you want to fight Expression?
+      value: Do you want to fight Expressiviness?
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 630
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531636323997815688, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
@@ -10648,7 +10666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Text
-      value: You've Already Beaten Depression.
+      value: You've Already Beaten Fragility.
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_FontData.m_Font
@@ -10906,7 +10924,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Do you want to fight Depression?
+      value: Do you want to fight Fragility?
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
