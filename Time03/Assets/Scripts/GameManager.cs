@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject Canvas;
 
     private GeneralCounts Counts;
+    public GeneralCounts counts {get{return Counts;}} 
 
     private bool GameIsPaused = false;
     private bool WaitPause = false;
@@ -33,8 +34,8 @@ public class GameManager : MonoBehaviour
     {
         Counts.TotalPlayTime += Time.deltaTime;
         if(GeneralCounts.Kill && player.GetComponent<MovimentPlayer>().enabled) {
-            Death();
             canPause = false;
+            Death();
         }
 
         if(Input.GetAxisRaw("Pause") == 1 && WaitPause == false)
@@ -52,11 +53,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ChangeInvincibility(bool value){
+        GeneralCounts.PlayerImortal = value;
+    }
+
     public void Death() {
-        player.GetComponent<RagdollController>().DoRagdoll(true);
-        player.GetComponent<MovimentPlayer>().enabled = false;
+        if(GeneralCounts.PlayerImortal) {
+            GeneralCounts.Kill = false;
+            canPause = true;
+        } else {
+            player.GetComponent<RagdollController>().DoRagdoll(true);
+            player.GetComponent<MovimentPlayer>().enabled = false;
+            StartCoroutine("DeathDelay");
+        }
         DeathCounter();
-        StartCoroutine("DeathDelay");
+
+        
     }
 
     private IEnumerator DeathDelay()

@@ -10,6 +10,7 @@ using System.Linq;
 public class GeneralCounts : ScriptableObject
 {
    public static bool Kill = false;
+   public static bool PlayerImortal = false;
    
    public bool CarinhoIsMorto = false;
    public bool TristezaIsMorto = false;
