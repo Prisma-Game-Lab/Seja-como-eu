@@ -12,6 +12,8 @@ public class PunchUltimate : MonoBehaviour
     public Transform Player;
     private MDM Mestre;
 
+    private int WaveSize = 12;
+
     private Animator anim;
 
     void Start()
@@ -41,11 +43,11 @@ public class PunchUltimate : MonoBehaviour
         yield return new WaitForSeconds(1);
         for(int i=0;i<NumberOfWaves/2;i++) {
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
-            rnd = Random.Range(0,7);
+            rnd = Random.Range(1,WaveSize/2);
             Destroy(wave.transform.GetChild(rnd).gameObject);
             yield return new WaitForSeconds(TimeBetweenWaves);
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
-            rnd = Random.Range(8,15);
+            rnd = Random.Range((WaveSize/2)+1,WaveSize);
             Destroy(wave.transform.GetChild(rnd).gameObject);
             yield return new WaitForSeconds(TimeBetweenWaves);
         }
@@ -65,11 +67,11 @@ public class PunchUltimate : MonoBehaviour
         yield return new WaitForSeconds(1);
         for(int i=0;i<3;i++) {
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
-            rnd = Random.Range(0,15);
+            rnd = Random.Range(1,WaveSize);
             Destroy(wave.transform.GetChild(rnd).gameObject);
             yield return new WaitForSeconds(TimeBetweenWaves);
         }
-        for(int i=0;i<14;i++) {
+        for(int i=0;i<WaveSize;i++) {
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
             Destroy(wave.transform.GetChild(i).gameObject);
             Destroy(wave.transform.GetChild(i+1).gameObject);
@@ -88,13 +90,13 @@ public class PunchUltimate : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         UltimateBarrier.SetActive(true);
         yield return new WaitForSeconds(1);
-        for(int i=0;i<14;i++) {
+        for(int i=0;i<WaveSize;i++) {
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
             Destroy(wave.transform.GetChild(i).gameObject);
             Destroy(wave.transform.GetChild(i+1).gameObject);
             yield return new WaitForSeconds(TimeBetweenWavesLevel1);
         }
-        for(int i=14;i>0;i--) {
+        for(int i=WaveSize;i>0;i--) {
             wave = Instantiate(UltimateWave,new Vector3(0.63f,0,1.6f),Quaternion.identity);
             Destroy(wave.transform.GetChild(i).gameObject);
             Destroy(wave.transform.GetChild(i-1).gameObject);

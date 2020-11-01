@@ -19,4 +19,8 @@ public class InvincibilidadeUI : MonoBehaviour
         toggle.isOn = !GeneralCounts.PlayerImortal;
         gameManager.ChangeInvincibility(toggle.isOn);
     }
+
+    void OnSubmit (){
+        ChangeInv();
+    }
 }

@@ -91,8 +91,8 @@ public class PunchFollow : MonoBehaviour
     private void Level2() {
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        Instantiate(PrefabPunchesFollowLevel2,new Vector3(-21,0,0),Quaternion.identity);
-        GameObject go = Instantiate(PrefabPunchesFollowLevel2,new Vector3(21,0,0),Quaternion.identity);
+        Instantiate(PrefabPunchesFollowLevel2,new Vector3(-22,0,0),Quaternion.identity);
+        GameObject go = Instantiate(PrefabPunchesFollowLevel2,new Vector3(22,0,0),Quaternion.identity);
 
         go.transform.Rotate(new Vector3(0,180,0));
     }
