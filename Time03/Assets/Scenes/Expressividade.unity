@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796f8163ad2bb1440a0d2abb18cc3481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 9
+  health: 6
   cooldown: 3
   portalExit: {fileID: 168924636}
 --- !u!114 &423537700
