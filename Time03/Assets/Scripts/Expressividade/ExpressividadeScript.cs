@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExpressividadeScript : MonoBehaviour
 {
 
-    public int health = 9;
+    public int health = 6;
     private Skills Missile;
     private Skills Pillar;
     private List<Skills> skills;
@@ -93,11 +93,11 @@ public class ExpressividadeScript : MonoBehaviour
         else
         {
             headAnimator.SetTrigger("damage");
-            if(health == 6)
+            if(health == 4)
             {
                 Missile.SwitchReady();
             }
-            if(health == 3)
+            if(health == 2)
             {
                 Pillar.SwitchReady();
             }
