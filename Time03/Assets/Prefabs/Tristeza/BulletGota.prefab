@@ -4970,7 +4970,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.1
+  m_Time: 0.13
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -5127,7 +5127,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.12
+  m_Time: 0.16
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1

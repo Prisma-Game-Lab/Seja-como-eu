@@ -1,5 +1,113 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1097841678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1097841679}
+  - component: {fileID: 1097841683}
+  - component: {fileID: 1097841682}
+  - component: {fileID: 1097841681}
+  - component: {fileID: 1097841680}
+  m_Layer: 0
+  m_Name: ChatBoxPlaceHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1097841679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097841678}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.68, y: 9.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 130749954619186808}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1097841683
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097841678}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1097841682
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097841678}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!135 &1097841681
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097841678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1097841680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097841678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f012dc8d5c3df4895edf52600f3eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameLabel: {fileID: 0}
+  MainCamera: {fileID: 0}
 --- !u!1 &130749954619186805
 GameObject:
   m_ObjectHideFlags: 0
@@ -19,6 +127,7 @@ GameObject:
   - component: {fileID: 130749954619186812}
   - component: {fileID: 130749954619186814}
   - component: {fileID: 130749954619186815}
+  - component: {fileID: 1138785813}
   m_Layer: 0
   m_Name: Fraqueza
   m_TagString: Untagged
@@ -41,6 +150,7 @@ Transform:
   - {fileID: 4182007723677971745}
   - {fileID: 4429555553444223532}
   - {fileID: 2499127115728110790}
+  - {fileID: 1097841679}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -151,9 +261,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Cooldown: 3
+  SkillIsReady: 0
   damageCounter: 0
   health: 3
+  startTime: 0.8
   RunAwayDistance: 10
+  casco: {fileID: 3350410374316798240}
+  quebrado1: {fileID: 2800000, guid: 04e31f0909f1af74b93371133523b46b, type: 3}
+  quebrado2: {fileID: 2800000, guid: 22ebea14919ab20478d058b3750f0c14, type: 3}
+  animLuz: {fileID: 0}
 --- !u!114 &130749954619186811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,18 +327,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae8f5359b07d20429b0ad3f79b9e435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollWindup: 1
-  rollDuration: 5
-  rollSpeed: 30
+  rollWindup: 1.2
+  rollDuration: 4.8
+  rollSpeed: 25
   Probabilidade: 100
-  Cooldown: 10
+  Cooldown: 12
   rolling: 0
   bounceMat: {fileID: 13400000, guid: ae647c002cd0501438ca2954c45ae449, type: 2}
   Player: {fileID: 0}
   PrefabBulletGota: {fileID: 4035445688948290335, guid: 532c3a64bdc73ca4d9bba67b29bd851e,
     type: 3}
   nightmareMode: 1
-  numeroBullets: 12
+  numeroBullets: 8
 --- !u!195 &130749954619186815
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -245,6 +361,22 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1138785813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130749954619186805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694fee7b401740840bbfac07a6658edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyTurn: 4
+  Frases: {fileID: 11400000, guid: f5ac1be78443e484fafe9ffe4c13e56c, type: 2}
+  Trigger: {fileID: 0}
+  ChatBox: {fileID: 0}
 --- !u!1 &130749955878469255
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +814,12 @@ GameObject:
 --- !u!4 &4182007723677971745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: af691f6c99e7c174aa857612df6181ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 9183909536163585595}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &3350410374316798240 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5840255483787996955, guid: af691f6c99e7c174aa857612df6181ee,
     type: 3}
   m_PrefabInstance: {fileID: 9183909536163585595}
   m_PrefabAsset: {fileID: 0}

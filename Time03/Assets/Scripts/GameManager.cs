@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameConfigUI;
     public GameObject player;
     public GameObject Canvas;
+    public ParticleSystem player_particle;
 
     private GeneralCounts Counts;
     public GeneralCounts counts {get{return Counts;}} 
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
         PauseMenuUI.SetActive(false);
         GameConfigUI.SetActive(false);
         CurrentScene = SceneManager.GetActiveScene().name;
+        player_particle = player.transform.GetChild(0).Find("DeathParticle").GetComponent<ParticleSystem>();
+        player_particle.Stop();
     }
 
     
@@ -66,6 +69,7 @@ public class GameManager : MonoBehaviour
             player.GetComponent<MovimentPlayer>().enabled = false;
             StartCoroutine("DeathDelay");
         }
+        player_particle.Play();
         DeathCounter();
 
         

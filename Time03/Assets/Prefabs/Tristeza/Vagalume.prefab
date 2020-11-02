@@ -4962,7 +4962,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.2
+  m_Time: 0.25
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -4981,11 +4981,11 @@ TrailRenderer:
       - serializedVersion: 3
         time: 0.9820359
         value: 0.09523812
-        inSlope: 0
-        outSlope: 0
+        inSlope: -1.6457828
+        outSlope: -1.6457828
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.1820756
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2

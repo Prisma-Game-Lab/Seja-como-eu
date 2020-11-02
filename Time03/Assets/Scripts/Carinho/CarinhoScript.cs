@@ -38,11 +38,13 @@ public class CarinhoScript : MonoBehaviour
     private bool invulneravel = false;
 
     private GeneralCounts Counts;
+    private MovimentPlayer player_mov;
     private DisplayFrase DF;
 
     void Start()
     {
         Counts = SaveSystem.GetInstance().generalCounts;
+        player_mov = PlayerPosition.GetComponent<MovimentPlayer>();
 
         DF = GetComponent<DisplayFrase>();
 
@@ -136,6 +138,10 @@ public class CarinhoScript : MonoBehaviour
                     SkillCD.ChooseSkill(skills);
                     StartCoroutine(ResetCooldown());
                 }
+                if(!player_mov.enabled){
+                    agent.enabled = false;
+                    anim.SetBool("Idle", true);
+                }
             }
 
 
@@ -156,6 +162,7 @@ public class CarinhoScript : MonoBehaviour
         {
             GetComponent<Collider>().enabled = false;
             agent.SetDestination(transform.position);
+            anim.SetTrigger("Death");
         }
     }
 

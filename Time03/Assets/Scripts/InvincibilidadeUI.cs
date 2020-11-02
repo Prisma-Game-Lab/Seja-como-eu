@@ -12,6 +12,7 @@ public class InvincibilidadeUI : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
         toggle = GetComponent<Toggle>();
+        
         toggle.isOn = GeneralCounts.PlayerImortal;
     }
 
