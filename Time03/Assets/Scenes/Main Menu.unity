@@ -1485,11 +1485,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831795dd0eb76d24bb60326c501c7ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuUI: {fileID: 1805314186}
-  DeathScreen: {fileID: 1805314186}
-  GameConfigUI: {fileID: 1805314186}
-  player: {fileID: 1805314186}
-  Canvas: {fileID: 1805314186}
+  PauseMenuUI: {fileID: 0}
+  DeathScreen: {fileID: 0}
+  GameConfigUI: {fileID: 0}
+  player: {fileID: 0}
+  Canvas: {fileID: 0}
   canPause: 0
 --- !u!114 &460062265
 MonoBehaviour:
