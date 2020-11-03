@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class ShowStats : MonoBehaviour
 {
-    public Text StatsText;
+    public GameObject statsObject;
     private GeneralCounts Counts;
+    public StatsObject[] stats;
 
     private bool CanActivate = false;
     private bool ControlAcess = true;
@@ -17,6 +18,12 @@ public class ShowStats : MonoBehaviour
     void Start()
     {
         Counts = SaveSystem.GetInstance().generalCounts;
+        stats = new StatsObject[5];
+        for(int i=0; i<stats.Length; i++){
+            stats[i].ValuesText = statsObject.transform.GetChild(i+2).GetChild(0).GetComponent<Text>();
+            stats[i].LabelText = statsObject.transform.GetChild(i+2).GetChild(1).GetComponent<Text>();
+            stats[i].CoverImage = statsObject.transform.GetChild(i+2).GetChild(3).GetChild(1).gameObject;
+        }
     }
     
     void Update()
@@ -36,53 +43,31 @@ public class ShowStats : MonoBehaviour
     }
 
     public void DisplayStats() {
-        TotalDashs = Counts.Stats["HubDashCount"] + Counts.Stats["CarinhoDashCount"] + Counts.Stats["TristezaDashCount"] +
+        TotalDashs = /*Counts.Stats["HubDashCount"]*/ + Counts.Stats["CarinhoDashCount"] + Counts.Stats["TristezaDashCount"] +
         Counts.Stats["ExpressividadeDashCount"] + Counts.Stats["MDMDashCount"];
         TotalDeaths = Counts.Stats["CarinhoDeathCount"] + Counts.Stats["TristezaDeathCount"] + Counts.Stats["MDMDeathCount"] +
         Counts.Stats["ExpressividadeDeathCount"];
         Time.timeScale = 0f;
         transform.GetChild(0).gameObject.SetActive(true);
-        StatsText.text = $"Número de Rolamentos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {TotalDashs}\n\nNúmero de Mortes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {TotalDeaths}\n\n";
 
-        StatsText.text += $"Número de Rolamentos no Hub . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["HubDashCount"]}\n\n";
+        stats[0].ValuesText.text = $"{TotalDashs}\n{TotalDeaths}\n{ConvertToTime(Counts.TotalPlayTime)}";
+        stats[0].LabelText.text = "Rolamentos totais\nMortes totais\nTempo de Jogo";
 
-        StatsText.text += Counts.CarinhoIsMorto?$"Tempo de Batalha do Carinho . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {ConvertToTime(Counts.CarinhoCompleteTimer)}\n\n"
-        :"Carinho Ainda não foi Derrotado.\n\n";
+        stats[1].ValuesText.text = Counts.CarinhoIsMorto?$"{Counts.Stats["CarinhoDashCount"]}\n{Counts.Stats["CarinhoDeathCount"]}\n{ConvertToTime(Counts.CarinhoCompleteTimer)}":"";
+        stats[1].LabelText.text = Counts.CarinhoIsMorto?"Rolamentos\nMortes\nTempo":"";
+        stats[1].CoverImage.SetActive(!Counts.CarinhoIsMorto);
 
-        StatsText.text += Counts.CarinhoIsMorto?$"Número de Rolamentos no Carinho . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["CarinhoDashCount"]}\n\n"
-        :"";
+        stats[2].ValuesText.text = Counts.ExpressividadeIsMorto?$"{Counts.Stats["ExpressividadeDashCount"]}\n{Counts.Stats["ExpressividadeDeathCount"]}\n{ConvertToTime(Counts.ExpressividadeCompleteTimer)}":"";
+        stats[2].LabelText.text = Counts.ExpressividadeIsMorto?"Rolamentos\nMortes\nTempo":"";
+        stats[2].CoverImage.SetActive(!Counts.ExpressividadeIsMorto);
 
-        StatsText.text += Counts.CarinhoIsMorto?$"Número de Mortes no Carinho . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["CarinhoDeathCount"]}\n\n"
-        :"";
+        stats[3].ValuesText.text = Counts.TristezaIsMorto?$"{Counts.Stats["TristezaDashCount"]}\n{Counts.Stats["TristezaDeathCount"]}\n{ConvertToTime(Counts.TristezaCompleteTimer)}":"";
+        stats[3].LabelText.text = Counts.TristezaIsMorto?"Rolamentos\nMortes\nTempo":"";
+        stats[3].CoverImage.SetActive(!Counts.TristezaIsMorto);
 
-        StatsText.text += Counts.TristezaIsMorto?$"Tempo de Batalha da Fraqueza . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {ConvertToTime(Counts.TristezaCompleteTimer)}\n\n"
-        :"Fraqueza Ainda não foi Derrotada.\n\n";
-
-        StatsText.text += Counts.TristezaIsMorto?$"Número de Rolamentos na Fraqueza . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["TristezaDashCount"]}\n\n"
-        :"";
-
-        StatsText.text += Counts.TristezaIsMorto?$"Número de Mortes na Fraqueza . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["TristezaDeathCount"]}\n\n"
-        :"";
-
-        StatsText.text += Counts.ExpressividadeIsMorto?$"Tempo de Batalha da Expressividade . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {ConvertToTime(Counts.ExpressividadeCompleteTimer)}\n\n"
-        :"Expressividade Ainda não foi Derrotada.\n\n";
-
-        StatsText.text += Counts.ExpressividadeIsMorto?$"Número de Rolamentos na Expressividade . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["ExpressividadeDashCount"]}\n\n"
-        :"";
-
-        StatsText.text += Counts.ExpressividadeIsMorto?$"Número de Mortes na Expressividade . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["ExpressividadeDeathCount"]}\n\n"
-        :"";
-
-        StatsText.text += Counts.MDMIsMorto?$"Tempo de Batalha do Mestre dos Machos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {ConvertToTime(Counts.MDMCompleteTimer)}\n\n"
-        :"????????????????????????????\n\n";
-
-        StatsText.text += Counts.MDMIsMorto?$"Número de Rolamentos no Mestre dos Machos . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["MDMDashCount"]}\n\n"
-        :"";
-
-        StatsText.text += Counts.MDMIsMorto?$"Número de Mortes no Mestre dos Machos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {Counts.Stats["MDMDeathCount"]}\n\n"
-        :"";
-
-        StatsText.text += $"Tempo Total de Jogo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . {ConvertToTime(Counts.TotalPlayTime)}";
+        stats[4].ValuesText.text = Counts.MDMIsMorto?$"{Counts.Stats["MDMDashCount"]}\n{Counts.Stats["MDMDeathCount"]}\n{ConvertToTime(Counts.MDMCompleteTimer)}":"";
+        stats[4].LabelText.text = Counts.MDMIsMorto?"Rolamentos\nMortes\nTempo":"";
+        stats[4].CoverImage.SetActive(!Counts.MDMIsMorto);
     }
 
     private string ConvertToTime(float time) {

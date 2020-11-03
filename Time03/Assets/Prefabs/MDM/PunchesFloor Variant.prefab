@@ -90,7 +90,7 @@ Transform:
   m_LocalScale: {x: 0.53569996, y: 0.6666667, z: 2}
   m_Children: []
   m_Father: {fileID: 2247228558320864857}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &2923528361132226230
 TrailRenderer:
@@ -408,20 +408,55 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1440061638791887429, guid: 5430fb4106b485f4490fb5203d7a9dbb,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440061638791887429, guid: 5430fb4106b485f4490fb5203d7a9dbb,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440061638791887429, guid: 5430fb4106b485f4490fb5203d7a9dbb,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440061638791887429, guid: 5430fb4106b485f4490fb5203d7a9dbb,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440061638791887429, guid: 5430fb4106b485f4490fb5203d7a9dbb,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1871249832918498566, guid: 5430fb4106b485f4490fb5203d7a9dbb,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2991211779255824106, guid: 5430fb4106b485f4490fb5203d7a9dbb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239666792510393965, guid: 5430fb4106b485f4490fb5203d7a9dbb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5234901223030090081, guid: 5430fb4106b485f4490fb5203d7a9dbb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7050569593930829034, guid: 5430fb4106b485f4490fb5203d7a9dbb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8644095445121436849, guid: 5430fb4106b485f4490fb5203d7a9dbb,
         type: 3}

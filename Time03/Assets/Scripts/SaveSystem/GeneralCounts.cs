@@ -14,7 +14,6 @@ public class GeneralCounts : ScriptableObject
    
    public bool CarinhoIsMorto = false;
    public bool TristezaIsMorto = false;
-
    public bool ExpressividadeIsMorto = false;
    public bool MDMIsMorto = false;
 
