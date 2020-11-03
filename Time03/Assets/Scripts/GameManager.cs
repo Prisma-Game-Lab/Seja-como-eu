@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameConfigUI;
     public GameObject player;
     public GameObject Canvas;
-    public ParticleSystem player_particle;
+    private ParticleSystem player_particle;
 
     private GeneralCounts Counts;
     public GeneralCounts counts {get{return Counts;}} 
