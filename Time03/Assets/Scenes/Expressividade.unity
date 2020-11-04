@@ -2567,7 +2567,7 @@ MonoBehaviour:
     type: 3}
   numPilares: 5
   PillarInterval: 0.5
-  windup: 0.5
+  windup: 0.8
   spawnPoints:
   - {x: -7.5, y: 0, z: 0}
   - {x: -15.5, y: 0, z: 0}

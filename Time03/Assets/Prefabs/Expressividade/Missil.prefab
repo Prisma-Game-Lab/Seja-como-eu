@@ -160,7 +160,7 @@ PrefabInstance:
     - target: {fileID: 1649329662437626253, guid: b6920e25c7605ad458928f1394619b0b,
         type: 3}
       propertyPath: m_Time
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1649329662437626253, guid: b6920e25c7605ad458928f1394619b0b,
         type: 3}
@@ -281,6 +281,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327887817781132817, guid: b6920e25c7605ad458928f1394619b0b,
+        type: 3}
+      propertyPath: m_Time
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5340353771014871758, guid: b6920e25c7605ad458928f1394619b0b, type: 3}

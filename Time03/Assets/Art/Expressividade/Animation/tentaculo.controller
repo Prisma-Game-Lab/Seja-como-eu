@@ -733,22 +733,22 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -6800729716630267044}
-    m_Position: {x: 120, y: 0, z: 0}
+    m_Position: {x: 90, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6430615237302307154}
-    m_Position: {x: 400, y: 80, z: 0}
+    m_Position: {x: 360, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4543753981484363544}
-    m_Position: {x: 360, y: -40, z: 0}
+    m_Position: {x: 360, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2285621717353567343}
-    m_Position: {x: 590, y: -40, z: 0}
+    m_Position: {x: 590, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6634447784883555876}
-    m_Position: {x: 850, y: -10, z: 0}
+    m_Position: {x: 590, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -418120128231394832}
-    m_Position: {x: 120, y: 80, z: 0}
+    m_Position: {x: 90, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3262053347551838734}
     m_Position: {x: 590, y: -130, z: 0}
@@ -758,9 +758,9 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 380, y: -120, z: 0}
-  m_EntryPosition: {x: 140, y: -70, z: 0}
-  m_ExitPosition: {x: 840, y: 80, z: 0}
+  m_AnyStatePosition: {x: 360, y: -120, z: 0}
+  m_EntryPosition: {x: 110, y: -120, z: 0}
+  m_ExitPosition: {x: 610, y: 160, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -6800729716630267044}
 --- !u!91 &9100000
@@ -1042,7 +1042,7 @@ AnimatorStateTransition:
   m_ExitTime: 0.75
   m_HasExitTime: 0
   m_HasFixedDuration: 1
-  m_InterruptionSource: 0
+  m_InterruptionSource: 2
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &2719730475176365615
@@ -1396,7 +1396,7 @@ AnimatorStateTransition:
   m_ExitTime: 0.992375
   m_HasExitTime: 0
   m_HasFixedDuration: 1
-  m_InterruptionSource: 0
+  m_InterruptionSource: 2
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1102 &5878887331563931116

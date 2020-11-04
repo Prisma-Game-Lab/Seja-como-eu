@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
         CurrentScene = SceneManager.GetActiveScene().name;
         player_particle = player.transform.GetChild(0).Find("DeathParticle").GetComponent<ParticleSystem>();
         player_particle.Stop();
+        player_particle.Clear();
     }
 
     

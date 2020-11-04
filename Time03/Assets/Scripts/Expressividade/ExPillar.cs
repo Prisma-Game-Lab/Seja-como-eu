@@ -20,8 +20,8 @@ public class ExPillar : MonoBehaviour
     void Start()
     {
         prefabHelper.transform.localScale.Set(PillarPrefab.transform.localScale.x, 0.05f, PillarPrefab.transform.localScale.z);
-        prefabHelper.GetComponent<Despawner4>().TimetoDespawn = 3.5f;
-        PillarPrefab.GetComponent<Despawner4>().TimetoDespawn = 3.5f;
+        prefabHelper.GetComponent<Despawner4>().TimetoDespawn = 3.8f;
+        PillarPrefab.GetComponent<Despawner4>().TimetoDespawn = 3.0f;
     }
 
     // Update is called once per frame
