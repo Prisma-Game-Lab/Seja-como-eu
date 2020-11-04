@@ -43,16 +43,16 @@ public class PunchFollow : MonoBehaviour
     private void Level0() {
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        GameObject one = Instantiate(PrefabPunchesFollow,new Vector3(21,1,19),Quaternion.identity);
+        GameObject one = Instantiate(PrefabPunchesFollow,new Vector3(18.5f,1,16.5f),Quaternion.identity);
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        GameObject two = Instantiate(PrefabPunchesFollow,new Vector3(-21,1,19),Quaternion.identity);
+        GameObject two = Instantiate(PrefabPunchesFollow,new Vector3(-18.5f,1,16.5f),Quaternion.identity);
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        GameObject three = Instantiate(PrefabPunchesFollow,new Vector3(21,1,-19),Quaternion.identity);
+        GameObject three = Instantiate(PrefabPunchesFollow,new Vector3(18.5f,1,-16.5f),Quaternion.identity);
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        GameObject four = Instantiate(PrefabPunchesFollow,new Vector3(-21,1,-19),Quaternion.identity);
+        GameObject four = Instantiate(PrefabPunchesFollow,new Vector3(-18.5f,1,-16.5f),Quaternion.identity);
 
         one.transform.LookAt(PlayerPosition);
         two.transform.LookAt(PlayerPosition);
@@ -63,22 +63,22 @@ public class PunchFollow : MonoBehaviour
     private void Level1() {
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        GameObject one = Instantiate(PrefabPunchesFollow,new Vector3(21,1,19),Quaternion.identity);
+        GameObject one = Instantiate(PrefabPunchesFollow,new Vector3(18.5f,1,16.5f),Quaternion.identity);
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        GameObject two = Instantiate(PrefabPunchesFollow,new Vector3(-21,1,19),Quaternion.identity);
+        GameObject two = Instantiate(PrefabPunchesFollow,new Vector3(-18.5f,1,16.5f),Quaternion.identity);
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        GameObject three = Instantiate(PrefabPunchesFollow,new Vector3(21,1,-19),Quaternion.identity);
+        GameObject three = Instantiate(PrefabPunchesFollow,new Vector3(18.5f,1,-16.5f),Quaternion.identity);
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        GameObject four = Instantiate(PrefabPunchesFollow,new Vector3(-21,1,-19),Quaternion.identity);
+        GameObject four = Instantiate(PrefabPunchesFollow,new Vector3(-18.5f,1,-16.5f),Quaternion.identity);
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        GameObject five = Instantiate(PrefabPunchesFollow,new Vector3(-21,1,0),Quaternion.identity);
+        GameObject five = Instantiate(PrefabPunchesFollow,new Vector3(-18.5f,1,0),Quaternion.identity);
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        GameObject six = Instantiate(PrefabPunchesFollow,new Vector3(21,1,0),Quaternion.identity);
+        GameObject six = Instantiate(PrefabPunchesFollow,new Vector3(18.5f,1,0),Quaternion.identity);
 
         one.transform.LookAt(PlayerPosition);
         two.transform.LookAt(PlayerPosition);
@@ -91,8 +91,8 @@ public class PunchFollow : MonoBehaviour
     private void Level2() {
         Facada.pitch = Random.Range(0.75f, 1.25f);
         Facada.Play();
-        Instantiate(PrefabPunchesFollowLevel2,new Vector3(-22,0,0),Quaternion.identity);
-        GameObject go = Instantiate(PrefabPunchesFollowLevel2,new Vector3(22,0,0),Quaternion.identity);
+        Instantiate(PrefabPunchesFollowLevel2,new Vector3(-18.5f,0,0),Quaternion.identity);
+        GameObject go = Instantiate(PrefabPunchesFollowLevel2,new Vector3(18.5f,0,0),Quaternion.identity);
 
         go.transform.Rotate(new Vector3(0,180,0));
     }

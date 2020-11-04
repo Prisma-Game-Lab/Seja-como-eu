@@ -14,12 +14,9 @@ public class ShowStats : MonoBehaviour
 
     private int TotalDashs;
     private int TotalDeaths;
-
-    void Awake(){
-        statsObject.transform.parent.gameObject.SetActive(false);
-    }
     void Start()
     {
+        statsObject.transform.parent.gameObject.SetActive(false);
         Counts = SaveSystem.GetInstance().generalCounts;
         stats = new StatsObject[5];
         for(int i=0; i<stats.Length; i++){
