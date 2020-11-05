@@ -141,7 +141,7 @@ MonoBehaviour:
       NextChat: 39
     - Texto: " Sorry? Not at all! Better them than I!\r"
       NextChat: 80
-  - Texto: " Sorry? Not at all! Better them than I!\r"
+  - Texto: "I wouldn\u2019t like it if someone did that to me.\r"
     Turn: 1
     Options: []
   - Texto: "It doesn\u2019t make sense to make fun of others to feel better\u2026
@@ -161,7 +161,7 @@ MonoBehaviour:
       NextChat: 83
     - Texto: A warrior changes his mind when he realizes he is wrong.
       NextChat: 44
-  - Texto: '*resposta*'
+  - Texto: A warrior changes his mind when he realizes he is wrong.
     Turn: 1
     Options: []
   - Texto: A man never turns back on his word because we have honor!
@@ -186,7 +186,7 @@ MonoBehaviour:
       NextChat: 88
     - Texto: "It doesn\u2019t make sense to fight my feelings, they are part of me.\r"
       NextChat: 50
-  - Texto: '*resposta*'
+  - Texto: "It doesn\u2019t make sense to fight my feelings, they are part of me.\r"
     Turn: 1
     Options: []
   - Texto: ' I know talking about feelings makes me vulnerable. And yes, it scares
@@ -204,7 +204,7 @@ MonoBehaviour:
       NextChat: 54
     - Texto: You know what I did with fear? I beat it up!
       NextChat: 90
-  - Texto: '*resposta*'
+  - Texto: "That\u2019s true, I\u2019m afraid of many things.\r"
     Turn: 1
     Options: []
   - Texto: I am afraid of failure, of being rejected...
@@ -231,7 +231,7 @@ MonoBehaviour:
       NextChat: 92
     - Texto: "And what\u2019s wrong with crying?"
       NextChat: 61
-  - Texto: '*resposta*'
+  - Texto: "And what\u2019s wrong with crying?"
     Turn: 1
     Options: []
   - Texto: "Sometimes it\u2019s important to cry to let the pain go away.\r"
@@ -250,7 +250,7 @@ MonoBehaviour:
     - Texto: I meant to say I release the pain on others when I make them cry like
         babies!
       NextChat: 94
-  - Texto: '*resposta*'
+  - Texto: If you keep that pain within you, in silence, bad things happen.
     Turn: 1
     Options: []
   - Texto: "You don\u2019t need to be afraid of being yourself. You don\u2019t need
@@ -279,7 +279,7 @@ MonoBehaviour:
       NextChat: 102
     - Texto: Others.
       NextChat: 72
-  - Texto: '*resposta*'
+  - Texto: Others.
     Turn: 1
     Options: []
   - Texto: What we need is others.
@@ -369,7 +369,7 @@ MonoBehaviour:
     Options:
     - Texto: "That\u2019s called power. I\u2019m ready to be a man!\r"
       NextChat: 104
-  - Texto: '*resposta*'
+  - Texto: "That\u2019s called power. I\u2019m ready to be a man!\r"
     Turn: 1
     Options: []
   - Texto: 

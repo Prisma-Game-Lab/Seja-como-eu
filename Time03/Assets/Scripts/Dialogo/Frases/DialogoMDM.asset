@@ -13,17 +13,13 @@ MonoBehaviour:
   m_Name: DialogoMDM
   m_EditorClassIdentifier: 
   Frase:
-  - Texto: "Men are sensible too. What\u2019s the problem with that?\r\n"
+  - Texto: "Men are sensible too. What\u2019s the problem with that?\r"
     Turn: 1
     Options: []
-  - Texto: 'You know nothing about being a man!
-
-'
+  - Texto: You know nothing about being a man!
     Turn: 2
     Options: []
-  - Texto: 'To be a man has nothing to do with those FOOLISH feelings!
-
-'
+  - Texto: To be a man has nothing to do with those FOOLISH feelings!
     Turn: 2
     Options: []
   - Texto: 'To be a man is to have have strength, power and control of ALL!
@@ -31,49 +27,39 @@ MonoBehaviour:
 '
     Turn: 2
     Options: []
-  - Texto: "You keep saying what i should and shouldn\u2019t do to be a man.\r\n"
+  - Texto: "You keep saying what i should and shouldn\u2019t do to be a man."
     Turn: 1
     Options: []
-  - Texto: 'But this formula is wrong.
-
-'
+  - Texto: But this formula is wrong.
     Turn: 1
     Options: []
   - Texto: You need none of that to be a man.
     Turn: 1
     Options: []
-  - Texto: 'This is insane! A man has to be manly.
-
-      
-
-'
+  - Texto: This is insane! A man has to be manly.
     Turn: 2
     Options: []
-  - Texto: 'Have you ever seen a man doing house chores?
-
-'
+  - Texto: Have you ever seen a man doing house chores?
     Turn: 2
     Options: []
-  - Texto: 'Or a man dancing ballet? A man doing his nails?
-
-'
+  - Texto: Or a man dancing ballet? A man doing his nails?
     Turn: 2
     Options: []
-  - Texto: "No! That\u2019s not a manly thing.\r\n"
+  - Texto: "No! That\u2019s not a manly thing.\r"
     Turn: 2
     Options: []
   - Texto: "That\u2019s silly. I can play sports, dance, wear any clothes and be
-      whoever i want.\r\n"
+      whoever i want.\r"
     Turn: 1
     Options: []
   - Texto: "And any of these things is going to be a \u201Cmanly\u201D thing, because
-      i feel manly.\r\n"
+      i feel manly.\r"
     Turn: 1
     Options: []
-  - Texto: "I don\u2019t need your approval to assert me.  \r\n"
+  - Texto: "I don\u2019t need your approval to assert me."
     Turn: 1
     Options: []
-  - Texto: "I am a man, and that\u2019s enough for me. \r\n"
+  - Texto: "I am a man, and that\u2019s enough for me. \r"
     Turn: 1
     Options: []
   - Texto: 
