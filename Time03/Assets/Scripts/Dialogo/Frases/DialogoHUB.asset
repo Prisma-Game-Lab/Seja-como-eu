@@ -89,7 +89,7 @@ MonoBehaviour:
     Turn: 0
     Options: []
   - Texto: "Emotions? Are you kidding me? I\u2019m a man of pure muscle, I don\u2019t
-      have those weaknesses.\r\n "
+      have those weaknesses.\r"
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
@@ -113,10 +113,10 @@ MonoBehaviour:
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
-  - Texto: "Congratulations warrior, you\u2019ve completed your mission.\r\n"
+  - Texto: "Congratulations warrior, you\u2019ve completed your mission.\r"
     Turn: 2
     Options: []
-  - Texto: "Now you\u2019re ready to become a true alpha male.\r\n"
+  - Texto: "Now you\u2019re ready to become a true alpha male."
     Turn: 2
     Options: []
   - Texto: 
@@ -128,7 +128,7 @@ MonoBehaviour:
 
 '
       NextChat: 36
-  - Texto: '*resposta*'
+  - Texto: I think this was a mistake.
     Turn: 1
     Options: []
   - Texto: "Don\u2019t tell me you feel sorry for them?\r"
@@ -137,23 +137,21 @@ MonoBehaviour:
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "I wouldn\u2019t like it if someone did that to me.\r\n"
+    - Texto: "I wouldn\u2019t like it if someone did that to me.\r"
       NextChat: 39
     - Texto: " Sorry? Not at all! Better them than I!\r"
       NextChat: 80
-  - Texto: '*resposta*'
+  - Texto: " Sorry? Not at all! Better them than I!\r"
     Turn: 1
     Options: []
   - Texto: "It doesn\u2019t make sense to make fun of others to feel better\u2026
       that just makes you\u2026. a coward."
     Turn: 1
     Options: []
-  - Texto: "Frankly, you\u2019re just a scaredy cat.\r\n"
+  - Texto: "Frankly, you\u2019re just a scaredy cat.\r"
     Turn: 2
     Options: []
-  - Texto: 'What kind of warrior backs down from a challenge?
-
-'
+  - Texto: What kind of warrior backs down from a challenge?
     Turn: 2
     Options: []
   - Texto: 
@@ -161,28 +159,24 @@ MonoBehaviour:
     Options:
     - Texto: Scaredy cat? Did you forget I defeated all of them?
       NextChat: 83
-    - Texto: 'A warrior changes his mind when he realizes he is wrong.
-
-'
+    - Texto: A warrior changes his mind when he realizes he is wrong.
       NextChat: 44
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: 'A man never turns back on his word because we have honor!
-
-'
+  - Texto: A man never turns back on his word because we have honor!
+    Turn: 2
+    Options: []
+  - Texto: "It seems like you\u2019ve spent a little too long with those emotions
+      and you\u2019re now sentimental.\r"
     Turn: 2
     Options: []
   - Texto: "Be a man and forget your feelings! I\u2019ve already told you: Feelings
-      make you weak!\r\n\n"
-    Turn: 2
-    Options: []
-  - Texto: "Seja homem e esque\xE7a essa historinha de sentimentos! Eu j\xE1 lhe
-      disse: Sentimentos te deixam fraco."
+      make you weak!"
     Turn: 2
     Options: []
   - Texto: "Look at you! You\u2019re vulnerable! If you want to be a warrior you\u2019d
-      better get rid of that.\r\n"
+      better get rid of that.\r"
     Turn: 2
     Options: []
   - Texto: 
@@ -190,45 +184,39 @@ MonoBehaviour:
     Options:
     - Texto: "I\u2019m not getting sentimental! I defeated all of my weaknesses!\r"
       NextChat: 88
-    - Texto: "It doesn\u2019t make sense to fight my feelings, they are part of me.\r\n"
+    - Texto: "It doesn\u2019t make sense to fight my feelings, they are part of me.\r"
       NextChat: 50
   - Texto: '*resposta*'
     Turn: 1
     Options: []
   - Texto: ' I know talking about feelings makes me vulnerable. And yes, it scares
-      me but...
-
-
-
-'
+      me but...'
     Turn: 1
     Options: []
   - Texto: "Ah, you\u2019re scared? Trembling in fear? I knew you were weak\u2026
-      What a disappointment.\r\n \r\n"
+      What a disappointment.\r"
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "That\u2019s true, I\u2019m afraid of many things.\r\n"
+    - Texto: "That\u2019s true, I\u2019m afraid of many things.\r"
       NextChat: 54
     - Texto: You know what I did with fear? I beat it up!
       NextChat: 90
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: 'I am afraid of failure, of being rejected...
-
-'
+  - Texto: I am afraid of failure, of being rejected...
     Turn: 1
     Options: []
   - Texto: But...
     Turn: 1
     Options: []
-  - Texto: "I don\u2019t need to be afraid of \u201Cfeeling fear\u201D.\r\n"
+  - Texto: "I don\u2019t need to be afraid of \u201Cfeeling fear\u201D.\r"
     Turn: 1
     Options: []
-  - Texto: "Because I\u2019ve learned that by accepting my fears I can face them.\r\n"
+  - Texto: "Because I\u2019ve learned that by accepting my fears I can face them.\r"
     Turn: 1
     Options: []
   - Texto: "Oh really? Do you want a tissue to cry little baby? HAHAHAH what a joke!\r"
@@ -246,20 +234,18 @@ MonoBehaviour:
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: "Sometimes it\u2019s important to cry to let the pain go away.\r\n"
+  - Texto: "Sometimes it\u2019s important to cry to let the pain go away.\r"
     Turn: 1
     Options: []
-  - Texto: "Releasing pain? A true man swallows pain!\r\n "
+  - Texto: "Releasing pain? A true man swallows pain!\r"
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "It\u2019s hard but I swallow it!\r\n"
+    - Texto: "It\u2019s hard but I swallow it!\r"
       NextChat: 97
-    - Texto: 'If you keep that pain within you, in silence, bad things happen.
-
-'
+    - Texto: If you keep that pain within you, in silence, bad things happen.
       NextChat: 65
     - Texto: I meant to say I release the pain on others when I make them cry like
         babies!
@@ -268,22 +254,20 @@ MonoBehaviour:
     Turn: 1
     Options: []
   - Texto: "You don\u2019t need to be afraid of being yourself. You don\u2019t need
-      to hide behind armor.\r\n"
+      to hide behind armor.\r"
     Turn: 1
     Options: []
-  - Texto: "You don\u2019t need to be tough all the time.\r\n"
+  - Texto: "You don\u2019t need to be tough all the time.\r"
     Turn: 1
     Options: []
-  - Texto: 'Or bully others to feel better!
-
-'
+  - Texto: Or bully others to feel better!
     Turn: 1
     Options: []
   - Texto: "And you especially don\u2019t need to fight your emotions until you become
-      stone.\r\n"
+      stone.\r"
     Turn: 1
     Options: []
-  - Texto: "So\u2026 what DO we need then?\r\n"
+  - Texto: "So\u2026 what DO we need then?\r"
     Turn: 2
     Options: []
   - Texto: 
@@ -298,14 +282,10 @@ MonoBehaviour:
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: 'What we need is others.
-
-'
+  - Texto: What we need is others.
     Turn: 1
     Options: []
-  - Texto: 'To be affectionate and caring.
-
-'
+  - Texto: To be affectionate and caring.
     Turn: 1
     Options: []
   - Texto: No one can live alone, not even you Master Macho!
@@ -334,24 +314,24 @@ MonoBehaviour:
   - Texto: 
     Turn: 2
     Options:
-    - Texto: "That\u2019s it! You\u2019ve shown them who is the man!\r\n"
+    - Texto: "That\u2019s it! You\u2019ve shown them who is the man!\r"
       NextChat: 104
-  - Texto: '*resposta*'
-    Turn: 0
-    Options: []
-  - Texto: "Did you forget? I\u2019m much stronger than you!\r\n"
+  - Texto: "That\u2019s it! You\u2019ve shown them who is the man!\r"
     Turn: 1
     Options: []
-  - Texto: "Calm down boy\u2019 don\u2019t forget who is the alpha around here!\r\n"
+  - Texto: "Did you forget? I\u2019m much stronger than you!\r"
+    Turn: 1
+    Options: []
+  - Texto: "Calm down boy\u2019 don\u2019t forget who is the alpha around here!\r"
     Turn: 2
     Options: []
-  - Texto: "Or else I\u2019ll be sure to beat you up and show you your place!\r\n"
+  - Texto: "Or else I\u2019ll be sure to beat you up and show you your place!\r"
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "I would love to beat you up!\r\n "
+    - Texto: "I would love to beat you up!\r"
       NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
@@ -367,8 +347,7 @@ MonoBehaviour:
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "I\u2019m much stronger than fear that\u2019s why you should fear me!
-        \r"
+    - Texto: "I\u2019m much stronger than fear that\u2019s why you should fear me!"
       NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
@@ -388,7 +367,7 @@ MonoBehaviour:
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "That\u2019s called power. I\u2019m ready to be a man!\r\n"
+    - Texto: "That\u2019s called power. I\u2019m ready to be a man!\r"
       NextChat: 104
   - Texto: '*resposta*'
     Turn: 1
@@ -415,28 +394,24 @@ MonoBehaviour:
   - Texto: All this because of a woman?
     Turn: 2
     Options: []
-  - Texto: "HAHAHAHA what a stud! I can see you\u2019re a true man!"
+  - Texto: "HAHAHAHA What a stud! I can see you\u2019re a true man!"
     Turn: 2
     Options: []
-  - Texto: "HAHAHAH Esse \xE9 o meu garoto!"
+  - Texto: HAHAHAH That's my boy!
     Turn: 2
     Options: []
-  - Texto: 'For a moment I thought you were going to disappoint me but I see the
-      man in you!
-
-'
+  - Texto: For a moment I thought you were going to disappoint me but I see the man
+      in you!
     Turn: 2
     Options: []
   - Texto: "Now that you\u2019ve defeated your emotions, you\u2019re ready to become
-      a real man.\r\n"
+      a real man.\r"
     Turn: 2
     Options: []
   - Texto: With no feelings.
     Turn: 2
     Options: []
-  - Texto: 'Brute, controlled, cold and tough...
-
-'
+  - Texto: Brute, controlled, cold and tough...
     Turn: 2
     Options: []
   - Texto: Like a rock.
