@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: DialogoHUB
   m_EditorClassIdentifier: 
   Frase:
-  - Texto: Bem vindo ao Projeto Alfa!
+  - Texto: Welcome to Project Alpha!
     Turn: 2
     Options: []
-  - Texto: "Aten\xE7\xE3o novato!"
+  - Texto: Attention recruit!
     Turn: 2
     Options: []
-  - Texto: Eu sou o MESTRE DOS MACHOS!
+  - Texto: I am the MASTER MACHO
     Turn: 2
     Options: []
   - Texto: "O macho mais macho de tudo que \xE9 M\xC1SCULO!"
