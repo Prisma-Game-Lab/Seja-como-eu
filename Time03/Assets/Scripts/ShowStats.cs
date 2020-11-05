@@ -51,22 +51,22 @@ public class ShowStats : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(true);
 
         stats[0].ValuesText.text = $"{TotalDashs}\n{TotalDeaths}\n{ConvertToTime(Counts.TotalPlayTime)}";
-        stats[0].LabelText.text = "Rolamentos totais\nMortes totais\nTempo de Jogo";
+        stats[0].LabelText.text = "Total Rolls\nTotal Deaths\nTotal Playtime";
 
         stats[1].ValuesText.text = Counts.CarinhoIsMorto?$"{Counts.Stats["CarinhoDashCount"]}\n{Counts.Stats["CarinhoDeathCount"]}\n{ConvertToTime(Counts.CarinhoCompleteTimer)}":"";
-        stats[1].LabelText.text = Counts.CarinhoIsMorto?"Rolamentos\nMortes\nTempo":"";
+        stats[1].LabelText.text = Counts.CarinhoIsMorto?"Rolls\nDeaths\nPlaytime":"";
         stats[1].CoverImage.SetActive(!Counts.CarinhoIsMorto);
 
         stats[2].ValuesText.text = Counts.ExpressividadeIsMorto?$"{Counts.Stats["ExpressividadeDashCount"]}\n{Counts.Stats["ExpressividadeDeathCount"]}\n{ConvertToTime(Counts.ExpressividadeCompleteTimer)}":"";
-        stats[2].LabelText.text = Counts.ExpressividadeIsMorto?"Rolamentos\nMortes\nTempo":"";
+        stats[2].LabelText.text = Counts.ExpressividadeIsMorto?"Rolls\nDeaths\nPlaytime":"";
         stats[2].CoverImage.SetActive(!Counts.ExpressividadeIsMorto);
 
         stats[3].ValuesText.text = Counts.TristezaIsMorto?$"{Counts.Stats["TristezaDashCount"]}\n{Counts.Stats["TristezaDeathCount"]}\n{ConvertToTime(Counts.TristezaCompleteTimer)}":"";
-        stats[3].LabelText.text = Counts.TristezaIsMorto?"Rolamentos\nMortes\nTempo":"";
+        stats[3].LabelText.text = Counts.TristezaIsMorto?"Rolls\nDeaths\nPlaytime":"";
         stats[3].CoverImage.SetActive(!Counts.TristezaIsMorto);
 
         stats[4].ValuesText.text = Counts.MDMIsMorto?$"{Counts.Stats["MDMDashCount"]}\n{Counts.Stats["MDMDeathCount"]}\n{ConvertToTime(Counts.MDMCompleteTimer)}":"";
-        stats[4].LabelText.text = Counts.MDMIsMorto?"Rolamentos\nMortes\nTempo":"";
+        stats[4].LabelText.text = Counts.MDMIsMorto?"Rolls\nDeaths\nPlaytime":"";
         stats[4].CoverImage.SetActive(!Counts.MDMIsMorto);
     }
 
