@@ -19,297 +19,322 @@ MonoBehaviour:
   - Texto: Attention recruit!
     Turn: 2
     Options: []
-  - Texto: I am the MASTER MACHO
+  - Texto: I am the MASTER MACHO!
     Turn: 2
     Options: []
-  - Texto: "O macho mais macho de tudo que \xE9 M\xC1SCULO!"
+  - Texto: The manliest man of all that is MANLY!
     Turn: 2
     Options: []
-  - Texto: "Sou o chefe aqui, ent\xE3o escute bem!"
+  - Texto: "I\u2019m the boss here so listen well!"
     Turn: 2
     Options: []
-  - Texto: "Vou te ensinar como ser forte como um tuf\xE3o, r\xE1pido como um rio
-      e honrado como um homem."
+  - Texto: "I\u2019m going to teach you how to be  swift as a coursing river with
+      all the force of a great typhoon and mysterious as the dark side of the moon.\r"
     Turn: 2
     Options: []
-  - Texto: "Se voc\xEA quiser ser que nem eu, siga minhas instru\xE7\xF5es."
+  - Texto: 'If you want to be like me, follow my instructions
+
+'
     Turn: 2
     Options: []
-  - Texto: "E voc\xEA ser\xE1 recompensado ao final de sua jornada com o PODER INFINITO!"
+  - Texto: "and you\u2019ll be rewarded at the end of your journey with INFINITE
+      POWER!\r"
     Turn: 2
     Options: []
-  - Texto: "Para isso voc\xEA precisar\xE1 derrotar as suas maiores fraquezas: AS
-      SUAS EMO\xC7\xD5ES!"
+  - Texto: 'To do this you will need to defeat your biggest weaknesses: YOUR EMOTIONS!'
     Turn: 2
     Options: []
-  - Texto: "Cada uma das tr\xEAs tem uma forma diferente de ser derrotada"
+  - Texto: 'Each one of your three emotions can be defeated in a different way.
+
+'
     Turn: 2
     Options: []
-  - Texto: E provavelmente, o seu rolamento tem algo a ver com isso.
+  - Texto: 'It probably has something to do with your roll...
+
+'
     Turn: 2
     Options: []
-  - Texto: "N\xE3o vai amarelar n\xE9? Estou confiando em voc\xEA."
+  - Texto: "You\u2019re not scared are you? I\u2019m trusting you."
     Turn: 2
     Options: []
-  - Texto: "Seja homem e v\xE1 a luta."
-    Turn: 2
-    Options: []
-  - Texto: '*Acaba o Dialogo*'
-    Turn: 0
-    Options: []
-  - Texto: "\xC9 hoje que voc\xEA vira homem."
-    Turn: 2
-    Options: []
-  - Texto: '*Acaba o Dialogo*'
-    Turn: 0
-    Options: []
-  - Texto: "Voc\xEA n\xE3o pode deixar que ningu\xE9m te desrespeite!"
+  - Texto: Be a man and go fight!
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
-  - Texto: "\xC9 o homem quem manda, e no caso, eu sou o maior de todos os homens."
+  - Texto: Today you become a man.
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
-  - Texto: "\rSabe o que voc\xEA faz com a dor? D\xE1 um soco na cara dela e mostra
-      quem \xE9 que manda.\r"
+  - Texto: "You can\u2019t let anyone disrespect you."
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
-  - Texto: "Homem de verdade n\xE3o precisa de ningu\xE9m."
+  - Texto: "A man always calls the shots and I\u2019m the biggest man there is."
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
-  - Texto: "Emo\xE7\xF5es? Est\xE1 me estranhando? Eu sou macho feito de puro m\xFAsculo,
-      n\xE3o tenho essas fraquezas."
+  - Texto: "\rYou know what you do with pain? PUNCH IT IN THE FACE AND SHOW IT WHO
+      IS BOSS!\r"
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
-  - Texto: "Olha s\xF3 para esses m\xFAsculos! Eu sou demais!"
+  - Texto: "A true man doesn\u2019t need anyone!"
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
-  - Texto: "Chega de tagarelar! T\xE1 na hora de enfrentar os inimigos."
+  - Texto: "Emotions? Are you kidding me? I\u2019m a man of pure muscle, I don\u2019t
+      have those weaknesses.\r\n "
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
-  - Texto: "Voc\xEA n\xE3o tem uma miss\xE3o para cumprir?"
+  - Texto: "Look at these muscles! I\u2019m awesome!"
     Turn: 2
     Options: []
   - Texto: '*Acaba o Dialogo*'
     Turn: 0
     Options: []
-  - Texto: "Parab\xE9ns guerreiro, voc\xEA completou sua miss\xE3o!"
+  - Texto: Enough chatting! Time to face your enemies.
     Turn: 2
     Options: []
-  - Texto: "Agora est\xE1 pronto para se tornar um verdadeiro Macho Alfa."
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Don\u2019t you have a mission to accomplish?"
+    Turn: 2
+    Options: []
+  - Texto: '*Acaba o Dialogo*'
+    Turn: 0
+    Options: []
+  - Texto: "Congratulations warrior, you\u2019ve completed your mission.\r\n"
+    Turn: 2
+    Options: []
+  - Texto: "Now you\u2019re ready to become a true alpha male.\r\n"
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: Um homem faz o que deve ser feito.
+    - Texto: "A man does what he must.\r"
       NextChat: 106
-    - Texto: Acho que isso foi um erro.
+    - Texto: 'I think this was a mistake.
+
+'
       NextChat: 36
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: "N\xE3o me diga que voc\xEA est\xE1 sentindo peninha deles?"
+  - Texto: "Don\u2019t tell me you feel sorry for them?\r"
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "Eu acho que eu n\xE3o gostaria que fizessem isso comigo."
+    - Texto: "I wouldn\u2019t like it if someone did that to me.\r\n"
       NextChat: 39
-    - Texto: "Pena? Eu n\xE3o! Antes eles do que eu..."
+    - Texto: " Sorry? Not at all! Better them than I!\r"
       NextChat: 80
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: "N\xE3o faz sentido humilhar algu\xE9m para se sentir mais forte... Isso
-      s\xF3 faz de voc\xEA... um covarde."
+  - Texto: "It doesn\u2019t make sense to make fun of others to feel better\u2026
+      that just makes you\u2026. a coward."
     Turn: 1
     Options: []
-  - Texto: "Francamente, voc\xEA n\xE3o passa de um beb\xEA medroso... "
+  - Texto: "Frankly, you\u2019re just a scaredy cat.\r\n"
     Turn: 2
     Options: []
-  - Texto: "Que tipo de guerreiro \xE9 esse que amarela diante de um desafio?"
+  - Texto: 'What kind of warrior backs down from a challenge?
+
+'
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "Beb\xEA medroso? Voc\xEA esqueceu que eu derrotei todos os chef\xF5es?"
+    - Texto: Scaredy cat? Did you forget I defeated all of them?
       NextChat: 83
-    - Texto: "Um guerreiro que muda de ideia quando percebe que est\xE1 errado."
+    - Texto: 'A warrior changes his mind when he realizes he is wrong.
+
+'
       NextChat: 44
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: "Um homem nunca volta atr\xE1s. \xC9 por isso que existe palavra de homem.
-      Porque temos honra!"
+  - Texto: 'A man never turns back on his word because we have honor!
+
+'
     Turn: 2
     Options: []
-  - Texto: "Parece que voc\xEA passou tempo demais com aquelas emo\xE7\xF5es e est\xE1
-      todo sentimentalzinho agora."
+  - Texto: "Be a man and forget your feelings! I\u2019ve already told you: Feelings
+      make you weak!\r\n\n"
     Turn: 2
     Options: []
   - Texto: "Seja homem e esque\xE7a essa historinha de sentimentos! Eu j\xE1 lhe
       disse: Sentimentos te deixam fraco."
     Turn: 2
     Options: []
-  - Texto: "Olha s\xF3 voc\xEA! Est\xE1 ficando vulner\xE1vel. Se quiser ser um guerreiro,
-      tem que se livrar disso.\r"
+  - Texto: "Look at you! You\u2019re vulnerable! If you want to be a warrior you\u2019d
+      better get rid of that.\r\n"
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "N\xE3o estou ficando sentimental! Eu derrotei todas as minhas fraquezas."
+    - Texto: "I\u2019m not getting sentimental! I defeated all of my weaknesses!\r"
       NextChat: 88
-    - Texto: "N\xE3o faz sentido lutar com meus sentimentos, eles s\xE3o parte de
-        mim."
+    - Texto: "It doesn\u2019t make sense to fight my feelings, they are part of me.\r\n"
       NextChat: 50
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: "Eu sei que falar sobre sentimentos me deixa vulner\xE1vel. E sim, isso\u2026
-      Me assusta... Mas..."
+  - Texto: ' I know talking about feelings makes me vulnerable. And yes, it scares
+      me but...
+
+      
+
+'
     Turn: 1
     Options: []
-  - Texto: "Ah t\xE1 assustadinho? Se tremendo todo? Eu sabia que voc\xEA era um
-      fracote... Que decep\xE7\xE3o."
+  - Texto: "Ah, you\u2019re scared? Trembling in fear? I knew you were weak\u2026
+      What a disappointment.\r\n \r\n"
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "\xC9 verdade, eu tenho medo... de muitas coisas."
+    - Texto: "That\u2019s true, I\u2019m afraid of many things.\r\n"
       NextChat: 54
-    - Texto: Mas sabe o que eu fiz com o medo? Dei uma surra nele.
+    - Texto: You know what I did with fear? I beat it up!
       NextChat: 90
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: Eu ainda tenho medo de fracassar, de ser rejeitado...
+  - Texto: 'I am afraid of failure, of being rejected...
+
+'
     Turn: 1
     Options: []
-  - Texto: Mas...
+  - Texto: But...
     Turn: 1
     Options: []
-  - Texto: "Eu n\xE3o preciso mais ter medo de \u201Cter medo\u201D. "
+  - Texto: "I don\u2019t need to be afraid of \u201Cfeeling fear\u201D.\r\n"
     Turn: 1
     Options: []
-  - Texto: "Porque eu aprendi que \xE9 aceitando o meu medo, que eu consigo enfrent\xE1-lo."
+  - Texto: "Because I\u2019ve learned that by accepting my fears I can face them.\r\n"
     Turn: 1
     Options: []
-  - Texto: "Oh, \xE9 mesmo? Voc\xEA quer um lencinho para chorar, medrosinho? HAHAHAHAH
-      Que piada\u2026"
+  - Texto: "Oh really? Do you want a tissue to cry little baby? HAHAHAH what a joke!\r"
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "Voc\xEA n\xE3o ouviu nada do que eu disse? O medo \xE9 quem tem que
-        ter medo de mim."
+    - Texto: "Didn\u2019t you hear what I said? Fear should fear me!\r"
       NextChat: 90
-    - Texto: "At\xE9 parece que eu vou chorar por uma coisa boba dessas..."
+    - Texto: "As if I\u2019d cry for something silly like that!"
       NextChat: 92
-    - Texto: E qual o problema de chorar?
+    - Texto: "And what\u2019s wrong with crying?"
       NextChat: 61
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: "As vezes \xE9 preciso chorar para a dor ir embora. "
+  - Texto: "Sometimes it\u2019s important to cry to let the pain go away.\r\n"
     Turn: 1
     Options: []
-  - Texto: Liberar a dor? Um homem de verdade engole a dor.
+  - Texto: "Releasing pain? A true man swallows pain!\r\n "
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: "\xC9 dif\xEDcil para mim, mas eu engulo."
+    - Texto: "It\u2019s hard but I swallow it!\r\n"
       NextChat: 97
-    - Texto: "Se voc\xEA guardar essa dor para si, em sil\xEAncio, coisas ruins acontecem."
+    - Texto: 'If you keep that pain within you, in silence, bad things happen.
+
+'
       NextChat: 65
-    - Texto: "Liberar a dor nos outros quando eu fa\xE7o eles chorarem como beb\xEAs."
+    - Texto: I meant to say I release the pain on others when I make them cry like
+        babies!
       NextChat: 94
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: "N\xE3o precisa ter medo de ser quem voc\xEA \xE9 e se esconder atr\xE1s
-      de uma armadura."
+  - Texto: "You don\u2019t need to be afraid of being yourself. You don\u2019t need
+      to hide behind armor.\r\n"
     Turn: 1
     Options: []
-  - Texto: "N\xE3o precisa ser dur\xE3o o tempo todo. "
+  - Texto: "You don\u2019t need to be tough all the time.\r\n"
     Turn: 1
     Options: []
-  - Texto: 'Nem precisa humilhar outras pessoas para se sentir mais forte. '
+  - Texto: 'Or bully others to feel better!
+
+'
     Turn: 1
     Options: []
-  - Texto: "Muito menos lutar contra as suas emo\xE7\xF5es at\xE9 se tornar pedra."
+  - Texto: "And you especially don\u2019t need to fight your emotions until you become
+      stone.\r\n"
     Turn: 1
     Options: []
-  - Texto: "Ent\xE3o... do que a gente precisa?"
+  - Texto: "So\u2026 what DO we need then?\r\n"
     Turn: 2
     Options: []
   - Texto: 
     Turn: 1
     Options:
-    - Texto: Cerveja e futebol.
+    - Texto: "Beer and soccer!\r"
       NextChat: 99
-    - Texto: Uma mulher de valor.
+    - Texto: "A woman of value.\r"
       NextChat: 102
-    - Texto: Pessoas.
+    - Texto: Others.
       NextChat: 72
   - Texto: '*resposta*'
     Turn: 1
     Options: []
-  - Texto: "O que n\xF3s precisamos \xE9 de pessoas. "
+  - Texto: 'What we need is others.
+
+'
     Turn: 1
     Options: []
-  - Texto: 'De afeto. Carinho. '
+  - Texto: 'To be affectionate and caring.
+
+'
     Turn: 1
     Options: []
-  - Texto: "Ningu\xE9m vive sozinho... Nem mesmo voc\xEA, Mestre."
+  - Texto: No one can live alone, not even you Master Macho!
     Turn: 1
     Options: []
-  - Texto: "Eu... eu..... \xE9... "
+  - Texto: "I.. Uh.. I...\r"
     Turn: 2
     Options: []
-  - Texto: "VOC\xCA SABE COM QUEM EST\xC1 FALANDO? EU! O MESTRE DOS MACHOS! "
+  - Texto: "DO YOU KNOW WHO YOU\u2019RE TALKING TO? ME! THE MASTER MACHO!"
     Turn: 2
     Options: []
-  - Texto: "SOU O MAIOR MACHO ALFA QUE J\xC1 EXISTIU! EU CRIEI A MASCULINIDADE! EU
-      SOU O MAIS FORTE!"
+  - Texto: " I\u2019M THE MANLIEST MAN THAT HAS EVER LIVED! I CREATED MASCULINITY!
+      I AM STRONGER THAN YOU!"
     Turn: 2
     Options: []
-  - Texto: "E N\xC3O OUSE ME COMPARAR COM UM FRACOTE-MARIQUINHA-MANTEIGA DERRETIDA
-      COMO VOC\xCA!"
+  - Texto: "AND DON\u2019T YOU DARE COMPARE ME TO A WEAK LITTLE BABY LIKE YOURSELF!\r"
     Turn: 2
     Options: []
   - Texto: '   ******   Batalha   *******'
     Turn: 0
     Options: []
-  - Texto: "Acho que eles n\xE3o mereciam isso... mas... eu tinha que me defender!
-      \r\nAzar o deles por serem fracos.\r"
+  - Texto: "I don\u2019t think they deserved it but I had to defend myself! It's
+      survival of the fittest."
     Turn: 1
     Options: []
   - Texto: 
