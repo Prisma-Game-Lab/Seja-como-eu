@@ -29,12 +29,10 @@ MonoBehaviour:
     Turn: 2
     Options: []
   - Texto: "I\u2019m going to teach you how to be  swift as a coursing river with
-      all the force of a great typhoon and mysterious as the dark side of the moon.\r"
+      all the force of a great typhoon!"
     Turn: 2
     Options: []
-  - Texto: 'If you want to be like me, follow my instructions
-
-'
+  - Texto: If you want to be like me, follow my instructions
     Turn: 2
     Options: []
   - Texto: "and you\u2019ll be rewarded at the end of your journey with INFINITE
@@ -44,14 +42,10 @@ MonoBehaviour:
   - Texto: 'To do this you will need to defeat your biggest weaknesses: YOUR EMOTIONS!'
     Turn: 2
     Options: []
-  - Texto: 'Each one of your three emotions can be defeated in a different way.
-
-'
+  - Texto: Each one of your three emotions can be defeated in a different way.
     Turn: 2
     Options: []
-  - Texto: 'It probably has something to do with your roll...
-
-'
+  - Texto: It probably has something to do with your roll...
     Turn: 2
     Options: []
   - Texto: "You\u2019re not scared are you? I\u2019m trusting you."

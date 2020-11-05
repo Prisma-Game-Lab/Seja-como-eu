@@ -2379,7 +2379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732308937, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 660
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_FontData.m_Font
@@ -2392,7 +2392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Text
-      value: "Voc\xEA j\xE1 derrotou a Expressividade."
+      value: You've Already Beaten Expressiveness.
       objectReference: {fileID: 0}
     - target: {fileID: 1510187175226471892, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -2559,7 +2559,7 @@ PrefabInstance:
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Vamo Monstro!!!!
+      value: "It's Killing Time!!!!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -2638,6 +2638,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 8489818886281238565, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_Text
+      value: I'm Scared!
+      objectReference: {fileID: 0}
     - target: {fileID: 8489818886438935609, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Color.r
@@ -2672,12 +2677,12 @@ PrefabInstance:
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Quer enfrentar a Expressividade?
+      value: Do you want to fight Expressiveness?
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 660
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
@@ -4774,6 +4779,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 427951212, guid: 85ca990acc848844f9a17d5f104c07c2, type: 3}
+      propertyPath: m_Text
+      value: Invincibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100041965, guid: 85ca990acc848844f9a17d5f104c07c2, type: 3}
+      propertyPath: m_Text
+      value: Invincibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799279611088836018, guid: 85ca990acc848844f9a17d5f104c07c2,
+        type: 3}
+      propertyPath: m_Text
+      value: Sound Effects
+      objectReference: {fileID: 0}
     - target: {fileID: 3792323769455067678, guid: 85ca990acc848844f9a17d5f104c07c2,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -4784,11 +4802,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4167262538217101271, guid: 85ca990acc848844f9a17d5f104c07c2,
+        type: 3}
+      propertyPath: m_Text
+      value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167262538570999372, guid: 85ca990acc848844f9a17d5f104c07c2,
+        type: 3}
+      propertyPath: m_Text
+      value: Main Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 4167262538575438066, guid: 85ca990acc848844f9a17d5f104c07c2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1806064549}
+    - target: {fileID: 4167262538873690917, guid: 85ca990acc848844f9a17d5f104c07c2,
+        type: 3}
+      propertyPath: m_Text
+      value: Back
+      objectReference: {fileID: 0}
     - target: {fileID: 4167262539097926840, guid: 85ca990acc848844f9a17d5f104c07c2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4814,6 +4847,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4167262539115428299, guid: 85ca990acc848844f9a17d5f104c07c2,
+        type: 3}
+      propertyPath: m_Text
+      value: Quit
+      objectReference: {fileID: 0}
     - target: {fileID: 4167262539151390294, guid: 85ca990acc848844f9a17d5f104c07c2,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -4823,6 +4861,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167262539191655140, guid: 85ca990acc848844f9a17d5f104c07c2,
+        type: 3}
+      propertyPath: m_Text
+      value: Save
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167262539211291823, guid: 85ca990acc848844f9a17d5f104c07c2,
+        type: 3}
+      propertyPath: m_Text
+      value: Resume game
       objectReference: {fileID: 0}
     - target: {fileID: 4167262539240667145, guid: 85ca990acc848844f9a17d5f104c07c2,
         type: 3}
@@ -5064,6 +5112,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6393269835014365438, guid: 85ca990acc848844f9a17d5f104c07c2,
+        type: 3}
+      propertyPath: m_Text
+      value: Sound Effects
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076797981627072451, guid: 85ca990acc848844f9a17d5f104c07c2,
+        type: 3}
+      propertyPath: m_Text
+      value: Music
+      objectReference: {fileID: 0}
     - target: {fileID: 7777874076506853702, guid: 85ca990acc848844f9a17d5f104c07c2,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -5093,6 +5151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960543865276124382, guid: 85ca990acc848844f9a17d5f104c07c2,
+        type: 3}
+      propertyPath: m_Text
+      value: Music
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ca990acc848844f9a17d5f104c07c2, type: 3}
@@ -9074,7 +9137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732308937, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_FontData.m_Font
@@ -9087,7 +9150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Text
-      value: "Voc\xEA j\xE1 derrotou o Carinho."
+      value: You've Already Beaten Affection.
       objectReference: {fileID: 0}
     - target: {fileID: 222560418326670744, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -9254,7 +9317,7 @@ PrefabInstance:
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Vamo Monstro!!!!
+      value: It's Killing Time!!!!
       objectReference: {fileID: 0}
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -9333,6 +9396,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 8489818886281238565, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_Text
+      value: I'm Scared!
+      objectReference: {fileID: 0}
     - target: {fileID: 8489818886438935609, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Color.r
@@ -9364,10 +9432,20 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_Text
+      value: Do you want to fight Affection?
+      objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 550
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8531636323997815688, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -10469,11 +10547,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 732308937, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_Text
-      value: "Voc\xEA j\xE1 derrotou a Fraqueza."
+      value: You've Already Beaten Fragility.
       objectReference: {fileID: 0}
     - target: {fileID: 732308938, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
       propertyPath: m_FontData.m_Font
@@ -10649,7 +10727,7 @@ PrefabInstance:
     - target: {fileID: 8489818885516978217, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Vamo Monstro!!!!
+      value: "It's Killing Time!!!!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 8489818885711256980, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -10723,6 +10801,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 8489818886281238565, guid: 6fbff826f6439f94d9e5464a5868b869,
+        type: 3}
+      propertyPath: m_Text
+      value: I'm Scared!
+      objectReference: {fileID: 0}
     - target: {fileID: 8489818886438935609, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Color.r
@@ -10746,7 +10829,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_Text
-      value: Quer enfrentar a Fraqueza?
+      value: Do you want to fight Fragility?
       objectReference: {fileID: 0}
     - target: {fileID: 8489818886475337674, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
@@ -10762,7 +10845,7 @@ PrefabInstance:
     - target: {fileID: 8489818886475337677, guid: 6fbff826f6439f94d9e5464a5868b869,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 550
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fbff826f6439f94d9e5464a5868b869, type: 3}
