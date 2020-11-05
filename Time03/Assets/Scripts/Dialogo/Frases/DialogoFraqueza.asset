@@ -13,37 +13,41 @@ MonoBehaviour:
   m_Name: DialogoFraqueza
   m_EditorClassIdentifier: 
   Frase:
-  - Texto: "Valent\xE3o, eu sei que voc\xEA humilha os mais fracos s\xF3 para poder
-      se sentir mais forte."
+  - Texto: 'Bully! I know you only make fun of the weak to feel better about yourself.
+
+'
     Turn: 4
     Options: []
-  - Texto: "Eu sei que, no fundo, voc\xEA faz isso porque se sente inseguro. "
+  - Texto: "I know deep down you do this because you\u2019re insecure.\r\n"
     Turn: 4
     Options: []
-  - Texto: "Voc\xEA tem medo."
+  - Texto: "You\u2019re scared.\r\n"
     Turn: 4
     Options: []
-  - Texto: 'Medo de fracassar, de ser rejeitado. '
+  - Texto: 'Scared of failing, scared of being rejected.
+
+'
     Turn: 4
     Options: []
-  - Texto: "E, principalmente, voc\xEA tem medo de \u201Csentir medo\u201D."
+  - Texto: "But most importantly, you\u2019re scared of being afraid.\r\n"
     Turn: 4
     Options: []
-  - Texto: "Mas saiba que esconder sua dor n\xE3o te faz dur\xE3o."
+  - Texto: "But know that hiding your pain doesn\u2019t make you tough. "
     Turn: 4
     Options: []
-  - Texto: "Isso \xE9 fugir do problema."
+  - Texto: "That\u2019s only running away from the problem.\r"
     Turn: 4
     Options: []
-  - Texto: "Fugir dos problemas e diminuir os outros para se sentir melhor, s\xF3
-      faz de voc\xEA um COVARDE."
+  - Texto: "It just makes you a coward.\r"
     Turn: 4
     Options: []
-  - Texto: "\xC9 preciso chorar para a dor ir embora e \xE9 preciso aceitar o medo
-      para enfrent\xE1-lo."
+  - Texto: "It\u2019s important to cry for the pain to go away and you need to accept
+      fear to face it.\r\n"
     Turn: 4
     Options: []
-  - Texto: "Porque admitir as nossas fraquezas \xE9 o que nos faz corajosos."
+  - Texto: 'Admitting our weaknesses is what makes us brave.
+
+'
     Turn: 4
     Options: []
   - Texto: '*Acaba dialogo*'
