@@ -22,9 +22,7 @@ MonoBehaviour:
   - Texto: To be a man has nothing to do with those FOOLISH feelings!
     Turn: 2
     Options: []
-  - Texto: 'To be a man is to have have strength, power and control of ALL!
-
-'
+  - Texto: To be a man is to have have strength, power and control of ALL!
     Turn: 2
     Options: []
   - Texto: "You keep saying what i should and shouldn\u2019t do to be a man."

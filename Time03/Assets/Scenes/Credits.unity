@@ -734,6 +734,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 817.9
       objectReference: {fileID: 0}
+    - target: {fileID: 328632144535834588, guid: d77a8ac41e048294a87f58bd43a970f6,
+        type: 3}
+      propertyPath: m_Text
+      value: THANKS FOR PLAYING !
+      objectReference: {fileID: 0}
     - target: {fileID: 328632144591019139, guid: d77a8ac41e048294a87f58bd43a970f6,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -862,7 +867,7 @@ PrefabInstance:
     - target: {fileID: 328632145614843015, guid: d77a8ac41e048294a87f58bd43a970f6,
         type: 3}
       propertyPath: m_Text
-      value: Resultado Final
+      value: Final Stats
       objectReference: {fileID: 0}
     - target: {fileID: 328632145614843016, guid: d77a8ac41e048294a87f58bd43a970f6,
         type: 3}
@@ -3176,7 +3181,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fim
+  m_Text: The end
 --- !u!222 &328632145249374561
 CanvasRenderer:
   m_ObjectHideFlags: 0
