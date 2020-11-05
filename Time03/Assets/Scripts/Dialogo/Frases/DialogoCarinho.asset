@@ -16,14 +16,10 @@ MonoBehaviour:
   - Texto: Why are you treating me like this?
     Turn: 3
     Options: []
-  - Texto: 'I bet you wouldn''t like it if someone did this to you.
-
-'
+  - Texto: I bet you wouldn't like it if someone did this to you.
     Turn: 3
     Options: []
-  - Texto: 'I was just trying to be your friend.
-
-'
+  - Texto: I was just trying to be your friend.
     Turn: 3
     Options: []
   - Texto: "Pushing others away won\u2019t make you more manly. It will only make
@@ -34,9 +30,7 @@ MonoBehaviour:
       and love.
     Turn: 3
     Options: []
-  - Texto: 'We all need the warmth of a hug.
-
-'
+  - Texto: We all need the warmth of a hug.
     Turn: 3
     Options: []
   - Texto: "You can run, you can try to deny it, you can even throw bales of hay

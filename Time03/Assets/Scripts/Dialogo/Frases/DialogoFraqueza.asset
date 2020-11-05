@@ -18,18 +18,16 @@ MonoBehaviour:
 '
     Turn: 4
     Options: []
-  - Texto: "I know deep down you do this because you\u2019re insecure.\r\n"
+  - Texto: "I know deep down you do this because you\u2019re insecure.\r"
     Turn: 4
     Options: []
-  - Texto: "You\u2019re scared.\r\n"
+  - Texto: "You\u2019re scared.\r"
     Turn: 4
     Options: []
-  - Texto: 'Scared of failing, scared of being rejected.
-
-'
+  - Texto: Scared of failing, scared of being rejected.
     Turn: 4
     Options: []
-  - Texto: "But most importantly, you\u2019re scared of being afraid.\r\n"
+  - Texto: "But most importantly, you\u2019re scared of being afraid.\r"
     Turn: 4
     Options: []
   - Texto: "But know that hiding your pain doesn\u2019t make you tough. "
@@ -42,12 +40,10 @@ MonoBehaviour:
     Turn: 4
     Options: []
   - Texto: "It\u2019s important to cry for the pain to go away and you need to accept
-      fear to face it.\r\n"
+      fear to face it.\r"
     Turn: 4
     Options: []
-  - Texto: 'Admitting our weaknesses is what makes us brave.
-
-'
+  - Texto: Admitting our weaknesses is what makes us brave.
     Turn: 4
     Options: []
   - Texto: '*Acaba dialogo*'

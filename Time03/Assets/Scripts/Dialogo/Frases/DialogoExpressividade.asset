@@ -22,25 +22,19 @@ MonoBehaviour:
   - Texto: "Say what you feel, express yourself!\r"
     Turn: 5
     Options: []
-  - Texto: ' If you hold that pain in silence, bad things happen.
-
-'
+  - Texto: ' If you hold that pain in silence, bad things happen.'
     Turn: 5
     Options: []
   - Texto: Being sensitive is part of being human.
     Turn: 5
     Options: []
-  - Texto: 'There are no rules, formulas or limits for what it means to be a man.
-
-'
+  - Texto: There are no rules, formulas or limits for what it means to be a man.
     Turn: 5
     Options: []
-  - Texto: "You don\u2019t need the approval of the Master Macho.\n\n"
+  - Texto: "You don\u2019t need the approval of the Master Macho."
     Turn: 5
     Options: []
-  - Texto: 'If you feel like a man, you are a man.
-
-'
+  - Texto: If you feel like a man, you are a man.
     Turn: 5
     Options: []
   - Texto: "Anything you do will be a manly thing.\r"
