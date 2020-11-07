@@ -1210,7 +1210,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Invinsibility
+  m_Text: Invincibility
 --- !u!222 &440569305
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3697,7 +3697,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Invinsibility
+  m_Text: Invincibility
 --- !u!222 &1296817402
 CanvasRenderer:
   m_ObjectHideFlags: 0

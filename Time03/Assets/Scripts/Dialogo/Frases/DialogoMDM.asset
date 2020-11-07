@@ -25,7 +25,7 @@ MonoBehaviour:
   - Texto: To be a man is to have have strength, power and control of ALL!
     Turn: 2
     Options: []
-  - Texto: "You keep saying what i should and shouldn\u2019t do to be a man."
+  - Texto: "You keep saying what I should and shouldn\u2019t do to be a man."
     Turn: 1
     Options: []
   - Texto: But this formula is wrong.
@@ -47,11 +47,11 @@ MonoBehaviour:
     Turn: 2
     Options: []
   - Texto: "That\u2019s silly. I can play sports, dance, wear any clothes and be
-      whoever i want.\r"
+      whoever I want.\r"
     Turn: 1
     Options: []
   - Texto: "And any of these things is going to be a \u201Cmanly\u201D thing, because
-      i feel manly.\r"
+      I feel manly.\r"
     Turn: 1
     Options: []
   - Texto: "I don\u2019t need your approval to assert me."
